@@ -21,6 +21,7 @@
 
 /* 공통클래스 중앙속박스 */
 .inbox{
-  max-width: 1360px;
+  max-width: 1400px;
   margin: 0 auto;
+  outline: 1px solid red;;
 }
