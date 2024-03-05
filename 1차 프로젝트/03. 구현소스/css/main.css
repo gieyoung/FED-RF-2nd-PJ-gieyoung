@@ -5,15 +5,13 @@
 @import url(./reset.css);
 @import url(./core.css);
 @import url(./common.css);
-/* 그리드 12 불러오기 */
-@import url(./grid_12_float.css);
+
 
 /* 공사중 표시 */
 body * {
     outline:1px dashed #ccc;
    
 }
-
 
 .wrap{
     position: relative;
@@ -32,7 +30,7 @@ body * {
 
   #top-area .inbox{
     position: relative;
-    max-width: 1480px;
+    max-width: 1502px;
 }
 
   
@@ -63,6 +61,35 @@ body * {
     background: url(../images/logo_wh.svg) no-repeat;
     text-indent: -99999px;
   }
+
+/* 메뉴 */
+#gnb{
+  max-width: 1000px;
+  background-color: #fff;
+  margin: 0 auto;
+}
+#gnb ul li{
+  width:calc(100% / 7);
+  float:left;
+  
+
+}
+
+#gnb>ul>li>a{
+  font-size: 18px;
+  font-family: 'OTTOGISans', 'Malgun Gothic', '맑은 고딕', "돋움", sans-serif;
+  font-weight: 500;
+  display: block;
+  line-height: 100px;
+  text-align: center;
+ 
+  
+}
+
+/* 사이트맵 */
+.btn_menu{
+  text-indent: -9999px;
+}
   
  
 

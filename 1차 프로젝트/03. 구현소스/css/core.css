@@ -18,6 +18,58 @@
     font-family: 'Nanum Gothic', sans-serif;
 */
 
+/* 폰트 */
+@font-face {
+	font-family:"OTTOGISans";
+    font-weight:200;
+    font-style:normal;
+	src:url(../css/font/OttogiSans-ExtraLight.otf) format('truetype'),
+    url(../css/font/OTTOGISans-ExtraLight.woff) format('woff'),
+	url(../css/font/OTTOGISans-ExtraLight.woff2) format('woff2');
+    font-display:block;
+}
+
+@font-face {
+	font-family:"OTTOGISans";
+    font-weight:300;
+    font-style:normal;
+	src:url(../css/font/OttogiSans-Light.otf) format('truetype'),
+    url(../css/font/OTTOGISans-Light.woff) format('woff'),
+	url(../css/font/OTTOGISans-Light.woff2) format('woff2');
+    font-display:block;
+}
+
+@font-face {
+	font-family:"OTTOGISans";
+    font-weight:500;
+    font-style:normal;
+	src:url(../css/font/OttogiSans-Medium.otf) format('truetype'),
+    url(../css/font/OTTOGISans-Medium.woff) format('woff'),
+	url(../css/font/OTTOGISans-Medium.woff2) format('woff2');
+    font-display:block;
+}
+
+@font-face {
+	font-family:"OTTOGISans";
+    font-weight:600;
+    font-style:normal;
+	src:url(../css/font/OttogiSans-Bold.otf) format('truetype'),
+    url(../css/font/OTTOGISans-Bold.woff) format('woff'),
+	url(../css/font/OTTOGISans-Bold.woff2) format('woff2');
+    font-display:block;
+}
+
+@font-face {
+	font-family:"OTTOGISans";
+    font-weight:900;
+    font-style:normal;
+	src:url(../css/font/OttogiSans-ExtraBold.otf) format('truetype'),
+    url(../css/font/OTTOGISans-ExtraBold.woff) format('woff'),
+	url(../css/font/OTTOGISans-ExtraBold.woff2) format('woff2');
+    font-display:block;
+}
+
+
 
 /* 임시타이틀 */
 .temp-tit{
@@ -26,6 +78,17 @@
   color:#888;
 
 }
+
+/* 공통클래스: 클리어 설정 */
+ul::after, ol::after, .clb::after{
+  content: '';
+  display: block;
+  clear:both;
+}
+
+
+
+
 
 
 /* 공통클래스 중앙속박스 */
