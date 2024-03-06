@@ -13,16 +13,22 @@
       <!-- 1. 상단 -->
       <div id="top-area">
         <header class="top-area inbox">
-          <!-- <h2 class="temp-tit">1. 상단</h2> -->
-          <h2 class="logo">
+          <!-- 로고 -->
+          <h1 class="logo">
             <a href="" alt="오뚜기 로고">로고</a>
-          </h2>
+          </h1>
           <!-- 메뉴 -->
-          <nav id="gnb">
-            <ul class="clb">
+          <nav id="nav">
+            <ul class="gnb">
               <li>
                 <a href="/about/otgoverview">회사소개</a>
-                
+                <ul class="sub_menu">
+                  <li><a href="/about/otgoverview">Overview</a></li>
+                  <li><a href="/about/otgcompany">오뚜기 소개</a></li>
+                  <li><a href="/about/otgoverseascorporation">글로벌 오뚜기</a></li>
+                  <li><a href="/about/otglocation">오시는길</a></li>
+                  <li><a href="/about/otgtalent">인재채용</a></li>
+                </ul>
               </li>
               <li>
                 <a href="/esg/otgoverview">ESG경영</a>
@@ -39,9 +45,10 @@
               <li>
                 <a href="/customer/customer_voice_process">고객서비스</a>
               </li>
-              <li class="sitemap">
-                <a href="/site/sitemap" class="btn_menu">사이트맵으로 이동</a>
-             </li>
+
+              <li class="menu_item sitemap">
+              <a href="/site/sitemap" class="btn_menu"><span class="sr_only">사이트맵으로 이동</span></a>
+            </li>
             </ul>
           </nav>
         </header>

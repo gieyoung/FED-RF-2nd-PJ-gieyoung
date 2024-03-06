@@ -3,71 +3,21 @@
 /* 도깨비 PJ : 공통 클래스 CSS - core.css */
 /* 공통 셋팅을 위한 클래스 + 웹폰트 */
 
-/* 웹폰트 CDN */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Gugi&family=Nanum+Gothic&family=Single+Day&family=ZCOOL+KuaiLe&display=swap');
+/* 웹폰트*/
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
 /* 
     0. 메뉴 등 일반체
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: "Jua", sans-serif;
     1. 캐릭터 설명 제목체
-    font-family: 'Gugi', cursive;
+    
     2. 캐릭터 설명 내용체
-    font-family: 'Single Day', cursive;
+    
     3. 캐릭터 설명 한자체
-    font-family: 'ZCOOL KuaiLe', cursive;
+    
     4. 전체 공통체(메뉴 등)
-    font-family: 'Nanum Gothic', sans-serif;
+    
 */
-
-/* 폰트 */
-@font-face {
-	font-family:"OTTOGISans";
-    font-weight:200;
-    font-style:normal;
-	src:url(../css/font/OttogiSans-ExtraLight.otf) format('truetype'),
-    url(../css/font/OTTOGISans-ExtraLight.woff) format('woff'),
-	url(../css/font/OTTOGISans-ExtraLight.woff2) format('woff2');
-    font-display:block;
-}
-
-@font-face {
-	font-family:"OTTOGISans";
-    font-weight:300;
-    font-style:normal;
-	src:url(../css/font/OttogiSans-Light.otf) format('truetype'),
-    url(../css/font/OTTOGISans-Light.woff) format('woff'),
-	url(../css/font/OTTOGISans-Light.woff2) format('woff2');
-    font-display:block;
-}
-
-@font-face {
-	font-family:"OTTOGISans";
-    font-weight:500;
-    font-style:normal;
-	src:url(../css/font/OttogiSans-Medium.otf) format('truetype'),
-    url(../css/font/OTTOGISans-Medium.woff) format('woff'),
-	url(../css/font/OTTOGISans-Medium.woff2) format('woff2');
-    font-display:block;
-}
-
-@font-face {
-	font-family:"OTTOGISans";
-    font-weight:600;
-    font-style:normal;
-	src:url(../css/font/OttogiSans-Bold.otf) format('truetype'),
-    url(../css/font/OTTOGISans-Bold.woff) format('woff'),
-	url(../css/font/OTTOGISans-Bold.woff2) format('woff2');
-    font-display:block;
-}
-
-@font-face {
-	font-family:"OTTOGISans";
-    font-weight:900;
-    font-style:normal;
-	src:url(../css/font/OttogiSans-ExtraBold.otf) format('truetype'),
-    url(../css/font/OTTOGISans-ExtraBold.woff) format('woff'),
-	url(../css/font/OTTOGISans-ExtraBold.woff2) format('woff2');
-    font-display:block;
-}
 
 
 
