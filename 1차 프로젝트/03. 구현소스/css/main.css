@@ -13,6 +13,9 @@ body * {
    
 }
 
+/* 상단 바로가기 버튼 */
+#skip{display:none;}
+
 .wrap{
     position: relative;
 }
