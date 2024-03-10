@@ -1,50 +1,289 @@
-/* header */
-.header {display:flex;align-items:center;position:relative;z-index:1000;width:100%;background:#FFF;transition:.2s linear;}
-.header.bg_white{position:relative;background:#fff}
-.header.bg_white .inner {background:#fff}
-.header .inner {width:100%}
-.header .h_wrap {position:relative;width:100%;height:100%;text-align:center;}
-.header .btn_dropdown {position:absolute;top:50%;right:0;z-index:200;width:30px;height:30px;margin-top:-15px;background:url(../images/common/btn_menu.svg) no-repeat 50% 50% / 30px 30px;text-indent:-9999px;}
-.header .btn_dropdown.active {background:url(../images/common/btn_menu_close.svg) no-repeat 0 0 / 30px 30px;}
-.header .menu_item.sitemap {display:none}
-.header .util.pc {display:none}
-.header .util.mo {display:none}
+@charset "utf-8";
+/* 도깨비 PJ : 메인페이지 CSS - main.css */
 
-.header .lang {position:absolute;top:50%;right:50px;z-index:200;transform:translateY(-50%);}
-.header .btn_lang {position:relative;padding-right:25px;font-size:16px;line-height:24px;}
-.header .btn_lang::after {content:'';position:absolute;top:50%;right:0;width:20px;height:20px;margin-top:-10px;background:url(../images/common/sel_lang.svg) no-repeat 0 0 / 20px 20px;}
-.header .lang_menu {display:none;position:absolute;top:40px;left:-30px;padding:15px 30px;border-radius:5px;background:#F8F8F8;}
-.header .lang_menu li {margin-top:12px}
-.header .lang_menu li:first-child {margin-top:0}
-.header .lang_menu li a {font-size:14px;font-weight:300;line-height:22px}
-.header .lang_menu li a:hover {font-weight:600;border-bottom:1px solid #000}
-.header .lang_menu li.active a {font-weight:600}
 
-.abs_header {position:absolute;top:0;left:0;right:0;background:transparent;}
-.header.col_white::after {content:'';position:absolute;top:0;left:0;right:0;z-index:-1;height:100%;background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.00) 100%);}
-.col_white .btn_menu {background:url(../images/common/btn_menu_w.svg) no-repeat 0 0 / 30px 30px}
-.col_white .btn_dropdown {background:url(../images/common/btn_menu_w.svg) no-repeat 0 0 / 30px 30px}
-.col_white .btn_lang {color:#FFF;text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.60);}
-.col_white .btn_lang::after {background:url(../images/common/sel_lang_w.svg) no-repeat 0 0 / 20px 20px}
-.bg_white .lang {right:90px}
-.bg_white.col_white::after {display:none}
-.bg_white.col_white .btn_lang {color:#000;text-shadow: none;}
-.bg_white.col_white .btn_lang::after {background:url(../images/common/sel_lang.svg) no-repeat 0 0 / 20px 20px}
+/* 공사중 표시 */
+body * {
+    outline:1px solid red;
+   
+}
 
- /* header */
- .header .inner {padding:0 50px}
- .header .logo {width:58px;height:58px}
- .header .logo a .ico {width:58px;height:58px}
- .header .lang {right:237px}
- .header .navbar>li>a {padding:0 13px;font-size:18px;line-height:26px;}
- .header .navbar>.menu_item.sitemap {padding:0 15px}
- .header .sub_menu {padding-left:15px}
- .header .sub_menu li a {font-size:14px;line-height:22px;}
- .header .util.pc ul li {margin-left:15px}
- .header .util.pc ul li .btn_search {width:30px;height:30px}
- .header .util.pc ul li .chat {width:36px;height:30px;}
- .header .util.pc ul li .link {width:126px;height:28px;padding:6px 36px 6px 10px;background:#FFFC29 url(../images/common/gnb_mall.svg) no-repeat top 50% left 10px / 80px 16px}
- .header .util.pc ul li .link::after {right:10px}
- .header .logo a .ico {
-  width: 58px;
-  height: 58px;}
+/* 전체 감싼 박스 */
+.full-wrap{
+    position: relative;
+}
+
+
+/* 1. 상단영역*/
+ #header{
+    /* 부모는? .full-wrap */
+    /* position:absolute;
+    left:0; top:0; */
+   
+    width: 100%;
+    height: 100px;
+    background-color:rgba(0,0,0,0.5);
+    
+   
+  }
+
+  
+/* 공통클래스 중앙속박스 */
+.inbox{
+  max-width: 1400px;
+  margin: 0 auto;
+  outline: 1px solid red;
+  height: 100%;
+}
+
+
+  /* header 내부박스 */
+  #header .inbox{
+    max-width: 100%;
+    position: relative;
+  }
+
+
+.header_wrap{
+  position: relative;
+}
+
+  /* 로고 */
+  h1.logo a{
+     /* 부모는 #header .inbox*/
+     position: absolute;
+     left:80px;
+     top:50%;
+     transform: translate(0,-50%);
+     z-index:99;
+    display: inline-block;
+    /* 배경이미지 삽입 */
+    background: url(../images/logo_wh.svg) no-repeat;
+    width:58px;
+    height:58px;
+    
+  }
+
+
+  /* 메뉴 */
+
+
+  #nav {
+    /* position: relative; */
+    
+    height: 100px;
+    /* overflow: hidden; */
+    z-index: 2;
+    text-align: center;
+    
+  }
+
+  
+  #header:hover #nav{
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    height: 300px;
+    transition: 0.4s;
+    background: #fff;
+}
+
+
+
+
+
+  /* 상단에 줄 */
+  /* #nav::before {
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    border-bottom: 3px solid #e1e1e1;
+  } */
+
+  .gnb {
+    height:100%;
+    display: flex;
+    justify-content: center;
+    /* 메뉴폰트 */
+font-family: "Jua", sans-serif;
+font-size: 18px;
+
+  }
+
+  /* 1단메뉴 */
+  .gnb-depth1{
+    position: relative;
+  }
+
+
+  .gnb-depth1>a{
+     display: block;
+     line-height: 100px;
+     padding:0 20px;
+     
+
+   
+  }
+
+
+  /* 2단메뉴 */
+  .gnb-depth2{
+    /* 부모는.gnb-depth1 */
+    position: absolute;
+    width: 100%;
+    text-align: left;
+    z-index:2;
+    font-size:16px;
+    font-weight: normal;
+
+  }
+
+  .gnb-depth2>ul>li{
+    margin-bottom: 30px;
+  }
+
+
+  .right-gnb{
+    position:relative;
+    right:0;
+    top:50%;
+    transform: translate(-50%,0);
+  }
+ 
+
+  .m_btn{
+    position:absolute;
+    right:0;
+    top:50%;
+    transform: translate(-50%,0);
+    display: block;
+    text-indent: -99999px;
+    width: 100px;
+    height: 100px;
+    border:1px solid red;
+    position: absolute;
+    left:50%; top:50%;
+    transform: translate(-50%,-50%);
+  }
+  
+     .m_btn span{
+       display: block;
+       width: 100px;
+       height: 20px;
+       background: #000;
+       position: absolute;
+       left:0; top:50%;
+       transform: translate(0,-50%);
+       transition: all 0.5s ease;
+     }
+  
+       .m_btn span::before{
+       content:'';
+       width: 100%;
+       height: 20px;
+       background: #000;
+     position: absolute;
+    left:0; top:-40px;
+    transition: all 0.5s ease;
+     }
+  
+  
+     .m_btn span::after{
+         content:'';
+       width: 100%;
+       height: 20px;
+       background: #000;
+     position: absolute;
+    left:0; top:40px;
+    transition: all 0.5s ease;
+  
+     }
+  
+    /* 햄버거 버튼을 클릭했을 때 X버튼으로 변화*/
+  
+    .m_btn.on span{
+      background: rgba(0,0,0,0);
+      transition: all 0.5s ease;
+  
+  
+  
+    }
+  
+    .m_btn.on span::before{
+      transform: rotate(45deg);
+      top:0;
+      transition: all 0.5s ease;
+    }
+  
+    .m_btn.on span::after{
+      transform: rotate(-45deg);
+      top:0;
+      transition: all 0.5s ease;
+    }
+  
+
+
+
+
+  
+ 
+
+/* 2. 배너영역 */
+
+#ban-area{
+    height: 100vh;
+    background-color: green;
+}
+
+
+
+/* 3. 사업소개 */
+#about-area{
+    height: 2069px;
+    background-color: #fff;
+}
+
+
+/* 4. 글로벌오뚜기 */
+#global-area{
+    height: 1240px;
+    background-color:#FFFDEB;
+}
+
+ /* 5. ESG경영 */
+
+ #esg-area{
+    height: 954px;
+    background-color:#fff;
+
+ }
+
+ /* 6. 브랜드스토리 */
+#story-area{
+    height: 954px;
+    background-color:#ccc;
+}
+
+
+ /* 7. 제품소개 */
+ #product-area{
+    height: 865px;
+    background-color: #FFED00;
+
+
+ }
+
+
+ /* 8. 오뚜기 소식 */
+
+#news-area{
+    height: 732px;
+    background-color: #F8F8F8;
+}
+
+
+/* 9. 하단영역  */
+#footer-area{
+    height: 430px;
+    background-color: #fff;
+}
