@@ -19,7 +19,12 @@
     
 */
 
-
+.ir{
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
 
 /* 임시타이틀 */
 .temp-tit{

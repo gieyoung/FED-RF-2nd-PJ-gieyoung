@@ -14,59 +14,124 @@
   <body>
 
     <div class="full-wrap">
-      <!-- 1. 상단 -->
-      <div id="header">
-        <div class="inbox">
-          <div class="header_wrap">
-          <!-- 로고 -->
-          <h1 class="logo">
-            <a href="" alt="오뚜기 로고">로고</a>
-          </h1>  
-          <!-- 메뉴 -->
-          <nav id="nav">
-            <ul class="gnb">
-              <li class="gnb-depth1">
-                <a href="/about/otgoverview">회사소개</a>
-                <div class="gnb-depth2">
-                  <ul class="subMenuUl">
-                    <li><a href="/about/otgoverview">Overview</a></li>
-                    <li><a href="/about/otgcompany">오뚜기 소개</a></li>
-                    <li><a href="/about/otgoverseascorporation">글로벌 오뚜기</a></li>
-                    <li><a href="/about/otglocation">오시는길</a></li>
-                    <li><a href="/about/otgtalent">인재채용</a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="gnb-depth1">
-                <a href="/esg/otgoverview">ESG경영</a>
-              </li>
-              <li class="gnb-depth1">
-                <a href="/product/otgbrandstory">제품이야기</a>
-              </li>
-              <li class="gnb-depth1">
-                <a href="/brand/otgoverview">브랜드경험</a>
-              </li>
-              <li class="gnb-depth1">
-                <a href="/pr/otgnotice_list">홍보센터</a>
-              </li>
-              <li class="gnb-depth1">
-                <a href="/customer/customer_voice_process">고객서비스</a>
-              </li>
-
-              <li class="menu_item sitemap">
+      <header id="header" class="header abs_header col_white">
+        <div class="inner">
+      <div class="h_wrap">
+        
+        <h1 class="logo">
+          <a href="/main/">
+            <i class="ico"><span class="sr_only">오뚜기</span></i>
+          </a>
+        </h1>
+        <a href="javascript:;" class="btn_back">이전메뉴</a>
+        <button type="button" aria-haspopup="dialog" class="btn_search_mo" onclick="ui.common.popupFn.searchOpen('total_search_area_mb');">검색</button>
+        <a href="javascript:;" class="btn_dropdown">전체메뉴</a>
+        <nav id="nav" class="nav">
+          <ul class="navbar">
+            <li class="menu_item">
+              <a href="/about/otgoverview"><span>회사소개</span></a>
+              <ul class="sub_menu">
+                <li class="menu_item"><a href="/about/otgoverview">Overview</a></li>
+                <li class="menu_item"><a href="/about/otgcompany">오뚜기 소개</a></li>
+                <li class="menu_item"><a href="/about/otgoverseascorporation">글로벌 오뚜기</a></li>
+                <li class="menu_item"><a href="/about/otglocation">오시는길</a></li>
+                <li class="menu_item"><a href="/about/otgtalent">인재채용</a></li>
+              </ul>
+            </li>
+            <li class="menu_item">
+              <a href="/esg/otgoverview"><span>ESG경영</span></a>
+              <ul class="sub_menu">
+                <li class="menu_item"><a href="/esg/otgoverview">Overview</a></li>
+                <li class="menu_item"><a href="/esg/otgmanagementintroduction">ESG경영 소개</a></li>
+                <li class="menu_item"><a href="/esg/otgactpolicy">환경</a></li>
+                <li class="menu_item"><a href="/esg/otgsocialhumanright">사회</a></li>
+                <li class="menu_item"><a href="/esg/otggovernance">지배구조</a></li>
+                <li class="menu_item"><a href="/esg/otgsocialcontribution">사회공헌</a></li>
+                <li class="menu_item"><a href="/esg/otggrowth">동반성장</a></li>
+                <li class="menu_item"><a href="/esg/otgsustainabilityreport">보고서 및 정책</a></li>
+                <li class="menu_item"><a href="/esg/otgesgdata">ESG Data</a></li>
+              </ul>
+            </li>
+            <li class="menu_item">
+              <a href="/product/otgbrandstory"><span>제품이야기</span></a>
+              <ul class="sub_menu">
+                <li class="menu_item"><a href="/product/otgbrandstory">브랜드 스토리</a></li>
+                <li class="menu_item"><a href="/product/product_cat">제품정보</a></li>
+              </ul>
+            </li>
+            <li class="menu_item">
+              <a href="/brand/otgoverview"><span>브랜드경험</span></a>
+              <ul class="sub_menu">
+                <li class="menu_item"><a href="/brand/otgoverview">Overview</a></li>
+                <li class="menu_item"><a href="/brand/otggoods">공식캐릭터</a></li>
+                <li class="menu_item"><a href="/brand/otgrolypoly">브랜드공간</a></li>
+                <li class="menu_item"><a href="/brand/brands_visit">공장견학</a></li>
+                <li class="menu_item"><a href="/brand/otgcontest_oif">공모전</a></li>
+                <li class="menu_item"><a href="/brand/otgfestival">페스티벌</a></li>
+                <li class="menu_item"><a href="/brand/otgevent_list">이벤트</a></li>
+              </ul>
+            </li>
+            <li class="menu_item">
+              <a href="/pr/otgnotice_list"><span>홍보센터</span></a>
+              <ul class="sub_menu">
+                <li class="menu_item"><a href="/pr/otgnotice_list">공지사항</a></li>
+                <li class="menu_item"><a href="/pr/otgnews_list">오뚜기 뉴스룸</a></li>
+                <li class="menu_item"><a href="/pr/otgmedia_list">언론보도</a></li>
+                <li class="menu_item"><a href="/pr/otgcf_list">CF스토리</a></li>
+                <li class="menu_item"><a href="/pr/otgcolumn_list">칼럼</a></li>
+                <li class="menu_item"><a href="/pr/otginvest_list">투자정보</a></li>
+              </ul>
+            </li>
+            <li class="menu_item">
+              <a href="/customer/customer_voice_process"><span>고객서비스</span></a>
+              <ul class="sub_menu">
+                <li class="menu_item"><a href="/customer/customer_voice_process">고객상담 프로세스</a></li>
+                <li class="menu_item"><a href="/customer/customer_voice">고객의 소리</a></li>
+                <li class="menu_item"><a href="/service/otgfaq">자주묻는 질문</a></li>
+                <li class="menu_item"><a href="/service/otgproductsafety">고객만족활동</a></li>
+                <li class="menu_item"><a href="/service/customer_ccm_noncertification">소비자중심경영</a></li>
+              </ul>
+            </li>
+            <li class="menu_item sitemap">
               <a href="/site/sitemap" class="btn_menu"><span class="sr_only">사이트맵으로 이동</span></a>
             </li>
+            <li class="util mo">
+              <ul>
+                <!--{*<li><a href="#" class="link">Nutritious life</a></li>*}-->
+                <li><a href="https://www.ottogimall.co.kr/" class="link" title="오뚜기몰 새창열림">오뚜기몰</a></li>
+                <li><a href="#none" class="chat" onclick="return openChatBot();" title="챗봇 새창열림">고객상담 챗봇</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="lang">
+          <a href="javascript:;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn_lang">KR</a>
+          <div id="dropLang" class="lang_menu">
+            <ul>
+              <li class="active"><a href="/main/" title="국문">KR</a></li>
+              <li><a href="/en/main/" title="영문">EN</a></li>
             </ul>
-          </nav>
-         </div>
+          </div>
         </div>
+        <div class="util pc">
+          <ul>
+            <li><button type="button" aria-haspopup="dialog" class="btn_search pop_search" onclick="ui.common.popupFn.pcSearchOpen('pop_search');">검색</button></li>
+            <li><a href="#" target="_blank" class="chat" title="챗봇 새창열림" onclick="return openChatBot();">고객상담 챗봇</a></li>
+            
+            <!--{*<li><a href="#" target="_blank" class="link" title="새창열림">Nutritious life</a></li>*}-->
+            <li><a href="https://www.ottogimall.co.kr/" target="_blank" class="link" title="오뚜기몰 새창열림">오뚜기몰</a></li>
+          </ul>
         </div>
+      </div>
+    </div>
+      </header>
       <!-- 2. 배너 -->
-      <div id="ban-area">
+      <!-- <div id="ban-area">
         <section class="ban-area inbox">
           <h2 class="temp-tit">2. 배너</h2>
         </section>
-      </div>
+      </div> -->
+     
       <!-- 3. 사업소개 -->
       <div id="about-area">
         <section class="about-area inbox">
