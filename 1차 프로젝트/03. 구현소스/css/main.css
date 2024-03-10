@@ -1,56 +1,55 @@
 @charset "utf-8";
 /* 도깨비 PJ : 메인페이지 CSS - main.css */
 
-/* 리셋, 코아, 커먼 공통 외부CSS 합치기 */
-@import url(./reset.css);
-@import url(./core.css);
-@import url(./common.css);
-
 
 /* 공사중 표시 */
 body * {
-    outline:1px dashed #ccc;
+    outline:1px solid red;
    
 }
 
-.wrap{
+/* 전체 감싼 박스 */
+.full-wrap{
     position: relative;
 }
 
-/* 1. 상단영역 */
- #top-area{
-    /* 부모는? .wrap */
+
+/* 1. 상단영역*/
+ #header{
+    /* 부모는? .full-wrap */
     /* position:absolute;
     left:0; top:0; */
+    position: relative;
     width: 100%;
     height: 100px;
     background-color:rgba(0,0,0,0.5);
+    
    
   }
 
-  #top-area .inbox{
-    position: relative;
-    max-width: 1502px;
+  
+/* 공통클래스 중앙속박스 */
+.inbox{
+  max-width: 1400px;
+  margin: 0 auto;
+  outline: 1px solid red;
+  height: 100%;
 }
 
-  
-  #top-area .top-area{
-    height: 100px;
-  }
+
+  /* header 내부박스 */
+  #header .inbox{
+    max-width: 1600px;
+}
 
 
-  .header{
-    position: relative;
-    left:0; top:0;
-    width:100%;
-    height:100%;
-    background:#fff;
-  }
-  
+.header_wrap{
+  position: relative;
+}
+
   /* 로고 */
-  
   h1.logo{
-    /* 부모는 #top-area .inbox */
+    /* 부모는 .header_wrap*/
     position: absolute;
     left: 0;
     top:50%;
@@ -58,6 +57,7 @@ body * {
     width:58px;
     height:58px;
     background: red;
+    z-index: 2;
     
     
   
@@ -74,36 +74,74 @@ body * {
 
   /* 메뉴 */
   .gnb {
+    height: 100px;
     display: flex;
     justify-content: center;
    
+    
+   
   }
+
+
 
   .gnb{
 /* 메뉴폰트 */
 font-family: "Jua", sans-serif;
   }
 
-  .gnb>li>a{
+
+  #nav {
+    position: relative;
+    font-size: 18px;
+    height: 100px;
+    overflow: hidden;
+    z-index: 10;
+    text-align: center;
+    background: red;
+  }
+
+  
+  .header_wrap:hover #nav {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    height: 350px;
+    transition: 0.4s;
+    background: #fff;
+}
+
+
+  /* 상단에 줄 */
+  #nav::before {
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    border-bottom: 3px solid #e1e1e1;
+  }
+
+  .gnb-depth1{
+    position: relative;
+  }
+
+
+  .gnb-depth1>a{
      display: block;
      line-height: 100px;
      padding:0 20px;
      font-size:20px;
-     color:#fff;
      text-align: left;
    
-    
+  }
+  .gnb-depth2{
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    min-height: 440px;
+    text-align: left;
+    padding-top: 10px;
+    z-index: 999;
 
   }
-
-  .gnb .sub_menu>li>a{
-    display: block;
-    line-height: 25px;
-    font-size:14px;
-    color: #666;
-  }
-
-
  
 
 
