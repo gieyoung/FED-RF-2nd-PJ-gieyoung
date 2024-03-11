@@ -223,6 +223,82 @@ font-size: 18px;
 }
 
 
+/*메인*/
+
+#main {
+  width: 100%;
+  height: 600px;
+position: relative;
+
+}
+
+
+/*메인배너슬라이드*/
+
+#main .bx-wrapper {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+
+}
+
+#main .main_slider li {
+  width: 100% !important;
+  height:600px;
+}
+
+
+/*사진어둡게*/
+#main .cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+left: 0;
+  top: 0;
+z-index: -1;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.1) 60%,rgba(0,0,0,0.3) 100%);
+}
+
+
+#main .inside{
+  position: relative;
+max-width:1200px;
+
+
+}
+#main .inside .title {
+  position: absolute;
+right:0;
+  top: 15%;
+text-align:right;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* 3. 사업소개 */
 #about-area{
