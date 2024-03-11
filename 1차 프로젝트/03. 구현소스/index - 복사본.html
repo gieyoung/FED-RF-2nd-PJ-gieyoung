@@ -12,16 +12,10 @@
     <link rel="stylesheet" href="./css/core.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/grid_12_flex.css" />
-
-    <!-- swiper슬라이더 -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <!-- JS연결 -->
     <script src="./js/main.js" defer></script>
+    <script src="./js/swiper-element-bundle.min.js"></script>
   </head>
   <body>
     <div class="full-wrap">
@@ -153,11 +147,14 @@
             class="mySwiper"
             pagination="true"
             pagination-clickable="true"
-            navigation="false"
+            navigation="true"
             space-between="1000"
             centered-slides="true"
             autoplay-delay="30000"
             autoplay-disable-on-interaction="false"
+            swiper-pagination="custom"
+          
+            
           >
             <!-- 배너1(video) -->
             <swiper-slide>
@@ -198,6 +195,16 @@
                 <circle cx="24" cy="24" r="20"></circle>
               </svg>
               <span></span>
+            </div>
+            <div class="controls">
+              <div class="swiper-pagination"></div><!--{* mobile: fraction / pc: fraction *}-->
+              <div class="swiper-pagination2"></div><!--{* mobile: bullet / mo: progressbar *}-->
+              <div class="btn_wrap">
+                <button type="button" class="swiper-button-pause type2"><span class="sr_only">전체 정지</span></button>
+                <button type="button" class="swiper-button-play type2"><span class="sr_only">전체 재생</span></button>
+              </div>
+              <button type="button" class="swiper-button-prev type2"><span class="sr_only">이전</span></button>
+              <button type="button" class="swiper-button-next type2"><span class="sr_only">다음</span></button>
             </div>
           </swiper-container>
         </section>

@@ -245,23 +245,21 @@ font-size: 18px;
 
 /* 배너 슬라이더 */
 
-swiper-container {
+.swiper {
   width: 100%;
   height: 100%;
 }
 
-swiper-slide {
-  position: relative;
+.swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
-swiper-slide img {
+.swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
@@ -298,43 +296,77 @@ swiper-slide img {
   transform: rotate(-90deg);
 }
 
-
 /* 배너 슬라이더 내부 글자 */
 .slide-txt {
- /* 부모는 swiper-slide */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  transform: translate(-50%, -50%);
-}
+  /* 부모는 swiper-slide */
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 100%;
+   transform: translate(-50%, -50%);
+ }
+ 
+ 
+ .slide-txt .txt{
+   font-size: 5rem;
+   line-height: 100px;
+   text-align: center;
+   color:#fff;
+   text-shadow:2px 2px 4px rgba(0, 0, 0, 0.8);
+ }
+ 
 
 
-.slide-txt .txt{
-  font-size: 5rem;
-  line-height: 100px;
-  text-align: center;
-  color:#fff;
-  text-shadow:2px 2px 4px rgba(0, 0, 0, 0.8);
-}
+.ban-area .swiper-slide a {display:block;height:100%;outline-offset:-4px;}
+   
+    .ban-area .controls {bottom:70px;left:70px;right:70px;z-index:20;max-width:441px;height:50px;margin:0 auto}
+    .ban-area .swiper-pagination-fraction {left:0;bottom:0;top:50%;margin-top:-12px;width:241px;height:24px;padding:0;background:transparent;font-size:16px;line-height:24px}
+    .ban-area .swiper-pagination-current {position:absolute;top:0;left:0}
+    .ban-area .swiper-pagination-total {position:absolute;top:0;right:0}
+    .ban-area .swiper-button-prev.type2 {display:block;left:auto;right:60px}
+    .ban-area .swiper-button-next.type2 {display:block;right:0}
+    .ban-area .swiper-button-pause.type2 {left:auto;right:120px;top:50%}
+    .ban-area .swiper-button-play.type2 {left:auto;right:120px;top:50%}
 
+    .ban-area .swiper-pagination-bullets {display:flex;gap:20px;bottom:0;left:0;width:calc(100% - 200px);padding:0}
+    .ban-area .swiper-pagination2 {bottom:auto;top:50%;left:29px;width:180px;margin-top:-2px;background:rgba(255,255,255,.3)}
+    .ban-area .swiper-pagination2 .swiper-pagination-progressbar-fill {background:#FFF}
+    .ban-area .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {height:41px;margin:0;background:transparent;opacity:1;}
+    .ban-area .swiper-pagination-bullet em {display:block;font-size:16px;font-weight:500;color:rgba(255, 255, 255, 0.3);line-height:26px;letter-spacing:0;text-align:center}
+    .ban-area .swiper-pagination-bullet-active em {font-weight:500;color:#FFF}
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .controls {display:flex;justify-content:center;gap:15px;height:50px}
+    .swiper-pagination-fraction {position:relative;order:2;width:auto;min-width:58px;font-size:26px;font-weight:300;line-height:50px;letter-spacing:-.8px}
+    .swiper-button-prev {flex:none;order:1;position:relative;width:50px;height:50px;margin-top:-25px;background:#fff url(../images/common/btn_prev.svg) no-repeat 50% 50% / 11px 20px;}
+    .swiper-button-next {flex:none;order:3;position:relative;width:50px;height:50px;margin-top:-25px;background:#fff url(../images/common/btn_next.svg) no-repeat 50% 50% / 11px 20px;}
+    .swiper-button-pause {flex:none;order:4;position:relative;right:0;width:50px;height:50px;margin-top:-25px;background:#fff url(../images/common/btn_pause_s.svg) no-repeat 50% 50% / 10px 16px}
+    .swiper-button-play {flex:none;order:4;position:relative;right:0;width:50px;height:50px;margin-top:-25px;background:#fff url(../images/common/btn_play_s.svg) no-repeat 50% 50% / 13px 16px}
+    .swiper-button-prev:hover::before {top:2px;left:2px;right:2px;bottom:2px;opacity:1;}
+    .swiper-button-next:hover::before {top:2px;left:2px;right:2px;bottom:2px;opacity:1;}
+    .swiper-button-pause:hover::before {top:2px;left:2px;right:2px;bottom:2px;opacity:1;}
+    .swiper-button-play:hover::before {top:2px;left:2px;right:2px;bottom:2px;opacity:1;}
+    /* 메인페이지>메인슬라이드 (type2 클래스사용) */
+    .swiper-pagination-fraction.type2{font-size:26px;font-weight:500;line-height:50px;color:#fff;text-shadow:0px 0px 4px rgba(0, 0, 0, 0.60);}
+    .swiper-pagination-fraction.type2 .swiper-pagination-current{margin-right:-3px;font-size:26px;font-weight:500;color:#fff;line-height:50px;}
+    .swiper-pagination-fraction.type2 .swiper-pagination-total{margin-left:-3px;}
+    .swiper-button-prev.type2 {display:block;position:absolute;width:50px;height:50px;margin-top:-25px;border-radius:50%;border:0;background:url(../images/common/btn_prev_main.svg) no-repeat 50% 50% / 100% 100%;}
+    .swiper-button-next.type2 {display:block;position:absolute;width:50px;height:50px;margin-top:-25px;border-radius:50%;border:0;background:url(../images/common/btn_next_main.svg) no-repeat 50% 50% / 100% 100%;}
+    .swiper-button-pause.type2 {display:block;width:50px;height:50px;margin-top:-25px;border-radius:50%;border:0;background:url(../images/common/btn_pause_main.svg) no-repeat 50% 50% / 100% 100%;}
+    .swiper-button-play.type2 {display:none;width:50px;height:50px;margin-top:-25px;border-radius:50%;border:0;background:url(../images/common/btn_play_main.svg) no-repeat 50% 50% / 100% 100%;}
+    .swiper-button-prev.type2:hover {background:url(../images/common/btn_prev_main_hover.svg) no-repeat 50% 50% / 100% 100%;transition:all .6s}
+    .swiper-button-next.type2:hover {background:url(../images/common/btn_next_main_hover.svg) no-repeat 50% 50% / 100% 100%;transition:all .6s}
+    .swiper-button-pause.type2:hover {background:url(../images/common/btn_pause_main_hover.svg) no-repeat 50% 50% / 100% 100%;transition:all .6s}
+    .swiper-button-play.type2:hover {background:url(../images/common/btn_play_main_hover.svg) no-repeat 50% 50% / 100% 100%;transition:all .6s}
+    .swiper-button-prev.type2::before {display:none}
+    .swiper-button-next.type2::before {display:none}
+    .swiper-button-pause.type2::before {display:none}
+    .swiper-button-play.type2::before {display:none}
+    /* 90x90 (type3 클래스사용) */
+    .swiper-button-prev.type3 {width:90px;height:90px;margin-top:-45px;background:#fff url(../images/common/btn_prev.svg) no-repeat 50% 50% / 15px 31px} 
+    .swiper-button-next.type3 {width:90px;height:90px;margin-top:-45px;background:#fff url(../images/common/btn_next.svg) no-repeat 50% 50% / 15px 31px} 
+    .swiper-button-pause.type3 {width:90px;height:90px;margin-top:-45px;background:#fff url(../images/common/btn_pause_b.svg) no-repeat 50% 50% / 16px 32px}
+    .swiper-button-play.type3 {width:90px;height:90px;margin-top:-45px;background:#fff url(../images/common/btn_play_b.svg) no-repeat 50% 50% / 19px 22px}
 
 
 
