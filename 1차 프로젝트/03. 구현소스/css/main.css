@@ -45,7 +45,7 @@ body * {
 
 
 .header_wrap{
-  position: fixed;
+  position: relative;
   top: 0;
   width: 100%;
   z-index: 999;
@@ -138,10 +138,6 @@ font-size: 18px;
      
 
    
-  }
-
-  .header-white{
-
   }
 
   /* 2단메뉴 */
