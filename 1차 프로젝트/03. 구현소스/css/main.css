@@ -8,15 +8,8 @@ body * {
    
 }
 
-<<<<<<< HEAD
-/* 상단 바로가기 버튼 */
-#skip{display:none;}
-
-.wrap{
-=======
 /* 전체 감싼 박스 */
 .full-wrap{
->>>>>>> a54f7644836efe74ae12d82032b9c52f840f2210
     position: relative;
 }
 
@@ -132,6 +125,9 @@ font-size: 18px;
    
   }
 
+  .header-white{
+
+  }
 
   /* 2단메뉴 */
   .gnb-depth2{
@@ -148,21 +144,9 @@ font-size: 18px;
   .gnb-depth2>ul>li{
     margin-bottom: 30px;
   }
-
-
-  .right-gnb{
-    position:relative;
-    right:0;
-    top:50%;
-    transform: translate(-50%,0);
-  }
  
 
   .m_btn{
-    position:absolute;
-    right:0;
-    top:50%;
-    transform: translate(-50%,0);
     display: block;
     text-indent: -99999px;
     width: 100px;
@@ -228,10 +212,6 @@ font-size: 18px;
       transition: all 0.5s ease;
     }
   
-
-
-
-
   
  
 
