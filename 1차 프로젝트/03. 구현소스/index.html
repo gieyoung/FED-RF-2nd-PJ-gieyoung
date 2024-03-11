@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/core.css" />
     <link rel="stylesheet" href="./css/common.css" />
-    <link rel="stylesheet" href="./css/jquery.bxslider.css" />
-    <!-- CDN연결 -->
+    <link rel="stylesheet" href="./css/grid_12_flex.css" />
+
+    <!-- swiper슬라이더 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
     <div class="full-wrap">
@@ -112,14 +112,48 @@
           </div>
         </div>
       </div>
+
       <!-- 2. 배너 -->
-      <div id="main">
+      <div id="ban-area">
         <section class="ban-area inbox">
-          <h2 class="temp-tit">2. 배너</h2>
-         
+          <!-- <h2 class="temp-tit">2. 배너</h2> -->
+          <!-- 배너 슬라이더 -->
+          <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="false" space-between="1000" centered-slides="true" autoplay-delay="30000" autoplay-disable-on-interaction="false">
+            <!-- 배너1(video) -->
+            <swiper-slide>
+              <video class="video mask" autoplay="autoplay" muted="muted" preload="auto" loop playsinline>
+                <source src="./images/51b6eeb6bbb449aab4bf46502e2bc074.mp4" type="video/mp4" />
+              </video>
+            </swiper-slide>
+            <!-- 배너2 -->
+            <swiper-slide>
+              <img src="./images/57a43ca6550d4bbcad24b4118b7e3fe6.jpg" alt="" />
+              <div class="slide-txt">
+                <h2 class="txt">
+                  맛과 품질을 가장 소중히<br />
+                  생각하고 행동합니다.
+                </h2>
+              </div>
+            </swiper-slide>
+           
+            <swiper-slide>Slide 3</swiper-slide>
+            <swiper-slide>Slide 4</swiper-slide>
+            <swiper-slide>Slide 5</swiper-slide>
+            <swiper-slide>Slide 6</swiper-slide>
+            <swiper-slide>Slide 7</swiper-slide>
+            <swiper-slide>Slide 8</swiper-slide>
+            <swiper-slide>Slide 9</swiper-slide>
+            <div class="autoplay-progress" slot="container-end">
+              <svg viewBox="0 0 48 48">
+                <circle cx="24" cy="24" r="20"></circle>
+              </svg>
+              <span></span>
+            </div>
+          </swiper-container>
         </section>
       </div>
-
+      <!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
       <!-- 3. 사업소개 -->
       <div id="about-area">
         <section class="about-area inbox">

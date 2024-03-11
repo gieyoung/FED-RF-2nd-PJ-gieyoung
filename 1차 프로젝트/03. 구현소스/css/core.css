@@ -42,6 +42,10 @@ ul::after, ol::after, .clb::after{
   clear:both;
 }
 
+body{
+font-size: 10px;
+font-family: "Jua", sans-serif;
+}
 
 
 
