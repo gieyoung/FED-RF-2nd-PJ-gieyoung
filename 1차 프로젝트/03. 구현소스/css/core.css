@@ -19,7 +19,13 @@
     
 */
 
-
+/* 글자날리기 */
+.ir{
+  display: block;
+  width:0;
+  height: 0;
+  overflow: hidden;
+}
 
 /* 임시타이틀 */
 .temp-tit{
@@ -40,14 +46,6 @@ ul::after, ol::after, .clb::after{
 
 
 
-
-/* 공통클래스 중앙속박스 */
-.inbox{
-  max-width: 1400px;
-  margin: 0 auto;
-  outline: 1px solid red;
-  height: 100%;
-}
 
 .cont-box{
   height: 100%;

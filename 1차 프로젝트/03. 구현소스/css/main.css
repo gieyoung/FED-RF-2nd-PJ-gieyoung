@@ -1,115 +1,238 @@
 @charset "utf-8";
 /* 도깨비 PJ : 메인페이지 CSS - main.css */
 
-/* 리셋, 코아, 커먼 공통 외부CSS 합치기 */
-@import url(./reset.css);
-@import url(./core.css);
-@import url(./common.css);
-
 
 /* 공사중 표시 */
 body * {
-    outline:1px dashed #ccc;
+    outline:1px solid red;
    
 }
 
+<<<<<<< HEAD
 /* 상단 바로가기 버튼 */
 #skip{display:none;}
 
 .wrap{
+=======
+/* 전체 감싼 박스 */
+.full-wrap{
+>>>>>>> a54f7644836efe74ae12d82032b9c52f840f2210
     position: relative;
 }
 
-/* 1. 상단영역 */
- #top-area{
-    /* 부모는? .wrap */
+
+/* 1. 상단영역*/
+ #header{
+    /* 부모는? .full-wrap */
     /* position:absolute;
     left:0; top:0; */
+   
     width: 100%;
     height: 100px;
     background-color:rgba(0,0,0,0.5);
+    
    
   }
 
-  #top-area .inbox{
-    position: relative;
-    max-width: 1502px;
+  
+/* 공통클래스 중앙속박스 */
+.inbox{
+  max-width: 1400px;
+  margin: 0 auto;
+  outline: 1px solid red;
+  height: 100%;
 }
 
-  
-  #top-area .top-area{
-    height: 100px;
-  }
 
-
-  .header{
+  /* header 내부박스 */
+  #header .inbox{
+    max-width: 100%;
     position: relative;
-    left:0; top:0;
-    width:100%;
-    height:100%;
-    background:#fff;
   }
-  
+
+
+.header_wrap{
+  position: relative;
+}
+
   /* 로고 */
-  
-  h1.logo{
-    /* 부모는 #top-area .inbox */
-    position: absolute;
-    left: 0;
-    top:50%;
-    transform: translate(0,-50%);
+  h1.logo a{
+     /* 부모는 #header .inbox*/
+     position: absolute;
+     left:80px;
+     top:50%;
+     transform: translate(0,-50%);
+     z-index:99;
+    display: inline-block;
+    /* 배경이미지 삽입 */
+    background: url(../images/logo_wh.svg) no-repeat;
     width:58px;
     height:58px;
-    background: red;
     
-    
-  
-  
-  }
-  h1.logo a{
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    background: url(../images/logo_wh.svg) no-repeat;
-    text-indent: -999px;
   }
 
 
   /* 메뉴 */
+
+
+  #nav {
+    /* position: relative; */
+    
+    height: 100px;
+    /* overflow: hidden; */
+    z-index: 2;
+    text-align: center;
+    
+  }
+
+  
+  #header:hover #nav{
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    height: 300px;
+    transition: 0.4s;
+    background: #fff;
+}
+
+
+
+
+
+  /* 상단에 줄 */
+  /* #nav::before {
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    border-bottom: 3px solid #e1e1e1;
+  } */
+
   .gnb {
+    height:100%;
     display: flex;
     justify-content: center;
-   
-  }
-
-  .gnb{
-/* 메뉴폰트 */
+    /* 메뉴폰트 */
 font-family: "Jua", sans-serif;
+font-size: 18px;
+
   }
 
-  .gnb>li>a{
+  /* 1단메뉴 */
+  .gnb-depth1{
+    position: relative;
+  }
+
+
+  .gnb-depth1>a{
      display: block;
      line-height: 100px;
      padding:0 20px;
-     font-size:20px;
-     color:#fff;
-     text-align: left;
+     
+
    
-    
-
-  }
-
-  .gnb .sub_menu>li>a{
-    display: block;
-    line-height: 25px;
-    font-size:14px;
-    color: #666;
   }
 
 
+  /* 2단메뉴 */
+  .gnb-depth2{
+    /* 부모는.gnb-depth1 */
+    position: absolute;
+    width: 100%;
+    text-align: left;
+    z-index:2;
+    font-size:16px;
+    font-weight: normal;
+
+  }
+
+  .gnb-depth2>ul>li{
+    margin-bottom: 30px;
+  }
+
+
+  .right-gnb{
+    position:relative;
+    right:0;
+    top:50%;
+    transform: translate(-50%,0);
+  }
  
 
+  .m_btn{
+    position:absolute;
+    right:0;
+    top:50%;
+    transform: translate(-50%,0);
+    display: block;
+    text-indent: -99999px;
+    width: 100px;
+    height: 100px;
+    border:1px solid red;
+    position: absolute;
+    left:50%; top:50%;
+    transform: translate(-50%,-50%);
+  }
+  
+     .m_btn span{
+       display: block;
+       width: 100px;
+       height: 20px;
+       background: #000;
+       position: absolute;
+       left:0; top:50%;
+       transform: translate(0,-50%);
+       transition: all 0.5s ease;
+     }
+  
+       .m_btn span::before{
+       content:'';
+       width: 100%;
+       height: 20px;
+       background: #000;
+     position: absolute;
+    left:0; top:-40px;
+    transition: all 0.5s ease;
+     }
+  
+  
+     .m_btn span::after{
+         content:'';
+       width: 100%;
+       height: 20px;
+       background: #000;
+     position: absolute;
+    left:0; top:40px;
+    transition: all 0.5s ease;
+  
+     }
+  
+    /* 햄버거 버튼을 클릭했을 때 X버튼으로 변화*/
+  
+    .m_btn.on span{
+      background: rgba(0,0,0,0);
+      transition: all 0.5s ease;
+  
+  
+  
+    }
+  
+    .m_btn.on span::before{
+      transform: rotate(45deg);
+      top:0;
+      transition: all 0.5s ease;
+    }
+  
+    .m_btn.on span::after{
+      transform: rotate(-45deg);
+      top:0;
+      transition: all 0.5s ease;
+    }
+  
 
+
+
+
+  
  
 
 /* 2. 배너영역 */
