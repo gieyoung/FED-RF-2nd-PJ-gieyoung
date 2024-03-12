@@ -1,100 +1,83 @@
 @charset "utf-8";
 /* 도깨비 PJ : 메인페이지 CSS - main.css */
 
-
 /* 공사중 표시 */
 body * {
-    outline:1px solid red;
-   
+  /* outline:1px solid red; */
 }
 
 /* 전체 감싼 박스 */
-.wrap{
-    position: relative;
+.wrap {
+  position: relative;
 }
 
-
 /* 1. 상단영역*/
- #header{
-    /* 부모는? .wrap */
-    /* position:absolute;
+#header {
+  /* 부모는? .wrap */
+  /* position:absolute;
     left:0; top:0; */
-   
-    width: 100%;
-    height: 100px;
-    background-color:rgba(0,0,0,0.5);
-    
-   
-  }
 
-  
+  width: 100%;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 /* 공통클래스 중앙속박스 */
-.inbox{
+.inbox {
   max-width: 1400px;
   margin: 0 auto;
   outline: 1px solid red;
   height: 100%;
 }
 
+/* header 내부박스 */
+#header .inbox {
+  max-width: 100%;
+  position: relative;
+}
 
-  /* header 내부박스 */
-  #header .inbox{
-    max-width: 100%;
-    position: relative;
-  }
-
-
-.header_wrap{
+.header_wrap {
   position: relative;
   top: 0;
   width: 100%;
   z-index: 999;
 }
 
-  /* 로고 */
-  h1.logo a{
-     /* 부모는 #header .inbox*/
-     position: absolute;
-     left:80px;
-     top:50%;
-     transform: translate(0,-50%);
-     z-index:99;
-    display: inline-block;
-    /* 배경이미지 삽입 */
-    background: url(../images/logo_wh.svg) no-repeat;
-    width:58px;
-    height:58px;
-    
-  }
+/* 로고 */
+h1.logo a {
+  /* 부모는 #header .inbox*/
+  position: absolute;
+  left: 80px;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 99;
+  display: inline-block;
+  /* 배경이미지 삽입 */
+  background: url(../images/logo_wh.svg) no-repeat;
+  width: 58px;
+  height: 58px;
+}
 
+/* 메뉴 */
 
-  /* 메뉴 */
+#nav {
+  /* position: relative; */
 
+  height: 100px;
+  /* overflow: hidden; */
+  z-index: 2;
+  text-align: center;
+}
 
-  #nav {
-    /* position: relative; */
-    
-    height: 100px;
-    /* overflow: hidden; */
-    z-index: 2;
-    text-align: center;
-    
-  }
-
-  
-  /* #header:hover #nav{
+/* #header:hover #nav{
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     height: 300px;
     transition: 0.4s;
     background: #fff;
 } */
 
-
-
-
-
-  /* 상단에 줄 */
-  /* #nav::before {
+/* 상단에 줄 */
+/* #nav::before {
     content: "";
     position: absolute;
     top: 100px;
@@ -103,144 +86,133 @@ body * {
     border-bottom: 3px solid #e1e1e1;
   } */
 
-  .gnb {
-    width: 650px;
-    margin: 0 auto;
-    height:100%;
-    display: flex;
-    justify-content: center;
-    /* 메뉴폰트 */
-font-family: "Jua", sans-serif;
-font-size: 18px;
+.gnb {
+  width: 650px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  /* 메뉴폰트 */
+  font-family: "Jua", sans-serif;
+  font-size: 18px;
+}
 
-  }
+/* 1단메뉴 */
+.gnb-depth1::before {
+  content: "";
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: red;
+  transition: height 0.4s;
+}
+.header_wrap.on .gnb-depth1::before {
+  height: 300px;
+}
 
-  /* 1단메뉴 */
-  .gnb-depth1::before{
-    content: '';
-    position: absolute;
-    top: 100px;
-    left: 0;
-    width: 100%;
-    height: 0;
-    background-color: red;
-    transition: height .4s;
-  }
-  .header_wrap.on .gnb-depth1::before{
-    height: 300px;
-  }
+.gnb-depth1 > a {
+  display: block;
+  line-height: 100px;
+  padding: 0 20px;
+}
 
+/* 2단메뉴 */
+.gnb-depth2 {
+  /* 부모는.gnb-depth1 */
+  position: absolute;
+  /* width: 100%; */
+  text-align: left;
+  z-index: 2;
+  font-size: 16px;
+  font-weight: normal;
+  overflow: hidden;
+  height: 0;
+  transition: height 0.4s;
+}
+.header_wrap.on .gnb-depth2 {
+  height: 300px;
+}
 
-  .gnb-depth1>a{
-     display: block;
-     line-height: 100px;
-     padding:0 20px;
-     
+.gnb-depth2 > ul > li {
+  margin-bottom: 30px;
+}
 
-   
-  }
+.m_btn {
+  display: block;
+  text-indent: -99999px;
+  width: 100px;
+  height: 100px;
+  border: 1px solid red;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 
-  /* 2단메뉴 */
-  .gnb-depth2{
-    /* 부모는.gnb-depth1 */
-    position: absolute;
-    /* width: 100%; */
-    text-align: left;
-    z-index:2;
-    font-size:16px;
-    font-weight: normal;
-    overflow: hidden;
-    height: 0;
-    transition: height .4s;
+.m_btn span {
+  display: block;
+  width: 100px;
+  height: 20px;
+  background: #000;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  transition: all 0.5s ease;
+}
 
-  }
-  .header_wrap.on .gnb-depth2{
-    height: 300px;
-  }
+.m_btn span::before {
+  content: "";
+  width: 100%;
+  height: 20px;
+  background: #000;
+  position: absolute;
+  left: 0;
+  top: -40px;
+  transition: all 0.5s ease;
+}
 
-  .gnb-depth2>ul>li{
-    margin-bottom: 30px;
-  }
- 
+.m_btn span::after {
+  content: "";
+  width: 100%;
+  height: 20px;
+  background: #000;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  transition: all 0.5s ease;
+}
 
-  .m_btn{
-    display: block;
-    text-indent: -99999px;
-    width: 100px;
-    height: 100px;
-    border:1px solid red;
-    position: absolute;
-    left:50%; top:50%;
-    transform: translate(-50%,-50%);
-  }
-  
-     .m_btn span{
-       display: block;
-       width: 100px;
-       height: 20px;
-       background: #000;
-       position: absolute;
-       left:0; top:50%;
-       transform: translate(0,-50%);
-       transition: all 0.5s ease;
-     }
-  
-       .m_btn span::before{
-       content:'';
-       width: 100%;
-       height: 20px;
-       background: #000;
-     position: absolute;
-    left:0; top:-40px;
-    transition: all 0.5s ease;
-     }
-  
-  
-     .m_btn span::after{
-         content:'';
-       width: 100%;
-       height: 20px;
-       background: #000;
-     position: absolute;
-    left:0; top:40px;
-    transition: all 0.5s ease;
-  
-     }
-  
-    /* 햄버거 버튼을 클릭했을 때 X버튼으로 변화*/
-  
-    .m_btn.on span{
-      background: rgba(0,0,0,0);
-      transition: all 0.5s ease;
-  
-  
-  
-    }
-  
-    .m_btn.on span::before{
-      transform: rotate(45deg);
-      top:0;
-      transition: all 0.5s ease;
-    }
-  
-    .m_btn.on span::after{
-      transform: rotate(-45deg);
-      top:0;
-      transition: all 0.5s ease;
-    }
-  
-  
- 
+/* 햄버거 버튼을 클릭했을 때 X버튼으로 변화*/
+
+.m_btn.on span {
+  background: rgba(0, 0, 0, 0);
+  transition: all 0.5s ease;
+}
+
+.m_btn.on span::before {
+  transform: rotate(45deg);
+  top: 0;
+  transition: all 0.5s ease;
+}
+
+.m_btn.on span::after {
+  transform: rotate(-45deg);
+  top: 0;
+  transition: all 0.5s ease;
+}
 
 /* 2. 배너영역 */
 
-#ban-area{
-    height: 100vh;
-    background-color: green;
+#ban-area {
+  height: 100vh;
+  background-color: green;
 }
 
-#ban-area .inbox{
-  max-width:100%;
+#ban-area .inbox {
+  max-width: 100%;
 }
 
 /* 배너 슬라이더 */
@@ -260,6 +232,13 @@ font-size: 18px;
 }
 
 .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-slide video{
   display: block;
   width: 100%;
   height: 100%;
@@ -299,124 +278,141 @@ font-size: 18px;
 /* 배너 슬라이더 내부 글자 */
 .slide-txt {
   /* 부모는 swiper-slide */
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   width: 100%;
-   transform: translate(-50%, -50%);
- }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.slide-txt .txt {
+  font-size: 5rem;
+  line-height: 100px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+
+
+/* 슬라이드 버튼 */
+.ban-area .controls {
+  position: absolute;
+  z-index: 10;
+  width: 600px;
+  height: 50px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 70px;
+  background: #c8c8c8;
+}
+
+/* 슬라이드 시간 바 */
+#ban-area .autoplay-progress {
+  /* background: red; */
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+/* 기존 슬라이드 버튼 스타일 제거 */
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after,
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  display: none;
+}
+
+
+/* 이전/다음 버튼 디자인 커스튬 */
+#ban-area .swiper-button-next,
+#ban-area .swiper-button-prev {
+  transform: translate(0, -50%);
+  width: 50px;
+  height: 50px;
+  border: none;
+  flex: none;
+  display: block;
+  left: auto;
+  right: 60px;
+  top: 50%;
+  margin-top: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+
+#ban-area .swiper-button-prev {
+  background: url(../images/btn_prev_main.svg) no-repeat;
  
- 
- .slide-txt .txt{
-   font-size: 5rem;
-   line-height: 100px;
-   text-align: center;
-   color:#fff;
-   text-shadow:2px 2px 4px rgba(0, 0, 0, 0.8);
- }
- 
+}
+#ban-area .swiper-button-next {
+  background: url(../images/common/btn_next_main.svg) no-repeat;
+  right:0;
+}
 
+/* 슬라이더 정지/재생 버튼 */
+#ban-area .swiper-button-pause,#ban-area .swiper-button-play{
+  position: absolute;
+  /* right:120px; */
+  display: block;
+  cursor: pointer;
+  width:50px;height:50px;
+  border-radius:50%;
+  border:0;
+}
+#ban-area .swiper-button-play{
+  background:url(../images/common/btn_play_main.svg) no-repeat;
+  right:180px;
+}
 
-.ban-area .swiper-slide a {display:block;height:100%;outline-offset:-4px;}
-   
-    .ban-area .controls {bottom:70px;left:70px;right:70px;z-index:20;max-width:441px;height:50px;margin:0 auto}
-    .ban-area .swiper-pagination-fraction {left:0;bottom:0;top:50%;margin-top:-12px;width:241px;height:24px;padding:0;background:transparent;font-size:16px;line-height:24px}
-    .ban-area .swiper-pagination-current {position:absolute;top:0;left:0}
-    .ban-area .swiper-pagination-total {position:absolute;top:0;right:0}
-    .ban-area .swiper-button-prev.type2 {display:block;left:auto;right:60px}
-    .ban-area .swiper-button-next.type2 {display:block;right:0}
-    .ban-area .swiper-button-pause.type2 {left:auto;right:120px;top:50%}
-    .ban-area .swiper-button-play.type2 {left:auto;right:120px;top:50%}
+#ban-area .swiper-button-pause{
+  background:url(../images/common/btn_pause_main.svg) no-repeat;
+  right:120px;
+}
 
-    .ban-area .swiper-pagination-bullets {display:flex;gap:20px;bottom:0;left:0;width:calc(100% - 200px);padding:0}
-    .ban-area .swiper-pagination2 {bottom:auto;top:50%;left:29px;width:180px;margin-top:-2px;background:rgba(255,255,255,.3)}
-    .ban-area .swiper-pagination2 .swiper-pagination-progressbar-fill {background:#FFF}
-    .ban-area .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {height:41px;margin:0;background:transparent;opacity:1;}
-    .ban-area .swiper-pagination-bullet em {display:block;font-size:16px;font-weight:500;color:rgba(255, 255, 255, 0.3);line-height:26px;letter-spacing:0;text-align:center}
-    .ban-area .swiper-pagination-bullet-active em {font-weight:500;color:#FFF}
-    
-
-    .controls {display:flex;justify-content:center;gap:15px;height:50px}
-    .swiper-pagination-fraction {position:relative;order:2;width:auto;min-width:58px;font-size:26px;font-weight:300;line-height:50px;letter-spacing:-.8px}
-    .swiper-button-prev {flex:none;order:1;position:relative;width:50px;height:50px;margin-top:-25px;background:#fff url(../images/common/btn_prev.svg) no-repeat 50% 50% / 11px 20px;}
-    .swiper-button-next {flex:none;order:3;position:relative;width:50px;height:50px;margin-top:-25px;background:#fff url(../images/common/btn_next.svg) no-repeat 50% 50% / 11px 20px;}
-    .swiper-button-pause {flex:none;order:4;position:relative;right:0;width:50px;height:50px;margin-top:-25px;background:#fff url(../images/common/btn_pause_s.svg) no-repeat 50% 50% / 10px 16px}
-    .swiper-button-play {flex:none;order:4;position:relative;right:0;width:50px;height:50px;margin-top:-25px;background:#fff url(../images/common/btn_play_s.svg) no-repeat 50% 50% / 13px 16px}
-    .swiper-button-prev:hover::before {top:2px;left:2px;right:2px;bottom:2px;opacity:1;}
-    .swiper-button-next:hover::before {top:2px;left:2px;right:2px;bottom:2px;opacity:1;}
-    .swiper-button-pause:hover::before {top:2px;left:2px;right:2px;bottom:2px;opacity:1;}
-    .swiper-button-play:hover::before {top:2px;left:2px;right:2px;bottom:2px;opacity:1;}
-    /* 메인페이지>메인슬라이드 (type2 클래스사용) */
-    .swiper-pagination-fraction.type2{font-size:26px;font-weight:500;line-height:50px;color:#fff;text-shadow:0px 0px 4px rgba(0, 0, 0, 0.60);}
-    .swiper-pagination-fraction.type2 .swiper-pagination-current{margin-right:-3px;font-size:26px;font-weight:500;color:#fff;line-height:50px;}
-    .swiper-pagination-fraction.type2 .swiper-pagination-total{margin-left:-3px;}
-    .swiper-button-prev.type2 {display:block;position:absolute;width:50px;height:50px;margin-top:-25px;border-radius:50%;border:0;background:url(../images/common/btn_prev_main.svg) no-repeat 50% 50% / 100% 100%;}
-    .swiper-button-next.type2 {display:block;position:absolute;width:50px;height:50px;margin-top:-25px;border-radius:50%;border:0;background:url(../images/common/btn_next_main.svg) no-repeat 50% 50% / 100% 100%;}
-    .swiper-button-pause.type2 {display:block;width:50px;height:50px;margin-top:-25px;border-radius:50%;border:0;background:url(../images/common/btn_pause_main.svg) no-repeat 50% 50% / 100% 100%;}
-    .swiper-button-play.type2 {display:none;width:50px;height:50px;margin-top:-25px;border-radius:50%;border:0;background:url(../images/common/btn_play_main.svg) no-repeat 50% 50% / 100% 100%;}
-    .swiper-button-prev.type2:hover {background:url(../images/common/btn_prev_main_hover.svg) no-repeat 50% 50% / 100% 100%;transition:all .6s}
-    .swiper-button-next.type2:hover {background:url(../images/common/btn_next_main_hover.svg) no-repeat 50% 50% / 100% 100%;transition:all .6s}
-    .swiper-button-pause.type2:hover {background:url(../images/common/btn_pause_main_hover.svg) no-repeat 50% 50% / 100% 100%;transition:all .6s}
-    .swiper-button-play.type2:hover {background:url(../images/common/btn_play_main_hover.svg) no-repeat 50% 50% / 100% 100%;transition:all .6s}
-    .swiper-button-prev.type2::before {display:none}
-    .swiper-button-next.type2::before {display:none}
-    .swiper-button-pause.type2::before {display:none}
-    .swiper-button-play.type2::before {display:none}
-    /* 90x90 (type3 클래스사용) */
-    .swiper-button-prev.type3 {width:90px;height:90px;margin-top:-45px;background:#fff url(../images/common/btn_prev.svg) no-repeat 50% 50% / 15px 31px} 
-    .swiper-button-next.type3 {width:90px;height:90px;margin-top:-45px;background:#fff url(../images/common/btn_next.svg) no-repeat 50% 50% / 15px 31px} 
-    .swiper-button-pause.type3 {width:90px;height:90px;margin-top:-45px;background:#fff url(../images/common/btn_pause_b.svg) no-repeat 50% 50% / 16px 32px}
-    .swiper-button-play.type3 {width:90px;height:90px;margin-top:-45px;background:#fff url(../images/common/btn_play_b.svg) no-repeat 50% 50% / 19px 22px}
 
 
 
 /* 3. 사업소개 */
-#about-area{
-    height: 2069px;
-    background-color: #fff;
+#about-area {
+  height: 2069px;
+  background-color: #fff;
 }
-
 
 /* 4. 글로벌오뚜기 */
-#global-area{
-    height: 1240px;
-    background-color:#FFFDEB;
+#global-area {
+  height: 1240px;
+  background-color: #fffdeb;
 }
 
- /* 5. ESG경영 */
+/* 5. ESG경영 */
 
- #esg-area{
-    height: 954px;
-    background-color:#fff;
-
- }
-
- /* 6. 브랜드스토리 */
-#story-area{
-    height: 954px;
-    background-color:#ccc;
+#esg-area {
+  height: 954px;
+  background-color: #fff;
 }
 
-
- /* 7. 제품소개 */
- #product-area{
-    height: 865px;
-    background-color: #FFED00;
-
-
- }
-
-
- /* 8. 오뚜기 소식 */
-
-#news-area{
-    height: 732px;
-    background-color: #F8F8F8;
+/* 6. 브랜드스토리 */
+#story-area {
+  height: 954px;
+  background-color: #ccc;
 }
 
+/* 7. 제품소개 */
+#product-area {
+  height: 865px;
+  background-color: #ffed00;
+}
+
+/* 8. 오뚜기 소식 */
+
+#news-area {
+  height: 732px;
+  background-color: #f8f8f8;
+}
 
 /* 9. 하단영역  */
-#footer-area{
-    height: 430px;
-    background-color: #fff;
+#footer-area {
+  height: 430px;
+  background-color: #fff;
 }
