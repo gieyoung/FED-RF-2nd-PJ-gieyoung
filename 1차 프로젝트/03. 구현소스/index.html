@@ -1,28 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>오뚜기 홈페이지 벤치마킹</title>
+    
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="./images/favicon.ico" />
+    
     <!-- CSS연결 -->
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/core.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/grid_12_flex.css" />
-    
+   
     <!-- JS연결 -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
     <script src="./js/main.js" defer></script>
+    
+    <!-- CDN연결(swiper슬라이더) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+
   </head>
   <body>
-    <div class="full-wrap">
+    <div class="wrap">
       <!-- 1. 상단 -->
       <div id="header">
         <div class="inbox">
@@ -150,34 +153,21 @@
           <!-- Swiper -->
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-              <div class="swiper-slide"> <video
-                class="video mask"
-                autoplay="autoplay"
-                muted="muted"
-                preload="auto"
-                loop
-                playsinline
-              >
-                <source
-                  src="./images/51b6eeb6bbb449aab4bf46502e2bc074.mp4"
-                  type="video/mp4"
-                />
-              </video></div>
-              <div class="swiper-slide"><img src="./images/57a43ca6550d4bbcad24b4118b7e3fe6.jpg" alt="" />
-                <div class="slide-txt">
-                  <h2 class="txt">
-                    맛과 품질을 가장 소중히<br />
-                    생각하고 행동합니다.
-                  </h2>
-                </div></div>
-              <div class="swiper-slide">Slide 3</div>
-              <div class="swiper-slide">Slide 4</div>
-              <div class="swiper-slide">Slide 5</div>
-              <div class="swiper-slide">Slide 6</div>
-              <div class="swiper-slide">Slide 7</div>
-              <div class="swiper-slide">Slide 8</div>
-              <div class="swiper-slide">Slide 9</div>
+              <div class="swiper-slide"> 
+                <video class="video mask" autoplay="autoplay" muted="muted" preload="auto" loop playsinline>
+                <source src="./images/51b6eeb6bbb449aab4bf46502e2bc074.mp4" type="video/mp4"/>
+              </video>
             </div>
+            <div class="swiper-slide"><img src="./images/57a43ca6550d4bbcad24b4118b7e3fe6.jpg" alt="" />
+              <div class="slide-txt">
+                <h2 class="txt">맛과 품질을 가장 소중히<br/>생각하고 행동합니다.</h2>
+              </div>
+            </div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+           </div>
+           
             <div class="controls">
               <div class="swiper-pagination"></div><!--{* mobile: fraction / pc: fraction *}-->
               <div class="swiper-pagination2"></div><!--{* mobile: bullet / mo: progressbar *}-->

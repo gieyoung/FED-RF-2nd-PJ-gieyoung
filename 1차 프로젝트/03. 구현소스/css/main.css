@@ -9,14 +9,14 @@ body * {
 }
 
 /* 전체 감싼 박스 */
-.full-wrap{
+.wrap{
     position: relative;
 }
 
 
 /* 1. 상단영역*/
  #header{
-    /* 부모는? .full-wrap */
+    /* 부모는? .wrap */
     /* position:absolute;
     left:0; top:0; */
    
