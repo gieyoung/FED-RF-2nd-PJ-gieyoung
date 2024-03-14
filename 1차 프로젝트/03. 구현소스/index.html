@@ -27,28 +27,16 @@
       <!-- 1. 상단 -->
       <div id="top-area">
         <header class="top-area inbox">
-          <!-- 로고 -->
-          <h1 class="logo">
-            <a href="" alt="오뚜기 로고"><span class="ir">로고</span></a>
-          </h1>
           <div class="nav_wrap">
+            <!-- 로고 -->
+            <h1 class="logo">
+              <a href="" alt="오뚜기 로고"><span class="ir">로고</span></a>
+            </h1>
             <!-- 메뉴 -->
             <nav id="nav">
               <ul class="gnb">
                 <li class="gnb-depth1">
-                  <a href="/about/otgoverview">회사소개</a>
-                    <ul class="gnb-depth2">
-                      <li><a href="/about/otgoverview">Overview</a></li>
-                      <li><a href="/about/otgcompany">오뚜기 소개</a></li>
-                      <li>
-                        <a href="/about/otgoverseascorporation">글로벌 오뚜기</a>
-                      </li>
-                      <li><a href="/about/otglocation">오시는길</a></li>
-                      <li><a href="/about/otgtalent">인재채용</a></li>
-                    </ul>
-                </li>
-                <li class="gnb-depth1">
-                  <a href="/esg/otgoverview">ESG경영</a>
+                  <a href="/about/otgoverview"><span class="red">회사소개</span></a>
                   <ul class="gnb-depth2">
                     <li><a href="/about/otgoverview">Overview</a></li>
                     <li><a href="/about/otgcompany">오뚜기 소개</a></li>
@@ -60,7 +48,7 @@
                   </ul>
                 </li>
                 <li class="gnb-depth1">
-                  <a href="/product/otgbrandstory">제품이야기</a>
+                  <a href="/esg/otgoverview"><span class="red">ESG경영</span></a>
                   <ul class="gnb-depth2">
                     <li><a href="/about/otgoverview">Overview</a></li>
                     <li><a href="/about/otgcompany">오뚜기 소개</a></li>
@@ -72,7 +60,7 @@
                   </ul>
                 </li>
                 <li class="gnb-depth1">
-                  <a href="/brand/otgoverview">브랜드경험</a>
+                  <a href="/product/otgbrandstory"><span class="red">제품이야기</span></a>
                   <ul class="gnb-depth2">
                     <li><a href="/about/otgoverview">Overview</a></li>
                     <li><a href="/about/otgcompany">오뚜기 소개</a></li>
@@ -84,7 +72,7 @@
                   </ul>
                 </li>
                 <li class="gnb-depth1">
-                  <a href="/pr/otgnotice_list">홍보센터</a>
+                  <a href="/brand/otgoverview"><span class="red">브랜드경험</span></a>
                   <ul class="gnb-depth2">
                     <li><a href="/about/otgoverview">Overview</a></li>
                     <li><a href="/about/otgcompany">오뚜기 소개</a></li>
@@ -96,7 +84,19 @@
                   </ul>
                 </li>
                 <li class="gnb-depth1">
-                  <a href="/customer/customer_voice_process">고객서비스</a>
+                  <a href="/pr/otgnotice_list"><span class="red">홍보센터</span></a>
+                  <ul class="gnb-depth2">
+                    <li><a href="/about/otgoverview">Overview</a></li>
+                    <li><a href="/about/otgcompany">오뚜기 소개</a></li>
+                    <li>
+                      <a href="/about/otgoverseascorporation">글로벌 오뚜기</a>
+                    </li>
+                    <li><a href="/about/otglocation">오시는길</a></li>
+                    <li><a href="/about/otgtalent">인재채용</a></li>
+                  </ul>
+                </li>
+                <li class="gnb-depth1">
+                  <a href="/customer/customer_voice_process"><span class="red">고객서비스</span></a>
                   <ul class="gnb-depth2">
                     <li><a href="/about/otgoverview">Overview</a></li>
                     <li><a href="/about/otgcompany">오뚜기 소개</a></li>
@@ -108,11 +108,14 @@
                   </ul>
                 </li>
 
-                <!-- <li class="menu_item sitemap">
-                  <a href="#" class="m_btn">
-                    <span>메뉴1</span>
+                <!-- 사이트맵 -->
+                <li class="sitemap">
+                  <a class="hambtn" onclick="this.classList.toggle('on')">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                   </a>
-                </li> -->
+                </li>
               </ul>
             </nav>
           </div>
@@ -133,7 +136,7 @@
                   <source src="./images/51b6eeb6bbb449aab4bf46502e2bc074.mp4" type="video/mp4" />
                 </video>
                 <div class="slide-txt">
-                  <h2 class="txt">인류의 식생활 향상과<br>건강에 이바지 합니다.</h2>
+                  <h2 class="txt">인류의 식생활 향상과<br />건강에 이바지 합니다.</h2>
                 </div>
               </div>
               <div class="swiper-slide">
@@ -145,7 +148,7 @@
               <div class="swiper-slide">
                 <img src="./images/c6a1af1ea63c482ab65d1d3c1156a538.jpg" alt="" />
                 <div class="slide-txt">
-                  <h2 class="txt">식품안전문화 정착을 위해<br>노력하고 있습니다.</h2>
+                  <h2 class="txt">식품안전문화 정착을 위해<br />노력하고 있습니다.</h2>
                 </div>
               </div>
             </div>

@@ -49,9 +49,12 @@ ul::after, ol::after, .clb::after{
   display: block;
   clear:both;
 }
+html{
+  font-size: 10px;
+
+}
 
 body{
-font-size: 10px;
 /* 폰트 */
 font-family: "Noto Sans KR", sans-serif;
 }

@@ -15,7 +15,7 @@ body * {
 .inbox {
   max-width: 1400px;
   margin: 0 auto;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
   height: 100%;
 }
 
@@ -27,23 +27,15 @@ body * {
   position: relative;
 }
 
-.top-area {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;
-}
 
 /* 상단 내부박스 */
 #top-area .inbox {
-  max-width: 100%;
-  /* 부모는 #top-area */
-  position: absolute;
-  z-index: 999;
-  left: 50%;
-  top: 0;
-  transform: translate(-50%, 0);
+   max-width: 100%;
+   /* 부모는 #top-area */
+   position: absolute;
+   width: 100%;
+   height: 100px;
+   z-index: 999;
 
 }
 
@@ -69,16 +61,17 @@ h1.logo a {
   /* 플렉스로 가로정렬 */
   display: flex;
   justify-content: center;
-  font-size: 20px;
+  font-size:2.0rem;
+ 
+ 
+  
 }
 
-.gnb:hover .top-area{
-  background: #fff;
-}
-
-.gnb:hover .gnb-depth1>a{
+.top-area:hover .gnb-depth1>a{
   color:#000;
 }
+
+
 
 
 /* 1단메뉴 */
@@ -88,23 +81,35 @@ h1.logo a {
   top:0;
   left: 0;
   width: 100%;
-  height: 0;
+  height:0;
   background-color: #fff;
   z-index: -1;
+ 
 
 }
 
+
 /* 마우스 오버시 2단메뉴 배경 내려오기 */
-.nav_wrap.on .gnb-depth1::before {
+.nav_wrap:hover .gnb-depth1::before{
   height: 350px;
 }
 
-.gnb-depth1 > a {
+
+.gnb> li{width:calc(50% / 5);}
+
+.gnb> li > a {
   display: block;
   line-height: 100px;
-  padding: 0 35px;
   color: #fff;
+  /* padding:0 3.5rem; */
 }
+
+/* 마우스오버시 글자 색상 레드 */
+.gnb> li:hover .red{
+  color: red;
+}
+
+
 
 /* 2단메뉴 */
 .gnb-depth2 {
@@ -114,15 +119,15 @@ h1.logo a {
   text-align: left;
   font-size: 16px;
   font-weight: normal;
-  padding: 0 35px;
+  /* padding: 0 3.5rem; */
   /* 2단메뉴 숨기기 */
   overflow: hidden;
   height: 0;
-  transition: height 0.4s;
+ 
 }
 
 /* 메뉴 마우스 오버시 숨어있던 2단메뉴 등장 */
-.gnb:hover .gnb-depth2 {
+.nav_wrap:hover .gnb-depth2 {
   overflow: visible;
   height: 100%;
 }
@@ -136,6 +141,7 @@ h1.logo a {
   word-break: break-word;
   white-space: nowrap;
   font-weight: normal;
+
 }
 
 .gnb-depth2 > li > a:hover{
@@ -144,85 +150,100 @@ h1.logo a {
  
 }
 
-
-
-.gnb-depth2 > li > a::after{
-  content:'';
-  display: block;
-  width:100%;
-  height:1px;
-  background:#000;
-  display: none;
-
+.gnb-depth2 > li > a:hover .red{
+  color:red;
 }
 
-
-.m_btn {
-  display: block;
-  text-indent: -99999px;
-  width: 100px;
+.sitemap{
+  background: red;
+  position: relative;
+  width: 30px;
   height: 100px;
-  border: 1px solid red;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
 }
 
-.m_btn span {
-  display: block;
-  width: 100px;
-  height: 20px;
-  background: #000;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translate(0, -50%);
-  transition: all 0.5s ease;
-}
+/* 사이트맵 */
+.hambtn {
+  position: relative;
+  /* 부모자격: span */
+  width: 30px;
+  height: 30px;
 
-.m_btn span::before {
-  content: "";
+  outline: 5px dotted lightpink;
+  /* 손가락보이기 */
+  cursor: pointer;
+}
+/* 햄버거 바 공통 */
+.hambtn span {
+  position: absolute;
   width: 100%;
-  height: 20px;
-  background: #000;
-  position: absolute;
+  height:3px;
+  background-color: #333;
+  border-radius: 25px;
+}
+/* 1번 바 */
+.hambtn span:nth-child(1) {
+  top: 0;
+  /* 트랜지션 개별설정 : 햄버거 복귀 */
+  transition: top 0.3s 0.3s, transform 0.3s;
+  /* top값은 0.3초대기후 0.3초애니,
+      transfrom은 바로 0.3초 애니 
+      회전후 중앙이동함! */
+}
+/* 2번 바 */
+.hambtn span:nth-child(2) {
+  top: 50%;
   left: 0;
-  top: -40px;
-  transition: all 0.5s ease;
+  /* left초기값 있어야
+      애니메이션 됨(기본값 auto) */
+  /* 트랜지션 : 0.3초후 0.1초애니 */
+  transition: 0.1s 0.3s;
+}
+/* 3번 바 */
+.hambtn span:nth-child(3) {
+  top: 100%;
+  /* 트랜지션 개별설정 : 햄버거 복귀 */
+  transition: top 0.3s 0.3s, transform 0.3s;
+  /* top값은 0.3초대기후 0.3초애니,
+      transfrom은 바로 0.3초 애니 
+      회전후 중앙이동함! */
 }
 
-.m_btn span::after {
-  content: "";
-  width: 100%;
-  height: 20px;
-  background: #000;
-  position: absolute;
-  left: 0;
-  top: 40px;
-  transition: all 0.5s ease;
-}
-
-/* 햄버거 버튼을 클릭했을 때 X버튼으로 변화*/
-
-.m_btn.on span {
-  background: rgba(0, 0, 0, 0);
-  transition: all 0.5s ease;
-}
-
-.m_btn.on span::before {
+/* 상위 메뉴에 클래스 on 줄경우 닫기버튼으로 변경 */
+/* 1번 바 */
+.hambtn.on span:nth-child(1) {
+  top: 100px;
   transform: rotate(45deg);
-  top: 0;
-  transition: all 0.5s ease;
+  /* 트랜지션 개별설정 */
+  /* transition: top 0.3s, transform 0.3s 0.3s; */
+  /* top값은 바로 0.3초애니,
+      transfrom은 0.3초대기후 0.3초 애니 
+      중앙이동후 회전함! */
 }
-
-.m_btn.on span::after {
+/* 2번 바 */
+.hambtn.on span:nth-child(2) {
+  top: 100px;
+  width: 0%;
+  left: 50%;
+  /* 트랜지션 : 0.3초후 0.1초애니 */
+  /* transition: 0.1s 0.3s; */
+}
+/* 3번 바 */
+.hambtn.on span:nth-child(3) {
+  top: 100px;
   transform: rotate(-45deg);
-  top: 0;
-  transition: all 0.5s ease;
+  /* 트랜지션 개별설정 */
+  /* transition: top 0.3s, transform 0.3s 0.3s; */
+  /* top값은 바로 0.3초애니,
+      transfrom은 0.3초대기후 0.3초 애니 
+      중앙이동후 회전함! */
 }
 
-/* 2. 배너영역 */
+
+
+
+
+
+/*********************** 2. 배너영역 ***********************/
 
 #ban-area {
   height: 100vh;
