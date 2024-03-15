@@ -1,273 +1,328 @@
 @charset "utf-8";
 /* 도깨비 PJ : 메인페이지 CSS - main.css */
 
-
 /* 공사중 표시 */
 body * {
-    outline:1px solid red;
-   
+  /* outline:1px solid red; */
 }
 
 /* 전체 감싼 박스 */
-.full-wrap{
-    position: relative;
+.wrap {
+  position: relative;
 }
 
-
-/* 1. 상단영역*/
- #header{
-    /* 부모는? .full-wrap */
-    /* position:absolute;
-    left:0; top:0; */
-   
-    width: 100%;
-    height: 100px;
-    background-color:rgba(0,0,0,0.5);
-    
-   
-  }
-
-  
 /* 공통클래스 중앙속박스 */
-.inbox{
+.inbox {
   max-width: 1400px;
   margin: 0 auto;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
   height: 100%;
 }
 
+/************************** 1. 상단영역*********************************/
 
-  /* header 내부박스 */
-  #header .inbox{
-    max-width: 100%;
-    position: relative;
-  }
-
-
-.header_wrap{
+#top-area {
+  /* 폰트 */
+  font-family: "Jua", sans-serif;
   position: relative;
-  top: 0;
-  width: 100%;
+}
+
+
+/* 상단 내부박스 */
+#top-area .inbox {
+   max-width: 100%;
+   /* 부모는 #top-area */
+   position: absolute;
+   width: 100%;
+   height: 100px;
+   z-index: 999;
+
+}
+
+/* 로고 */
+h1.logo a {
+  /* 부모는 .top-area .inbox*/
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translate(0, -50%);
+  display: inline-block;
+  /* 로고 이미지 삽입 */
+  background: url(../images/logo_wh.svg) no-repeat;
+  width: 58px;
+  height: 58px;
   z-index: 999;
 }
 
-  /* 로고 */
-  h1.logo a{
-     /* 부모는 #header .inbox*/
-     position: absolute;
-     left:80px;
-     top:50%;
-     transform: translate(0,-50%);
-     z-index:99;
-    display: inline-block;
-    /* 배경이미지 삽입 */
-    background: url(../images/logo_wh.svg) no-repeat;
-    width:58px;
-    height:58px;
-    
-  }
+/* 메뉴 */
 
 
-  /* 메뉴 */
-
-
-  #nav {
-    /* position: relative; */
-    
-    height: 100px;
-    /* overflow: hidden; */
-    z-index: 2;
-    text-align: center;
-    
-  }
-
-  
-  /* #header:hover #nav{
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    height: 300px;
-    transition: 0.4s;
-    background: #fff;
-} */
-
-
-
-
-
-  /* 상단에 줄 */
-  /* #nav::before {
-    content: "";
-    position: absolute;
-    top: 100px;
-    left: 0;
-    width: 100%;
-    border-bottom: 3px solid #e1e1e1;
-  } */
-
-  .gnb {
-    width: 650px;
-    margin: 0 auto;
-    height:100%;
-    display: flex;
-    justify-content: center;
-    /* 메뉴폰트 */
-font-family: "Jua", sans-serif;
-font-size: 18px;
-
-  }
-
-  /* 1단메뉴 */
-  .gnb-depth1::before{
-    content: '';
-    position: absolute;
-    top: 100px;
-    left: 0;
-    width: 100%;
-    height: 0;
-    background-color: red;
-    transition: height .4s;
-  }
-  .header_wrap.on .gnb-depth1::before{
-    height: 300px;
-  }
-
-
-  .gnb-depth1>a{
-     display: block;
-     line-height: 100px;
-     padding:0 20px;
-     
-
-   
-  }
-
-  /* 2단메뉴 */
-  .gnb-depth2{
-    /* 부모는.gnb-depth1 */
-    position: absolute;
-    /* width: 100%; */
-    text-align: left;
-    z-index:2;
-    font-size:16px;
-    font-weight: normal;
-    overflow: hidden;
-    height: 0;
-    transition: height .4s;
-
-  }
-  .header_wrap.on .gnb-depth2{
-    height: 300px;
-  }
-
-  .gnb-depth2>ul>li{
-    margin-bottom: 30px;
-  }
+.gnb {
+  /* 플렉스로 가로정렬 */
+  display: flex;
+  justify-content: center;
+  font-size:2.0rem;
  
-
-  .m_btn{
-    display: block;
-    text-indent: -99999px;
-    width: 100px;
-    height: 100px;
-    border:1px solid red;
-    position: absolute;
-    left:50%; top:50%;
-    transform: translate(-50%,-50%);
-  }
-  
-     .m_btn span{
-       display: block;
-       width: 100px;
-       height: 20px;
-       background: #000;
-       position: absolute;
-       left:0; top:50%;
-       transform: translate(0,-50%);
-       transition: all 0.5s ease;
-     }
-  
-       .m_btn span::before{
-       content:'';
-       width: 100%;
-       height: 20px;
-       background: #000;
-     position: absolute;
-    left:0; top:-40px;
-    transition: all 0.5s ease;
-     }
-  
-  
-     .m_btn span::after{
-         content:'';
-       width: 100%;
-       height: 20px;
-       background: #000;
-     position: absolute;
-    left:0; top:40px;
-    transition: all 0.5s ease;
-  
-     }
-  
-    /* 햄버거 버튼을 클릭했을 때 X버튼으로 변화*/
-  
-    .m_btn.on span{
-      background: rgba(0,0,0,0);
-      transition: all 0.5s ease;
-  
-  
-  
-    }
-  
-    .m_btn.on span::before{
-      transform: rotate(45deg);
-      top:0;
-      transition: all 0.5s ease;
-    }
-  
-    .m_btn.on span::after{
-      transform: rotate(-45deg);
-      top:0;
-      transition: all 0.5s ease;
-    }
-  
-  
  
-
-/* 2. 배너영역 */
-
-#ban-area{
-    height: 100vh;
-    background-color: green;
+  
 }
 
-#ban-area .inbox{
-  max-width:100%;
+.top-area:hover .gnb-depth1>a{
+  color:#000;
+}
+
+
+
+
+/* 1단메뉴 */
+.gnb-depth1::before {
+  content: "";
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height:0;
+  background-color: #fff;
+  z-index: -1;
+ 
+
+}
+
+
+/* 마우스 오버시 2단메뉴 배경 내려오기 */
+.nav_wrap:hover .gnb-depth1::before{
+  height: 350px;
+}
+
+
+.gnb> li{width:calc(50% / 5);}
+
+.gnb> li > a {
+  display: block;
+  line-height: 100px;
+  color: #fff;
+  /* padding:0 3.5rem; */
+}
+
+/* 마우스오버시 글자 색상 레드 */
+.gnb> li:hover .red{
+  color: red;
+}
+
+
+
+/* 2단메뉴 */
+.gnb-depth2 {
+  /* 부모는 .gnb-depth1 */
+  position: absolute;
+  z-index: 5;
+  text-align: left;
+  font-size: 16px;
+  font-weight: normal;
+  /* padding: 0 3.5rem; */
+  /* 2단메뉴 숨기기 */
+  overflow: hidden;
+  height: 0;
+ 
+}
+
+/* 메뉴 마우스 오버시 숨어있던 2단메뉴 등장 */
+.nav_wrap:hover .gnb-depth2 {
+  overflow: visible;
+  height: 100%;
+}
+
+.gnb-depth2 > li > a {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 100;
+  color: #666;
+  line-height: 20px;
+  word-break: break-word;
+  white-space: nowrap;
+  font-weight: normal;
+
+}
+
+.gnb-depth2 > li > a:hover{
+  color:#000;
+  text-decoration: underline;
+ 
+}
+
+.gnb-depth2 > li > a:hover .red{
+  color:red;
+}
+
+.sitemap{
+  background: red;
+  position: relative;
+  width: 30px;
+  height: 100px;
+}
+
+/* 사이트맵 */
+.hambtn {
+  position: relative;
+  /* 부모자격: span */
+  width: 30px;
+  height: 30px;
+
+  outline: 5px dotted lightpink;
+  /* 손가락보이기 */
+  cursor: pointer;
+}
+/* 햄버거 바 공통 */
+.hambtn span {
+  position: absolute;
+  width: 100%;
+  height:3px;
+  background-color: #333;
+  border-radius: 25px;
+}
+/* 1번 바 */
+.hambtn span:nth-child(1) {
+  top: 0;
+  /* 트랜지션 개별설정 : 햄버거 복귀 */
+  transition: top 0.3s 0.3s, transform 0.3s;
+  /* top값은 0.3초대기후 0.3초애니,
+      transfrom은 바로 0.3초 애니 
+      회전후 중앙이동함! */
+}
+/* 2번 바 */
+.hambtn span:nth-child(2) {
+  top: 50%;
+  left: 0;
+  /* left초기값 있어야
+      애니메이션 됨(기본값 auto) */
+  /* 트랜지션 : 0.3초후 0.1초애니 */
+  transition: 0.1s 0.3s;
+}
+/* 3번 바 */
+.hambtn span:nth-child(3) {
+  top: 100%;
+  /* 트랜지션 개별설정 : 햄버거 복귀 */
+  transition: top 0.3s 0.3s, transform 0.3s;
+  /* top값은 0.3초대기후 0.3초애니,
+      transfrom은 바로 0.3초 애니 
+      회전후 중앙이동함! */
+}
+
+/* 상위 메뉴에 클래스 on 줄경우 닫기버튼으로 변경 */
+/* 1번 바 */
+.hambtn.on span:nth-child(1) {
+  top: 100px;
+  transform: rotate(45deg);
+  /* 트랜지션 개별설정 */
+  /* transition: top 0.3s, transform 0.3s 0.3s; */
+  /* top값은 바로 0.3초애니,
+      transfrom은 0.3초대기후 0.3초 애니 
+      중앙이동후 회전함! */
+}
+/* 2번 바 */
+.hambtn.on span:nth-child(2) {
+  top: 100px;
+  width: 0%;
+  left: 50%;
+  /* 트랜지션 : 0.3초후 0.1초애니 */
+  /* transition: 0.1s 0.3s; */
+}
+/* 3번 바 */
+.hambtn.on span:nth-child(3) {
+  top: 100px;
+  transform: rotate(-45deg);
+  /* 트랜지션 개별설정 */
+  /* transition: top 0.3s, transform 0.3s 0.3s; */
+  /* top값은 바로 0.3초애니,
+      transfrom은 0.3초대기후 0.3초 애니 
+      중앙이동후 회전함! */
+}
+
+
+
+
+
+
+/*********************** 2. 배너영역 ***********************/
+
+#ban-area {
+  height: 100vh;
+  background-color: green;
+}
+
+#ban-area .inbox {
+  max-width: 100%;
 }
 
 /* 배너 슬라이더 */
 
-swiper-container {
+.swiper {
   width: 100%;
   height: 100%;
 }
 
-swiper-slide {
-  position: relative;
+.swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
-swiper-slide img {
+.swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+.swiper-slide video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 배너 슬라이더 내부 글자 */
+.slide-txt {
+  /* 부모는 swiper-slide */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.slide-txt .txt {
+  font-size: 5rem;
+  line-height: 100px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* 배너 슬라이드 버튼 전체 감싸는 박스 */
+.ban-area .controls {
+  position: absolute;
+  z-index: 10;
+  width: 363px;
+  height: 50px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 70px;
+  /* 폰트 */
+  font-family: "Jua", sans-serif;
+}
+
+/* 배너 슬라이드 시간 바 */
+#ban-area .autoplay-progress {
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+/* 배너 슬라이드 시간 바 */
 .autoplay-progress {
   position: absolute;
   right: 16px;
@@ -280,6 +335,8 @@ swiper-slide img {
   justify-content: center;
   font-weight: bold;
   color: var(--swiper-theme-color);
+  color: #fff;
+  font-size: 14px;
 }
 
 .autoplay-progress svg {
@@ -295,96 +352,157 @@ swiper-slide img {
   fill: none;
   stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
   stroke-dasharray: 125.6;
+  stroke: #fff;
   transform: rotate(-90deg);
 }
 
+/* 슬라이드 페이지 숫자 */
+#ban-area .swiper-pagination-fraction {
+  bottom: 50%;
+  left: 39px;
+  line-height: 50px;
+  width: 100px;
+  bottom: 0;
+  font-size: 16px;
+  color: #fff;
+}
 
-/* 배너 슬라이더 내부 글자 */
-.slide-txt {
- /* 부모는 swiper-slide */
-  position: absolute;
+/* 기존 슬라이드 버튼 스타일 제거 */
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after,
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  display: none;
+}
+
+/* 이전/다음 버튼 디자인 커스튬 */
+#ban-area .swiper-button-next,
+#ban-area .swiper-button-prev {
+  transform: translate(0, -50%);
+  width: 50px;
+  height: 50px;
+  border: none;
+  flex: none;
+  display: block;
+  left: auto;
+  right: 60px;
   top: 50%;
+  margin-top: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+
+#ban-area .swiper-button-prev {
+  background: url(../images/btn_prev_main.svg) no-repeat;
+}
+#ban-area .swiper-button-next {
+  background: url(../images/common/btn_next_main.svg) no-repeat;
+  right: 0;
+}
+
+/* 슬라이더 정지/재생 버튼 */
+#ban-area .swiper-button-pause,
+#ban-area .swiper-button-play {
+  position: absolute;
+  /* right:120px; */
+  display: block;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 0;
+}
+#ban-area .swiper-button-play {
+  background: url(../images/common/btn_play_main.svg) no-repeat;
+  right: 180px;
+}
+
+#ban-area .swiper-button-pause {
+  background: url(../images/common/btn_pause_main.svg) no-repeat;
+  right: 120px;
+}
+
+#ban-area .inbox {
+  position: relative;
+}
+
+/* 
+
+#ban-area{
+  overflow: hidden;
+}
+
+
+#ban-area .bg_con {
+  display: block;
+  position: absolute;
+  top:50%;
   left: 50%;
-  width: 100%;
-  transform: translate(-50%, -50%);
+  z-index:2;
+  width: 42.875%;
+  height: 189.91%;
+  background: url(../images/prd_bg.png) no-repeat 50% / 100%;
+  transform: translate(-50%,-50%);
+  animation:  bag-ani 2s ease-in-out 3s infinite;
+
 }
 
-
-.slide-txt .txt{
-  font-size: 5rem;
-  line-height: 100px;
-  text-align: center;
-  color:#fff;
-  text-shadow:2px 2px 4px rgba(0, 0, 0, 0.8);
+#ban-area .bg_con.on {
+  width: 500%;
+  height: 500%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@keyframes bag-ani {
+  from{
+    width: 100px;
+    height: 100px;
+  }
+  to{
+    width: 500%;
+  height: 500%;
+  }
+} */
 
 /* 3. 사업소개 */
-#about-area{
-    height: 2069px;
-    background-color: #fff;
+#about-area {
+  height: 2069px;
+  background-color: #fff;
 }
-
 
 /* 4. 글로벌오뚜기 */
-#global-area{
-    height: 1240px;
-    background-color:#FFFDEB;
+#global-area {
+  height: 1240px;
+  background-color: #fffdeb;
 }
 
- /* 5. ESG경영 */
+/* 5. ESG경영 */
 
- #esg-area{
-    height: 954px;
-    background-color:#fff;
-
- }
-
- /* 6. 브랜드스토리 */
-#story-area{
-    height: 954px;
-    background-color:#ccc;
+#esg-area {
+  height: 954px;
+  background-color: #fff;
 }
 
-
- /* 7. 제품소개 */
- #product-area{
-    height: 865px;
-    background-color: #FFED00;
-
-
- }
-
-
- /* 8. 오뚜기 소식 */
-
-#news-area{
-    height: 732px;
-    background-color: #F8F8F8;
+/* 6. 브랜드스토리 */
+#story-area {
+  height: 954px;
+  background-color: #ccc;
 }
 
+/* 7. 제품소개 */
+#product-area {
+  height: 865px;
+  background-color: #ffed00;
+}
+
+/* 8. 오뚜기 소식 */
+
+#news-area {
+  height: 732px;
+  background-color: #f8f8f8;
+}
 
 /* 9. 하단영역  */
-#footer-area{
-    height: 430px;
-    background-color: #fff;
+#footer-area {
+  height: 430px;
+  background-color: #fff;
 }
