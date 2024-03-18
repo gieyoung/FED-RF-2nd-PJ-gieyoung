@@ -52,3 +52,17 @@ play.onclick = function () {
 pause.onclick = function () {
   swiper.autoplay.stop();
 };
+
+//햄버거버튼
+document.querySelector(".sitemap").onclick = function(){
+  document.querySelector(".hambtn").classList.toggle("on");
+}
+
+
+// 다국어
+  document.querySelector(".btn_lang").onclick = function(){
+    document.querySelector(".lang-menu").classList.toggle("on");
+  }
+  
+
+

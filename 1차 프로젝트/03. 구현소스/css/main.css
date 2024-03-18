@@ -27,16 +27,14 @@ body * {
   position: relative;
 }
 
-
 /* 상단 내부박스 */
 #top-area .inbox {
-   max-width: 100%;
-   /* 부모는 #top-area */
-   position: absolute;
-   width: 100%;
-   height: 100px;
-   z-index: 999;
-
+  max-width: 100%;
+  /* 부모는 #top-area */
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  z-index: 999;
 }
 
 /* 1-1.로고 */
@@ -56,48 +54,39 @@ h1.logo a {
 
 /* 1-2.메뉴 */
 
-
 .gnb {
   /* 플렉스로 가로정렬 */
   display: flex;
   justify-content: center;
-  font-size:2.0rem;
- 
- 
-  
+  font-size: 2rem;
 }
 
-.top-area:hover .gnb-depth1>a{
-  color:#000;
+.top-area:hover .gnb-depth1 > a {
+  color: #000;
 }
-
-
-
 
 /* 1단메뉴 */
 .gnb-depth1::before {
   content: "";
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   width: 100%;
-  height:0;
+  height: 0;
   background-color: #fff;
   z-index: -1;
- 
-
 }
 
-
 /* 마우스 오버시 2단메뉴 배경 내려오기 */
-.nav_wrap:hover .gnb-depth1::before{
+.nav-wrap:hover .gnb-depth1::before {
   height: 350px;
 }
 
+.gnb > li {
+  width: calc(70% / 7);
+}
 
-.gnb> li{width:calc(50% / 5);}
-
-.gnb> li > a {
+.gnb > li > a {
   display: block;
   line-height: 100px;
   color: #fff;
@@ -105,11 +94,9 @@ h1.logo a {
 }
 
 /* 마우스오버시 글자 색상 레드 */
-.gnb> li:hover .red{
+.gnb > li:hover .red {
   color: red;
 }
-
-
 
 /* 2단메뉴 */
 .gnb-depth2 {
@@ -123,11 +110,10 @@ h1.logo a {
   /* 2단메뉴 숨기기 */
   overflow: hidden;
   height: 0;
- 
 }
 
 /* 메뉴 마우스 오버시 숨어있던 2단메뉴 등장 */
-.nav_wrap:hover .gnb-depth2 {
+.nav-wrap:hover .gnb-depth2 {
   overflow: visible;
   height: 100%;
 }
@@ -141,20 +127,18 @@ h1.logo a {
   word-break: break-word;
   white-space: nowrap;
   font-weight: normal;
-
 }
 
-.gnb-depth2 > li > a:hover{
-  color:#000;
+.gnb-depth2 > li > a:hover {
+  color: #000;
   text-decoration: underline;
- 
 }
 
-.gnb-depth2 > li > a:hover .red{
-  color:red;
+.gnb-depth2 > li > a:hover .red {
+  color: red;
 }
 
-.sitemap{
+.sitemap {
   /* background: red; */
   position: relative;
   width: 10px;
@@ -165,29 +149,28 @@ h1.logo a {
 .hambtn {
   position: relative;
   /* 부모자격: span */
-  width: 30px;
-  height: 30px;
-
-  outline: 5px dotted lightpink;
-  /* 손가락보이기 */
+  /* outline: 5px dotted lightpink; */
   cursor: pointer;
+}
+
+
+.top-area:hover .hambtn span{
+  background-color: #333;
+
 }
 /* 햄버거 바 공통 */
 .hambtn span {
   position: absolute;
   width: 100%;
   height:3px;
-  background-color: #333;
+  background-color: #fff;
   border-radius: 25px;
 }
 /* 1번 바 */
 .hambtn span:nth-child(1) {
   top: 0;
-  /* 트랜지션 개별설정 : 햄버거 복귀 */
-  transition: top 0.3s 0.3s, transform 0.3s;
-  /* top값은 0.3초대기후 0.3초애니,
-      transfrom은 바로 0.3초 애니 
-      회전후 중앙이동함! */
+  
+ 
 }
 /* 2번 바 */
 .hambtn span:nth-child(2) {
@@ -196,28 +179,21 @@ h1.logo a {
   /* left초기값 있어야
       애니메이션 됨(기본값 auto) */
   /* 트랜지션 : 0.3초후 0.1초애니 */
-  transition: 0.1s 0.3s;
+
 }
 /* 3번 바 */
 .hambtn span:nth-child(3) {
   top: 100%;
-  /* 트랜지션 개별설정 : 햄버거 복귀 */
-  transition: top 0.3s 0.3s, transform 0.3s;
-  /* top값은 0.3초대기후 0.3초애니,
-      transfrom은 바로 0.3초 애니 
-      회전후 중앙이동함! */
+ 
 }
 
 /* 상위 메뉴에 클래스 on 줄경우 닫기버튼으로 변경 */
 /* 1번 바 */
 .hambtn.on span:nth-child(1) {
-  top: 100px;
+  top: 7px;
   transform: rotate(45deg);
   /* 트랜지션 개별설정 */
-  /* transition: top 0.3s, transform 0.3s 0.3s; */
-  /* top값은 바로 0.3초애니,
-      transfrom은 0.3초대기후 0.3초 애니 
-      중앙이동후 회전함! */
+ 
 }
 /* 2번 바 */
 .hambtn.on span:nth-child(2) {
@@ -225,87 +201,158 @@ h1.logo a {
   width: 0%;
   left: 50%;
   /* 트랜지션 : 0.3초후 0.1초애니 */
-  /* transition: 0.1s 0.3s; */
+
 }
 /* 3번 바 */
 .hambtn.on span:nth-child(3) {
-  top: 100px;
+  top: 7px;
   transform: rotate(-45deg);
   /* 트랜지션 개별설정 */
-  /* transition: top 0.3s, transform 0.3s 0.3s; */
-  /* top값은 바로 0.3초애니,
-      transfrom은 0.3초대기후 0.3초 애니 
-      중앙이동후 회전함! */
+  
 }
 
+/* 두번째 카피 햄버거 버튼 크기/위치이동 */
+.hambtn2 {
+  width: 28px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
 
+}
 /* 1-3.기타 */
 
-
-.nav_wrap .etc-box{
+.nav-wrap .etc-box {
   position: absolute;
-  right:200px; top:50%;
-  transform: translate(0,-50%);
-  background-color: gray;
-  width:600px;
-  height:100%;
-
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  /* background-color: gray; */
+  width: 20%;
+  height: 100%;
+  padding:0 20px;
 }
 
-.etc-box .lang{
+/* 다국어*/
+.etc-box .lang {
   position: relative;
   text-align: center;
   width: 80px;
-  
 }
 
-
-
-.btn_lang::after{
-  content: '▼';
+.btn-lang::after {
+  content: "▼";
   font-size: 9px;
   margin-left: 8px;
   vertical-align: middle;
-  
-  
- 
-  
 }
 
-.lang>a {
+.lang > a {
   font-size: 2rem;
-  color:#fff;
- 
+  color: #fff;
 }
 
-
-.nav_wrap:hover .lang>a{
-  color:#000;
+.nav-wrap:hover .lang > a {
+  color: #000;
 }
-.lang-menu{
+.lang-menu {
   text-align: center;
-  background:#F8F8F8;
+  background: #f8f8f8;
   margin-top: 11px;
   border-radius: 5px;
   padding: 12px 0;
-
-
+  position: absolute;
+  width:80px;
+  display: none;
 }
 
-.lang-menu a{
+.lang-menu.on {
+  display: block;
+}
+
+.lang-menu a {
   font-size: 1.7rem;
   line-height: 29px;
   display: inline;
-  color:#000;
- 
-
-
+  color: #000;
 }
 
-.lang-menu a:hover{
+.lang-menu a:hover {
   text-decoration: underline;
 }
+.etc-box {
+  display: flex;
+  align-items: center;
+}
 
+/* 검색버튼*/
+.search {
+  background: url(../images/gnb_search.svg) no-repeat center/cover;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.search-btn{
+  display: block;
+  width: 100%; height: 100%;
+
+}
+
+/* 챗봇 */
+.chat {
+  background: url(../images/gnb_chatbot.svg) no-repeat center/cover;
+  width: 30px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+/* 오뚜기 바로가기 */
+.ottugi-go {
+  width: 107px;
+  height: 24px;
+  background-color: #fffc29;
+  border-radius: 5px;
+  position: relative;
+  padding-right: 10px;
+}
+
+.ottugi-go::after {
+  content: "";
+  background: url("../images/ico_arrow.svg") no-repeat center/cover;
+  width: 16px;
+  height: 19px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  animation: arrow-ani 1s ease-in-out infinite;
+ 
+}
+
+
+@keyframes arrow-ani {
+  0% {
+    margin-top: -8px;
+    right: 5px;
+  }
+  50% {
+    margin-top: -10px;
+    right: 2px;
+  }
+  100% {
+    margin-top: -8px;
+    right: 5px;
+  }
+}
+
+.go-btn {
+  display: block;
+  margin: 0 auto;
+  line-height: 24px;
+  width: 100%;
+  height: 100%;
+  background: url(../images/gnb_mall.svg) no-repeat center/70px 14px;
+}
 
 /*********************** 2. 배너영역 ***********************/
 
@@ -365,7 +412,7 @@ h1.logo a {
   color: #fff;
   line-height: 100px;
   letter-spacing: 0;
-  text-shadow: 0px 8px 24px rgba(0, 0, 0, 0.80);
+  text-shadow: 0px 8px 24px rgba(0, 0, 0, 0.8);
 }
 
 /* 배너 슬라이드 버튼 전체 감싸는 박스 */
@@ -492,15 +539,6 @@ h1.logo a {
   position: relative;
 }
 
-
-
-
-
-
-
-
-
-
 /* 
 
 #ban-area{
@@ -543,6 +581,60 @@ h1.logo a {
   height: 2069px;
   background-color: #fff;
 }
+
+#about-area .inbox{
+  max-width:1400px;
+  outline: 1px solid red;;
+
+}
+
+/* 스크롤 */
+.scroll-btn{
+  background: url(../images/ico_scroll.svg) no-repeat center/cover;
+  width: 93px;
+  height: 90px;
+  display: block;
+  margin:60px auto 0;
+  position: relative;
+ 
+
+
+}
+
+.scroll-btn::after{
+  content: '';
+  background: url(../images/ico_scroll_arw.svg) no-repeat center/cover;
+  width: 16px; height: 18px;
+  display: block;
+  position: absolute;
+  left:50%; bottom:20px;
+  transform: translateX(-50%);
+  animation: arrow-ani2 1s ease-in infinite;
+
+
+}
+
+@keyframes arrow-ani2 {
+  0%{
+    bottom:20px;
+  }
+  50%{
+    bottom:15px;
+  }
+  100%{
+    bottom:20px;
+  }
+}
+
+.about-area h2{
+  font-size: 46px;
+  line-height: 63px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+
+
 
 /* 4. 글로벌오뚜기 */
 #global-area {
