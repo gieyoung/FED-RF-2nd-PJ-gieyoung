@@ -54,15 +54,13 @@ pause.onclick = function () {
 };
 
 //햄버거버튼
-document.querySelector(".sitemap").onclick = function(){
+document.querySelector(".sitemap").onclick = function () {
   document.querySelector(".hambtn").classList.toggle("on");
-}
-
+};
 
 // 다국어
-  document.querySelector(".btn_lang").onclick = function(){
-    document.querySelector(".lang-menu").classList.toggle("on");
-  }
-  
+document.querySelector(".btn_lang").onclick = function () {
+  document.querySelector(".lang-menu").classList.toggle("on");
+};
 
 

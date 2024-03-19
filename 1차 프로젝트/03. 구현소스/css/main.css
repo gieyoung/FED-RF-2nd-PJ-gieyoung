@@ -626,11 +626,123 @@ h1.logo a {
   }
 }
 
+.about-box{
+  width:80%;
+  margin:0 auto;
+}
+
 .about-area h2{
   font-size: 46px;
   line-height: 63px;
   text-align: center;
   margin-top: 100px;
+  margin-bottom:80px;
+}
+
+
+.about-area .con{
+  outline:1px solid red;
+  margin:0 auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+  
+}
+
+/* 이미지 두개가 번갈아가며 서서히 나타나는 효과 */
+.about-area .con .img-fade{
+  position: relative;
+  width: 450px;
+  height: 500px;
+  border-radius:200px;
+  outline: 1px solid red;
+  margin-right: 40px;
+  overflow: hidden;
+
+  
+}
+
+.about-area .con .img-fade img{
+  width: 100%;
+  height:100%;
+}
+
+.about-area .con .fade1{
+  /* 부모는 .img-fade */
+  position: absolute;
+  left:0; top:0;
+  animation: fade-ani 3.5s 1.5s ease-in-out infinite alternate;
+
+}
+
+.about-area .con .fade2 {
+  /* 부모는 .img-fade */
+  position: absolute;
+  left:0; top:0;
+  animation: fade-ani2 3.5s 1.5s ease-in-out infinite alternate;
+
+
+}
+
+@keyframes fade-ani{
+  0%{opacity:0;}
+  100%{opacity:1;}
+
+}
+@keyframes fade-ani2{
+  0%{opacity:1;}
+  100%{opacity:0;}
+
+}
+
+/* 글자영역 */
+.about-area .con .text h3{
+  font-size: 46px;
+  line-height: 56px;
+  margin-bottom: 30px;
+
+ 
+}
+
+.about-area .con .text h3 span{
+  color: #FFED00;
+  -webkit-text-stroke: 1px #000;
+
+}
+
+.about-area .con .text p{
+  font-size:18px;
+}
+
+
+.more{
+    display: block;
+    background: url(../images/btn_more_pc.svg) no-repeat center/cover;
+    width: 100px;
+    height: 30px;
+    margin-top:30px;
+}
+
+/* 마우스 오버시 더보기 버튼 움직이는 효과 */
+.more:hover{
+  animation:more-ani 1s ease-in-out infinite;
+}
+
+
+@keyframes more-ani {
+  0%{
+    margin-left: 0;
+    
+  }
+  50%{
+    margin-left: 20px;
+
+  }
+  100%{
+    margin-left: 0;
+
+  }
 }
 
 
@@ -640,7 +752,72 @@ h1.logo a {
 #global-area {
   height: 1240px;
   background-color: #fffdeb;
+  padding:230px 0;
+  position: relative;
+  overflow: hidden;
 }
+#global-area .inbox{
+  max-width:1400px;
+  outline: 1px solid red;
+
+
+  
+ 
+}
+
+#global-area::after{
+  content: '';
+  position: absolute;
+  width: 900px;
+  height: 900px;
+  background: url(../images/global_bg.svg) no-repeat center/cover;
+  bottom: -170px;
+  right: -70px;
+
+}
+
+.global-area h3{
+
+  font-size:80px;
+  color: #DC2F34;
+  line-height: 87px;
+ 
+}
+
+.global-area h3 span{
+  font-size:50px;
+  color:#000;
+}
+
+.global-area p{
+  font-size: 25px;
+  margin: 30px 0;
+}
+
+/* 원 이미지 영역 */
+.global-area .img-fade{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 80px;
+  gap: 50px;
+  padding:0 50px;
+}
+
+.global-area .img-fade li{
+  width:220px;
+  height: 220px;
+  border-radius: 50%;
+  background-color: grey;
+
+}
+
+
+
+
+
+
+
 
 /* 5. ESG경영 */
 
