@@ -631,7 +631,7 @@ h1.logo a {
   height: auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 /* .about-area .con .img-fade{
@@ -731,7 +731,7 @@ h1.logo a {
   font-size: 18px;
 }
 
-.more{
+.more {
   display: block;
   background: url(../images/btn_more_pc.svg) no-repeat center/cover;
   width: 100px;
@@ -739,10 +739,8 @@ h1.logo a {
   margin-top: 30px;
 }
 
-
-
 /* 마우스 오버시 더보기 버튼 움직이는 효과 */
-.more:hover{
+.more:hover {
   animation: more-ani 1s ease-in-out infinite;
 }
 
@@ -882,7 +880,7 @@ h1.logo a {
 
 /* 뒤 배경 이미지 */
 .story-area .visual {
-  background: url("../images/main_brand_mo.jpg") no-repeat 50%/cover; 
+  background: url("../images/main_brand_mo.jpg") no-repeat 50% / cover;
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -895,7 +893,6 @@ h1.logo a {
   height: 890px;
 } */
 
-
 /* 글자 */
 .story-area .visual .text {
   width: 80%;
@@ -907,8 +904,7 @@ h1.logo a {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
- 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .story-area h3 {
@@ -924,7 +920,6 @@ h1.logo a {
   line-height: 67px;
   color: #fff;
   letter-spacing: 30px;
-  
 }
 
 /* brand글자 */
@@ -939,7 +934,6 @@ h1.logo a {
   position: relative;
   justify-content: flex-end;
   padding-left: 236px;
-  
 }
 /* story글자*/
 .visual span {
@@ -961,26 +955,24 @@ h1.logo a {
   background: #ffed00;
 }
 
-.visual h6{
+.visual h6 {
   margin-top: 36px;
-  font-size:20px;
-  color:#fff;
+  font-size: 20px;
+  color: #fff;
   text-align: right;
 }
 
 /* 더보기 버튼 */
-.more2{
+.more2 {
   background: url(../images/btn_more_wh_pc.svg) no-repeat center/cover;
   width: 100px;
   height: 30px;
-  float:right;
+  float: right;
   margin-top: 100px;
-  
 }
 .more2:hover {
   animation: more-ani2 1s ease-in-out infinite;
 }
-
 
 @keyframes more-ani2 {
   0% {
@@ -994,173 +986,133 @@ h1.logo a {
   }
 }
 
-
 /* 7. 제품소개 */
 #product-area {
   height: 865px;
   background-color: #ffed00;
 }
 
-#product-area .inbox{
-  max-width: 1600px;
-  outline:1px solid red;
+#product-area .inbox {
+  max-width: 1400px;
+  outline: 1px solid red;
   position: relative;
 }
 
-
 /* 제품소개 슬라이더 */
-
-/* 배너 슬라이더 */
-
 #product-area .swiper {
-  width:1103px;
-  height: 620px;
+  width: 100%;
+  height: 100%;
   /* 부모는 #product-area .inbox */
   position: absolute;
-  left:50%;
-  top:50%;
-  transform: translate(-50%,-50%);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   outline: 1px solid red;
 }
 
-#product-area .swiper-slide{
+#product-area .swiper-slide {
   display: flex;
 }
 
 #product-area .slide-img {
   display: flex;
-    align-items: center;
-    justify-content: center;
-  width:50%;
-  height:100%;
-  outline:1px solid red;
-  background-color: rgba(0,0,0,0.5);
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  outline: 1px solid red;
+  /* background-color: rgba(0, 0, 0, 0.5); */
 }
 
 #product-area .swiper-slide img {
-  
+  max-width: 95%;
+  object-fit: contain;
 }
-
 
 /* 배너 슬라이더 내부 글자 */
 #product-area .slide-txt {
- width:50%;
- text-align: right;
- color: #000;
-
+  width: 50%;
+  text-align: right;
+  color: #000;
+  position: absolute;
+  right: 0;
+  top: calc(50% - 70px);
+  transform: translate(0, -50%);
 }
 
 #product-area .slide-txt .txt {
-  font-size: 6rem;
-  line-height: 100px;
-  line-height: 76px;
-  
+  font-size: 7rem;
+  line-height: 87px;
 }
 
-#product-area .slide-txt h3{
-  display: inline;
-  font-size:2.5rem;
+#product-area .slide-txt h3 {
+  display: inline-block;
+  font-size: 2.5rem;
   padding: 5px 30px;
   line-height: 38px;
   white-space: nowrap;
   background: rgba(0, 0, 0, 0.05);
   border-radius: 20px;
+  margin: 30px 0;
 }
-#product-area .slide-txt h4{
+#product-area .slide-txt h4 {
   font-size: 4.5rem;
   font-weight: normal;
   line-height: 57px;
-
 }
 
 /* 더보기 */
-#product-area .slide-txt .more3{
+#product-area .slide-txt .more3 {
   font-size: 2rem;
   font-weight: normal;
-  line-height: 57px;
+  line-height: 80px;
   position: relative;
   padding-right: 20px;
-  
 }
 
 /* 더보기 버튼 화살표 */
-#product-area .slide-txt .more3::after{
-  content: '';
+#product-area .slide-txt .more3::after {
+  content: "";
   position: absolute;
-  right:0;
-  top:50%;
-  transform: translate(0,-50%);
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
   background: url("../images/ico_arrow.svg");
-  width: 16px; height: 16px;
+  width: 16px;
+  height: 16px;
 }
 
-#product-area .slide-txt .more3:hover{
+#product-area .slide-txt .more3:hover {
   text-decoration: underline;
 }
 
 /* 배너 슬라이드 버튼 전체 감싸는 박스 */
-#product-area .ban-area .controls {
+#product-area .controls {
   position: absolute;
   z-index: 10;
-  width: 363px;
-  height: 50px;
-  left: 50%;
-  transform: translate(-50%, 0);
-  bottom: 70px;
-  /* 폰트 */
-  font-family: "Jua", sans-serif;
-}
+  height: 100px;
+  right: 0;
+  bottom:160px;
+  width: 400px;
 
-/* 배너 슬라이드 시간 바 */
-#product-area .autoplay-progress {
-  left: 0;
-  top: 50%;
-  transform: translate(0, -50%);
-}
-
-/* 배너 슬라이드 시간 바 */
-#product-area .autoplay-progress {
-  position: absolute;
-  right: 16px;
-  bottom: 16px;
-  z-index: 10;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: var(--swiper-theme-color);
-  color: #fff;
-  font-size: 14px;
-}
-
-#product-area .autoplay-progress svg {
-  --progress: 0;
-  position: absolute;
-  left: 0;
-  top: 0px;
-  z-index: 10;
-  width: 100%;
-  height: 100%;
-  stroke-width: 4px;
-  stroke: var(--swiper-theme-color);
-  fill: none;
-  stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
-  stroke-dasharray: 125.6;
-  stroke: #fff;
-  transform: rotate(-90deg);
 }
 
 /* 슬라이드 페이지 숫자 */
 #product-area .swiper-pagination-fraction {
-  bottom: 50%;
-  left: 39px;
-  line-height: 50px;
+  /* 부모는 #product-area .controls */
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 100px;
+  line-height: 34px;
   width: 100px;
-  bottom: 0;
-  font-size: 16px;
-  color: #fff;
+  font-size: 4rem;
+  color: #000;
+}
+
+#product-area .swiper-pagination-current {
+  font-weight:bold;
+  color: #DC2F34;
 }
 
 /* 기존 슬라이드 버튼 스타일 제거 */
@@ -1175,53 +1127,49 @@ h1.logo a {
 #product-area .swiper-button-next,
 #product-area .swiper-button-prev {
   transform: translate(0, -50%);
-  width: 50px;
-  height: 50px;
   border: none;
   flex: none;
   display: block;
-  left: auto;
-  right: 60px;
   top: 50%;
   margin-top: 0;
   z-index: 10;
   cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid #000;
+  width: 90px;
+  height: 90px;
 }
 
 #product-area .swiper-button-prev {
-  background: url(../images/btn_prev_main.svg) no-repeat;
+  background: #fff url(../images/btn_prev.svg) no-repeat 50% 50% / 18px 34px;
+  left: 0;
 }
 #product-area .swiper-button-next {
-  background: url(../images/common/btn_next_main.svg) no-repeat;
-  right: 0;
+  background: #fff url(../images/btn_next.svg) no-repeat 50% 50% / 18px 34px;
+  right: 100px;
 }
 
 /* 슬라이더 정지/재생 버튼 */
 #product-area .swiper-button-pause,
 #product-area .swiper-button-play {
+  /* #product-area .controls */
   position: absolute;
-  /* right:120px; */
-  display: block;
+  top: 50%;
+  right: 0;
+  transform: translate(0,-50%);
   cursor: pointer;
-  width: 50px;
-  height: 50px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
-  border: 0;
+  border: 2px solid #000;
 }
 #product-area .swiper-button-play {
-  background: url(../images/common/btn_play_main.svg) no-repeat;
-  right: 180px;
+  background: #fff url(../images/btn_play_b.svg) no-repeat 50% 50% / 19px 22px;
 }
 
 #product-area .swiper-button-pause {
-  background: url(../images/common/btn_pause_main.svg) no-repeat;
-  right: 120px;
+  background: #fff url(../images/btn_pause_b.svg) no-repeat 50% 50% / 16px 32px;
 }
-
-#product-area .inbox {
-  position: relative;
-}
-
 
 
 
@@ -1230,6 +1178,12 @@ h1.logo a {
 #news-area {
   height: 732px;
   background-color: #f8f8f8;
+}
+
+#news-area .inbox{
+  max-width: 1600px;
+  height: 100%;
+  outline: 1px solid red;
 }
 
 /* 9. 하단영역  */
