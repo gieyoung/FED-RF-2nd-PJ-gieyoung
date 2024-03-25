@@ -64,3 +64,18 @@ document.querySelector(".btn_lang").onclick = function () {
 };
 
 
+
+// const tabBtn = document.querySelectorAll(".tab li a");
+// const tabList = document.querySelectorAll(".list");
+
+// console.log(tabBtn,tabList);
+
+// for (let i = 0; i < tabBtn.length; i++){
+
+//   tabBtn.item(i).onclick = ()=>{
+
+//     tabList[i].style.display = "block";
+   
+   
+//   };
+// }
