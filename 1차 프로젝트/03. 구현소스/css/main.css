@@ -129,9 +129,10 @@ h1.logo a {
   font-weight: normal;
 }
 
-.gnb-depth2 > li > a:hover {
-  color: #000;
-  text-decoration: underline;
+/* 마우스 오버시 밑줄 */
+.gnb-depth2 > li > a:hover span {
+  border-bottom: 1px solid #000;
+  box-sizing: border-box;
 }
 
 .gnb-depth2 > li > a:hover .red {
@@ -1082,8 +1083,9 @@ h1.logo a {
   height: 16px;
 }
 
-#product-area .slide-txt .more3:hover {
-  text-decoration: underline;
+#product-area .slide-txt .more3:hover span {
+  border-bottom: 1px solid #000;
+  box-sizing: border-box;
 }
 
 /* 배너 슬라이드 버튼 전체 감싸는 박스 */
@@ -1180,6 +1182,7 @@ h1.logo a {
 #news-area .inbox {
   max-width: 1600px;
   height: 100%;
+  padding-bottom: 150px;
   outline: 1px solid red;
 }
 #news-area h2 {
@@ -1194,12 +1197,17 @@ h1.logo a {
   display: flex;
   justify-content: center;
   gap: 80px;
-  margin: 50px 0;
+  margin: 80px 0;
 }
 #news-area .tab li a {
   font-family: "Jua", sans-serif;
   font-size: 3rem;
   position: relative;
+}
+
+/* 탭버튼 on */
+#news-area .tab li a.on {
+  color: red;
 }
 
 /* 탭버튼 이미지 */
@@ -1230,20 +1238,33 @@ h1.logo a {
 }
 
 /* 탭리스트 */
+
 #news-area .list {
-  display: flex;
-  justify-content: center;
-  gap: 3%;
+  display: none;
 }
-#news-area .list li {
-  width: calc(100% / 3 - 3%);
+
+/* 탭리스트 on */
+#news-area .list.on {
+  display: block;
+}
+
+/************* 뉴스룸 *************/
+
+#news-area .list1 li {
+  float: left;
+  margin-right: 40px;
+  width: calc(100% / 3 - 27px);
   height: 500px;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
   overflow: hidden;
   border-radius: 10px;
   position: relative;
 }
-#news-area .list .img-box {
+
+#news-area .list li:last-child {
+  margin-right: 0;
+}
+#news-area .list1 .img-box {
   display: block;
   width: 100%;
   height: 100%;
@@ -1251,19 +1272,19 @@ h1.logo a {
 }
 
 /* 이미지박스 음영효과 */
-#news-area .list .img-box::before {
-  content: '';
+#news-area .list1 .img-box::before {
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 1;
   height: 180px;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 4%, rgba(0, 0, 0, 0.80) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 4%, rgba(0, 0, 0, 0.8) 100%);
 }
 
 /* 이미지 크기 조정 */
-#news-area .list .img-box img {
+#news-area .list1 .img-box img {
   /* 부모는 #news-area .list .img-box */
   position: absolute;
   left: 0;
@@ -1277,16 +1298,15 @@ h1.logo a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
-#news-area .list .img-box:hover img{
+/* 마우스 오버시 이미지 확대 */
+#news-area .list .img-box:hover img {
   transform: scale(1.2);
 }
 
-
-
-#news-area .list .txt-box{
+#news-area .list1 .txt-box {
   display: block;
   position: absolute;
   left: 0;
@@ -1297,46 +1317,356 @@ h1.logo a {
   color: #fff;
   font-weight: bold;
   z-index: 2;
-  
-
-
 }
 
 /* 제목 2줄만 보이게 하기 */
-#news-area .list .txt-box p{
+#news-area .list .txt-box p {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
   line-height: 34px;
- 
 }
 
-/* 레시피 */
-#news-area .list2 .txt-box{
+/*********** 레시피 ***********/
+#news-area .list2 .txt-box {
   display: block;
-  
-  
   font-size: 2.5rem;
   font-weight: bold;
-
-  
-
-
 }
 
+#news-area .list2 li {
+  float: left;
+  margin-right: 30px;
+  width: calc(100% / 4 - 23px);
+  height: auto;
+  /* outline: 1px solid red; */
+}
 
-/* #news-area .list{
-display: none;
-} */
+#news-area .list2 .img-box {
+  display: block;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+}
 
-#news-area .list.on{
+/* 이미지 크기 조정 */
+#news-area .list2 .img-box img {
+  max-height: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  min-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease-in-out;
+}
+
+#news-area .list2 .txt-box {
   display: block;
 }
 
+#news-area .list2 .txt-box p {
+  display: inline-block;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 10px 0 5px;
+  position: relative;
+  padding-right: 20px;
+}
+
+#news-area .list2 .txt-box p::after {
+  content: "";
+  /* 부모는 #news-area .list2 .txt-box p  */
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  background: url(../images/ico_arrow.svg);
+  width: 16px;
+  height: 16px;
+}
+
+#news-area .list2 .txt-box .tag {
+  font-size: 1.8rem;
+  color: #666;
+  font-weight: 500;
+}
+
+/*********** sns ***********/
+#news-area .list3 .txt-box {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+#news-area .list3 li {
+  float: left;
+  margin-right: 30px;
+  width: calc(100% / 3 - 80px);
+  height: 500px;
+  outline: 1px solid #c8c8c8;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  padding: 30px;
+}
+
+/* 인스타 로고*/
+#news-area .list3 .insta {
+  font-family: "Malgun Gothic", "맑은 고딕", "돋움", sans-serif;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  position: relative;
+  padding-left: 32px;
+}
+
+#news-area .list3 .insta::before {
+  /* 부모는 #news-area .list3 .insta */
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  background: url(../images/insta_26x26.png) no-repeat center/100%;
+  width: 26px;
+  height: 26px;
+}
+
+#news-area .list3 .img-box {
+  display: block;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* 이미지 크기 조정 */
+#news-area .list3 .img-box img {
+  max-height: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  min-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease-in-out;
+}
+
+#news-area .list3 .txt-box {
+  display: block;
+}
+
+#news-area .list3 .txt-box p {
+  display: inline-block;
+  font-size: 1.9rem;
+  font-weight: bold;
+  margin: 10px 0 5px;
+  padding-right: 20px;
+  line-height: 28px;
+}
 
 /**************** 9. 하단영역  ****************/
 #footer-area {
-  height: 430px;
+  height: auto;
   background-color: #fff;
+  padding-bottom: 60px;
+}
+
+#footer-area .inbox {
+  outline: 1px solid red;
+  max-width: 1600px;
+  height: 100%;
+}
+
+/* sns */
+
+#footer-area .sns {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+#footer-area .sns li {
+  margin-right: 20px;
+}
+#footer-area .sns li a {
+  display: inline-block;
+}
+
+#footer-area .sns .insta {
+  background: url(../images/btn_instagram.svg) no-repeat center/cover;
+  width: 28px;
+  height: 28px;
+}
+#footer-area .sns .youtube {
+  background: url(../images/btn_youtube.svg) no-repeat center/cover;
+  width: 28px;
+  height: 28px;
+}
+#footer-area .sns .facebook {
+  background: url(../images/btn_facebook.svg) no-repeat center/cover;
+  width: 28px;
+  height: 28px;
+}
+#footer-area .sns .blog {
+  background: url(../images/btn_blog.svg) no-repeat center/cover;
+  width: 28px;
+  height: 28px;
+}
+
+/* 하단로고 */
+#footer-area .con {
+  display: flex;
+  border-top: 1px solid #000;
+  padding-top: 40px;
+}
+
+#footer-area .logo {
+  margin-right: 40px;
+  width: 20%;
+}
+#footer-area .logo a {
+  display: block;
+  background: url(../images/common/f_logo.svg) no-repeat center;
+  width: 200px;
+  height: 50px;
+}
+
+/* 하단메뉴 */
+#footer-area .f-gnb {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#footer-area .f-gnb > li {
+  margin-right: 30px;
+}
+#footer-area .f-gnb > li:last-child {
+  margin-right: 0;
+}
+#footer-area .f-gnb > li > a {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+#footer-area .f-gnb .f-sub > li {
+  padding-top: 10px;
+}
+
+#footer-area .f-gnb .f-sub > li > a {
+  display: inline-block;
+  font-size: 1.5rem;
+  position: relative;
+  padding-right: 20px;
+}
+
+#footer-area .f-gnb .f-sub .more3::after {
+  content: "";
+  /* 부모는 #footer-area .f-gnb .f-sub>li>a */
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  background: url(../images/ico_arrow.svg);
+  width: 16px;
+  height: 16px;
+}
+
+/* 마우스 오버시 밑줄(a에 밑줄을 주면 마우스 오버할때마다 움직이니까 span을 넣어서 거기에 밑줄을 준다 */
+#footer-area .f-gnb .f-sub > li > a:hover span {
+  border-bottom: 1px solid #000;
+  box-sizing: border-box;
+}
+
+#footer-area .etc {
+  width: 30%;
+}
+
+/* 연락처 */
+#footer-area .etc .tel {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#footer-area .etc .tel th {
+  vertical-align: top;
+  font-size: 1.6rem;
+  color: #666;
+  text-align: left;
+  padding-right: 20px;
+  padding: 7px 20px 0 0;
+  font-weight: 500;
+}
+
+#footer-area .etc .tel td {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 18px;
+  padding: 10px 0;
+}
+
+#footer-area .etc .tel td span {
+  font-size: 1.3rem;
+  color: #666;
+  font-weight: 400;
+}
+
+/* 인증마크 */
+
+#footer-area .etc .mark {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#footer-area .etc .mark li {
+  margin-right: 20px;
+}
+
+#footer-area .etc .mark li:last-child {
+  margin-right: 0;
+}
+#footer-area .etc .mark li a {
+  display: inline-block;
+}
+#footer-area .etc .mark li:first-child a {
+  background: url(../images/iso_mark.png) no-repeat center/cover;
+  width: 69px;
+  height: 44px;
+}
+
+#footer-area .etc .mark li:nth-child(2) a {
+  background: url(../images/common/wa_mark.png) no-repeat center/cover;
+  width: 48px;
+  height: 34px;
+}
+#footer-area .etc .mark li:nth-child(3) a {
+  background: url(../images/common/ffsb_mark.png) no-repeat center/cover;
+  width: 140px;
+  height: 32px;
+}
+
+#footer-area .etc .copy {
+  font-size: 1.2rem;
+  color: #666;
+  text-align: right;
+  margin-top: 20px;
+}
+
+#wrap{
+  position: relative;
+}
+/* 탑버튼 */
+.top-btn{
+  display: inline-block;
+  position: fixed;
+  bottom:0;
+  right:0;
+  width: 80px;
+    height: 72px;
+    background: url(../images/common/btn_top_pc.svg) no-repeat center/cover;
+    z-index: 99;
 }
