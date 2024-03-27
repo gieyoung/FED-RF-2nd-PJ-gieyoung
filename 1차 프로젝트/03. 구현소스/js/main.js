@@ -40,11 +40,16 @@ var swiper = new Swiper(".swiper-container", {
       progressContent.textContent = `${Math.ceil(time / 1000)}s`;
     },
   },
+
+
+  
 });
 
 /****************슬라이드 정지/재생 버튼****************/
 var play = document.querySelector(".swiper-button-play");
 var pause = document.querySelector(".swiper-button-pause");
+
+
 
 play.onclick = function () {
   swiper.autoplay.start();
@@ -91,4 +96,10 @@ tabBtn.forEach((ele, idx) => {
 
 
 /********************탑버튼********************/
+
+const topBtn = document.querySelector(".top-btn");
+
+topBtn.onclick = () => {
+  window.scrollTo({top:0, behavior:'smooth'});
+};///////click///////////
 
