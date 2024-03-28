@@ -37,6 +37,60 @@ body * {
   z-index: 999;
 }
 
+/* 검색 팝업 */
+#top-area .pop-search{
+  width: 100%;
+    height: 150px;
+    background: #fff;
+    position: fixed;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+
+
+  
+
+#top-area .pop-search .pop-logo{
+  background: url(../images/logo_wh.svg) no-repeat;
+  width: 58px;
+  height: 58px;
+  
+ 
+}
+#top-area .pop-search h2{
+  font-size: 1.5rem;
+  font-size: 2rem;
+    font-weight: 300;
+}
+
+#top-area .pop-search form{
+  position: relative;
+}
+/* 검색창 */
+#top-area .pop-search input{
+  width: 600px;
+    height: 70px;
+    padding: 8px 140px 8px 40px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    background-color: #F8F8F8;
+   
+}
+
+#top-area .pop-search .search-btn{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 100%;
+  margin-top: 0;
+  border-radius: 0 50px 50px 0;
+  background: #FFED00 url(../images/ico_search.svg) no-repeat 50% 50% / 24px 24px;
+}
+
 /* 1-1.로고 */
 h1.logo a {
   /* 부모는 .top-area .inbox*/
@@ -407,7 +461,7 @@ h1.logo a {
 #ban-area .ban-area .controls {
   position: absolute;
   z-index: 10;
-  width: 363px;
+  width: 310px;
   height: 50px;
   left: 50%;
   transform: translate(-50%, 0);
@@ -505,7 +559,7 @@ h1.logo a {
 #ban-area .swiper-button-pause,
 #ban-area .swiper-button-play {
   position: absolute;
-  /* right:120px; */
+  right:120px;
   display: block;
   cursor: pointer;
   width: 50px;
@@ -515,7 +569,8 @@ h1.logo a {
 }
 #ban-area .swiper-button-play {
   background: url(../images/common/btn_play_main.svg) no-repeat;
-  right: 180px;
+  /* right: 180px; */
+  display: none;
 }
 
 #ban-area .swiper-button-pause {
@@ -1115,13 +1170,6 @@ h1.logo a {
   color: #dc2f34;
 }
 
-/* 기존 슬라이드 버튼 스타일 제거 */
-.swiper-button-next:after,
-.swiper-rtl .swiper-button-prev:after,
-.swiper-button-prev:after,
-.swiper-rtl .swiper-button-next:after {
-  display: none;
-}
 
 /* 이전/다음 버튼 디자인 커스튬 */
 #product-area .swiper-button-next,
@@ -1150,8 +1198,8 @@ h1.logo a {
 }
 
 /* 슬라이더 정지/재생 버튼 */
-#product-area .swiper-button-pause,
-#product-area .swiper-button-play {
+#product-area .swiper-button-pause2,
+#product-area .swiper-button-play2 {
   /* #product-area .controls */
   position: absolute;
   top: 50%;
@@ -1163,11 +1211,12 @@ h1.logo a {
   border-radius: 50%;
   border: 2px solid #000;
 }
-#product-area .swiper-button-play {
+#product-area .swiper-button-play2 {
   background: #fff url(../images/btn_play_b.svg) no-repeat 50% 50% / 19px 22px;
+  display:none;
 }
 
-#product-area .swiper-button-pause {
+#product-area .swiper-button-pause2 {
   background: #fff url(../images/btn_pause_b.svg) no-repeat 50% 50% / 16px 32px;
 }
 
