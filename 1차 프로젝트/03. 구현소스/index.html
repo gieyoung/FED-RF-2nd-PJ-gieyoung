@@ -21,6 +21,11 @@
     <!-- CDN연결(swiper슬라이더) -->
     <link rel="stylesheet" href="./css/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- AOS 라이브러리 불러오기-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+
   </head>
   <body>
     <div class="wrap">
@@ -30,14 +35,12 @@
           <div class="pop-search">
              <div class="pop-logo"><span class="ir"></span></div>
              <h2>통합검색</h2>
-           
               <form action="search">
                 <label for=""></label>
                 <input type="text" id="" name="keyword" class="" title="검색" placeholder="검색어를 입력해 주세요">
-                <button type="button" class="del-btn"><span class="sr_only">삭제</span></button>
                 <button type="submit" class="search-btn"><span class="ir">검색하기</span></button>
               </form>
-          
+              <button type="button" class="del-btn"><span class="ir">삭제</span></button>
           </div>
           <div class="nav-wrap">
             <!-- 1-1.로고 -->
@@ -130,7 +133,7 @@
             <div class="etc-box">
               <!-- 다국어 셀렉버튼 -->
               <div class="lang">
-                <a href="javascript:;" class="btn_lang">KR</a>
+                <a href="javascript:;" class="btn-lang">KR</a>
                 <div class="lang-menu">
                   <ul>
                     <li class="active"><a href="#" title="국문">KR</a></li>
@@ -144,11 +147,11 @@
               </div>
               <!-- 챗봇 -->
               <div class="chat">
-                <a href="#" class="chat-btn"><span class="ir">챗봇열기</span></a>
+                <a href="javascript:window.open('https://v2.coginsight.net/service/#/aa15f11b-60b0-470a-90df-c84d1af43be9?', '가족친화인증서', 'top=0, left=0, width=530, height=750, scrollbars=no, overflow=hidden');" class="chat-btn"><span class="ir">챗봇열기</span></a>
               </div>
               <!-- 오뚜기몰 바로가기 버튼 -->
               <div class="ottugi-go">
-                <a href="#" class="go-btn"><span class="ir">오뚜기 mall바로가기</span></a>
+                <a href="https://www.ottogimall.co.kr/" target="_blank" title="오뚜기몰 새창열림" class="go-btn"><span class="ir">오뚜기 mall바로가기</span></a>
               </div>
             </div>
           </div>
@@ -164,7 +167,7 @@
           <div class="swiper mySwiper swiper-container">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <video class="video mask" autoplay="autoplay" muted="muted" preload="auto" loop playsinline>
+                <video class="video mask on" autoplay="autoplay" muted="muted" preload="auto" loop playsinline>
                   <source src="./images/51b6eeb6bbb449aab4bf46502e2bc074.mp4" type="video/mp4" />
                 </video>
                 <div class="slide-txt">
@@ -218,7 +221,7 @@
           <ul class="about-box">
             <li class="con">
               <!-- 이미지 영역 -->
-              <div class="img-fade img-fade1">
+              <div class="img-fade img-fade1 aos-init aos-animate" data-aos="fade-up">
                 <img src="./images/clip1.jpg" alt="" class="fade1" />
                 <img src="./images/clip1_1.jpg" alt="" class="fade2" />
               </div>
@@ -372,6 +375,7 @@
       </div>
       <!-- 7. 제품소개 -->
       <div id="product-area">
+        <div class="bg-con"></div>
         <section class="product-area inbox">
           <!-- 제품소개 슬라이더 -->
           <!-- Swiper -->

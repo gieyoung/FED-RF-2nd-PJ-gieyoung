@@ -37,17 +37,20 @@ body * {
   z-index: 999;
 }
 
-/* 검색 팝업 */
+/* 검색창 팝업 */
 #top-area .pop-search{
   width: 100%;
     height: 150px;
     background: #fff;
     position: fixed;
-    z-index: 9999;
     display: flex;
     justify-content: center;
     align-items: center;
     gap:10px;
+    z-index:9999;
+    /* 검색창 안보이게 */
+    display: none;
+
 }
 
 
@@ -69,7 +72,7 @@ body * {
 #top-area .pop-search form{
   position: relative;
 }
-/* 검색창 */
+/* 검색 입력창 */
 #top-area .pop-search input{
   width: 600px;
     height: 70px;
@@ -77,18 +80,39 @@ body * {
     border-radius: 50px;
     box-sizing: border-box;
     background-color: #F8F8F8;
+    font-size: 1.6rem;
+    border: none;
    
 }
 
+#top-area form:hover input{
+ outline:2px solid #000;
+}
+
+/* 검색버튼 */
 #top-area .pop-search .search-btn{
   position: absolute;
   top: 0;
   right: 0;
   width: 80px;
-  height: 100%;
+  height: 99%;
   margin-top: 0;
   border-radius: 0 50px 50px 0;
   background: #FFED00 url(../images/ico_search.svg) no-repeat 50% 50% / 24px 24px;
+  border: none;
+  cursor: pointer;
+}
+
+/* 검색창 닫기버튼 */
+#top-area .pop-search .del-btn{
+  position: absolute;
+  top:0;
+  right:0;
+  width: 48px;
+  height: 48px;
+  background: url(../images/btn_pop_close_b.svg) no-repeat 50% 50% / 30px 30px;
+  border:none;
+  cursor: pointer;
 }
 
 /* 1-1.로고 */
@@ -136,6 +160,8 @@ h1.logo a {
   height: 350px;
 }
 
+
+
 .gnb > li {
   width: calc(70% / 7);
 }
@@ -144,8 +170,15 @@ h1.logo a {
   display: block;
   line-height: 100px;
   color: #fff;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.60);
   /* padding:0 3.5rem; */
 }
+
+/* 헤더에 마우스 오버시 글자 그림자 효과 없애기 */
+.nav-wrap:hover .gnb > li > a{
+  text-shadow: none;
+}
+
 
 /* 마우스오버시 글자 색상 레드 */
 .gnb > li:hover .red {
@@ -188,8 +221,11 @@ h1.logo a {
   box-sizing: border-box;
 }
 
+
+
 .gnb-depth2 > li > a:hover .red {
   color: red;
+  
 }
 
 .sitemap {
@@ -289,6 +325,7 @@ h1.logo a {
   font-size: 9px;
   margin-left: 8px;
   vertical-align: middle;
+ 
 }
 
 .lang > a {
@@ -301,12 +338,13 @@ h1.logo a {
 }
 .lang-menu {
   text-align: center;
-  background: #f8f8f8;
+  background: #c3c3c3;
   margin-top: 11px;
   border-radius: 5px;
   padding: 12px 0;
   position: absolute;
   width: 80px;
+  left: -9px;
   display: none;
 }
 
@@ -351,6 +389,11 @@ h1.logo a {
   margin-right: 10px;
 }
 
+.chat a{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 /* 오뚜기 바로가기 */
 .ottugi-go {
   width: 107px;
@@ -369,8 +412,13 @@ h1.logo a {
   position: absolute;
   right: 0;
   top: 50%;
+  margin-top: -8px;
+  right: 5px;
   animation: arrow-ani 1s ease-in-out infinite;
+  
 }
+
+
 
 @keyframes arrow-ani {
   0% {
@@ -435,6 +483,38 @@ h1.logo a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+
+}
+
+/* 하얀색 원이 화면을 채우는 애니(mask-image사용 */
+#ban-area .swiper-slide .mask{
+  width: 100%;
+  height: 105%;
+  object-fit: cover;
+  mask-size: 66.66% 56.29%;
+  -webkit-mask-size: 66.66% 56.29%;
+  mask-image: url(../images/mask.png);
+  -webkit-mask-image: url(../images/mask.png);
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center bottom;
+  -webkit-mask-position: center bottom;
+  transition: mask-size 1s;
+  -webkit-transition: -webkit-mask-size 1s;
+
+}
+
+#ban-area .swiper-slide .mask.on{
+ animation: mask-ani 1s ease-in-out 1s forwards;
+}
+
+
+@keyframes mask-ani {
+
+  to{ mask-size:500% 400%;
+    -webkit-mask-size:500% 400%;
+
+  }
 }
 
 /* 배너 슬라이더 내부 글자 */
@@ -551,7 +631,7 @@ h1.logo a {
   background: url(../images/btn_prev_main.svg) no-repeat;
 }
 #ban-area .swiper-button-next {
-  background: url(../images/common/btn_next_main.svg) no-repeat;
+  background: url(../images/btn_next_main.svg) no-repeat;
   right: 0;
 }
 
@@ -568,13 +648,13 @@ h1.logo a {
   border: 0;
 }
 #ban-area .swiper-button-play {
-  background: url(../images/common/btn_play_main.svg) no-repeat;
+  background: url(../images/btn_play_main.svg) no-repeat;
   /* right: 180px; */
   display: none;
 }
 
 #ban-area .swiper-button-pause {
-  background: url(../images/common/btn_pause_main.svg) no-repeat;
+  background: url(../images/btn_pause_main.svg) no-repeat;
   right: 120px;
 }
 
@@ -1044,13 +1124,53 @@ h1.logo a {
 /* 7. 제품소개 */
 #product-area {
   height: 865px;
-  background-color: #ffed00;
+  /* background-color: #ffed00; */
+  position: relative;
 }
 
 #product-area .inbox {
   max-width: 1400px;
   outline: 1px solid red;
   position: relative;
+}
+
+
+
+
+#product-area{
+  overflow: hidden;
+}
+
+/* 배경애니 */
+#product-area .bg-con {
+  display: block;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  z-index:1;
+  width: 42.875%;
+  height: 189.91%;
+  background: url(../images/prd_bg.png) no-repeat 50% / 100%;
+  transform: translate(-50%,-50%);
+  animation:  bag-ani 2s ease-in-out;
+  
+
+}
+
+#product-area .bg-con.on {
+  width: 500%;
+  height: 500%;
+}
+
+@keyframes bag-ani {
+  from{
+    width: 100px;
+    height: 100px;
+  }
+  to{
+    width: 500%;
+  height: 500%;
+  }
 }
 
 /* 제품소개 슬라이더 */
@@ -1581,7 +1701,7 @@ h1.logo a {
 }
 #footer-area .logo a {
   display: block;
-  background: url(../images/common/f_logo.svg) no-repeat center;
+  background: url(../images/f_logo.svg) no-repeat center;
   width: 200px;
   height: 50px;
 }
@@ -1690,12 +1810,12 @@ h1.logo a {
 }
 
 #footer-area .etc .mark li:nth-child(2) a {
-  background: url(../images/common/wa_mark.png) no-repeat center/cover;
+  background: url(../images/wa_mark.png) no-repeat center/cover;
   width: 48px;
   height: 34px;
 }
 #footer-area .etc .mark li:nth-child(3) a {
-  background: url(../images/common/ffsb_mark.png) no-repeat center/cover;
+  background: url(../images/ffsb_mark.png) no-repeat center/cover;
   width: 140px;
   height: 32px;
 }
@@ -1718,7 +1838,7 @@ h1.logo a {
   right:0;
   width: 80px;
     height: 72px;
-    background: url(../images/common/btn_top_pc.svg) no-repeat center/cover;
+    background: url(../images/btn_top_pc.svg) no-repeat center/cover;
     z-index: 99;
     transition: 3s ease-in-out;
 }

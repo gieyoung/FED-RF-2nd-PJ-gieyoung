@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+/* 도깨비 PJ : 공통 클래스 CSS - core.css */
+/* 공통 셋팅을 위한 클래스 + 웹폰트 */
+
+/* 웹폰트*/
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&display=swap');
+
+/* 
+    0. 메뉴 등 일반체
+    font-family: "Jua", sans-serif;
+    font-family: "Noto Sans KR", sans-serif;
+    font-family: "Hahmlet", serif;
+
+}
+
+    1. 캐릭터 설명 제목체
+    
+    2. 캐릭터 설명 내용체
+    
+    3. 캐릭터 설명 한자체
+    
+    4. 전체 공통체(메뉴 등)
+    
+*/
+
+/* 글자날리기 */
+.ir{
+  display: block;
+  width:0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* 임시타이틀 */
+.temp-tit{
+  position: absolute;
+  font-size: 2vw;
+  color:#888;
+
+}
+
+/* 공통클래스: 클리어 설정 */
+.clb::after{
+  content: '';
+  display: block;
+  clear:both;
+}
+html{
+  font-size: 10px;
+
+}
+
+body{
+/* 폰트 */
+font-family: "Noto Sans KR", sans-serif;
+}
+
+
+
+
+
+.cont-box{
+  height: 100%;
+} 
+
+
