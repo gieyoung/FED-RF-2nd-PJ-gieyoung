@@ -76,9 +76,33 @@ play.onclick = function () {
 
 
 /****************햄버거 버튼****************/
-document.querySelector(".sitemap").onclick = function () {
-  document.querySelector(".hambtn").classList.toggle("on");
-};
+//대상선정: 햄버거 버튼
+const siteMap = document.querySelector(".sitemap");
+const hamBtn = document.querySelector(".hambtn");
+const popMenu = document.querySelector(".pop-menu");
+
+
+// 반응형 웹 햄버거 메뉴 클릭 시 메뉴 펼침, 숨김 처리
+siteMap.addEventListener('click', () => {
+  hamBtn.classList.toggle('on');
+  popMenu.classList.toggle('on');
+});
+
+
+// document.querySelector(".sitemap").onclick = function () {
+//   document.querySelector(".hambtn").classList.add("on");
+//   document.querySelector(".pop-menu").style.display = "block";
+
+// };
+// document.querySelector(".sitemap").onclick = function () {
+//   document.querySelector(".hambtn").classList.remove("on");
+//   document.querySelector(".pop-menu").style.display = "none";
+  
+// };
+
+/****************사이트맵 팝업****************/
+
+
 
 /****************다국어****************/
 document.querySelector(".btn-lang").onclick = function () {

@@ -4,10 +4,10 @@
 /* 공통 셋팅을 위한 클래스 + 웹폰트 */
 
 /* 웹폰트*/
-@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&display=swap");
 
 /* 
     0. 메뉴 등 일반체
@@ -27,44 +27,56 @@
     
 */
 
+/* 공사중 표시 */
+body * {
+  /* outline:1px solid red; */
+}
+
+/* 전체 감싼 박스 */
+#wrap {
+  position: relative;
+}
+
+/* 공통클래스 중앙속박스 */
+.inbox {
+  max-width: 1600px;
+  margin: 0 auto;
+  /* outline: 1px solid red; */
+  height: 100%;
+}
+
 /* 글자날리기 */
-.ir{
+.ir {
   display: block;
-  width:0;
+  width: 0;
   height: 0;
   overflow: hidden;
 }
 
 /* 임시타이틀 */
-.temp-tit{
+.temp-tit {
   position: absolute;
   font-size: 2vw;
-  color:#888;
-
+  color: #888;
 }
 
 /* 공통클래스: 클리어 설정 */
-.clb::after{
-  content: '';
+.clb::after {
+  content: "";
   display: block;
-  clear:both;
+  clear: both;
 }
-html{
+
+/* rem 계산 편하게 하기 위해 */
+html {
   font-size: 10px;
-
 }
 
-body{
-/* 폰트 */
-font-family: "Noto Sans KR", sans-serif;
+body {
+  /* 폰트 */
+  font-family: "Noto Sans KR", sans-serif;
 }
 
-
-
-
-
-.cont-box{
+.cont-box {
   height: 100%;
-} 
-
-
+}

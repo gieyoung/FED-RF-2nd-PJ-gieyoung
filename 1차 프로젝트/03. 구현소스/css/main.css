@@ -1,448 +1,8 @@
 @charset "utf-8";
 /* 도깨비 PJ : 메인페이지 CSS - main.css */
 
-/* 공사중 표시 */
-body * {
-  /* outline:1px solid red; */
-}
-
-/* 전체 감싼 박스 */
-.wrap {
-  position: relative;
-}
-
-/* 공통클래스 중앙속박스 */
-.inbox {
-  max-width: 1400px;
-  margin: 0 auto;
-  /* outline: 1px solid red; */
-  height: 100%;
-}
-
-/************************** 1. 상단영역*********************************/
-
-#top-area {
-  /* 폰트 */
-  font-family: "Jua", sans-serif;
-  position: relative;
-}
-
-/* 상단 내부박스 */
-#top-area .inbox {
-  max-width: 100%;
-  /* 부모는 #top-area */
-  position: absolute;
-  width: 100%;
-  height: 100px;
-  z-index: 999;
-}
-
-/* 검색창 팝업 */
-#top-area .pop-search{
-  width: 100%;
-    height: 150px;
-    background: #fff;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap:10px;
-    z-index:9999;
-    /* 검색창 안보이게 */
-    display: none;
-
-}
-
-
-  
-
-#top-area .pop-search .pop-logo{
-  background: url(../images/logo_wh.svg) no-repeat;
-  width: 58px;
-  height: 58px;
-  
- 
-}
-#top-area .pop-search h2{
-  font-size: 1.5rem;
-  font-size: 2rem;
-    font-weight: 300;
-}
-
-#top-area .pop-search form{
-  position: relative;
-}
-/* 검색 입력창 */
-#top-area .pop-search input{
-  width: 600px;
-    height: 70px;
-    padding: 8px 140px 8px 40px;
-    border-radius: 50px;
-    box-sizing: border-box;
-    background-color: #F8F8F8;
-    font-size: 1.6rem;
-    border: none;
-   
-}
-
-#top-area form:hover input{
- outline:2px solid #000;
-}
-
-/* 검색버튼 */
-#top-area .pop-search .search-btn{
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 80px;
-  height: 99%;
-  margin-top: 0;
-  border-radius: 0 50px 50px 0;
-  background: #FFED00 url(../images/ico_search.svg) no-repeat 50% 50% / 24px 24px;
-  border: none;
-  cursor: pointer;
-}
-
-/* 검색창 닫기버튼 */
-#top-area .pop-search .del-btn{
-  position: absolute;
-  top:0;
-  right:0;
-  width: 48px;
-  height: 48px;
-  background: url(../images/btn_pop_close_b.svg) no-repeat 50% 50% / 30px 30px;
-  border:none;
-  cursor: pointer;
-}
-
-/* 1-1.로고 */
-h1.logo a {
-  /* 부모는 .top-area .inbox*/
-  position: absolute;
-  left: 30px;
-  top: 50%;
-  transform: translate(0, -50%);
-  display: inline-block;
-  /* 로고 이미지 삽입 */
-  background: url(../images/logo_wh.svg) no-repeat;
-  width: 58px;
-  height: 58px;
-  z-index: 999;
-}
-
-/* 1-2.메뉴 */
-
-.gnb {
-  /* 플렉스로 가로정렬 */
-  display: flex;
-  justify-content: center;
-  font-size: 2rem;
-}
-
-.top-area:hover .gnb-depth1 > a {
-  color: #000;
-}
-
-/* 1단메뉴 */
-.gnb-depth1::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
-  background-color: #fff;
-  z-index: -1;
-}
-
-/* 마우스 오버시 2단메뉴 배경 내려오기 */
-.nav-wrap:hover .gnb-depth1::before {
-  height: 350px;
-}
-
-
-
-.gnb > li {
-  width: calc(70% / 7);
-}
-
-.gnb > li > a {
-  display: block;
-  line-height: 100px;
-  color: #fff;
-  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.60);
-  /* padding:0 3.5rem; */
-}
-
-/* 헤더에 마우스 오버시 글자 그림자 효과 없애기 */
-.nav-wrap:hover .gnb > li > a{
-  text-shadow: none;
-}
-
-
-/* 마우스오버시 글자 색상 레드 */
-.gnb > li:hover .red {
-  color: red;
-}
-
-/* 2단메뉴 */
-.gnb-depth2 {
-  /* 부모는 .gnb-depth1 */
-  position: absolute;
-  z-index: 5;
-  text-align: left;
-  font-size:1.5rem;
-  font-weight: normal;
-  /* padding: 0 3.5rem; */
-  /* 2단메뉴 숨기기 */
-  overflow: hidden;
-  height: 0;
-}
-
-/* 메뉴 마우스 오버시 숨어있던 2단메뉴 등장 */
-.nav-wrap:hover .gnb-depth2 {
-  overflow: visible;
-  height: 100%;
-}
-
-.gnb-depth2 > li > a {
-  display: block;
-  margin-bottom: 20px;
-  color: #666;
-  line-height: 20px;
-  word-break: break-word;
-  white-space: nowrap;
-  font-family: "Noto Sans KR", sans-serif;
-}
-
-/* 마우스 오버시 밑줄 */
-.gnb-depth2 > li > a:hover span {
-  border-bottom: 1px solid #000;
-  box-sizing: border-box;
-}
-
-
-
-.gnb-depth2 > li > a:hover .red {
-  color: red;
-  
-}
-
-.sitemap {
-  /* background: red; */
-  position: relative;
-  width: 10px;
-  height: 100px;
-}
-
-/* 사이트맵 */
-.hambtn {
-  position: relative;
-  /* 부모자격: span */
-  /* outline: 5px dotted lightpink; */
-  cursor: pointer;
-}
-
-.top-area:hover .hambtn span {
-  background-color: #333;
-}
-/* 햄버거 바 공통 */
-.hambtn span {
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  background-color: #fff;
-  border-radius: 25px;
-}
-/* 1번 바 */
-.hambtn span:nth-child(1) {
-  top: 0;
-}
-/* 2번 바 */
-.hambtn span:nth-child(2) {
-  top: 50%;
-  left: 0;
-  /* left초기값 있어야
-      애니메이션 됨(기본값 auto) */
-  /* 트랜지션 : 0.3초후 0.1초애니 */
-}
-/* 3번 바 */
-.hambtn span:nth-child(3) {
-  top: 100%;
-}
-
-/* 상위 메뉴에 클래스 on 줄경우 닫기버튼으로 변경 */
-/* 1번 바 */
-.hambtn.on span:nth-child(1) {
-  top: 7px;
-  transform: rotate(45deg);
-  /* 트랜지션 개별설정 */
-}
-/* 2번 바 */
-.hambtn.on span:nth-child(2) {
-  top: 100px;
-  width: 0%;
-  left: 50%;
-  /* 트랜지션 : 0.3초후 0.1초애니 */
-}
-/* 3번 바 */
-.hambtn.on span:nth-child(3) {
-  top: 7px;
-  transform: rotate(-45deg);
-  /* 트랜지션 개별설정 */
-}
-
-/* 두번째 카피 햄버거 버튼 크기/위치이동 */
-.hambtn2 {
-  width: 28px;
-  height: 20px;
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-}
-/* 1-3.기타 */
-
-.nav-wrap .etc-box {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translate(0, -50%);
-  /* background-color: gray; */
-  width: 20%;
-  height: 100%;
-  padding: 0 20px;
-}
-
-/* 다국어*/
-.etc-box .lang {
-  position: relative;
-  text-align: center;
-  width: 80px;
-}
-
-.btn-lang::after {
-  content: "▼";
-  font-size: 9px;
-  margin-left: 8px;
-  vertical-align: middle;
- 
-}
-
-.lang > a {
-  font-size: 2rem;
-  color: #fff;
-}
-
-.nav-wrap:hover .lang > a {
-  color: #000;
-}
-.lang-menu {
-  text-align: center;
-  background: #c3c3c3;
-  margin-top: 11px;
-  border-radius: 5px;
-  padding: 12px 0;
-  position: absolute;
-  width: 80px;
-  left: -9px;
-  display: none;
-}
-
-.lang-menu.on {
-  display: block;
-}
-
-.lang-menu a {
-  font-size: 1.7rem;
-  line-height: 29px;
-  display: inline;
-  color: #000;
-}
-
-.lang-menu a:hover {
-  text-decoration: underline;
-}
-.etc-box {
-  display: flex;
-  align-items: center;
-}
-
-/* 검색버튼*/
-.search {
-  background: url(../images/gnb_search.svg) no-repeat center/cover;
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
-}
-
-.search-btn {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-/* 챗봇 */
-.chat {
-  background: url(../images/gnb_chatbot.svg) no-repeat center/cover;
-  width: 30px;
-  height: 25px;
-  margin-right: 10px;
-}
-
-.chat a{
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-/* 오뚜기 바로가기 */
-.ottugi-go {
-  width: 107px;
-  height: 24px;
-  background-color: #fffc29;
-  border-radius: 5px;
-  position: relative;
-  padding-right: 10px;
-}
-
-.ottugi-go::after {
-  content: "";
-  background: url("../images/ico_arrow.svg") no-repeat center/cover;
-  width: 16px;
-  height: 19px;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  margin-top: -8px;
-  right: 5px;
-  animation: arrow-ani 1s ease-in-out infinite;
-  
-}
-
-
-
-@keyframes arrow-ani {
-  0% {
-    margin-top: -8px;
-    right: 5px;
-  }
-  50% {
-    margin-top: -10px;
-    right: 2px;
-  }
-  100% {
-    margin-top: -8px;
-    right: 5px;
-  }
-}
-
-.go-btn {
-  display: block;
-  margin: 0 auto;
-  line-height: 24px;
-  width: 100%;
-  height: 100%;
-  background: url(../images/gnb_mall.svg) no-repeat center/70px 14px;
-}
+/************* 1. 상단영역 *************/
+/* common.css */
 
 /*********************** 2. 배너영역 ***********************/
 
@@ -453,6 +13,7 @@ h1.logo a {
 
 #ban-area .inbox {
   max-width: 100%;
+  position: relative;
 }
 
 /* 배너 슬라이더 */
@@ -483,11 +44,10 @@ h1.logo a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-
 }
 
 /* 하얀색 원이 화면을 채우는 애니(mask-image사용 */
-#ban-area .swiper-slide .mask{
+#ban-area .swiper-slide .mask {
   width: 100%;
   height: 105%;
   object-fit: cover;
@@ -501,19 +61,16 @@ h1.logo a {
   -webkit-mask-position: center bottom;
   transition: mask-size 1s;
   -webkit-transition: -webkit-mask-size 1s;
-
 }
 
-#ban-area .swiper-slide .mask.on{
- animation: mask-ani 1s ease-in-out 1s forwards;
+#ban-area .swiper-slide .mask.on {
+  animation: mask-ani 1s ease-in-out 1s forwards;
 }
-
 
 @keyframes mask-ani {
-
-  to{ mask-size:500% 400%;
-    -webkit-mask-size:500% 400%;
-
+  to {
+    mask-size: 500% 400%;
+    -webkit-mask-size: 500% 400%;
   }
 }
 
@@ -639,7 +196,7 @@ h1.logo a {
 #ban-area .swiper-button-pause,
 #ban-area .swiper-button-play {
   position: absolute;
-  right:120px;
+  right: 120px;
   display: block;
   cursor: pointer;
   width: 50px;
@@ -658,46 +215,6 @@ h1.logo a {
   right: 120px;
 }
 
-#ban-area .inbox {
-  position: relative;
-}
-
-/* 
-
-#ban-area{
-  overflow: hidden;
-}
-
-
-#ban-area .bg_con {
-  display: block;
-  position: absolute;
-  top:50%;
-  left: 50%;
-  z-index:2;
-  width: 42.875%;
-  height: 189.91%;
-  background: url(../images/prd_bg.png) no-repeat 50% / 100%;
-  transform: translate(-50%,-50%);
-  animation:  bag-ani 2s ease-in-out 3s infinite;
-
-}
-
-#ban-area .bg_con.on {
-  width: 500%;
-  height: 500%;
-}
-
-@keyframes bag-ani {
-  from{
-    width: 100px;
-    height: 100px;
-  }
-  to{
-    width: 500%;
-  height: 500%;
-  }
-} */
 
 /* 3. 사업소개 */
 #about-area {
@@ -1134,10 +651,7 @@ h1.logo a {
   position: relative;
 }
 
-
-
-
-#product-area{
+#product-area {
   overflow: hidden;
 }
 
@@ -1145,16 +659,14 @@ h1.logo a {
 #product-area .bg-con {
   display: block;
   position: absolute;
-  top:50%;
+  top: 50%;
   left: 50%;
-  z-index:1;
+  z-index: 1;
   width: 42.875%;
   height: 189.91%;
   background: url(../images/prd_bg.png) no-repeat 50% / 100%;
-  transform: translate(-50%,-50%);
-  animation:  bag-ani 2s ease-in-out;
-  
-
+  transform: translate(-50%, -50%);
+  animation: bag-ani 2s ease-in-out;
 }
 
 #product-area .bg-con.on {
@@ -1163,13 +675,13 @@ h1.logo a {
 }
 
 @keyframes bag-ani {
-  from{
+  from {
     width: 100px;
     height: 100px;
   }
-  to{
+  to {
     width: 500%;
-  height: 500%;
+    height: 500%;
   }
 }
 
@@ -1290,7 +802,6 @@ h1.logo a {
   color: #dc2f34;
 }
 
-
 /* 이전/다음 버튼 디자인 커스튬 */
 #product-area .swiper-button-next,
 #product-area .swiper-button-prev {
@@ -1333,7 +844,7 @@ h1.logo a {
 }
 #product-area .swiper-button-play2 {
   background: #fff url(../images/btn_play_b.svg) no-repeat 50% 50% / 19px 22px;
-  display:none;
+  display: none;
 }
 
 #product-area .swiper-button-pause2 {
@@ -1348,7 +859,6 @@ h1.logo a {
 }
 
 #news-area .inbox {
-  max-width: 1600px;
   height: 100%;
   padding-bottom: 150px;
   outline: 1px solid red;
@@ -1581,7 +1091,6 @@ h1.logo a {
   padding: 30px;
 }
 
-
 /* 인스타 로고*/
 #news-area .list3 .insta {
   font-family: "Malgun Gothic", "맑은 고딕", "돋움", sans-serif;
@@ -1638,207 +1147,4 @@ h1.logo a {
 }
 
 /**************** 9. 하단영역  ****************/
-#footer-area {
-  height: auto;
-  background-color: #fff;
-  padding-bottom: 60px;
-}
-
-#footer-area .inbox {
-  outline: 1px solid red;
-  max-width: 1600px;
-  height: 100%;
-}
-
-/* sns */
-
-#footer-area .sns {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 20px;
-}
-
-#footer-area .sns li {
-  margin-right: 20px;
-}
-#footer-area .sns li a {
-  display: block;
-  width:100%;
-  height:100%;
-}
-
-#footer-area .sns .insta {
-  background: url(../images/btn_instagram.svg) no-repeat center/cover;
-  width: 28px;
-  height: 28px;
-}
-#footer-area .sns .youtube {
-  background: url(../images/btn_youtube.svg) no-repeat center/cover;
-  width: 28px;
-  height: 28px;
-}
-#footer-area .sns .facebook {
-  background: url(../images/btn_facebook.svg) no-repeat center/cover;
-  width: 28px;
-  height: 28px;
-}
-#footer-area .sns .blog {
-  background: url(../images/btn_blog.svg) no-repeat center/cover;
-  width: 28px;
-  height: 28px;
-}
-
-/* 하단로고 */
-#footer-area .con {
-  display: flex;
-  border-top: 1px solid #000;
-  padding-top: 40px;
-}
-
-#footer-area .logo {
-  margin-right: 40px;
-  width: 20%;
-}
-#footer-area .logo a {
-  display: block;
-  background: url(../images/f_logo.svg) no-repeat center;
-  width: 200px;
-  height: 50px;
-}
-
-/* 하단메뉴 */
-#footer-area .f-gnb {
-  width: 50%;
-  display: flex;
-  justify-content: space-between;
-}
-
-#footer-area .f-gnb > li {
-  margin-right: 30px;
-}
-#footer-area .f-gnb > li:last-child {
-  margin-right: 0;
-}
-#footer-area .f-gnb > li > a {
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-
-#footer-area .f-gnb .f-sub > li {
-  padding-top: 10px;
-}
-
-#footer-area .f-gnb .f-sub > li > a {
-  display: inline-block;
-  font-size: 1.5rem;
-  position: relative;
-  padding-right: 20px;
-}
-
-#footer-area .f-gnb .f-sub .more3::after {
-  content: "";
-  /* 부모는 #footer-area .f-gnb .f-sub>li>a */
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translate(0, -50%);
-  background: url(../images/ico_arrow.svg);
-  width: 16px;
-  height: 16px;
-}
-
-/* 마우스 오버시 밑줄(a에 밑줄을 주면 마우스 오버할때마다 움직이니까 span을 넣어서 거기에 밑줄을 준다 */
-#footer-area .f-gnb .f-sub > li > a:hover span {
-  border-bottom: 1px solid #000;
-  box-sizing: border-box;
-}
-
-#footer-area .etc {
-  width: 30%;
-}
-
-/* 연락처 */
-#footer-area .etc .tel {
-  display: flex;
-  justify-content: flex-end;
-}
-
-#footer-area .etc .tel th {
-  vertical-align: top;
-  font-size: 1.6rem;
-  color: #666;
-  text-align: left;
-  padding-right: 20px;
-  padding: 7px 20px 0 0;
-  font-weight: 500;
-}
-
-#footer-area .etc .tel td {
-  font-size: 2rem;
-  font-weight: bold;
-  line-height: 18px;
-  padding: 10px 0;
-}
-
-#footer-area .etc .tel td span {
-  font-size: 1.3rem;
-  color: #666;
-  font-weight: 400;
-}
-
-/* 인증마크 */
-
-#footer-area .etc .mark {
-  display: flex;
-  justify-content: flex-end;
-}
-
-#footer-area .etc .mark li {
-  margin-right: 20px;
-}
-
-#footer-area .etc .mark li:last-child {
-  margin-right: 0;
-}
-#footer-area .etc .mark li a {
-  display: inline-block;
-}
-#footer-area .etc .mark li:first-child a {
-  background: url(../images/iso_mark.png) no-repeat center/cover;
-  width: 69px;
-  height: 44px;
-}
-
-#footer-area .etc .mark li:nth-child(2) a {
-  background: url(../images/wa_mark.png) no-repeat center/cover;
-  width: 48px;
-  height: 34px;
-}
-#footer-area .etc .mark li:nth-child(3) a {
-  background: url(../images/ffsb_mark.png) no-repeat center/cover;
-  width: 140px;
-  height: 32px;
-}
-
-#footer-area .etc .copy {
-  font-size: 1.2rem;
-  color: #666;
-  text-align: right;
-  margin-top: 20px;
-}
-
-#wrap{
-  position: relative;
-}
-/* 탑버튼 */
-.top-btn.on{
-  display: inline-block;
-  position: fixed;
-  bottom:0;
-  right:0;
-  width: 80px;
-    height: 72px;
-    background: url(../images/btn_top_pc.svg) no-repeat center/cover;
-    z-index: 99;
-    transition: 3s ease-in-out;
-}
+/* common.css */
