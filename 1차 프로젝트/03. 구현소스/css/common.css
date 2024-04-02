@@ -30,11 +30,12 @@
   left: 0;
   top: 0;
   z-index: -1;
+  /* 숨기기 */
   display: none;
 }
 
+/* 사이트맵 나타나기 클래스on */
 #top-area .pop-menu.on{
-/* 숨기기 */
 display:block;
 }
 
@@ -171,7 +172,7 @@ display:block;
   cursor: pointer;
 }
 
-/* 1-1.로고 */
+/* 로고 */
 h1.logo a {
   /* 부모는 .top-area .inbox*/
   position: absolute;
@@ -186,7 +187,7 @@ h1.logo a {
   z-index: 998;
 }
 
-/* 1-2.메뉴 */
+/* 메뉴 */
 
 .gnb {
   /* 플렉스로 가로정렬 */
