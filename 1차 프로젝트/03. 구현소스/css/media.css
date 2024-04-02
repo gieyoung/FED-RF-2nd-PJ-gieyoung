@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+/* 1차 PJ : 미디어쿼리 CSS - media.css */
+
+
+/* 1200이하 */
+@media screen and (max-width:1200px) {
+  /* 공통 */
+  html {font-size: 8px;}
+  /* 상단영역 */
+  .gnb{margin-left:-100px;}
+  .gnb > li { width: calc(60% / 7);}
+  .nav-wrap .etc-box{width:25%;}
+ 
+}
+/* 1024이하 */
+@media screen and (max-width:1024px) {
+   /* 공통 */
+   html {font-size: 6px;}
+   /* 상단영역 */
+  .gnb{display: none;}
+  .search{display: none;}
+  .chat{display: none;}
+  .ottugi-go{display: none;}
+
+
+
+}
+
+@media screen and (max-width:760px) {
+ 
+  
+}
+@media screen and (max-width:480px) {
+ 
+  
+}
+
+@media screen and (max-width:280px) {
+ 
+}

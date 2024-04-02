@@ -1,5 +1,5 @@
 @charset "utf-8";
-/* 도깨비 PJ : 메인페이지 CSS - main.css */
+/* 1차 PJ : 메인페이지 CSS - main.css */
 
 /************* 1. 상단영역 *************/
 /* common.css */
@@ -25,7 +25,7 @@
 
 #ban-area .swiper-slide {
   text-align: center;
-  font-size: 18px;
+  font-size: 1.8rem;
   background: #fff;
   display: flex;
   justify-content: center;
@@ -128,7 +128,7 @@
   font-weight: bold;
   color: var(--swiper-theme-color);
   color: #fff;
-  font-size: 14px;
+  font-size: 1.4rem;
 }
 
 #ban-area .autoplay-progress svg {
@@ -155,7 +155,7 @@
   line-height: 50px;
   width: 100px;
   bottom: 0;
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #fff;
 }
 
@@ -270,7 +270,7 @@
 }
 
 .about-area h2 {
-  font-size: 46px;
+  font-size: 4.6rem;
   line-height: 63px;
   text-align: center;
   margin-top: 100px;
@@ -369,7 +369,7 @@
 
 /* 글자영역 */
 .about-area .con .text h3 {
-  font-size: 46px;
+  font-size: 4.6rem;
   line-height: 56px;
   margin-bottom: 30px;
 }
@@ -380,7 +380,7 @@
 }
 
 .about-area .con .text p {
-  font-size: 18px;
+  font-size: 1.8rem;
 }
 
 .more {
@@ -434,18 +434,18 @@
 } */
 
 .global-area h3 {
-  font-size: 80px;
+  font-size: 8.0rem;
   color: #dc2f34;
   line-height: 87px;
 }
 
 .global-area h3 span {
-  font-size: 50px;
+  font-size: 5.0rem;
   color: #000;
 }
 
 .global-area p {
-  font-size: 25px;
+  font-size: 2.5rem;
   margin: 30px 0;
 }
 
@@ -609,7 +609,7 @@
 
 .visual h6 {
   margin-top: 36px;
-  font-size: 20px;
+  font-size: 2rem;
   color: #fff;
   text-align: right;
 }
@@ -926,7 +926,15 @@
   display: block;
 }
 
+/* 더보기 버튼 */
+#news-area .more{
+  margin-bottom: 50px;
+
+
+}
 /************* 뉴스룸 *************/
+
+
 
 #news-area .list1 li {
   float: left;
