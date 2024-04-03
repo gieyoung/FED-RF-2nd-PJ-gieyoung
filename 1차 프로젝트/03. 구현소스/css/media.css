@@ -11,31 +11,85 @@
   .gnb{margin-left:-100px;}
   .gnb > li { width: calc(60% / 7);}
   .nav-wrap .etc-box{width:25%;}
+  /* 글로벌오뚜기 */
+  .global-area .img-fade .img9,.global-area .img-fade .img10{display: none;}
  
 }
 /* 1024이하 */
 @media screen and (max-width:1024px) {
    /* 공통 */
-   html {font-size: 6px;}
    /* 상단영역 */
   .gnb{display: none;}
   .search{display: none;}
   .chat{display: none;}
   .ottugi-go{display: none;}
+  /* 브랜드스토리 */
+  .story-area h3{font-size: 3rem; line-height: 4rem;}
+  .story-area .visual .text{width: 80%; left: 0; top: 10%; transform: translate(0,0);}
+  .visual h4{font-size: 10.1rem; line-height: 6.7rem;}
+  .visual h5{font-size: 7rem; margin-top: 44px; padding-left: 235px;}
+    
+    
+
 
 
 
 }
 
 @media screen and (max-width:760px) {
- 
+  /* 배너영역 */
+  #ban-area .slide-txt .txt{font-size: 5rem; line-height: 8rem;}
+   /* 사업소개 */
+  .about-area .con{flex-direction: column;}
+  .about-area .con .img-fade1{margin-right: 0; width: 37.5rem; height: 37.5rem;}
+  .about-area .con .img-fade2{margin-right: 0; width: 37.5rem; height: 37.5rem;    margin-bottom: 30px;}
+  .about-area .con .img-fade3{margin-right: 0; width: 37.5rem; height: 37.5rem;}
+  .about-area .text{text-align: center; margin-top: 30px;}
+  .about-area .more{margin:30px auto;}
+
+  }
+  
   
 }
 @media screen and (max-width:480px) {
+  /* 상단영역 */
+  .nav-wrap .etc-box{width: 40%;padding: 0;}
+  /* 배너영역 */
+  #ban-area .swiper-button-next, #ban-area .swiper-button-prev{display:none;}
+  #ban-area .autoplay-progress{display: none;}
+  #ban-area .slide-txt .txt{font-size: 3rem; line-height: 4rem;}
+  #ban-area .swiper-pagination-fraction{width: 130px;}
+  /* 사업소개 */
+  .about-area h2{font-size: 3rem; line-height: 4rem;}
+  .about-area .con .text h3{font-size: 3rem; line-height: 4rem;}
+  /* 글로벌오뚜기 */
+  .global-area .con{text-align: center;}
+  .global-area h3 span{font-size:3.0rem;}
+  .global-area h3{font-size: 4rem; line-height: 4rem;}
+  .global-area p{font-size: 1.8rem;}
+  .global-area .more{margin:30px auto;}
+  .global-area .img-fade li{width:16rem; height:16rem;}
+  /* 브랜드스토리 */
+  
+
+
  
+  
+  
   
 }
 
-@media screen and (max-width:280px) {
+@media screen and (max-width:360px) {
+  /* 사업소개 */
+  .about-area .con .img-fade1{width: 80%; height:30rem;}
+  .about-area .con .img-fade2{width: 80%; height:25rem;}
+  .about-area .con .img-fade3{width: 80%; height:30rem;}
+    /* 글로벌오뚜기 */
+  .global-area .img-fade li{width:14rem; height:14rem;}
+  .global-area .img-fade{gap:1rem;}
+ 
+  
+ 
+
  
 }

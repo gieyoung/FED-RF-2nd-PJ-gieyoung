@@ -177,7 +177,7 @@ var swiper2 = new Swiper(".swiper-container2", {
   // Autoplay 활성화 및 옵션 설정
   loop: true,
   autoplay: {
-    delay: 5000, // 슬라이드 전환 시간 (밀리초)
+    delay: 50000, // 슬라이드 전환 시간 (밀리초)
     disableOnInteraction: false, // 사용자 상호 작용 후에도 자동 재생 유지
   },
   pagination: {
