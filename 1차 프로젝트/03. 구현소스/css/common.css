@@ -510,6 +510,7 @@ h1.logo a {
 #footer-area .inbox {
   outline: 1px solid red;
   height: 100%;
+  width: 90%;
 }
 
 /* sns */
@@ -559,13 +560,13 @@ h1.logo a {
 
 #footer-area .logo {
   margin-right: 40px;
-  width: 20%;
+  /* width: 20%; */
 }
 #footer-area .logo a {
   display: block;
-  background: url(../images/f_logo.svg) no-repeat center;
-  width: 200px;
-  height: 50px;
+  background: url(../images/f_logo.svg) no-repeat center/cover;
+  width: 20rem;
+  height: 5rem;
 }
 
 /* 하단메뉴 */
@@ -667,22 +668,23 @@ h1.logo a {
 }
 #footer-area .etc .mark li:first-child a {
   background: url(../images/iso_mark.png) no-repeat center/cover;
-  width: 69px;
-  height: 44px;
+  width: 6.9rem;
+  height: 4.4rem;
 }
 
 #footer-area .etc .mark li:nth-child(2) a {
   background: url(../images/wa_mark.png) no-repeat center/cover;
-  width: 48px;
-  height: 34px;
+  width: 4.8rem;
+  height: 3.4rem;
 }
 #footer-area .etc .mark li:nth-child(3) a {
   background: url(../images/ffsb_mark.png) no-repeat center/cover;
-  width: 140px;
-  height: 32px;
+  width: 14.0rem;
+  height: 3.2rem;
 }
 
-#footer-area .etc .copy {
+/* 저작권표시 */
+#footer-area .copy {
   font-size: 1.2rem;
   color: #666;
   text-align: right;

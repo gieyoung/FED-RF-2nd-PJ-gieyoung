@@ -137,10 +137,14 @@ delBtn.onclick = () => {
 const tabBtn = document.querySelectorAll(".tab li a");
 // 대상선정: 탭리스트
 const tabList = document.querySelectorAll(".tab-list ul");
+// 대상선정: 더보기 버튼
+const moreBtn = document.querySelectorAll(".tab-list .more");
+
+
 //대상확인
 // console.log(tabBtn,tabList);
 
-//탭버튼 on넣고 빼기
+//1. 탭버튼 on넣고 빼기
 tabBtn.forEach((ele, idx) => {
   ele.onclick = () => {
     for (let x of tabBtn) {
@@ -148,13 +152,26 @@ tabBtn.forEach((ele, idx) => {
     }/////////for of//////////
     ele.classList.add("on");
 
-//현재 선택된 탭버튼과 순서가 일치하는 탭리스트에 on넣고 빼기
+//2. 현재 선택된 탭버튼과 순서가 일치하는 탭리스트에 on넣고 빼기
     for (let x of tabList) {
       x.classList.remove("on");
     }/////////for of//////////
     tabList[idx].classList.add("on");
+
+//3. 현재 선택된 탭버튼과 순서가 일치하는 더보기 버튼에 on넣고 빼기
+    for (let y of moreBtn) {
+      y.classList.remove("on");
+    }/////////for of//////////
+    moreBtn[idx].classList.add("on");
+  
   };//////click//////////
+
+ 
+
 });//////////forEach////////////
+
+
+
 
 
 

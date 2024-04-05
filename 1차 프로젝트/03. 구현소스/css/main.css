@@ -860,6 +860,7 @@
 
 #news-area .inbox {
   height: 100%;
+  width: 90%;
   padding-bottom: 150px;
   outline: 1px solid red;
 }
@@ -899,20 +900,20 @@
 
 #news-area .tab .news::before {
   background: url("../images/ico_sns1.svg") no-repeat center/100%;
-  width: 81px;
-  height: 80px;
+  width: 8.1rem;
+  height: 8.0rem;
 }
 
 #news-area .tab .recipe::before {
   background: url("../images/ico_sns2.svg") no-repeat center/100%;
-  width: 81px;
-  height: 80px;
+  width: 8.1rem;
+  height: 8.0rem;
 }
 
 #news-area .tab .sns::before {
   background: url("../images/ico_sns3.svg") no-repeat center/100%;
-  width: 81px;
-  height: 80px;
+  width: 8.1rem;
+  height: 8.0rem;
 }
 
 /* 탭리스트 */
@@ -923,29 +924,36 @@
 
 /* 탭리스트 on */
 #news-area .list.on {
-  display: block;
+  display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 /* 더보기 버튼 */
 #news-area .more{
   margin-bottom: 50px;
+  display: none;
 
 
 }
+
+#news-area .more.on{
+  display: block;
+}
+
+#news-area .list li {
+  margin-right:3rem;
+  height: 50rem;
+  overflow: hidden;
+  border-radius: 10px;
+  flex: 1 1 0;
+  position: relative;
+}
+
 /************* 뉴스룸 *************/
 
 
 
-#news-area .list1 li {
-  float: left;
-  margin-right: 40px;
-  width: calc(100% / 3 - 27px);
-  height: 500px;
-  /* outline: 1px solid red; */
-  overflow: hidden;
-  border-radius: 10px;
-  position: relative;
-}
 
 #news-area .list li:last-child {
   margin-right: 0;
@@ -1021,18 +1029,11 @@
   font-weight: bold;
 }
 
-#news-area .list2 li {
-  float: left;
-  margin-right: 30px;
-  width: calc(100% / 4 - 23px);
-  height: auto;
-  /* outline: 1px solid red; */
-}
 
 #news-area .list2 .img-box {
   display: block;
   width: 100%;
-  height: 300px;
+  height: 30rem;
   overflow: hidden;
   border-radius: 10px;
 }
@@ -1088,15 +1089,12 @@
 }
 
 #news-area .list3 li {
-  float: left;
-  margin-right: 30px;
-  width: calc(100% / 3 - 80px);
-  height: 500px;
+  height: 53rem;
   outline: 1px solid #c8c8c8;
   overflow: hidden;
   border-radius: 10px;
   position: relative;
-  padding: 30px;
+  padding: 3rem;
 }
 
 /* 인스타 로고*/
@@ -1124,7 +1122,7 @@
 #news-area .list3 .img-box {
   display: block;
   width: 100%;
-  height: 400px;
+  height: 40rem;
   overflow: hidden;
   border-radius: 10px;
 }
