@@ -1154,3 +1154,21 @@
 
 /**************** 9. 하단영역  ****************/
 /* common.css */
+
+
+
+/**************** 스크롤 액션  ****************/
+
+/* 스크롤 등장*/
+.scroll-el{
+  transform: translateY(20%);
+  opacity: 0;
+  transition: .75s ease;
+
+}
+
+.scroll-el.on{
+  transform: translateY(0);
+  opacity: 1;
+}
+
