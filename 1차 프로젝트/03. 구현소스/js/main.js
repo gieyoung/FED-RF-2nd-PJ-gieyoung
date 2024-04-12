@@ -80,12 +80,14 @@ play.onclick = function () {
 const siteMap = document.querySelector(".sitemap");
 const hamBtn = document.querySelector(".hambtn");
 const popMenu = document.querySelector(".pop-menu");
+const black = document.querySelector(".black-back");
 
 
 // 반응형 웹 햄버거 메뉴 클릭 시 메뉴 펼침, 숨김 처리
 siteMap.addEventListener('click', () => {
   hamBtn.classList.toggle('on');
   popMenu.classList.toggle('on');
+  black.classList.toggle('on');
 });
 
 

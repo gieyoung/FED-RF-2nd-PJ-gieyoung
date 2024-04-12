@@ -54,6 +54,10 @@
 }
 
 @media screen and (max-width:760px) {
+  /* 사이트맵 */
+  #top-area .pop-menu .list > ol > li{flex-direction: column;}
+  #top-area .pop-menu .list .depth2 a{width:100%;}
+  #top-area .pop-menu .list .depth2{min-width: 100%;}
   /* 배너영역 */
   #ban-area .slide-txt .txt{font-size: 5rem; line-height: 8rem;}
    /* 사업소개 */
@@ -94,6 +98,8 @@
    #footer-area .etc .tel{margin-bottom: 40px;}
    #footer-area .f-gnb{width: 100%;}
    #footer-area .copy{margin-top: 0;}
+
+   
 
 
   }

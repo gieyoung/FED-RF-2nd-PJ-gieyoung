@@ -10,7 +10,7 @@
 
     <!-- CSS연결 -->
     <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/sub.css" />
     <link rel="stylesheet" href="./css/core.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/media.css" />
@@ -379,441 +379,273 @@
         </header>
       </div>
 
-      <!-- 2. 배너 -->
-      <div id="ban-area">
-        <section class="ban-area inbox">
-          <!-- 배너 슬라이더 -->
-          <!-- Swiper -->
-          <div class="swiper mySwiper swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <video class="video mask on" autoplay="autoplay" muted="muted" preload="auto" loop playsinline>
-                  <source src="./images/51b6eeb6bbb449aab4bf46502e2bc074.mp4" type="video/mp4" />
-                </video>
-                <div class="slide-txt">
-                  <h2 class="txt">인류의 식생활 향상과<br />건강에 이바지 합니다.</h2>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <img src="./images/57a43ca6550d4bbcad24b4118b7e3fe6.jpg" alt="배너 슬라이드 이미지" />
-                <div class="slide-txt">
-                  <h2 class="txt">맛과 품질을 가장 소중히<br />생각하고 행동합니다.</h2>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <img src="./images/c6a1af1ea63c482ab65d1d3c1156a538.jpg" alt="배너 슬라이드 이미지" />
-                <div class="slide-txt">
-                  <h2 class="txt">식품안전문화 정착을 위해<br />노력하고 있습니다.</h2>
-                </div>
-              </div>
-            </div>
-
-            <!-- 슬라이드 버튼 -->
-            <div class="controls">
-              <!-- 슬라이드 시간 바 -->
-              <div class="autoplay-progress">
-                <svg viewBox="0 0 48 48">
-                  <circle cx="24" cy="24" r="20"></circle>
-                </svg>
-                <span></span>
-              </div>
-              <!-- 슬라이드 페이지 숫자 -->
-              <div class="swiper-pagination"></div>
-              <!-- 슬라이드 정지/재생 버튼 -->
-              <div class="btn_wrap">
-                <button type="button" class="swiper-button-pause"><span class="ir">전체 정지</span></button>
-                <button type="button" class="swiper-button-play"><span class="ir">전체 재생</span></button>
-              </div>
-              <!-- 슬라이드 이전/다음 버튼 -->
-              <button type="button" class="swiper-button-prev"><span class="ir">이전</span></button>
-              <button type="button" class="swiper-button-next"><span class="ir">다음</span></button>
-            </div>
-          </div>
-        </section>
-      </div>
+  
       <!-- 3. 사업소개 -->
-      <div id="about-area">
-        <section class="about-area inbox">
-          <!-- 스크롤 -->
-          <a href="#" class="scroll-btn"><span class="ir">아래 스크롤</span></a>
-          <h2 class="scroll-el hide-el">인류 식생활을 향상시키는<br />글로벌 식품 기업</h2>
-
-          <ul class="about-box">
-            <li class="con scroll-el hide-el">
-              <!-- 이미지 영역 -->
-              <div class="img-fade img-fade1">
-                <img src="./images/clip1.jpg" alt="" class="fade1" />
-                <img src="./images/clip1_1.jpg" alt="" class="fade2" />
-              </div>
-              <!-- 글자영역 -->
-              <div class="text">
-                <h3>
-                  보다 좋은 품질의<br />
-                  <span>제품</span>을
-                </h3>
-                <p>
-                  자동화된 생산라인과 첨단설비, 위생적인 환경을 구축하여<br />
-                  오뚜기의 1등 제품을 우수한 품질로 제공합니다.
-                </p>
-                <a href="#" class="more"><span class="ir">더보기</span></a>
-              </div>
-            </li>
-            <li class="con scroll-el hide-el">
-              <!-- 글자영역 -->
-              <div class="text">
-                <h3>
-                  보다 높은 영양을 위해<br />
-                  <span>1969년</span>부터 한결같이
-                </h3>
-                <p>
-                  식품이 사람들의 심신 건강을 지키는 영양분이 될 수 있도록<br />
-                  과거부터 현재까지 이어온<br />
-                  그리고 앞으로도 계속 이어갈 오뚜기의 마음입니다.
-                </p>
-                <a href="#" class="more"><span class="ir">더보기</span></a>
-              </div>
-              <!-- 이미지 영역 -->
-              <div class="img-fade img-fade2">
-                <!-- 클리핑 마스크 -->
-                <svg class="svg">
-                  <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
-                    <path
-                      d="M0.5,1 C0.469,1,0.439,0.996,0.419,0.989 L0.049,0.855 C0.025,0.846,0,0.809,0,0.781 V0.219 C0,0.191,0.025,0.154,0.049,0.145 L0.419,0.011 C0.439,0.004,0.469,0,0.5,0 C0.531,0,0.561,0.004,0.581,0.011 L0.951,0.145 C0.975,0.154,1,0.191,1,0.219 V0.781 C1,0.809,0.975,0.846,0.951,0.855 L0.581,0.989 C0.561,0.996,0.531,1,0.5,1"
-                    ></path>
-                  </clipPath>
-                </svg>
-                <img src="./images/clip2.jpg" alt="" class="fade1" />
-                <img src="./images/clip2_1.jpg" alt="" class="fade2" />
-              </div>
-            </li>
-            <li class="con scroll-el hide-el">
-              <!-- 이미지 영역 -->
-              <div class="img-fade img-fade3">
-                <svg class="svg">
-                  <clipPath id="my-clip-path2" clipPathUnits="objectBoundingBox"><path d="M0.9,0.9 C0.633,1,0.367,1,0.1,0.9 C-0.033,0.633,-0.033,0.367,0.1,0.1 C0.367,-0.033,0.633,-0.033,0.9,0.1 C1,0.367,1,0.633,0.9,0.9"></path></clipPath>
-                </svg>
-                <img src="./images/clip3.jpg" alt="" class="fade1" />
-                <img src="./images/clip3_1.jpg" alt="" class="fade2" />
-              </div>
-              <!-- 글자영역 -->
-              <div class="text">
-                <h3>
-                  보다 앞선 <span>식품개발</span>에<br />
-                  노력하고 있습니다.
-                </h3>
-                <p>
-                  오뚜기는 항상 앞장서서 창조의 기쁨과 보람을 경험하고<br />
-                  앞선 식품을 우리 인류에게 선보입니다.
-                </p>
-                <a href="#" class="more"><span class="ir">더보기</span></a>
-              </div>
-            </li>
-          </ul>
-        </section>
-      </div>
-      <!-- 4. 글로벌오뚜기 -->
-      <div id="global-area">
-        <section class="global-area inbox">
-          <div class="con">
-            <h3 class="scroll-el hide-el">
-              <span>세계로 나가는</span><br />
-              Global OTTOGI
-            </h3>
-            <p class="scroll-el hide-el">전 세계인의 식탁에 오뚜기가 놓여지는 그 날까지, 오뚜기는 끊임없이 글로벌 고객의 니즈에 귀를 기울일 것입니다.</p>
-            <a href="#" class="more scroll-el hide-el"><span class="ir">더보기</span></a>
-
-            <!-- 원 이미지 영역 -->
-            <ul class="img-fade">
-              <li class="img1 g1 hide-el">
-                <img src="./images/list_bg1_1_mo.png" alt="" class="fade1" />
-                <img src="./images/list_bg1_2_mo.png" alt="" class="fade2" />
-              </li>
-              <li class="img2 g2 hide-el">
-                <img src="./images/list_bg2_1_mo.png" alt="" class="fade1" />
-                <img src="./images/list_bg2_2_mo.png" alt="" class="fade2" />
-              </li>
-              <li class="img3 g3 hide-el">
-                <img src="./images/list_bg4_1_mo.png" alt="" class="fade1" />
-                <img src="./images/list_bg4_2_mo.png" alt="" class="fade2" />
-              </li>
-              <li class="img4 g2 hide-el">
-                <img src="./images/list_bg3_1_mo.png" alt="" class="fade1" />
-                <img src="./images/list_bg3_2_mo.png" alt="" class="fade2" />
-              </li>
-              <li class="img5 g1 hide-el">
-                <img src="./images/list_bg5_1_mo.png" alt="" class="fade1" />
-                <img src="./images/list_bg5_2_mo.png" alt="" class="fade2" />
-              </li>
-              <li class="img6 g3 hide-el">
-                <img src="./images/list_bg2_1_mo.png" alt="" class="fade1" />
-                <img src="./images/list_bg2_2_mo.png" alt="" class="fade2" />
-              </li>
-              <li class="img7 g1 hide-el">
-                <img src="./images/list_bg5_2_mo.png" alt="" class="fade1" />
-                <img src="./images/list_bg5_1_mo.png" alt="" class="fade2" />
-              </li>
-              <li class="img8 g2 hide-el">
-                <img src="./images/list_bg3_1_mo.png" alt="" class="fade1" />
-                <img src="./images/list_bg3_2_mo.png" alt="" class="fade2" />
-              </li>
-              <li class="img9 g3 hide-el">
-                <img src="./images/list_bg1_2_mo.png" alt="" class="fade1" />
-                <img src="./images/list_bg1_1_mo.png" alt="" class="fade2" />
-              </li>
-              <li class="img10 g2 hide-el">
-                <img src="./images/list_bg3_2_mo.png" alt="" class="fade1" />
-                <img src="./images/list_bg3_1_mo.png" alt="" class="fade2" />
-              </li>
+      <div id="cus-voice">
+        <section class="cus-voice inbox">
+          <h2 class="scroll-el hide-el">고객의 소리</h2>
+          <div class="guide_wrap">
+            <strong class="tit">꼭 읽어주세요!</strong>
+            <ul>
+              <li>오뚜기는 고객님의 작은 소리도 귀 기울여 듣습니다. 불편하신 사항이나 문의사항, 제안 등을 남겨주세요.</li>
+              <li>고객의 소리를 통해 접수된 고객님의 의견은 관련 부서로 전달하여 제품 및 서비스 개선에 참고하겠습니다.</li>
+              <li>고객상담실에서는 본사 직원이 소비자 분쟁 해결 기준에 따라 신속하고 공정하게 처리해드리고 있습니다.</li>
+              <li>홍보/광고성 내용은 관리자에 의해 삭제될 수 있습니다.</li>
+              <li><a href="/service/otgfaq" class="underline">자주묻는 질문</a> 혹은 고객상담 <a href="#" class="link ic_chat" target="_blank" title="챗봇 새창열림" onclick="return openChatBot();"><span class="underline">챗봇</span></a>을 통해서도 궁금하신 내용을 해결하실 수 있습니다. </li>
+              <li>산업안전보건법에 의거하여 폭언 및 욕설 시 상담이 제한될 수 있음을 안내 드립니다.</li>
             </ul>
           </div>
-        </section>
-      </div>
-      <!-- 6. 브랜드스토리 -->
-      <div id="story-area">
-        <section class="story-area inbox">
-          <h3 class="scroll-el hide-el">
-            오뚜기는 생각합니다.<br />
-            "맛있는 식품은 신선한 원료로 부터"
-          </h3>
-          <div class="visual">
-            <!-- <img src="./images/main_brand_mo.jpg" alt="브랜드스토리"> -->
-            <div class="text">
-              <h4 class="scroll-el hide-el">OTTOGI</h4>
-              <h5 class="scroll-el hide-el">BRAND<span>STORY</span></h5>
-              <h6 class="scroll-el hide-el">오뚜기의 전통&진화, 시너지, 가능성,가치 그리고 미래를 이야기하고자 합니다.</h6>
-              <a href="#" class="more2 clb scroll-el hide-el"><span class="ir">더보기</span></a>
+          <form name="frmWrite">
+            <table class="tbl_write">
+              <caption class="ir">고객의 소리 등록 입력 표</caption>
+              <colgroup>
+                <col style="width:15%">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <label for="customerName">이름</label>
+                    <span class="require">(필수)</span>
+                  </th>
+                  <td>
+                    <div class="inp_box">
+                      <input type="text" id="customerName" name="customerName" maxlength="30" placeholder="이름을 입력해 주세요." class="inp_base">
+                      <button type="button" class="btn_del" style="display: none;"><span class="ir">삭제</span></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label for="customerTel">연락처</label>
+                    <span class="require">(필수)</span>
+                  </th>
+                  <td>
+                    <div class="inp_box">
+                      <input type="text" id="customerTel" name="customerTel" maxlength="12" placeholder="연락처를 입력해 주세요." class="inp_base">
+                      <button type="button" class="btn_del" style="display: none;"><span class="ir">삭제</span></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <span class="label">거주국가</span>
+                    <span class="require">(필수)</span>
+                  </th>
+                  <td>
+                    <span class="form_wrap">
+                      <input type="radio" id="isLivingAbroadYnN" name="isLivingAbroadYn" value="N" checked="">
+                      <label for="isLivingAbroadYnN" role="radio">국내</label>
+                    </span>
+                    <span class="form_wrap">
+                      <input type="radio" id="isLivingAbroadYnY" name="isLivingAbroadYn" value="Y">
+                      <label for="isLivingAbroadYnY" role="radio">해외</label>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <span class="label">주소</span>
+                    <span class="choice">(선택)</span>
+                  </th>
+                  <td>
+                    <div class="d_flex">
+                      <div class="inp_box">
+                        <input type="hidden" name="zipcode">
+                        <input type="hidden" name="addrBase">
+                        <input type="text" id="addrFirst" class="inp_base" title="우편번호 입력" readonly="" placeholder="우편번호를 검색해 주세요.">
+                        <button type="button" class="btn_del" onclick="$('#addrBase').val('');$('#zipcode').val('')" style="display: none;"><span class="sr_only">삭제</span></button>
+                      </div>
+                      <a href="#" class="btn_type2_s" onclick="openZipcode(selectedZipcode);return false;" title="“새창열림”">우편번호 검색</a>
+                    </div>
+                    <div class="inp_box mt">
+                      <input type="text" id="custAddress" name="addrDetail" class="inp_base" title="상세주소 입력" maxlength="50" placeholder="상세 주소를 입력해 주세요.">
+                      <button type="button" class="btn_del" style="display: none;"><span class="sr_only">삭제</span></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label for="customerEmail">이메일</label>
+                    <span class="require">(필수)</span>
+                  </th>
+                  <td>
+                    <div class="inp_box">
+                      <input type="text" id="customerEmail" name="customerEmail" maxlength="80" placeholder="이메일을 입력해 주세요." class="inp_base">
+                      <button type="button" class="btn_del" style="display: none;"><span class="sr_only">삭제</span></button>
+                    </div>
+                    <span class="form_wrap mt no_email">
+                      <input type="checkbox" id="noEmailYn" name="noEmailYn" value="Y">
+                      <label for="noEmailYn" role="checkbox">이메일 주소 없음</label>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <span class="label">상담유형</span>
+                    <span class="require">(필수)</span>
+                  </th>
+                  <td>
+                    <span class="form_wrap">
+                      <input type="radio" id="customerTopicsCodePRAISE" name="customerTopicsCode" value="PRAISE" onclick="clickCustomerTopicsCode(this)" checked="checked">
+                      <label for="customerTopicsCodePRAISE" role="radio">칭찬</label>
+                    </span><span class="form_wrap">
+                      <input type="radio" id="customerTopicsCodeSUGGESTION" name="customerTopicsCode" value="SUGGESTION" onclick="clickCustomerTopicsCode(this)">
+                      <label for="customerTopicsCodeSUGGESTION" role="radio">제안</label>
+                    </span><span class="form_wrap">
+                      <input type="radio" id="customerTopicsCodeINQUIRY" name="customerTopicsCode" value="INQUIRY" onclick="clickCustomerTopicsCode(this)">
+                      <label for="customerTopicsCodeINQUIRY" role="radio">문의</label>
+                    </span><span class="form_wrap">
+                      <input type="radio" id="customerTopicsCodeCOMPLAINT" name="customerTopicsCode" value="COMPLAINT" onclick="clickCustomerTopicsCode(this)">
+                      <label for="customerTopicsCodeCOMPLAINT" role="radio">불편/불만</label>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label for="customerProposalCode">제안분야</label>
+                    <span class="require">(필수)</span>
+                  </th>
+                  <td>
+                    <div class="sel_box">
+                      <select id="customerProposalCode" name="customerProposalCode" class="sel_base" title="제안분야 항목" disabled="">
+                        <option value="">선택</option>
+                        <option value="PRODUCT">제품제안</option>
+                        <option value="DEOMESTIC">국내영업</option>
+                        <option value="INTERNATIONAL">해외수출 및 영업</option>
+                        <option value="MATERIAL">원부자재조달</option>
+                        <option value="PROMOTION">프로모션/제휴/협찬</option>
+                        <option value="ESG">ESG경영</option>
+                        <option value="SOCIAL">사회공헌</option>
+                        <option value="OEM">OEM생산</option>
+                        <option value="FACILITIES">설비/기술</option>
+                        <option value="SOLUTION">IT/솔루션</option>
+                        <option value="RESEARCH">공동연구/개발</option>
+                        <option value="INTELLECTUAL">지식재산권</option>
+                        <option value="STAFF">임직원제휴</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label for="title">제목</label>
+                    <span class="require">(필수)</span>
+                  </th>
+                  <td>
+                    <div class="inp_box">
+                      <input type="text" id="title" name="title" maxlength="100" placeholder="제목을 입력해 주세요." class="inp_base">
+                      <button type="button" class="btn_del" style="display: none;"><span class="sr_only">삭제</span></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label for="productName">제품명</label>
+                    <span class="choice">(선택)</span>
+                  </th>
+                  <td>
+                    <div class="inp_box">
+                      <input type="text" id="productName" name="productName" maxlength="100" placeholder="제품명을 입력해 주세요." class="inp_base">
+                      <button type="button" class="btn_del" style="display: none;"><span class="sr_only">삭제</span></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label for="description">내용</label>
+                    <span class="require">(필수)</span>
+                  </th>
+                  <td>
+                    <textarea id="description" name="description" class="textarea" maxlength="1000" placeholder="내용을 입력해 주세요.(이름, 연락처, 주소, 이메일, 주민등록번호 등 개인정보는 입력하지 않도록 주의해 주시기 바랍니다.) 
+  제품 관련 문의 시 제품의 소비기한 및 중량도 확인하시어 기재 부탁 드립니다."></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label for="CustomerVoicePassword">비밀번호</label>
+                    <span class="require">(필수)</span>
+                  </th>
+                  <td>
+                    <div class="inp_box">
+                      <input type="password" id="CustomerVoicePassword" name="CustomerVoicePassword" maxlength="16" placeholder="비밀번호 4~16자리를 입력해 주세요." autocomplete="new-password" class="inp_base">
+                      <button type="button" class="btn_del" style="display: none;"><span class="sr_only">삭제</span></button>
+                    </div>
+                    <p class="msg_noti">비밀번호는 추후 접수내역 조회 시에 활용되오니, 꼭 기억해 주세요.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <span class="label">자동등록 방지</span>
+                    <span class="require">(필수)</span>
+                  </th>
+                  <td>
+                    <div class="captcha_box">
+                      <div class="g-recaptcha" data-sitekey="6LfIzh8oAAAAAGRAy5rX5MYdjZPYN68Z61J05uCV" title="자동등록 방지"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" width="304" height="78" role="presentation" name="a-rnhjxbdpatov" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/anchor?ar=2&amp;k=6LfIzh8oAAAAAGRAy5rX5MYdjZPYN68Z61J05uCV&amp;co=aHR0cHM6Ly93d3cub3R0b2dpLmNvLmtyOjQ0Mw..&amp;hl=ko&amp;v=rz4DvU-cY2JYCwHSTck0_qm-&amp;size=normal&amp;cb=f5qveabheivt"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+  
+            <div class="agree_box"><!--{* active : 자세히보기 활성화 *}-->
+              <div class="tit">
+                <span class="form_wrap type2">
+                  <input type="checkbox" id="isAgreeCollectPersonalInformationYn" name="isAgreeCollectPersonalInformationYn" value="Y">
+                  <label for="isAgreeCollectPersonalInformationYn" role="checkbox">개인정보 수집·이용에 동의합니다.
+                    <span class="require">(필수)</span>
+                  </label>
+                </span>
+                <button type="button" class="btn_detail"><span class="sr_only">자세히보기 열기</span></button>
+              </div>
+              <div class="con"><!--{* 230922 번호 순서변경 *}-->
+                <div class="agree_content scroller" tabindex="0">
+                  <h3>개인정보 수집·이용 동의</h3>
+                  <p>주식회사 오뚜기(이하 "회사"라 합니다)는 개인정보보호법, 정보통신망 이용촉진 및 정보보호 등에 관한 법률 (이하"정통망법"이라 합니다) 등 관련 법령상의 개인정보보호규정을 준수하며, 관련 법령에 의거한 개인정보처리방침을 정하여 고객의 권익보호에 최선을 다하고 있습니다.</p>
+                  <ol>
+                    <li>1. 개인정보의 수집 및 이용 목적</li>
+                    <li>2. 개인정보의 수집항목 및 수집방법</li>
+                    <li>3. 개인정보의 보유, 이용기간 및 파기</li>
+                  </ol>
+                  <h4>1. 개인정보의 수집 및 이용 목적</h4>
+                  <p>회사는 수집한 개인정보를 공장견학 또는 고객한마디 상담시 본인 확인 및 고객서비스 유형에 따른 신속한 응대 목적으로만 이용하며, 이용 목적이 변경되는 경우 관련 법규에 따라 별도의 동의를 받는 등 필요한 조치를 이행합니다.</p>
+                  <h4>2. 개인정보의 수집항목 및 수집방법</h4>
+                  <p>(1) 회원가입 시 개인정보 수집<br>회사 홈페이지(www.ottogi.co.kr)는 별도의 개인정보 등록절차 없이 자유롭게 접근할 수 있습니다. 다만, 다음의 서비스는 보다 향상된 양질의 서비스를 제공하기 위하여 최소한의 개인정보를 처리하고 있습니다.</p>
+                  <ul>
+                    <li>필수수집항목<br>항목 성명, 이메일, 연락처 </li>
+                    <li>선택수집항목<br>주소</li>
+                    <li>필수/선택항목 수집 목적<br>본인확인, 공장견학 및 고객한마디 유형에 따른 응대</li>
+                    <li>자동수집 항목 <br>사이트 이용기록(접속 로그) 접속 IP 정보</li>
+                    <li>자동수집 항목 수집 목적<br>자동수집</li>
+                    <li>온라인 이벤트 진행시 이벤트 유형에 따라 수집되는 성명, 연락처, 주소 등에 대한 개인정보 의 수집항목, 수집목적, 보유기간을 별도 고지하여 동의를 받습니다.</li>
+                    <li>회사는 고객의 성명, 이메일, 연락처, 주소  정보 입력시 개인정보 수집 및 이용에 관한 동의여부를 선택할 수 있는 장치를 마련하여 「동의함」버튼을 클릭하는 경우, 개인정보 수집 및 이용에 대하여 동의한 것으로 봅니다.</li>
+                  </ul>
+                  <h4>3. 개인정보의 보유, 이용기간 및 파기</h4>
+                  <p>(1) 회사가 고객의 개인정보의 수집목적 또는 제공받은 목적이 달성된 때에는 고객의 개인정보를 지체없이 파기합니다. 다만 상법, 전자상거래등에서의 소비자보호에 관한 법률등 법령의 규정에 의하여 보존할 필요성이 있는 경우에는 아래와 같이 고객의 개인정보를 보관할 수 있습니다.이 경우 해당 개인정보는 보관의 목적으로만 관리합니다.</p>
+                  <ul class="pb0">
+                    <li><strong>계약 또는 청약철회 등에 관한 기록 : 5년</strong></li>
+                    <li><strong>대금결제 및 재화 등의 공급에 관한 기록 : 5년</strong></li>
+                    <li><strong>소비자의 불만 또는 분쟁처리에 관한 기록 : 3년</strong></li>
+                  </ul>
+                  <p>(2) 회사는 회원의 개인정보 유출로 인한 피해가 발생하지 않도록 다음 방법을 통하여 개인정보를 파기합니다. 종이에 출력된 개인정보 : 분쇄기로 분쇄하거나 소각 전자적 파일 형태로 저장된 개인정보 : 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제</p>
+                  <h4>4. 고지의무</h4>
+                  <p class="pb0">법령, 정책 또는 보안기술의 변경에 따라 내용의 추가, 삭제 및 수정이 있을 시에는 최소 7일 전부터 홈페이지를 통하여 공지됩니다.</p>
+                </div>
+              </div>
             </div>
+          </form>
+
+          <div class="btn_wrap type2">
+            <button type="button" class="btn_type_l" onclick="onSubmit()">등록</button>
           </div>
+
         </section>
+
+        
       </div>
-      <!-- 7. 제품소개 -->
-      <div id="product-area">
-        <div class="bg-con hide-el"></div>
-        <section class="product-area inbox">
-          <!-- 제품소개 슬라이더 -->
-          <!-- Swiper -->
-          <div class="swiper mySwiper swiper-container2">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="slide-img">
-                  <img src="./images/b8bdc5697fa1486fb3c11f19495b3e58.png" alt="" />
-                </div>
-                <div class="slide-txt">
-                  <h2 class="txt">
-                    맛있는 생활의<br />
-                    오뚜기 제품
-                  </h2>
-                  <h3>카레/짜장</h3>
-                  <h4>오뚜기를 대표하는<br />카레,짜장!</h4>
-                  <a href="#" class="more3"><span>오뚜기몰에서 상품보기</span></a>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slide-img">
-                  <img src="./images/3399ed06bd1d4f29a3cb0df825c576d8.png" alt="" />
-                </div>
-                <div class="slide-txt">
-                  <h2 class="txt">
-                    맛있는 생활의<br />
-                    오뚜기 제품
-                  </h2>
-                  <h3>봉지라면</h3>
-                  <h4>언제 어디서나 맛있는!<br />오뚜기 라면</h4>
-                  <a href="#" class="more3"><span>오뚜기몰에서 상품보기</span></a>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slide-img">
-                  <img src="./images/a47c5a4b54ac43eca0f6cc3a4d5a0d5b.png" alt="" />
-                </div>
-                <div class="slide-txt">
-                  <h2 class="txt">
-                    맛있는 생활의<br />
-                    오뚜기 제품
-                  </h2>
-                  <h3>만두</h3>
-                  <h4>좋은 재료로 속을<br />꽉 채워만든 만두</h4>
-                  <a href="#" class="more3"><span>오뚜기몰에서 상품보기</span></a>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slide-img">
-                  <img src="./images/9d23d293d25e42f0be1a71697649cffc.png" alt="" />
-                </div>
-                <div class="slide-txt">
-                  <h2 class="txt">
-                    맛있는 생활의<br />
-                    오뚜기 제품
-                  </h2>
-                  <h3>참기름/들기름/고추맛기름/볶음참깨</h3>
-                  <h4>엄선한 재료로<br />고소한 맛과 향</h4>
-                  <a href="#" class="more3"><span>오뚜기몰에서 상품보기</span></a>
-                </div>
-              </div>
-            </div>
-
-            <!-- 슬라이드 버튼 -->
-            <div class="controls">
-              <!-- 슬라이드 페이지 숫자 -->
-              <div class="swiper-pagination"></div>
-              <!-- 슬라이드 정지/재생 버튼 -->
-              <button type="button" class="swiper-button-pause2"><span class="ir">전체 정지</span></button>
-              <button type="button" class="swiper-button-play2"><span class="ir">전체 재생</span></button>
-
-              <!-- 슬라이드 이전/다음 버튼 -->
-              <button type="button" class="swiper-button-prev"><span class="ir">이전</span></button>
-              <button type="button" class="swiper-button-next"><span class="ir">다음</span></button>
-            </div>
-          </div>
-        </section>
-      </div>
-      <!-- 8. 오뚜기 소식 -->
-      <div id="news-area">
-        <section class="news-area inbox">
-          <h2 class="scroll-el hide-el">세상과 함께하는 <br />이야기를 나누고자 합니다.</h2>
-
-          <!-- 탭버튼 -->
-          <ul class="tab scroll-el hide-el">
-            <li><a href="javascript:;" class="news on">뉴스룸</a></li>
-            <li><a href="javascript:;" class="recipe">레시피</a></li>
-            <li><a href="javascript:;" class="sns">SNS</a></li>
-          </ul>
-
-          <!-- 탭 리스트 -->
-          <div class="tab-list scroll-el hide-el">
-             <!-- 뉴스룸 -->
-                 <!-- 더보기 버튼 -->
-                 <a href="#" class="more on"><span class="ir">뉴스룸 더보기</span></a>
-              <ul class="list list1 clb on">
-              
-                <li>
-                  <a href="#" class="img-box">
-                    <img src="./images/ed1cb0af3276411c919f1966a27cda11.jpg" alt="오뚜기 , ‘ 스위트홈 제 27 회 오뚜기 가족요리 페스티벌 ’ 참가자 모집 … ‘ 오뚜기 카레 ’ 활용" />
-                  </a>
-                  <a href="#" class="txt-box">
-                    <p>오뚜기 , ‘ 스위트홈 제 27 회 오뚜기 가족요리 페스티벌 ’ 참가자 모집 … ‘ 오뚜기 카레 ’ 활용</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="img-box">
-                    <img src="./images/45eabc71773c4c7ba99410a1cd2af9b7.jpg" alt="“ 세계 물의 날 ” ㈜오뚜기 , 공장 설비 개선 등 ‘ 수자원 보호 ’ 행보 눈길" />
-                  </a>
-                  <a href="#" class="txt-box">
-                    <p>“ 세계 물의 날 ” ㈜오뚜기 , 공장 설비 개선 등 ‘ 수자원 보호 ’ 행보 눈길</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="img-box">
-                    <img src="./images/95f462abf9ad47c19e9555ddb31ed18c.jpg" alt="“ 파우치에 담은 비법양념 ” ㈜오뚜기 ‘ 오늘밥상 ’, 집밥·캠핑족 잡았다" />
-                  </a>
-                  <a href="#" class="txt-box">
-                    <p>“ 파우치에 담은 비법양념 ” ㈜오뚜기 ‘ 오늘밥상 ’, 집밥·캠핑족 잡았다</p>
-                  </a>
-                </li>
-              </ul>
-           
-              <!-- 레시피 -->
-               <!-- 더보기 버튼 -->
-               <a href="#" class="more"><span class="ir">레시피 더보기</span></a>
-            <ul class="list list2 clb">
-                <li>
-                  <a href="#" class="img-box">
-                    <img src="./images/bfe208e34139487e99f8c585ae1de1ec.jpg" alt="" />
-                  </a>
-                  <a href="#" class="txt-box">
-                    <p>차돌 냉이 된장찌개</p>
-                    <div class="tag">
-                      <span>#오늘밥상&nbsp;</span>
-                      <span>#된장찌개양념&nbsp;</span>
-                      <span>#냉이&nbsp;</span>
-                    </div>
-                  </a>
-                </li>
   
-                <li>
-                  <a href="#" class="img-box">
-                    <img src="./images/6f245a1fbcd340818adc37734a3cbe44.jpg" alt="" />
-                  </a>
-                  <a href="#" class="txt-box">
-                    <p>찹쌀크림도너츠</p>
-                    <div class="tag">
-                      <span>#크림듬뿍&nbsp;</span>
-                      <span>#오뚜기쨈&nbsp;</span>
-                      <span>#디저트&nbsp;</span>
-                    </div>
-                  </a>
-                </li>
-  
-                <li>
-                  <a href="#" class="img-box">
-                    <img src="./images/41ac71e70ad54b88b8e867507335d13f.jpg" alt="" />
-                  </a>
-                  <a href="#" class="txt-box">
-                    <p>낙지 초무침</p>
-                    <div class="tag">
-                      <span>#안주&nbsp;</span>
-                      <span>#야식&nbsp;</span>
-                      <span>#새콤달콤&nbsp;</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="img-box">
-                    <img src="./images/cb5e4658d06b4997a6788b9bfd476453.jpg" alt="" />
-                  </a>
-                  <a href="#" class="txt-box">
-                    <p>쭈꾸미 떡볶이</p>
-                    <div class="tag">
-                      <span>#주꾸미&nbsp;</span>
-                      <span>#떡볶이&nbsp;</span>
-                      <span>#간식&nbsp;</span>
-                    </div>
-                  </a>
-                </li>
-             
-              </ul>
-            </ul>
-               <!-- SNS -->
-                <!-- 더보기 버튼 -->
-                <a href="#" class="more"><span class="ir">sns 더보기</span></a>
-               <ul class="list list3 clb">
-                <li>
-                  <p class="insta">ottogi_daily</p>
-                  <a href="#" class="img-box">
-                    <img src="./images/3e35470307d04b508e0d9913ca762fea.jpg" alt="" />
-                  </a>
-                  <a href="#" class="txt-box">
-                    <p>오즈키친 주먹밥으로 간편하게 담기만 하면 도시락 완성🍱</p>
-                    
-                  </a>
-                </li>
-  
-                <li>
-                  <p class="insta">ottogi_daily</p>
-                  <a href="#" class="img-box">
-                    <img src="./images/d1e0b2850f174bbba7ba4cd61d40bf67.jpg" alt="" />
-                  </a>
-                  <a href="#" class="txt-box">
-                    <p>아침 메뉴로 딱! 가볍고 든든한 참치미역죽 레시피🥣</p>
-                    
-                  </a>
-                </li>
-  
-                <li>
-                  <p class="insta">ottogi_daily</p>
-                  <a href="#" class="img-box">
-                    <img src="./images/d6e09404285f4c9f86dd29c98c6065c8.jpg" alt="" />
-                  </a>
-                  <a href="#" class="txt-box">
-                    <p>🆕상큼달달 LIGHT SUGAR 사과쨈🍎</p>
-                    
-                  </a>
-                </li>
-              </ul>
-            </ul>
-          </div>
-        </section>
-      </div>
+    
+     
       <!-- 9. 하단영역 -->
       <div id="footer-area">
         <footer class="footer-area inbox">

@@ -1,0 +1,357 @@
+@charset "utf-8";
+/* 1차 PJ : 메인페이지 CSS - main.css */
+
+/************* 1. 상단영역 *************/
+/* common.css */
+#cus-voice{
+  width: 100%;
+  height: 100%;
+  padding-top: 100px;
+
+}
+#cus-voice .inbox{
+max-width: 1400px;
+outline: 1px solid red;
+height:auto;
+}
+
+#cus-voice h2{
+  margin-top: 50px;
+  text-align: center;
+  font-size:5rem;
+}
+
+.guide_wrap {
+  display: flex;
+  margin: 30px -20px 0 -20px;
+    padding: 30px 20px 73px;
+    border-radius: 30px 30px 700px 700px;
+    background: #F8F8F8;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    min-height: 332px;
+    margin: 80px 0 0;
+    padding: 40px 104px 40px 355px;
+    border-radius: 20px 500px 500px 20px;
+}
+
+.guide_wrap::before {
+  content: '';
+  display: block;
+  width: 156px;
+  height: 172px;
+  margin: 0 auto;
+  background: url(../images/ttogi.png) no-repeat 50% 50% / 100% 100%;
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  width: 222px;
+  height: 244px;
+  transform: translateY(-50%);
+}
+
+.guide_wrap .tit {
+  margin: 0 0 10px;
+  font-size: 40px;
+  line-height: 56px;
+  letter-spacing: -.8px;
+  text-align: left;
+}
+
+.guide_wrap ul li {
+  font-size:1.6rem;
+  line-height: 28px;
+  position: relative;
+  margin-top: 5px;
+  padding-left: 16px;
+}
+
+.tbl_write {
+  display: table;
+  margin: 10.3rem auto;
+}
+
+.tbl_write tbody tr th label {
+  font-size: 16px;
+  line-height: 50px;
+}
+
+.tbl_write th .require {
+  font-size: 16px;
+  line-height: 50px;
+  display: inline-block;
+  color: #DC2F34;
+  line-height: 23px;
+}
+
+.inp_base {
+  width: 100%;
+  height: 40px;
+  padding: 8px 20px;
+  border-radius: 50px;
+  background: #F8F8F8;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 23px;
+}
+
+
+.tbl_write tbody tr th .label {
+  font-size: 16px;
+  line-height: 50px;
+}
+
+.tbl_write tbody tr th {
+  text-align: left;
+}
+.tbl_write th .label {
+  display: inline-block;
+  font-size: 15px;
+  line-height: 23px;
+
+}
+
+.inp_base {
+  width: 100%;
+  height: 40px;
+  padding: 8px 20px;
+  border-radius: 50px;
+  background: #F8F8F8;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 23px;
+  border:none;
+}
+
+.form_wrap input[type="radio"]+label {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 23px;
+  position: relative;
+  padding-left: 30px;
+
+
+}
+
+
+.form_wrap input[type="radio"]+label::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background: url(../images/ico_radio.svg) no-repeat 0 0 / 20px 20px;
+}
+
+.form_wrap input[type="radio"]:checked+label::before {
+  background: url(../images/ico_radio_on.svg) no-repeat 0 0 / 20px 20px;
+}
+
+.tbl_write tbody tr td {
+  display: table-cell;
+  padding-top: 40px;
+  width: 100%;
+}
+
+.tbl_write tbody tr th {
+  display: table-cell;
+  padding-top: 40px;
+  vertical-align: top;
+}
+
+.tbl_write td .d_flex {
+  display: flex;
+}
+.tbl_write td .d_flex .inp_box {
+  flex: 1;
+}
+
+.tbl_write td .d_flex .btn_type2_s {
+  width: auto;
+  margin-left: 10px;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+
+.btn_type2_s {
+position: relative;
+height: 50px;
+font-size: 16px;
+font-weight: 500;
+line-height: 46px;
+border: 2px solid #E6E6E6;
+background: #fff;
+
+}
+
+
+.tbl_write th .choice {
+  display: inline-block;
+  color: #666;
+  font-size: 16px;
+  line-height: 50px;
+}
+
+input[type="radio" i] {
+  display: none;
+}
+
+[class*="btn_type2"]:hover {
+  border: 2px solid #E6E6E6;
+}
+
+[class*="btn_type2"]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 3px solid transparent;
+  border-radius: 100px;
+  outline: 2px solid #E6E6E6;
+  opacity: 0;
+  transition: all .5s cubic-bezier(.6,0,0,1);
+}
+
+.tbl_write tbody tr td .mt {
+  margin-top: 10px;
+}
+.inp_box {
+  position: relative;
+}
+.tbl_write tbody tr td .form_wrap {
+  margin: 13px 40px 13px 0;
+}
+
+
+.form_wrap input[type="checkbox"]+label{
+  display: inline-block;
+    padding-left: 30px;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 23px;
+}
+
+.form_wrap input[type="checkbox"]:checked+label::before {
+  background: url(../images/ico_chkbox_on.svg) no-repeat 0 0 / 20px 20px;
+}
+
+.form_wrap input[type="checkbox"]:hover+label::before {
+  background: url(../images/ico_chkbox_hover.svg) no-repeat 0 0 / 20px 20px;
+}
+.form_wrap input[type="checkbox"]+label::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background: url(../images/ico_chkbox.svg) no-repeat 0 0 / 20px 20px;
+}
+
+.sel_base {
+  width: 100%;
+  padding: 8px 60px 8px 20px;
+  border-radius: 50px;
+  border: 2px solid #666;
+  background: url(../images/ico_sel.svg) no-repeat right 20px top 50% / 24px 24px;
+  
+  height: 50px;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+
+.textarea {
+  width: 100%;
+  height: 240px;
+  padding: 15px 20px;
+  border: 2px solid #666;
+  border-radius: 15px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 300;
+
+}
+
+.msg_noti {
+  position: relative;
+  padding-left: 21px;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #666;
+  line-height: 22px;
+}
+
+.msg_noti::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background: url(../images/ico_notice.svg) no-repeat 0 0 / 16px 16px;
+}
+.agree_box {
+  overflow: hidden;
+  margin-top: 40px;
+  border: 1px solid #666;
+  border-radius: 15px;
+
+}
+
+
+.agree_box .tit {
+  display: flex;
+  justify-content: space-between;
+  padding: 17px 20px;
+}
+
+.agree_box .con .agree_content {
+  display: none;
+  overflow-y: auto;
+  max-height: 330px;
+  padding: 20px;
+  border-radius: inherit;
+}
+
+
+.btn_type_l {
+  position: relative;
+  border: 2px solid transparent;
+  background: #FFED00;
+  height: 80px;
+  font-size: 22px;
+  line-height: 76px;
+}
+
+[class*="btn_type"]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 3px solid transparent;
+  border-radius: 100px;
+  outline: 2px solid #FFED00;
+  opacity: 0;
+  transition: all .5s cubic-bezier(.6,0,0,1);
+}
+
+.btn_wrap.type2 button {
+  display: block;
+ margin:50px auto 0;
+  width: auto;
+  padding: 0 100px;
+  border-radius: 100px;
+}
+
