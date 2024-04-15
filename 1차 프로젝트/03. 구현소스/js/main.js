@@ -88,7 +88,15 @@ siteMap.addEventListener('click', () => {
   hamBtn.classList.toggle('on');
   popMenu.classList.toggle('on');
   black.classList.toggle('on');
+
 });
+
+
+// // 어두운 배경 클릭시에 사이트맵 팝업 없어지게
+// black.addEventListener('click', () => {
+//   popMenu.style.display = "none";
+//   black.style.display = "none";
+// }); 
 
 
 // document.querySelector(".sitemap").onclick = function () {
@@ -235,8 +243,6 @@ play2.onclick = function () {
 
 
 /***********스크롤 위치 애니메이션*********/
-
-AOS.init(); 
 
 
 

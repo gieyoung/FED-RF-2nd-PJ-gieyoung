@@ -229,6 +229,12 @@ h1.logo a {
   z-index: -1;
 }
 
+/* 대형스크린 대비 가운데로 모아주기 */
+.nav-wrap{
+ margin:0 auto;
+ max-width:9000px;
+}
+
 /* 마우스 오버시 2단메뉴 배경 내려오기 */
 .nav-wrap:hover .gnb-depth1::before {
   height: 350px;
@@ -400,7 +406,7 @@ h1.logo a {
   color: #fff;
 }
 
-.nav-wrap:hover .lang > a {
+.top-area:hover .lang > a {
   color: #000;
 }
 .lang-menu {

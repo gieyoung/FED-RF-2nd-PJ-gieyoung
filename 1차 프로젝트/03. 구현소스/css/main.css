@@ -533,12 +533,12 @@
 }
 
 #story-area .inbox {
-  max-width: 90%;
+  max-width: 100%;
 }
 
 /* 뒤 배경 이미지 */
 .story-area .visual {
-  background: url("../images/main_brand_mo.jpg") no-repeat 50% / cover;
+  background: url("../images/main_brand_pc.jpg") no-repeat 50% / cover;
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -553,7 +553,7 @@
 
 /* 글자 */
 .story-area .visual .text {
-  width: 80%;
+  max-width:1600px;
   height: auto;
   /* outline: 1px solid red; */
   margin: 0 auto;
