@@ -65,7 +65,10 @@ function addOn(ele) {
   // console.log(bcrVal);
 
   // 기준값보다 작을때 등장
-  if (bcrVal < CRITERIA) ele.classList.add("on");
+  if (bcrVal < CRITERIA) {
+    ele.classList.contains('except')?
+    myFn.qs('.bg-con').classList.add("on"):
+    ele.classList.add("on");}
   // 기준값보다 크면 원상복귀(숨김-on빼기)
   else ele.classList.remove("on");
 } ///////////// addOn 함수 //////////////
