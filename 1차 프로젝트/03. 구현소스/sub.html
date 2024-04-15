@@ -13,20 +13,14 @@
     <link rel="stylesheet" href="./css/sub.css" />
     <link rel="stylesheet" href="./css/core.css" />
     <link rel="stylesheet" href="./css/common.css" />
-    <link rel="stylesheet" href="./css/media.css" />
-    <!-- <link rel="stylesheet" href="./css/grid_12_flex.css" /> -->
+    <!-- <link rel="stylesheet" href="./css/media.css" /> -->
+  
 
     <!-- JS연결 -->
-    <script src="./js/main.js" defer></script>
-    <script src="./js/scroll_action.js" defer></script>
+    <script src="./js/sub.js" defer></script>
+  
 
-    <!-- CDN연결(swiper슬라이더) -->
-    <link rel="stylesheet" href="./css/swiper-bundle.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- AOS 라이브러리 불러오기-->
-    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  -->
+  
 
   </head>
   <body>
@@ -299,7 +293,6 @@
                   <ul class="gnb-depth2">
                     <li><a href="javascript:;"><span>브랜드 스토리</span></a></li>
                     <li><a href="javascript:;"><span>제품정보</span></a></li>
-                  
                   </ul>
                 </li>
                 <li class="gnb-depth1">
@@ -338,8 +331,6 @@
                     <li><a href="javascript:;"><span>소비자중심경영</span></a></li>
                   </ul>
                 </li>
-
-                
               </ul>
             </nav>
             <!-- 1-3.기타 -->
@@ -487,16 +478,16 @@
                   </th>
                   <td>
                     <span class="form_wrap">
-                      <input type="radio" id="customerTopicsCodePRAISE" name="customerTopicsCode" value="PRAISE" onclick="clickCustomerTopicsCode(this)" checked="checked">
+                      <input type="radio" id="customerTopicsCodePRAISE" name="customerTopicsCode" value="PRAISE" onclick="" checked="checked">
                       <label for="customerTopicsCodePRAISE" role="radio">칭찬</label>
                     </span><span class="form_wrap">
-                      <input type="radio" id="customerTopicsCodeSUGGESTION" name="customerTopicsCode" value="SUGGESTION" onclick="clickCustomerTopicsCode(this)">
+                      <input type="radio" id="customerTopicsCodeSUGGESTION" name="customerTopicsCode" value="SUGGESTION" onclick="">
                       <label for="customerTopicsCodeSUGGESTION" role="radio">제안</label>
                     </span><span class="form_wrap">
-                      <input type="radio" id="customerTopicsCodeINQUIRY" name="customerTopicsCode" value="INQUIRY" onclick="clickCustomerTopicsCode(this)">
+                      <input type="radio" id="customerTopicsCodeINQUIRY" name="customerTopicsCode" value="INQUIRY" onclick="">
                       <label for="customerTopicsCodeINQUIRY" role="radio">문의</label>
                     </span><span class="form_wrap">
-                      <input type="radio" id="customerTopicsCodeCOMPLAINT" name="customerTopicsCode" value="COMPLAINT" onclick="clickCustomerTopicsCode(this)">
+                      <input type="radio" id="customerTopicsCodeCOMPLAINT" name="customerTopicsCode" value="COMPLAINT" onclick="">
                       <label for="customerTopicsCodeCOMPLAINT" role="radio">불편/불만</label>
                     </span>
                   </td>
@@ -596,9 +587,9 @@
                     <span class="require">(필수)</span>
                   </label>
                 </span>
-                <button type="button" class="btn_detail"><span class="sr_only">자세히보기 열기</span></button>
+                <button type="button" class="btn_detail"><span class="ir">자세히보기 열기</span></button>
               </div>
-              <div class="con"><!--{* 230922 번호 순서변경 *}-->
+              <div class="con">
                 <div class="agree_content scroller" tabindex="0">
                   <h3>개인정보 수집·이용 동의</h3>
                   <p>주식회사 오뚜기(이하 "회사"라 합니다)는 개인정보보호법, 정보통신망 이용촉진 및 정보보호 등에 관한 법률 (이하"정통망법"이라 합니다) 등 관련 법령상의 개인정보보호규정을 준수하며, 관련 법령에 의거한 개인정보처리방침을 정하여 고객의 권익보호에 최선을 다하고 있습니다.</p>
@@ -636,7 +627,7 @@
           </form>
 
           <div class="btn_wrap type2">
-            <button type="button" class="btn_type_l" onclick="onSubmit()">등록</button>
+            <button type="button" class="btn_type_l" onclick="">등록</button>
           </div>
 
         </section>

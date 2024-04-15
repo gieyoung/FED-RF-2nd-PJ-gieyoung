@@ -247,12 +247,11 @@ play2.onclick = function () {
 
 
 
-/*배너구역 배경 애니메이션*/ 
+// /*배너구역 배경 애니메이션*/ 
 
-
-  document.querySelectorAll('.bg-con')
-  .forEach(ele=>{
-    ele.onclick = ()=>{
-      ele.classList.toggle('on');
-    }; /// click ///
-  }); /// forEach ////
+//   document.querySelectorAll('.bg-con')
+//   .forEach(ele=>{
+//     ele.onclick = ()=>{
+//       ele.classList.toggle('on');
+//     }; /// click ///
+//   }); /// forEach ////

@@ -3,16 +3,28 @@
 
 /************* 1. 상단영역 *************/
 /* common.css */
+.gnb > li > a{
+  text-shadow:none !important;
+  color: #000 !important;
+
+}
+
+
+
+
+/************* 2. 메인영역 *************/
 #cus-voice{
   width: 100%;
   height: 100%;
-  padding-top: 100px;
+  padding: 100px 0;
+ 
 
 }
 #cus-voice .inbox{
 max-width: 1400px;
 outline: 1px solid red;
 height:auto;
+
 }
 
 #cus-voice h2{
@@ -87,13 +99,14 @@ height:auto;
 
 .inp_base {
   width: 100%;
-  height: 40px;
-  padding: 8px 20px;
-  border-radius: 50px;
-  background: #F8F8F8;
-  font-size: 15px;
-  font-weight: 300;
-  line-height: 23px;
+    height: 40px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    background: #F8F8F8;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 23px;
+    border: none;
 }
 
 
@@ -165,9 +178,13 @@ height:auto;
 
 .tbl_write td .d_flex {
   display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  align-content: center;
+ 
 }
 .tbl_write td .d_flex .inp_box {
-  flex: 1;
+  width: 71%;
 }
 
 .tbl_write td .d_flex .btn_type2_s {
@@ -232,7 +249,6 @@ input[type="radio" i] {
 
 .form_wrap input[type="checkbox"]+label{
   display: inline-block;
-    padding-left: 30px;
     font-size: 15px;
     font-weight: 300;
     line-height: 23px;
@@ -244,16 +260,6 @@ input[type="radio" i] {
 
 .form_wrap input[type="checkbox"]:hover+label::before {
   background: url(../images/ico_chkbox_hover.svg) no-repeat 0 0 / 20px 20px;
-}
-.form_wrap input[type="checkbox"]+label::before {
-  content: '';
-  position: absolute;
-  top: 2px;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  background: url(../images/ico_chkbox.svg) no-repeat 0 0 / 20px 20px;
 }
 
 .sel_base {
@@ -302,9 +308,10 @@ input[type="radio" i] {
 }
 .agree_box {
   overflow: hidden;
-  margin-top: 40px;
   border: 1px solid #666;
   border-radius: 15px;
+  width: 70%;
+  margin: 0 auto;
 
 }
 
@@ -319,10 +326,15 @@ input[type="radio" i] {
   display: none;
   overflow-y: auto;
   max-height: 330px;
-  padding: 20px;
   border-radius: inherit;
+  background: #f1f1f1;
+  padding: 20px;
+  font-size: 12px;
 }
 
+.agree_box .con .agree_content.on{
+  display: block;
+}
 
 .btn_type_l {
   position: relative;
@@ -331,21 +343,31 @@ input[type="radio" i] {
   height: 80px;
   font-size: 22px;
   line-height: 76px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-[class*="btn_type"]::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 3px solid transparent;
-  border-radius: 100px;
-  outline: 2px solid #FFED00;
-  opacity: 0;
-  transition: all .5s cubic-bezier(.6,0,0,1);
+.btn_type_l::before {
+  
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* right: 0; */
+    bottom: 0;
+    border: 3px solid transparent;
+    border-radius: 100px;
+    width: 104%;
+    height: 112%;
+    /* padding: 20px; */
+    outline: 2px solid #FFED00;
+   
+    
 }
+
+
 
 .btn_wrap.type2 button {
   display: block;
@@ -354,4 +376,22 @@ input[type="radio" i] {
   padding: 0 100px;
   border-radius: 100px;
 }
+.agree_box .tit .btn_detail{
+  position: relative;
+  overflow: none;
+  border: none;
+  background: none;
+  width: 21px;
+  display: inline-block;
+}
 
+.agree_box .tit .btn_detail::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  background: url(../images/btn_detail_view.svg) no-repeat 0 0 / 100% 100%;
+}
