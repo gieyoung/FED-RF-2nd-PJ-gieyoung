@@ -3,53 +3,48 @@
 
 /************* 1. 상단영역 *************/
 /* common.css */
-.gnb > li > a{
-  text-shadow:none !important;
+.gnb > li > a {
+  text-shadow: none !important;
   color: #000 !important;
-
 }
 
-
-
-
 /************* 2. 메인영역 *************/
-#cus-voice{
+#cus-voice {
   width: 100%;
   height: 100%;
   padding: 100px 0;
- 
-
 }
-#cus-voice .inbox{
-max-width: 1400px;
-outline: 1px solid red;
-height:auto;
-
+#cus-voice .inbox {
+  max-width: 1200px;
+  outline: 1px solid red;
+  height: auto;
+  width:95%;
 }
 
-#cus-voice h2{
+#cus-voice h2 {
   margin-top: 50px;
   text-align: center;
-  font-size:5rem;
+  font-size: 5rem;
 }
 
 .guide_wrap {
   display: flex;
   margin: 30px -20px 0 -20px;
-    padding: 30px 20px 73px;
-    border-radius: 30px 30px 700px 700px;
-    background: #F8F8F8;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    min-height: 332px;
-    margin: 80px 0 0;
-    padding: 40px 104px 40px 355px;
-    border-radius: 20px 500px 500px 20px;
+  padding: 30px 20px 73px;
+  border-radius: 30px 30px 700px 700px;
+  background: #f8f8f8;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  min-height: 332px;
+  margin: 80px 0 0;
+  padding: 40px 104px 40px 355px;
+  border-radius: 20px 500px 500px 20px;
+  box-sizing: border-box;
 }
 
 .guide_wrap::before {
-  content: '';
+  content: "";
   display: block;
   width: 156px;
   height: 172px;
@@ -65,14 +60,19 @@ height:auto;
 
 .guide_wrap .tit {
   margin: 0 0 10px;
-  font-size: 40px;
+  font-size: 3.5rem;
   line-height: 56px;
-  letter-spacing: -.8px;
+  letter-spacing: -0.8px;
   text-align: left;
 }
 
+
+.guide_wrap ul li .underline {
+  border-bottom: 1px solid #000;
+  
+}
 .guide_wrap ul li {
-  font-size:1.6rem;
+  font-size: 1.6rem;
   line-height: 28px;
   position: relative;
   margin-top: 5px;
@@ -93,22 +93,22 @@ height:auto;
   font-size: 16px;
   line-height: 50px;
   display: inline-block;
-  color: #DC2F34;
+  color: #dc2f34;
   line-height: 23px;
 }
 
 .inp_base {
   width: 100%;
-    height: 40px;
-    padding: 8px 20px;
-    border-radius: 50px;
-    background: #F8F8F8;
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 23px;
-    border: none;
+  height: 40px;
+  padding: 28px 20px;
+  border-radius: 50px;
+  background: #f8f8f8;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 23px;
+  border: none;
+  box-sizing: border-box;
 }
-
 
 .tbl_write tbody tr th .label {
   font-size: 16px;
@@ -122,35 +122,20 @@ height:auto;
   display: inline-block;
   font-size: 15px;
   line-height: 23px;
-
 }
 
-.inp_base {
-  width: 100%;
-  height: 40px;
-  padding: 8px 20px;
-  border-radius: 50px;
-  background: #F8F8F8;
-  font-size: 15px;
-  font-weight: 300;
-  line-height: 23px;
-  border:none;
-}
 
-.form_wrap input[type="radio"]+label {
+.form_wrap input[type="radio"] + label {
   display: inline-block;
   font-size: 15px;
   font-weight: 300;
   line-height: 23px;
   position: relative;
   padding-left: 30px;
-
-
 }
 
-
-.form_wrap input[type="radio"]+label::before {
-  content: '';
+.form_wrap input[type="radio"] + label::before {
+  content: "";
   position: absolute;
   top: 2px;
   left: 0;
@@ -160,7 +145,7 @@ height:auto;
   background: url(../images/ico_radio.svg) no-repeat 0 0 / 20px 20px;
 }
 
-.form_wrap input[type="radio"]:checked+label::before {
+.form_wrap input[type="radio"]:checked + label::before {
   background: url(../images/ico_radio_on.svg) no-repeat 0 0 / 20px 20px;
 }
 
@@ -181,7 +166,6 @@ height:auto;
   justify-content: space-between;
   align-items: baseline;
   align-content: center;
- 
 }
 .tbl_write td .d_flex .inp_box {
   width: 71%;
@@ -194,18 +178,15 @@ height:auto;
   box-sizing: border-box;
 }
 
-
 .btn_type2_s {
-position: relative;
-height: 50px;
-font-size: 16px;
-font-weight: 500;
-line-height: 46px;
-border: 2px solid #E6E6E6;
-background: #fff;
-
+  position: relative;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 46px;
+  border: 2px solid #e6e6e6;
+  background: #fff;
 }
-
 
 .tbl_write th .choice {
   display: inline-block;
@@ -219,11 +200,11 @@ input[type="radio" i] {
 }
 
 [class*="btn_type2"]:hover {
-  border: 2px solid #E6E6E6;
+  border: 2px solid #e6e6e6;
 }
 
 [class*="btn_type2"]::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -231,9 +212,9 @@ input[type="radio" i] {
   bottom: 0;
   border: 3px solid transparent;
   border-radius: 100px;
-  outline: 2px solid #E6E6E6;
+  outline: 2px solid #e6e6e6;
   opacity: 0;
-  transition: all .5s cubic-bezier(.6,0,0,1);
+  transition: all 0.5s cubic-bezier(0.6, 0, 0, 1);
 }
 
 .tbl_write tbody tr td .mt {
@@ -246,19 +227,18 @@ input[type="radio" i] {
   margin: 13px 40px 13px 0;
 }
 
-
-.form_wrap input[type="checkbox"]+label{
+.form_wrap input[type="checkbox"] + label {
   display: inline-block;
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 23px;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 23px;
 }
 
-.form_wrap input[type="checkbox"]:checked+label::before {
+.form_wrap input[type="checkbox"]:checked + label::before {
   background: url(../images/ico_chkbox_on.svg) no-repeat 0 0 / 20px 20px;
 }
 
-.form_wrap input[type="checkbox"]:hover+label::before {
+.form_wrap input[type="checkbox"]:hover + label::before {
   background: url(../images/ico_chkbox_hover.svg) no-repeat 0 0 / 20px 20px;
 }
 
@@ -268,12 +248,11 @@ input[type="radio" i] {
   border-radius: 50px;
   border: 2px solid #666;
   background: url(../images/ico_sel.svg) no-repeat right 20px top 50% / 24px 24px;
-  
-  height: 50px;
-    font-size: 20px;
-    line-height: 28px;
-}
 
+  height: 50px;
+  font-size: 20px;
+  line-height: 28px;
+}
 
 .textarea {
   width: 100%;
@@ -284,7 +263,7 @@ input[type="radio" i] {
   font-size: 18px;
   line-height: 26px;
   font-weight: 300;
-
+  box-sizing: border-box;
 }
 
 .msg_noti {
@@ -298,7 +277,7 @@ input[type="radio" i] {
 }
 
 .msg_noti::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 3px;
   left: 0;
@@ -312,9 +291,7 @@ input[type="radio" i] {
   border-radius: 15px;
   width: 70%;
   margin: 0 auto;
-
 }
-
 
 .agree_box .tit {
   display: flex;
@@ -332,51 +309,47 @@ input[type="radio" i] {
   font-size: 12px;
 }
 
-.agree_box .con .agree_content.on{
+.agree_box .con .agree_content.on {
   display: block;
 }
 
 .btn_type_l {
   position: relative;
   border: 2px solid transparent;
-  background: #FFED00;
-  height: 80px;
+  background: #ffed00;
+  height: 65px;
   font-size: 22px;
-  line-height: 76px;
+  line-height: 45px;
   font-family: "Noto Sans KR", sans-serif;
   font-weight: bold;
   cursor: pointer;
 }
 
 .btn_type_l::before {
-  
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* right: 0; */
-    bottom: 0;
-    border: 3px solid transparent;
-    border-radius: 100px;
-    width: 104%;
-    height: 112%;
-    /* padding: 20px; */
-    outline: 2px solid #FFED00;
-   
-    
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* right: 0; */
+  bottom: 0;
+  border: 3px solid transparent;
+  border-radius: 100px;
+  width: 104%;
+  height: 112%;
+  /* padding: 20px; */
+  outline: 2px solid #ffed00;
 }
-
-
 
 .btn_wrap.type2 button {
   display: block;
- margin:50px auto 0;
+  margin: 50px auto 0;
   width: auto;
-  padding: 0 100px;
+  padding: 0 70px;
   border-radius: 100px;
 }
-.agree_box .tit .btn_detail{
+
+.agree_box .tit .btn_detail {
   position: relative;
   overflow: none;
   border: none;
@@ -386,7 +359,7 @@ input[type="radio" i] {
 }
 
 .agree_box .tit .btn_detail::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   right: 0;
