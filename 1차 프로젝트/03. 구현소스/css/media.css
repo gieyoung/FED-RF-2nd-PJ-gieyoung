@@ -24,6 +24,8 @@
   .chat{display: none;}
   .ottugi-go{display: none;}
   .etc-box .lang{display: none;}
+  .hambtn span{background-color: #f1f1f1; box-shadow: 1px 0 grey, -1px 0 grey, 0 1px grey, 0 -1px grey;}
+  .top-area:hover .hambtn span {background-color: #f1f1f1;}
   
 
   /* 브랜드스토리 */

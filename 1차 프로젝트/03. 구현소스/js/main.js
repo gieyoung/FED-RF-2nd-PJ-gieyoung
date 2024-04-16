@@ -92,11 +92,12 @@ siteMap.addEventListener('click', () => {
 });
 
 
-// // 어두운 배경 클릭시에 사이트맵 팝업 없어지게
-// black.addEventListener('click', () => {
-//   popMenu.style.display = "none";
-//   black.style.display = "none";
-// }); 
+// 어두운 배경 클릭시에 사이트맵 팝업 없어지게
+black.addEventListener('click', () => {
+  popMenu.classList.remove('on');
+  black.classList.remove('on');
+  hamBtn.classList.remove('on');
+}); 
 
 
 // document.querySelector(".sitemap").onclick = function () {
