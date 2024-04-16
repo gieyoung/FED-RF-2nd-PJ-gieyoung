@@ -30,7 +30,19 @@
 /* 공사중 표시 */
 body * {
   /* outline:1px solid red; */
+   
 }
+
+
+/* 모바일에서 오른쪽 여백 생기는 문제 해결 */
+body>*{
+  overflow-x:hidden;
+}
+
+
+/* 드래그시 배경 색상(오뚜기 시그니처 컬러) */
+::selection{ background:#ffed00; }
+
 
 /* 전체 감싼 박스 */
 #wrap {
