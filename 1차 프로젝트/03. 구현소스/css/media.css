@@ -113,6 +113,7 @@
   /* 상단영역 */
   .nav-wrap .etc-box{width: 40%;}
   /* 배너영역 */
+  #ban-area {height: 50vh;}
   #ban-area .swiper-button-next, #ban-area .swiper-button-prev{display:none;}
   #ban-area .autoplay-progress{display: none;}
   #ban-area .slide-txt .txt{font-size: 3rem; line-height: 4rem;}
