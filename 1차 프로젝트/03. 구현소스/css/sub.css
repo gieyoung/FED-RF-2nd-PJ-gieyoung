@@ -16,9 +16,9 @@
 }
 #cus-voice .inbox {
   max-width: 1200px;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
   height: auto;
-  width:95%;
+  width: 95%;
 }
 
 #cus-voice h2 {
@@ -66,10 +66,8 @@
   text-align: left;
 }
 
-
 .guide_wrap ul li .underline {
   border-bottom: 1px solid #000;
-  
 }
 .guide_wrap ul li {
   font-size: 1.6rem;
@@ -83,18 +81,27 @@
   display: table;
   margin: 10.3rem auto;
 }
-
+.guide_wrap ul li::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #000;
+}
 .tbl_write tbody tr th label {
-  font-size: 16px;
-  line-height: 50px;
+  font-size: 1.6rem;
+  line-height: 5.0rem;
 }
 
 .tbl_write th .require {
-  font-size: 16px;
-  line-height: 50px;
+  font-size: 1.6rem;
+  line-height: 5.0rem;
   display: inline-block;
   color: #dc2f34;
-  line-height: 23px;
+  /* line-height: 23px; */
 }
 
 .inp_base {
@@ -103,16 +110,16 @@
   padding: 28px 20px;
   border-radius: 50px;
   background: #f8f8f8;
-  font-size: 15px;
+  font-size: 1.5rem;
   font-weight: 300;
-  line-height: 23px;
+  line-height: 2.3rem;
   border: none;
   box-sizing: border-box;
 }
 
 .tbl_write tbody tr th .label {
-  font-size: 16px;
-  line-height: 50px;
+  font-size: 1.6rem;
+  line-height: 5.0rem;
 }
 
 .tbl_write tbody tr th {
@@ -120,16 +127,15 @@
 }
 .tbl_write th .label {
   display: inline-block;
-  font-size: 15px;
-  line-height: 23px;
+  font-size: 1.5rem;
+  line-height: 2.3rem;
 }
-
 
 .form_wrap input[type="radio"] + label {
   display: inline-block;
-  font-size: 15px;
+  font-size: 1.5rem;
   font-weight: 300;
-  line-height: 23px;
+  line-height: 2.3rem;
   position: relative;
   padding-left: 30px;
 }
@@ -168,22 +174,22 @@
   align-content: center;
 }
 .tbl_write td .d_flex .inp_box {
-  width: 71%;
+  width: 75%;
 }
 
 .tbl_write td .d_flex .btn_type2_s {
-  width: auto;
+  width:25%;
+  text-align: center;
   margin-left: 10px;
-  padding: 0 40px;
   box-sizing: border-box;
+  border-radius: 50px;
 }
 
 .btn_type2_s {
   position: relative;
-  height: 50px;
-  font-size: 16px;
+  line-height: 5.0rem;
+  font-size: 1.6rem;
   font-weight: 500;
-  line-height: 46px;
   border: 2px solid #e6e6e6;
   background: #fff;
 }
@@ -191,7 +197,7 @@
 .tbl_write th .choice {
   display: inline-block;
   color: #666;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 50px;
 }
 
@@ -229,7 +235,7 @@ input[type="radio" i] {
 
 .form_wrap input[type="checkbox"] + label {
   display: inline-block;
-  font-size: 15px;
+  font-size: 1.5rem;
   font-weight: 300;
   line-height: 23px;
 }
@@ -250,7 +256,7 @@ input[type="radio" i] {
   background: url(../images/ico_sel.svg) no-repeat right 20px top 50% / 24px 24px;
 
   height: 50px;
-  font-size: 20px;
+  font-size: 2.0rem;
   line-height: 28px;
 }
 
@@ -260,8 +266,8 @@ input[type="radio" i] {
   padding: 15px 20px;
   border: 2px solid #666;
   border-radius: 15px;
-  font-size: 18px;
-  line-height: 26px;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
   font-weight: 300;
   box-sizing: border-box;
 }
@@ -270,10 +276,10 @@ input[type="radio" i] {
   position: relative;
   padding-left: 21px;
   margin-top: 10px;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 300;
   color: #666;
-  line-height: 22px;
+  line-height: 2.2rem;
 }
 
 .msg_noti::before {
@@ -289,7 +295,7 @@ input[type="radio" i] {
   overflow: hidden;
   border: 1px solid #666;
   border-radius: 15px;
-  width: 70%;
+  width: 77%;
   margin: 0 auto;
 }
 
@@ -306,7 +312,7 @@ input[type="radio" i] {
   border-radius: inherit;
   background: #f1f1f1;
   padding: 20px;
-  font-size: 12px;
+  font-size: 1.2rem;
 }
 
 .agree_box .con .agree_content.on {
@@ -318,8 +324,8 @@ input[type="radio" i] {
   border: 2px solid transparent;
   background: #ffed00;
   height: 65px;
-  font-size: 22px;
-  line-height: 45px;
+  font-size: 2.2rem;
+  line-height: 4.5rem;
   font-family: "Noto Sans KR", sans-serif;
   font-weight: bold;
   cursor: pointer;
@@ -367,4 +373,92 @@ input[type="radio" i] {
   height: 20px;
   margin-top: -10px;
   background: url(../images/btn_detail_view.svg) no-repeat 0 0 / 100% 100%;
+}
+
+select{
+  color: #000;
+  border-radius: 0;
+  border: 0;
+  -webkit-appearance: none;
+}
+
+/*********************** 서브페이지(고객의 소리) ***********************/
+
+/* 1200이하 */
+@media screen and (max-width: 1200px) {
+
+}
+/* 1024이하 */
+@media screen and (max-width: 1024px) {
+   html{font-size:8px;}
+  .guide_wrap {
+    margin: 30px 0;
+    padding: 30px 20px 73px;
+    border-radius: 30px 30px 700px 700px;
+    background: #f8f8f8;
+  }
+
+  .guide_wrap::before {
+    content: "";
+    display: block;
+    width: 156px;
+    height: 172px;
+    margin: 0 auto;
+    background: url(../images/ttogi.png) no-repeat 50% 50% / 100% 100%;
+    position: static;
+    transform: translate(0, 0);
+  }
+
+  .guide_wrap .tit {
+    display: block;
+    margin: 20px 0 10px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 34px;
+    text-align: center;
+  }
+
+  .guide_wrap ul {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .agree_box{width: 100%;}
+
+
+  @media screen and (max-width: 760px) {
+    .tbl_write tbody tr th {
+      display: block;
+      width: 100%;
+      text-align: left;
+  }
+ 
+
+  .tbl_write tbody tr td {
+    display: block;
+    padding-top:0;
+    width: 100%;
+}
+
+.tbl_write tbody tr th{
+  padding-top: 30px;
+}
+
+.inp_base{padding: 20px;}
+  }
+
+  #cus-voice h2{font-size:4rem;}
+ 
+
+  @media screen and (max-width: 480px) {
+    .con-wrap {
+      width: 100%;
+      height: auto;
+      overflow: auto;
+    }
+  
+  }
+
+  @media screen and (max-width: 360px) {
+  }
 }
