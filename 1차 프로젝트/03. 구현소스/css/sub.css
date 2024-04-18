@@ -384,6 +384,11 @@ select{
 
 /*********************** 서브페이지(고객의 소리) ***********************/
 
+
+/* 헤더 */
+.hambtn span{background-color: #333 !important;}
+.lang > a{color:#333 !important;}
+
 /* 1200이하 */
 @media screen and (max-width: 1200px) {
 
