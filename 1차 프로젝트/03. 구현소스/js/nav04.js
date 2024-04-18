@@ -1,6 +1,10 @@
 // 네비게이션 유형4 JS - nav04.js
 // 세로네비 서브별 드롭다운 세로형
 
+
+
+
+
 const myFn = {
   // 요소선택함수 ////////
   qs: (x) => document.querySelector(x),
@@ -16,13 +20,18 @@ const myFn = {
 // 상위 메뉴 클릭시 하위 메뉴 나타나기
 // 영역을 벗어날때 하위메뉴 닫기
 
+
+
 // 2. 대상선정
-// 이벤트 대상: .gnb>ul>li
-const gnbList = myFn.qsa(".gnb>ul>li");
+// 이벤트 대상: #top-area .pop-menu .list
+const gnbList = myFn.qsa("#top-area .pop-menu .list");
 // 변경 대상: .smenu -> 클릭된 이벤트 대상 하위요소
 //   const smenu = myFn.qs('.smenu');
 
 console.log("대상:", gnbList);
+
+
+
 
 // 3. 이벤트 설정하기 //////
 gnbList.forEach((ele) => {

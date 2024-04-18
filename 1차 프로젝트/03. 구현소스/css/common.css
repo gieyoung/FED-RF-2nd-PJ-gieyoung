@@ -65,7 +65,7 @@ display:block;
 #top-area .pop-menu h3 {
   text-align: center;
   font-size: 5rem;
-  margin: 50px 0;
+  margin: 20px 0;
 }
 
 #top-area .pop-menu .depth1 {
@@ -74,6 +74,7 @@ display:block;
   background: #ffed00;
   font-size: 2.5rem;
   font-weight: bold;
+  cursor: pointer;
 }
 
 #top-area .pop-menu .list > ol {
@@ -83,6 +84,11 @@ display:block;
 #top-area .pop-menu .list > ol > li {
   display: flex;
   align-items: center;
+}
+
+.smenu{
+  height: 0;
+  overflow: hidden;
 }
 #top-area .pop-menu .list .depth2 {
   min-width: 230px;
