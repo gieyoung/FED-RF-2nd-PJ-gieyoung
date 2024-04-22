@@ -86,10 +86,10 @@ display:block;
   align-items: center;
 }
 
-.smenu{
+/* .smenu{
   height: 0;
   overflow: hidden;
-}
+} */
 #top-area .pop-menu .list .depth2 {
   min-width: 230px;
   margin-top: 10px;
