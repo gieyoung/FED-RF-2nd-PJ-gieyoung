@@ -3,108 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>이지영-2차 프로젝트</title>
+    <title>[네니아]이지영-2차 프로젝트</title>
 
     <!-- 파비콘 -->
-    <link rel="shortcut icon" href="./images/favicon.ico" />
+    <link rel="shortcut icon" href="./images/favicon.png" />
 
     <!-- CSS연결 -->
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/core.css" />
-    <link rel="stylesheet" href="./css/common.css" />
-    <link rel="stylesheet" href="./css/main.css" />
-    
-    <!-- <link rel="stylesheet" href="./css/media.css" /> -->
-
-
-    <!-- JS연결 -->
-    <!-- <script src="./js/main.js" defer></script> -->
-
+    <link rel="stylesheet" href="./css/common/reset.css" />
+    <link rel="stylesheet" href="./css/common/core.css" />
+    <link rel="stylesheet" href="./css/common/common.css" />
   </head>
   <body>
     <div id="wrap">
       <div id="top-area">
-        <header class="top-area inbox">  
+        <header class="top-area inbox">
           <div class="nav-wrap">
+            <!-- 1-1.메뉴 -->
+            <nav id="nav">
+              <ul class="gnb">
+                <li class="gnb-depth1">
+                  <a href=""><span class="red">회사소개</span></a>
+                  <ul class="gnb-depth2">
+                    <li>
+                      <a href=""><span>네니아way</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span>우리밀이야기</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="gnb-depth1">
+                  <a href="./sub.html"><span class="red">사업소개</span></a>
+                  <ul class="gnb-depth2">
+                    <li>
+                      <a href=""><span>네니아</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span>친환경급식</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span>네니아브레드</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="gnb-depth1">
+                  <a href=""><span class="red">네니아소식</span></a>
+                </li>
+                <li class="gnb-depth1">
+                  <a href=""><span class="red">스토어</span></a>
+                </li>
+              </ul>
+            </nav>
             <!-- 1-1.로고 -->
             <h1 class="logo">
               <a href="" alt="오뚜기 로고"><span class="ir">로고</span></a>
             </h1>
-            <!-- 1-2.메뉴 -->
-            <nav id="nav">
-              <ul class="gnb">
-                <li class="gnb-depth1">
-                  <a href="./sub.html"><span class="red">회사소개</span></a>
-                  <ul class="gnb-depth2">
-                    <li><a href="./sub.html"><span>Overview</span></a></li>
-                    <li><a href="./sub.html"><span>오뚜기 소개</span></a></li>
-                    <li>
-                      <a href="./sub.html"><span>글로벌 오뚜기</span></a>
-                    </li>
-                    <li><a href="./sub.html"><span>오시는길</span></a></li>
-                    <li><a href="./sub.html"><span>인재채용</span></a></li>
-                  </ul>
-                </li>
-                <li class="gnb-depth1">
-                  <a href="./sub.html"><span class="red">ESG경영</span></a>
-                  <ul class="gnb-depth2">
-                    <li><a href="./sub.html"><span>Overview</span></a></li>
-                    <li><a href="./sub.html"><span>ESG경영</span></a></li>
-                    <li>
-                      <a href="./sub.html"><span>환경</span></a>
-                    </li>
-                    <li><a href="./sub.html"><span>사회</span></a></li>
-                    <li><a href="./sub.html"><span>지배구조</span></a></li>
-                  </ul>
-                </li>
-                <li class="gnb-depth1">
-                  <a href="./sub.html"><span class="red">제품이야기</span></a>
-                  <ul class="gnb-depth2">
-                    <li><a href="./sub.html"><span>브랜드 스토리</span></a></li>
-                    <li><a href="./sub.html"><span>제품정보</span></a></li>
-                  
-                  </ul>
-                </li>
-                <li class="gnb-depth1">
-                  <a href="/brand/otgoverview"><span class="red">브랜드경험</span></a>
-                  <ul class="gnb-depth2">
-                    <li><a href="./sub.html"><span>Overview</span></a></li>
-                    <li><a href="./sub.html"><span>공식캐릭터</span></a></li>
-                    <li>
-                      <a href="./sub.html"><span>글로벌 오뚜기</span></a>
-                    </li>
-                    <li><a href="./sub.html"><span>오시는길</span></a></li>
-                    <li><a href="./sub.html"><span>인재채용</span></a></li>
-                  </ul>
-                </li>
-                <li class="gnb-depth1">
-                  <a href="/pr/otgnotice_list"><span class="red">홍보센터</span></a>
-                  <ul class="gnb-depth2">
-                    <li><a href="./sub.html"><span>Overview</span></a></li>
-                    <li><a href="./sub.html"><span>브랜드공간</span></a></li>
-                    <li>
-                      <a href="./sub.html"><span>공장견학</span></a>
-                    </li>
-                    <li><a href="./sub.html"><span>페스티벌</span></a></li>
-                    <li><a href="./sub.html"><span>이벤트</span></a></li>
-                  </ul>
-                </li>
-                <li class="gnb-depth1">
-                  <a href="/customer/customer_voice_process"><span class="red">고객서비스</span></a>
-                  <ul class="gnb-depth2">
-                    <li><a href="./sub.html"><span>고객상담 프로세스</span></a></li>
-                    <li><a href="./sub.html"><span>고객의 소리</span></a></li>
-                    <li>
-                      <a href="./sub.html"><span>자주묻는 질문</span></a>
-                    </li>
-                    <li><a href="./sub.html"><span>고객만족활동</span></a></li>
-                    <li><a href="./sub.html"><span>소비자중심경영</span></a></li>
-                  </ul>
-                </li>
-
-                
-              </ul>
-            </nav>
             <!-- 1-3.기타 -->
             <div class="etc-box">
               <!-- 사이트맵 -->
@@ -131,7 +84,9 @@
               </div>
               <!-- 챗봇 -->
               <div class="chat">
-                <a href="javascript:window.open('https://v2.coginsight.net/service/./sub.html/aa15f11b-60b0-470a-90df-c84d1af43be9?', '가족친화인증서', 'top=0, left=0, width=530, height=750, scrollbars=no, overflow=hidden');" class="chat-btn"><span class="ir">챗봇열기</span></a>
+                <a href="javascript:window.open('https://v2.coginsight.net/service/./sub.html/aa15f11b-60b0-470a-90df-c84d1af43be9?', '가족친화인증서', 'top=0, left=0, width=530, height=750, scrollbars=no, overflow=hidden');" class="chat-btn"
+                  ><span class="ir">챗봇열기</span></a
+                >
               </div>
               <!-- 오뚜기몰 바로가기 버튼 -->
               <div class="ottugi-go">
@@ -164,39 +119,64 @@
           <div class="con">
             <!-- 하단로고 -->
             <h2 class="logo">
-               <a href="./sub.html"><span class="ir">로고</span></a>
+              <a href="./sub.html"><span class="ir">로고</span></a>
             </h2>
             <!-- 하단메뉴 -->
             <ul class="f-gnb">
               <li>
                 <a href="./sub.html">Family Site</a>
                 <ul class="f-sub">
-                   <li><a href="https://www.ottogimall.co.kr/"  target="_blank" class="more3" title="오뚜기몰 새창열림"><span>오뚜기몰</span></a></li>
-                   <li><a href="https://ottogi.okitchen.co.kr/" target="_blank" class="more3" title="오키친 새창열림"><span>오키친</span></a></li>
-                   <li><a href="http://ottogifdn.org/" target="_blank" class="more3" title="오뚜기함태호재단 새창열림"><span>오뚜기함태호재단</span></a></li>
+                  <li>
+                    <a href="https://www.ottogimall.co.kr/" target="_blank" class="more3" title="오뚜기몰 새창열림"><span>오뚜기몰</span></a>
+                  </li>
+                  <li>
+                    <a href="https://ottogi.okitchen.co.kr/" target="_blank" class="more3" title="오키친 새창열림"><span>오키친</span></a>
+                  </li>
+                  <li>
+                    <a href="http://ottogifdn.org/" target="_blank" class="more3" title="오뚜기함태호재단 새창열림"><span>오뚜기함태호재단</span></a>
+                  </li>
                 </ul>
               </li>
               <li>
                 <a href="./sub.html">함께하는 오뚜기</a>
                 <ul class="f-sub">
-                   <li><a href="./sub.html"><span>스위트홈 가족요리 페스티벌</span></a></li>
-                   <li><a href="./sub.html"><span>공장견학</span></a></li>
-                   <li><a href="./sub.html"><span>공모전</span></a></li>
-                   <li><a href="./sub.html"><span>오키친 스튜디오</span></a></li>
-                   <li><a href="./sub.html"><span>오뚜기 푸드트럭</span></a></li>
+                  <li>
+                    <a href="./sub.html"><span>스위트홈 가족요리 페스티벌</span></a>
+                  </li>
+                  <li>
+                    <a href="./sub.html"><span>공장견학</span></a>
+                  </li>
+                  <li>
+                    <a href="./sub.html"><span>공모전</span></a>
+                  </li>
+                  <li>
+                    <a href="./sub.html"><span>오키친 스튜디오</span></a>
+                  </li>
+                  <li>
+                    <a href="./sub.html"><span>오뚜기 푸드트럭</span></a>
+                  </li>
                 </ul>
               </li>
               <li>
                 <a href="./sub.html">고객지원</a>
                 <ul class="f-sub">
-                   <li><a href="./sub.html"><span>개인정보 처리방침</span></a></li>
-                   <li><a href="./sub.html"><span>고객의 소리</span></a></li>
-                   <li><a href="./sub.html"><span>자주묻는 질문</span></a></li>
-                   <li><a href="./sub.html"><span>고객상담 챗봇</span></a></li>
-                   <li><a href="./sub.html"><span>오시는 길</span></a></li>
+                  <li>
+                    <a href="./sub.html"><span>개인정보 처리방침</span></a>
+                  </li>
+                  <li>
+                    <a href="./sub.html"><span>고객의 소리</span></a>
+                  </li>
+                  <li>
+                    <a href="./sub.html"><span>자주묻는 질문</span></a>
+                  </li>
+                  <li>
+                    <a href="./sub.html"><span>고객상담 챗봇</span></a>
+                  </li>
+                  <li>
+                    <a href="./sub.html"><span>오시는 길</span></a>
+                  </li>
                 </ul>
               </li>
-
             </ul>
             <!-- 기타 -->
             <div class="etc">
@@ -208,27 +188,34 @@
                 </tr>
                 <tr>
                   <th>오뚜기라면 고객상담실</th>
-                  <td>080-088-1212<br>
+                  <td>
+                    080-088-1212<br />
                     <span>(월~금 08:30~17:00)</span>
                   </td>
-              
                 </tr>
-
               </table>
               <!-- 인증마크 -->
               <ul class="mark">
-                <li><a title="인증서 보기" href="javascript:window.open('./images/popup_iso27701_kr.png', 'ISO27001/27701 인증서', 'top=0, left=0, width=805, height=565, scrollbars=no, overflow=hidden');" title="ISO인증서 새창열림"><span class="ir">ISO27001/27701 인증서</span></a></li>
-                <li><a href="https://www.wa.or.kr/" target="_blank" title="한국웹접근성인증평가원 2023.12.18~2024.12.17 새창열림"><span class="ir">웹접근성우수기업인증마크</span></a></li>
-                <li><a href="javascript:window.open('./images/popup_ffsb.png', '가족친화인증서', 'top=0, left=0, width=530, height=750, scrollbars=no, overflow=hidden');" title="가족친화인증서 새창열림"><span class="ir">가족친화우수기업인증마크</span></a></li>
+                <li>
+                  <a title="인증서 보기" href="javascript:window.open('./images/popup_iso27701_kr.png', 'ISO27001/27701 인증서', 'top=0, left=0, width=805, height=565, scrollbars=no, overflow=hidden');" title="ISO인증서 새창열림"
+                    ><span class="ir">ISO27001/27701 인증서</span></a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.wa.or.kr/" target="_blank" title="한국웹접근성인증평가원 2023.12.18~2024.12.17 새창열림"><span class="ir">웹접근성우수기업인증마크</span></a>
+                </li>
+                <li>
+                  <a href="javascript:window.open('./images/popup_ffsb.png', '가족친화인증서', 'top=0, left=0, width=530, height=750, scrollbars=no, overflow=hidden');" title="가족친화인증서 새창열림"
+                    ><span class="ir">가족친화우수기업인증마크</span></a
+                  >
+                </li>
               </ul>
             </div>
           </div>
-           <!-- 저작권 표시 -->
-           <p class="copy">© OTTOGI CORP. ALL RIGHTS RESERVED</p>
+          <!-- 저작권 표시 -->
+          <p class="copy">© OTTOGI CORP. ALL RIGHTS RESERVED</p>
         </footer>
-        
       </div>
-     
     </div>
   </body>
 </html>
