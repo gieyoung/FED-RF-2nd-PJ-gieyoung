@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+/* 1차 PJ : 공통 클래스 CSS - core.css */
+/* 공통 셋팅을 위한 클래스 + 웹폰트 */
+
+/* 웹폰트*/
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+}
+
+/* 공사중 표시 */
+body * {
+  // outline:1px solid red;
+}
+
+/* 모바일에서 오른쪽 여백 생기는 문제 해결 */
+body > * {
+  // overflow-x:hidden;
+}
+
+/* 드래그시 배경 색상(오뚜기 시그니처 컬러) */
+::selection {
+  background: #ffed00;
+}
+
+/* 전체 감싼 박스 */
+#wrap {
+  position: relative;
+}
+
+/* 공통클래스 중앙속박스 */
+.inbox {
+  max-width: 1500px;
+  margin: 0 auto;
+  outline: 1px solid red;
+  // height: 100%;
+}
+
+/* 글자날리기 */
+.ir {
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* 임시타이틀 */
+.temp-tit {
+  position: absolute;
+  font-size: 2vw;
+  color: #888;
+}
+
+// 가운데정렬
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+// 포지션 가로/세로 가운데정렬
+.po-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// 포지션 가로 가운데정렬
+.po-centerX {
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+// 포지션 세로 가운데정렬
+.po-centerY {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* 공통클래스: 클리어 설정 */
+.clb::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* rem 계산 편하게 하기 위해 */
+html {
+  font-size: 10px;
+}
+
+body {
+  /* 폰트 */
+  font-family: "Pretendard-Regular";
+}
+
+.cont-box {
+  height: 100%;
+}
