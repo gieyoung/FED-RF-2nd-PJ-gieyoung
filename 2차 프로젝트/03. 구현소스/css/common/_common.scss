@@ -9,8 +9,6 @@
   .top-area {
     position: fixed;
     width: 100%;
-    display: flex;
-    align-items: center;
     min-height: 70px;
     background: #faf3e6;
     max-width: 83.4%;
@@ -20,44 +18,74 @@
   }
 
   /* 상단 내부박스 */
-  .inbox {
-  }
 }
 
 /* 메뉴 */
 .gnb {
   /* 플렉스로 가로정렬 */
-  display: flex;
-  justify-content: center;
-  gap: 30px;
+  // gap: 25px;
   font-size: 1.7rem;
   font-weight: 500;
 
   /* 1단메뉴 */
-.gnb-depth1{
-  > li {
+  .gnb-depth1 {
+    position: relative;
+
     > a {
+      padding: 0 17px;
+      display: inline-block;
+      line-height: 70px;
       color: #154726;
-      
+
+      &:hover .gnb-depth2 {
+        display: block;
+      }
     }
   }
-}
+
   /* 2단메뉴 */
   .gnb-depth2 {
     position: absolute;
     top: 100%;
+    width: 100%;
     text-align: center;
-    // display: none;
-    >li{
-      margin-bottom:15px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #154726;
+    display: none;
+    > li {
+      > a {
+        font-weight: 300;
+        display: inline-block;
+        padding: 10px 0;
+        width: 100%;
+        color: #fefcf7;
+        font-size: 17px;
+        text-align: center;
+        position: relative;
 
-      >a{
-
+        // a에 마우스 오버시 밑줄
+        &:hover::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 2px;
+          background-color: #fff;
+          left: 0;
+          animation: bar-ani 0.2s ease-in-out forwards;
+        }
       }
     }
   }
-  /* 메뉴 마우스 오버시 숨어있던 2단메뉴 등장 */
-  .gnb-depth1 > li > a:hover .gnb-depth2 {
-    display: block;
+}
+
+@keyframes bar-ani {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
   }
 }

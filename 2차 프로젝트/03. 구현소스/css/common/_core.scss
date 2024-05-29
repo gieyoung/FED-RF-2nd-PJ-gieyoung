@@ -10,14 +10,14 @@
 }
 
 /* 공사중 표시 */
-body * {
-  // outline:1px solid red;
-}
+// body * {
+//   outline:1px solid red;
+// }
 
 /* 모바일에서 오른쪽 여백 생기는 문제 해결 */
-body > * {
-  // overflow-x:hidden;
-}
+// body > * {
+//   overflow-x:hidden;
+// }
 
 /* 드래그시 배경 색상(오뚜기 시그니처 컬러) */
 ::selection {
@@ -76,6 +76,13 @@ body > * {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+}
+
+// 플렉스 설정
+.flex{
+  display: flex;
+  align-items: center;
+
 }
 /* 공통클래스: 클리어 설정 */
 .clb::after {
