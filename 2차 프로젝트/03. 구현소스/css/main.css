@@ -160,38 +160,44 @@ body {
   padding: 0 50px;
 }
 
-/* 메뉴 */
-.gnb {
+.nav-wrap {
+  /* 메뉴 */
+  /* 로고 */
+}
+.nav-wrap .gnb {
   /* 플렉스로 가로정렬 */
   font-size: 1.7rem;
   font-weight: 500;
   /* 1단메뉴 */
   /* 2단메뉴 */
 }
-.gnb .gnb-depth1 {
+.nav-wrap .gnb .gnb-depth1 {
   position: relative;
 }
-.gnb .gnb-depth1 > a {
+.nav-wrap .gnb .gnb-depth1 > a {
   padding: 0 17px;
   display: inline-block;
   line-height: 70px;
   color: #154726;
 }
-.gnb .gnb-depth1 > a:hover .gnb-depth2 {
-  display: block;
+.nav-wrap .gnb .gnb-depth1 > a:hover span {
+  font-weight: bold;
 }
-.gnb .gnb-depth2 {
+.nav-wrap .gnb .gnb-depth2 {
   position: absolute;
   top: 100%;
   width: 100%;
   text-align: center;
   margin-top: 10px;
-  padding: 10px;
   border-radius: 20px;
   background-color: #154726;
-  display: none;
+  height: 0;
 }
-.gnb .gnb-depth2 > li > a {
+.nav-wrap .gnb .gnb-depth2.on {
+  height: auto;
+  padding: 10px;
+}
+.nav-wrap .gnb .gnb-depth2 > li > a {
   font-weight: 300;
   display: inline-block;
   padding: 10px 0;
@@ -201,7 +207,7 @@ body {
   text-align: center;
   position: relative;
 }
-.gnb .gnb-depth2 > li > a:hover::after {
+.nav-wrap .gnb .gnb-depth2 > li > a:hover::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -211,7 +217,6 @@ body {
   left: 0;
   animation: bar-ani 0.2s ease-in-out forwards;
 }
-
 @keyframes bar-ani {
   0% {
     width: 0;
@@ -219,4 +224,16 @@ body {
   100% {
     width: 100%;
   }
+}
+.nav-wrap h1.logo a {
+  position: absolute;
+  display: inline-block;
+  /* 로고 이미지 삽입 */
+  background: url(../images/logo.png) no-repeat;
+  width: 114px;
+  height: 49px;
+  z-index: 998;
+}
+.nav-wrap .etc-box {
+  gap: 20px;
 }/*# sourceMappingURL=main.css.map */

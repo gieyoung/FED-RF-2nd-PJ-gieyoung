@@ -20,6 +20,7 @@
   /* 상단 내부박스 */
 }
 
+.nav-wrap{
 /* 메뉴 */
 .gnb {
   /* 플렉스로 가로정렬 */
@@ -37,8 +38,8 @@
       line-height: 70px;
       color: #154726;
 
-      &:hover .gnb-depth2 {
-        display: block;
+      &:hover span{
+        font-weight: bold;
       }
     }
   }
@@ -50,10 +51,19 @@
     width: 100%;
     text-align: center;
     margin-top: 10px;
-    padding: 10px;
+   
     border-radius: 20px;
     background-color: #154726;
-    display: none;
+    // 2단메뉴 숨기기
+    height:0;
+
+    // 2단메뉴 보이기
+    &.on{
+      height:auto;
+      padding: 10px;
+    }
+    
+  
     > li {
       > a {
         font-weight: 300;
@@ -79,8 +89,11 @@
       }
     }
   }
+  
+ 
 }
 
+//메뉴바 애니메이션
 @keyframes bar-ani {
   0% {
     width: 0;
@@ -88,4 +101,28 @@
   100% {
     width: 100%;
   }
+}
+
+
+
+/* 로고 */
+h1.logo a{
+  position: absolute;
+  display: inline-block;
+  /* 로고 이미지 삽입 */
+  background: url(../images/logo.png) no-repeat;
+  width: 114px;
+  height: 49px;
+  z-index: 998;
+}
+
+
+.etc-box{
+gap: 20px;
+  li{
+    
+  }
+
+
+}
 }
