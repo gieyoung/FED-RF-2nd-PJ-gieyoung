@@ -20,109 +20,156 @@
   /* 상단 내부박스 */
 }
 
-.nav-wrap{
-/* 메뉴 */
-.gnb {
-  /* 플렉스로 가로정렬 */
-  // gap: 25px;
-  font-size: 1.7rem;
-  font-weight: 500;
+.nav-wrap {
+  width: 100%;
+  /* 메뉴 */
+  #nav {
+    width: 60%;
 
-  /* 1단메뉴 */
-  .gnb-depth1 {
-    position: relative;
+    .gnb {
+      /* 플렉스로 가로정렬 */
+      // gap: 25px;
+      font-size: 1.7rem;
+      font-weight: 500;
 
-    > a {
-      padding: 0 17px;
-      display: inline-block;
-      line-height: 70px;
-      color: #154726;
-
-      &:hover span{
-        font-weight: bold;
-      }
-    }
-  }
-
-  /* 2단메뉴 */
-  .gnb-depth2 {
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
-   
-    border-radius: 20px;
-    background-color: #154726;
-    // 2단메뉴 숨기기
-    height:0;
-
-    // 2단메뉴 보이기
-    &.on{
-      height:auto;
-      padding: 10px;
-    }
-    
-  
-    > li {
-      > a {
-        font-weight: 300;
-        display: inline-block;
-        padding: 10px 0;
-        width: 100%;
-        color: #fefcf7;
-        font-size: 17px;
-        text-align: center;
+      /* 1단메뉴 */
+      .gnb-depth1 {
         position: relative;
 
-        // a에 마우스 오버시 밑줄
-        &:hover::after {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          width: 100%;
-          height: 2px;
-          background-color: #fff;
-          left: 0;
-          animation: bar-ani 0.2s ease-in-out forwards;
+        > a {
+          padding: 0 17px;
+          display: inline-block;
+          line-height: 70px;
+          color: #154726;
+
+          &:hover span {
+            font-weight: bold;
+          }
+        }
+      }
+
+      /* 2단메뉴 */
+      .gnb-depth2 {
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+
+        border-radius: 20px;
+        background-color: #154726;
+        // 2단메뉴 숨기기
+        height: 0;
+
+        // 2단메뉴 보이기
+        &.on {
+          height: auto;
+          padding: 10px;
+        }
+
+        > li {
+          > a {
+            font-weight: 300;
+            display: inline-block;
+            padding: 10px 0;
+            width: 100%;
+            color: #fefcf7;
+            font-size: 17px;
+            text-align: center;
+            position: relative;
+
+            // a에 마우스 오버시 밑줄
+            &:hover::after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              width: 100%;
+              height: 2px;
+              background-color: #fff;
+              left: 0;
+              animation: bar-ani 0.2s ease-in-out forwards;
+            }
+          }
         }
       }
     }
   }
-  
- 
-}
 
-//메뉴바 애니메이션
-@keyframes bar-ani {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-
-
-/* 로고 */
-h1.logo a{
-  position: absolute;
-  display: inline-block;
-  /* 로고 이미지 삽입 */
-  background: url(../images/logo.png) no-repeat;
-  width: 114px;
-  height: 49px;
-  z-index: 998;
-}
-
-
-.etc-box{
-gap: 20px;
-  li{
-    
+  //메뉴바 애니메이션
+  @keyframes bar-ani {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
   }
 
+  /* 로고 */
+  h1.logo {
+    width: 15%;
 
+    a {
+      position: absolute;
+      display: inline-block;
+      /* 로고 이미지 삽입 */
+      background: url(../images/logo.svg) no-repeat;
+      width: 114px;
+      height: 49px;
+      z-index: 998;
+    }
+  }
+
+  // 기타
+  .etc-box {
+    width: 25%;
+    justify-content: space-evenly;
+    li {
+      position: relative;
+      font-size: 14px;
+      background: #154726;
+      width: 100px;
+      height: 35px;
+      display: inline-block;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      border-radius: 50px;
+      transition: all 0.5s;
+      &:hover{
+        scale: 1.1;
+        a{
+          animation: btn-ani 0.5s forwards linear;
+        }
+      }
+      a {
+        color: #fff;
+        // background-color: red;
+        width: 100%; line-height: 35px;
+        text-align: center;
+        display: inline-block;
+      }
+    }
+  }
 }
+
+@keyframes btn-ani {
+  from{
+    opacity: 0;
+    top: 100%;
+  }
+  to{
+    opacity: 1;
+    top: 50%;
+  }
+}
+
+
+
+// 메인
+.main-area{
+  width: 100%;
+  height: 100vh;
+  background: url("../images/visual_img.jpg")
+
 }

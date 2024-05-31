@@ -161,29 +161,33 @@ body {
 }
 
 .nav-wrap {
+  width: 100%;
   /* 메뉴 */
   /* 로고 */
 }
-.nav-wrap .gnb {
+.nav-wrap #nav {
+  width: 60%;
+}
+.nav-wrap #nav .gnb {
   /* 플렉스로 가로정렬 */
   font-size: 1.7rem;
   font-weight: 500;
   /* 1단메뉴 */
   /* 2단메뉴 */
 }
-.nav-wrap .gnb .gnb-depth1 {
+.nav-wrap #nav .gnb .gnb-depth1 {
   position: relative;
 }
-.nav-wrap .gnb .gnb-depth1 > a {
+.nav-wrap #nav .gnb .gnb-depth1 > a {
   padding: 0 17px;
   display: inline-block;
   line-height: 70px;
   color: #154726;
 }
-.nav-wrap .gnb .gnb-depth1 > a:hover span {
+.nav-wrap #nav .gnb .gnb-depth1 > a:hover span {
   font-weight: bold;
 }
-.nav-wrap .gnb .gnb-depth2 {
+.nav-wrap #nav .gnb .gnb-depth2 {
   position: absolute;
   top: 100%;
   width: 100%;
@@ -193,11 +197,11 @@ body {
   background-color: #154726;
   height: 0;
 }
-.nav-wrap .gnb .gnb-depth2.on {
+.nav-wrap #nav .gnb .gnb-depth2.on {
   height: auto;
   padding: 10px;
 }
-.nav-wrap .gnb .gnb-depth2 > li > a {
+.nav-wrap #nav .gnb .gnb-depth2 > li > a {
   font-weight: 300;
   display: inline-block;
   padding: 10px 0;
@@ -207,7 +211,7 @@ body {
   text-align: center;
   position: relative;
 }
-.nav-wrap .gnb .gnb-depth2 > li > a:hover::after {
+.nav-wrap #nav .gnb .gnb-depth2 > li > a:hover::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -225,15 +229,61 @@ body {
     width: 100%;
   }
 }
+.nav-wrap h1.logo {
+  width: 15%;
+}
 .nav-wrap h1.logo a {
   position: absolute;
   display: inline-block;
   /* 로고 이미지 삽입 */
-  background: url(../images/logo.png) no-repeat;
+  background: url(../images/logo.svg) no-repeat;
   width: 114px;
   height: 49px;
   z-index: 998;
 }
 .nav-wrap .etc-box {
-  gap: 20px;
+  width: 25%;
+  justify-content: space-evenly;
+}
+.nav-wrap .etc-box li {
+  position: relative;
+  font-size: 14px;
+  background: #154726;
+  width: 100px;
+  height: 35px;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 50px;
+  transition: all 0.5s;
+}
+.nav-wrap .etc-box li:hover {
+  scale: 1.1;
+}
+.nav-wrap .etc-box li:hover a {
+  animation: btn-ani 0.5s forwards linear;
+}
+.nav-wrap .etc-box li a {
+  color: #fff;
+  width: 100%;
+  line-height: 35px;
+  text-align: center;
+  display: inline-block;
+}
+
+@keyframes btn-ani {
+  from {
+    opacity: 0;
+    top: 100%;
+  }
+  to {
+    opacity: 1;
+    top: 50%;
+  }
+}
+.main-area {
+  width: 100%;
+  height: 100vh;
+  background: url("../images/visual_img.jpg");
 }/*# sourceMappingURL=main.css.map */
