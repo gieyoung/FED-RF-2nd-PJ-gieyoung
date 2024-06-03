@@ -75,6 +75,7 @@ img {
   max-width: 1500px;
   margin: 0 auto;
   outline: 1px solid red;
+  height: 100%;
 }
 
 /* 글자날리기 */
@@ -105,12 +106,14 @@ img {
 }
 
 .po-centerX {
+  position: absolute;
   left: 50%;
   top: 0;
   transform: translateX(-50%);
 }
 
 .po-centerY {
+  position: absolute;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
@@ -119,6 +122,50 @@ img {
 .flex {
   display: flex;
   align-items: center;
+}
+
+.font-2 {
+  font-size: 4.4rem;
+  font-weight: bold;
+}
+
+.font-5 {
+  font-size: 2.1rem;
+}
+
+.label {
+  font-size: 17px;
+  width: 140px;
+  border-radius: 60px;
+  background: #fff2d8;
+  font-weight: 600;
+  transition: all 0.5s;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.label:hover {
+  scale: 1.1;
+}
+.label:hover a {
+  animation: btn-ani 0.5s forwards linear;
+}
+.label a {
+  color: #154726;
+  width: 100%;
+  line-height: 50px;
+  text-align: center;
+  display: inline-block;
+}
+@keyframes btn-ani {
+  from {
+    opacity: 0;
+    top: 100%;
+  }
+  to {
+    opacity: 1;
+    top: 50%;
+  }
 }
 
 /* 공통클래스: 클리어 설정 */
@@ -147,47 +194,45 @@ body {
 /****************** 1.상단영역 ******************/
 #top-area {
   position: relative;
-  /* 상단 내부박스 */
 }
 #top-area .top-area {
   position: fixed;
   width: 100%;
-  min-height: 70px;
+  height: 70px;
   background: #faf3e6;
   max-width: 83.4%;
   border-radius: 0 0 20px 20px;
   transition: all 0.5s;
   padding: 0 50px;
 }
-
-.nav-wrap {
+#top-area .nav-wrap {
   width: 100%;
   /* 메뉴 */
   /* 로고 */
 }
-.nav-wrap #nav {
+#top-area .nav-wrap #nav {
   width: 60%;
 }
-.nav-wrap #nav .gnb {
+#top-area .nav-wrap #nav .gnb {
   /* 플렉스로 가로정렬 */
   font-size: 1.7rem;
   font-weight: 500;
   /* 1단메뉴 */
   /* 2단메뉴 */
 }
-.nav-wrap #nav .gnb .gnb-depth1 {
+#top-area .nav-wrap #nav .gnb .gnb-depth1 {
   position: relative;
 }
-.nav-wrap #nav .gnb .gnb-depth1 > a {
+#top-area .nav-wrap #nav .gnb .gnb-depth1 > a {
   padding: 0 17px;
   display: inline-block;
   line-height: 70px;
   color: #154726;
 }
-.nav-wrap #nav .gnb .gnb-depth1 > a:hover span {
+#top-area .nav-wrap #nav .gnb .gnb-depth1 > a:hover span {
   font-weight: bold;
 }
-.nav-wrap #nav .gnb .gnb-depth2 {
+#top-area .nav-wrap #nav .gnb .gnb-depth2 {
   position: absolute;
   top: 100%;
   width: 100%;
@@ -196,12 +241,14 @@ body {
   border-radius: 20px;
   background-color: #154726;
   height: 0;
+  opacity: 0;
 }
-.nav-wrap #nav .gnb .gnb-depth2.on {
+#top-area .nav-wrap #nav .gnb .gnb-depth2.on {
   height: auto;
-  padding: 10px;
+  padding: 10px 20px;
+  opacity: 1;
 }
-.nav-wrap #nav .gnb .gnb-depth2 > li > a {
+#top-area .nav-wrap #nav .gnb .gnb-depth2 > li > a {
   font-weight: 300;
   display: inline-block;
   padding: 10px 0;
@@ -211,7 +258,7 @@ body {
   text-align: center;
   position: relative;
 }
-.nav-wrap #nav .gnb .gnb-depth2 > li > a:hover::after {
+#top-area .nav-wrap #nav .gnb .gnb-depth2 > li > a:hover::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -229,10 +276,10 @@ body {
     width: 100%;
   }
 }
-.nav-wrap h1.logo {
+#top-area .nav-wrap h1.logo {
   width: 15%;
 }
-.nav-wrap h1.logo a {
+#top-area .nav-wrap h1.logo a {
   position: absolute;
   display: inline-block;
   /* 로고 이미지 삽입 */
@@ -241,11 +288,11 @@ body {
   height: 49px;
   z-index: 998;
 }
-.nav-wrap .etc-box {
+#top-area .nav-wrap .etc-box {
   width: 25%;
   justify-content: space-evenly;
 }
-.nav-wrap .etc-box li {
+#top-area .nav-wrap .etc-box li {
   position: relative;
   font-size: 14px;
   background: #154726;
@@ -258,20 +305,19 @@ body {
   border-radius: 50px;
   transition: all 0.5s;
 }
-.nav-wrap .etc-box li:hover {
+#top-area .nav-wrap .etc-box li:hover {
   scale: 1.1;
 }
-.nav-wrap .etc-box li:hover a {
+#top-area .nav-wrap .etc-box li:hover a {
   animation: btn-ani 0.5s forwards linear;
 }
-.nav-wrap .etc-box li a {
+#top-area .nav-wrap .etc-box li a {
   color: #fff;
   width: 100%;
   line-height: 35px;
   text-align: center;
   display: inline-block;
 }
-
 @keyframes btn-ani {
   from {
     opacity: 0;
@@ -282,8 +328,20 @@ body {
     top: 50%;
   }
 }
-.main-area {
+
+/****************** 2.메인영역 ******************/
+#main-area {
   width: 100%;
   height: 100vh;
   background: url("../images/visual_img.jpg");
+}
+#main-area .main-area {
+  position: relative;
+}
+#main-area .main-area .txt-wrap {
+  display: inline-block;
+  max-width: 1500px;
+}
+#main-area .main-area .txt-wrap .font-2 {
+  padding: 15px 0 30px;
 }/*# sourceMappingURL=main.css.map */
