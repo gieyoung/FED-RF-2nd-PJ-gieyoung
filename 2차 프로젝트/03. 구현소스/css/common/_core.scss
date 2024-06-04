@@ -81,69 +81,67 @@
 }
 
 // 플렉스 설정
-.flex{
+.flex {
   display: flex;
   align-items: center;
-
 }
 
 // 폰트사이즈
 
-.font-1{
 
-}
-.font-2{
+.font-2 {
   font-size: 4.4rem;
-  font-weight:bold;
+  font-weight: bold;
+  line-height: 1.4;
 }
 
-.font-5{
-  font-size:2.1rem; 
+.font-5 {
+  font-size: 2.1rem;
  
-
 }
 
-.label{
-  
-    font-size: 17px;
-    width: 140px;
-    border-radius: 60px;
-    background: #fff2d8;
-    font-weight: 600;
-    transition: all 0.5s;
-    justify-content: center;
-        align-items: center;
-        display: flex;
-    &:hover {
-      scale: 1.1;
-      a {
-        animation: btn-ani 0.5s forwards linear;
-      }
+// 버튼 스타일 애니메이션
+.btn {
+  position: relative;
+  font-size: 17px;
+  background: #fff2d8;
+  width: 100px;
+  height: 50px;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 50px;
+  transition: all 0.5s;
+  font-size: 17px;
+  width: 140px;
+
+  &:hover {
+    scale: 1.1;
+    a {
+      animation: btn-ani 0.5s forwards linear;
     }
-    
-
-      a {
-        color: #154726;
-        // background-color: red;
-        width: 100%;
-        line-height: 50px;
-        text-align: center;
-        display: inline-block;
-      }
-
-      @keyframes btn-ani {
-        from {
-          opacity: 0;
-          top: 100%;
-        }
-        to {
-          opacity: 1;
-          top: 50%;
-        }
-      }
-      
+  }
+  > a {
+    color: #154726;
+    // background-color: red;
+    width: 100%;
+    line-height: 50px;
+    border-radius: 50px;
+    text-align: center;
+    display: inline-block;
+  }
+  @keyframes btn-ani {
+    from {
+      opacity: 0;
+      top: 100%;
     }
-
+    to {
+      opacity: 1;
+      top: 50%;
+    }
+  }
+}
 
 
 /* 공통클래스: 클리어 설정 */
