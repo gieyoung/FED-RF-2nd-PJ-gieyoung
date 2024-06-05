@@ -8,23 +8,23 @@ export const sns = [
   },
   {
     alt: "유튜브",
-    img: "../../public/images/instar.png",
-    link: "https://www.instagram.com/econenia/",
+    img: "http://nenia.kr/theme/responsive_nenia/include/img/youtube.png",
+    link: "https://www.youtube.com/@econenia",
   },
   {
     alt: "블로그",
-    img: "../../public/images/instar.png",
-    link: "https://www.instagram.com/econenia/",
+    img: "http://nenia.kr/theme/responsive_nenia/include/img/blog.png",
+    link: "https://m.blog.naver.com/PostList.naver?blogId=eco-nenia",
   },
   {
     alt: "페이스북",
-    img: "../../public/images/instar.png",
-    link: "https://www.instagram.com/econenia/",
+    img: "http://nenia.kr/theme/responsive_nenia/include/img/facebook.png",
+    link: "https://www.facebook.com/econenia",
   },
   {
     alt: "카카오스토리",
-    img: "../../public/images/instar.png",
-    link: "https://www.instagram.com/econenia/",
+    img: "http://nenia.kr/theme/responsive_nenia/include/img/kakao.png",
+    link: "https://story.kakao.com/econenia",
   },
   
 ];

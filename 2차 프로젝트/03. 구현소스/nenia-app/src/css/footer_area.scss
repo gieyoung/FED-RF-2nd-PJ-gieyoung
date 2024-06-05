@@ -1,45 +1,69 @@
 /****************** 3.하단영역 ******************/
 
-
-#footer-area{
-  background: #2F4E37;
-  color: #FEFCF7;
+#footer-area {
+  background: #2f4e37;
+  color: #fefcf7;
   height: 300px;
-  .footer-area{
-    display: flex;
+  .footer-area {
     justify-content: space-between;
+    color: rgba(254, 252, 247, 0.6);
+    span {
+      color: #fff;
+    }
+    a {
+      color: rgba(254, 252, 247, 0.6);
+      &:hover {
+        color: #fff;
+      }
+    }
 
     // 하단로고
     h2.logo {
-      background-color: red;
-      width: 30%;
-  
+      // background-color: red;
+      width: 50%;
+
       a {
         display: inline-block;
         /* 로고 이미지 삽입 */
         background: url(../../public/images/footer_logo.svg) no-repeat;
         width: 128px;
         height: 131px;
-   
       }
     }
-    
-// 주소
-    address{
-      font-style: normal;
-      color: rgba(254, 252, 247, 0.6);
-      p{
-        line-height: 20px;
-      }
+    .mid {
+      // background-color: green;
+      width: 25%;
 
-      p:first-child{
-        margin-bottom: 10px;
-      }
-      span{
-        color:#fff;
-      }
+      // 주소
+      address {
+        font-style: normal;
 
+        padding: 0 0 35px 0;
+        p {
+          line-height: 20px;
+        }
+
+        p:first-child {
+          margin-bottom: 10px;
+        }
+      }
+      //sns
+      .sns {
+        display: flex;
+        gap: 43px;
+      }
     }
-   
+
+    .last {
+      width: 25%;
+      // background-color: black;
+      // 개인정보처리방침
+      .privacy {
+        height: 125px;
+        li {
+          margin-bottom: 10px;
+        }
+      }
+    }
   }
 }
