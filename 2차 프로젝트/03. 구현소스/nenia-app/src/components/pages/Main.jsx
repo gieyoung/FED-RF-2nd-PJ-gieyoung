@@ -3,6 +3,9 @@
 // 메인영역 CSS 불러오기
 import "../../css/index.scss";
 
+// 메인영역 js불러오기
+
+
 export default function Main(){
 
   //// 코드 리턴구역 //////////////
