@@ -1,0 +1,76 @@
+// 전체 공통 CSS 불러오기
+
+@import "../css/common/core";
+@import "../css/common/reset";
+
+#main-area {
+  position: relative;
+
+  // 메인 배너 이미지
+  .main-visual {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: url("../../public/images/main/visual_img.jpg") no-repeat center/cover;
+    z-index: -1;
+  }
+  .main-area {
+    position: relative;
+
+    // 메인1
+    .txt-wrap {
+      padding: 500px 0 40px;
+      max-width: 1500px;
+      color: #fff;
+
+      .font-2 {
+        padding: 15px 0 30px;
+      }
+
+      .btn a {
+        font-weight: 600;
+      }
+    }
+
+    // 메인2 - 스크롤되면 가로 크기가 달라짐
+    .main2 {
+      position: relative;
+      top: 100px;
+      padding: 100px 55px 140px;
+      background: #faf3e6;
+      width: 83.3%;
+      border-radius: 20px;
+      margin: 0 auto;
+
+      .wrap {
+        justify-content: space-between;
+
+        .left {
+          .font-5 {
+            color: #149473;
+          }
+          .font-2 {
+            color: #154726;
+          }
+        }
+
+        .right {
+          width:50%;
+          .video-sum{
+            background: url(http://nenia.kr/theme/responsive_nenia/include/img/video_thumb.png) no-repeat center / cover;
+            border-radius: 20px;
+            width: 100%;
+            height: 600px;
+            position: relative;
+          }
+         
+         
+          .btn {
+            background-color: #ffd550;
+
+          }
+        }
+      }
+    }
+  }
+}

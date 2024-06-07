@@ -35,7 +35,7 @@ export default function TopArea() {
                     {
                       // 서브 메뉴 데이터가 있으면 하위그리기
                       v.sub && (
-                        <ul class="gnb-depth2 po-centerX">
+                        <ul className="gnb-depth2 po-centerX">
                           {v.sub.map((v, i) => (
                             <li key={i}>
                               <Link to={v.link}>

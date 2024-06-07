@@ -89,15 +89,20 @@
 
 // 폰트사이즈
 
-
+// 작은타이틀 - stit
 .font-2 {
   font-size: 4.4rem;
-  font-weight: bold;
+  font-weight: 500;
   line-height: 1.4;
+  padding: 15px 0 30px;
+  span{
+   font-weight: bold;
+  }
 }
-
+// 큰타이틀 - btit
 .font-5 {
   font-size: 2.1rem;
+  font-weight: 500;
  
 }
 
