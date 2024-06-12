@@ -1,17 +1,19 @@
 // nenia 슬로건 데이터
 
-export const slogan = {
+export const sloganData = {
   main1: {
     stit: "자연 가까이, 네니아",
     btit: "우리밀을 비롯한 우리 땅에서 나는 원재료로\n친환경 식품을 기획하고 생산합니다.",
     disc: "",
     more: "더알아보기",
+    link: "",
   },
   main2: {
     stit: "About US",
     btit: "더 나은 사회가치를\n 공유하고자 노력합니다.",
     disc: "‘지속 가능한 건강한 삶’에 어떻게 기여할 수 있는가? 그리고 그것을 위해서 어떻게 실행하는가?",
-    more: "Watch"
+    more: "더알아보기",
+    link: "",
   },
   main3:{
     stit: "",

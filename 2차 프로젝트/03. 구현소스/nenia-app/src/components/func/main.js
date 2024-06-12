@@ -11,8 +11,6 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 
 
 
-
-
 // 스크롤트리거 플러그인을 불러오기
 gsap.registerPlugin(ScrollTrigger);
 

@@ -4,13 +4,15 @@
 // import { slogan } from "../data/slogan";
 import Slogan from "../modules/Slogan.jsx";
 
-
 // 메인영역 CSS 불러오기
 import "../../css/main.scss";
 
 // 폰트어썸 불러오기
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faPlay } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
+
+// 공통 js 불러오기
+import "../func/common.js";
 
 // 메인영역 js불러오기
 import "../func/main.js";
@@ -26,17 +28,8 @@ export default function Main() {
         <div className="inbox">
           {/* 메인1 - 글자영역 */}
           <div className="txt-wrap">
-
-          <Slogan clsName = "main1" />
-            {/* <h1 className="font-5">{slogan[0].stit}</h1>
-            <p className="font-2">
-              <span>{slogan[0].btit}</span>
-            </p>
-            <div className="btn">
-              <a href="" className="po-center">
-                더 알아보기
-              </a>
-            </div> */}
+            {/* 슬로건 모듈 */}
+            <Slogan clsName="main1" />
           </div>
         </div>
         {/* 메인2 - 동영상 */}
@@ -45,24 +38,17 @@ export default function Main() {
             <div className="wrap flex">
               {/* 왼쪽영역 */}
               <div className="left">
-              {/* <Slogan clsName = "main1" /> */}
-                {/* <h1 className="font-5">{slogan[1].stit}</h1>
-                <p className="font-2">
-                  <span>{slogan[1].btit}</span>
-                </p>
-                <div className="btn">
-                  <a href="" className="po-center">
-                    더 알아보기
-                  </a> */}
-                </div>
+                {/* 슬로건 모듈 */}
+                <Slogan clsName="main2" />
               </div>
+
               {/* 오른쪽 영역 */}
               <div className="right flex">
                 <div className="video-sum">
-                  <div class="btn">
-                    <a href="" class="po-center">
+                  <div className="btn">
+                    <a href="" className="po-center">
                       {/* 폰트어썸 사용 */}
-                      Watch
+                      <FontAwesomeIcon icon={faPlay} /> Watch
                     </a>
                   </div>
                 </div>
@@ -71,6 +57,6 @@ export default function Main() {
           </div>
         </div>
       </div>
-
+    </div>
   );
 } /////////// Main /////////////////////
