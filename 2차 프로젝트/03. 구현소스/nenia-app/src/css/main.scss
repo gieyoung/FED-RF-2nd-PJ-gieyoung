@@ -58,9 +58,9 @@
         }
         .btn {
           background-color: #154726;
-         
-          &>a{
-            color:#fff;
+
+          & > a {
+            color: #fff;
           }
         }
       }
@@ -73,11 +73,96 @@
         background: url("http://nenia.kr/theme/responsive_nenia/include/img/video_thumb.png") no-repeat center / cover;
         border-radius: 20px;
         height: 600px;
-        
+
         .btn {
           background-color: #ffd550;
         }
       }
     }
+
+    // 비디오 팝업
+    .vid-popup {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      justify-content: center;
+      width: 100vw;
+      height: 0;
+      background: #d8e0a5;
+      z-index: 2;
+      flex-direction: column;
+      // animation: pop-ani2 0.5s ease-in-out forwards;
+
+      &.on {
+        height: 100vh;
+        animation: pop-ani 0.5s ease-in-out forwards;
+      }
+      &.on2 {
+        height: 0;
+        animation: pop-ani2 0.5s ease-in-out forwards;
+      }
+
+      .video-bg {
+        height: 80%;
+      }
+
+      video {
+        width: 100%;
+        max-width: 1500px;
+        height: 100%;
+        border-radius: 20px;
+      }
+
+      // 비디오 닫기 버튼
+      .close-btn {
+        font-size: 45px;
+        justify-content: center;
+        color: #154726;
+        margin-top: 35px;
+      }
+
+      // 비디오 팝업 애니메이션
+      // 등장할때
+      @keyframes pop-ani {
+        from {
+          height: 0;
+        }
+        to {
+          height: 100vh;
+        }
+      }
+      // 사라질때
+      @keyframes pop-ani2 {
+        from {
+          height: 100vh;
+        }
+        to {
+          height: 0;
+        }
+      }
+    } //////////////////main2/////////////////
+
+
+    //main3
+    .main3 {
+      width: 100%;
+      background: url("http://nenia.kr/theme/responsive_nenia/include/img/main2_bak.jpg") no-repeat 50% 30% / cover;
+      position: relative;
+      padding: 150px 0;
+      
+      ul {
+        justify-content: center;
+        padding-bottom: 30px;
+        gap:30px;
+
+        li img {
+          width: 100%;
+          max-width: 150px;
+          height: auto;
+        }
+      }
+
+    }
+    
   }
 }

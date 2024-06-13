@@ -15,11 +15,6 @@ export const sloganData = {
     more: "더알아보기",
     link: "",
   },
-  main3:{
-    stit: "",
-    btit: "우리 아이들이 푸르고 건강하게 자라나도록 좋은 식품을 만듭니다.",
-    disc: "",
-  },
   main4:{
     stit: "Business",
     btit: "순수한 자연과 가장 가까운 먹을거리를 만듭니다.",

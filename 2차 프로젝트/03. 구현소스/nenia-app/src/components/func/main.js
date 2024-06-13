@@ -1,12 +1,37 @@
 // 메인영역 함수 - main.js
 
-
 // 제이쿼리 + 제이쿼리UI
 import $ from "jquery";
 import "jquery-ui-dist/jquery-ui";
+
 // gsap
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+
+// 가로 사이즈 변하는 js불러오기
+import "../func/width_chg.js";
+
+// $(".btn>a").on("click", () => {
+//   $(".close-btn").show("on");
+//   $(".vid-popup").addClass("on");
+// });
+// $(".close-btn").on("click", () => {
+//   $(".close-btn").hide("on");
+//   $(".vid-popup").removeClass("on");
+// });
+$(".btn>a").on("click", () => {
+  $(".close-btn").show("on");
+  $(".vid-popup").addClass("on");
+});
+$(".close-btn").on("click", () => {
+  $(".close-btn").show("on2");
+  $(".vid-popup").removeClass("on");
+});
+
+
+
+
+
 
 
 
@@ -18,50 +43,39 @@ gsap.registerPlugin(ScrollTrigger);
 var windowWidth = window.matchMedia("screen and (max-width:900px)");
 
 
-
-$(function(){
-  if (windowWidth.matches){
-    var tl = gsap.timeline({
-      scrollTrigger: {                     
-      trigger: '.main2',               
-      scrub:1,                          
-      start:'top 76%',             
-      end:'top 40%',
-      toggleActions: 'play none none none',
-    }
-    });
-  tl.to(".main2", {
-      borderRadius:'0 0 20px 20px', 
-      width: '100%',
-      top: 0,
-      });
-      var tl = gsap.timeline({
-        scrollTrigger: {
-          trigger:'.main_3',
-          scrub:1,
-          start:'top 100%',
-          endTrigger:'bottom',
-          end:'bottom -200%',
-          toggleActions: 'play none none none',
-        }
-      });
+// 메인3 이미지 움직이는 효과
+// $(function(){
+//   if (windowWidth.matches){
+//     var tl = gsap.timeline({
+//       scrollTrigger: {
+//         trigger:'.main3',
+//         scrub:1,
+//         start:'top 100%',
+//         endTrigger:'bottom',
+//         end:'bottom -200%',
+//         toggleActions: 'play none none none',
+//       }
+//     });
+//     tl.to('.main3', {
+//       backgroundPosition:'50% 100%'
+//     })
      
       
-  }else{ //PC
-    var tl = gsap.timeline({
-        scrollTrigger: {                     
-        trigger: '.main2',               
-        scrub:1,                          
-        start:'top 76%',             
-        end:'top 40%',
-        toggleActions: 'play none none none',
-      }
-      });
-    tl.to(".main2", {
-        borderRadius:'0 0 20px 20px', 
-        width: '100%',
-        top: 0,
-        });
+//   }else{ //PC
+//     var tl = gsap.timeline({
+//       scrollTrigger: {
+//         trigger:'.main3',
+//         scrub:1,
+//         start:'top 100%',
+//         endTrigger:'bottom',
+//         end:'bottom -200%',
+//         toggleActions: 'play none none none',
+//       }
+//     });
+//     tl.to('.main3', {
+//       backgroundPosition:'50% 80%'
+//     })
     
-  }
-});
+    
+//   }
+// });
