@@ -97,7 +97,7 @@ body * {
 // 큰타이틀 - btit
 
 .font-2 {
-  font-size: 4rem;
+  font-size: 4.3rem;
   font-weight: 500;
   line-height: 1.4;
   padding: 15px 0 30px;
@@ -124,6 +124,14 @@ body * {
   font-weight: 500;
  
 }
+// desc
+.font-6 {
+  font-size: 1.8rem;
+  color:#154726;
+  font-weight: 500;
+  line-height:1.8;
+ 
+}
 
 .font-9{
  font-size: 1.4rem;
@@ -132,6 +140,10 @@ body * {
 .font-10{
  font-size: 1.2rem;
  font-weight: 100;
+}
+
+.desc{
+  margin-top:100px;
 }
 
 // 버튼 스타일 애니메이션

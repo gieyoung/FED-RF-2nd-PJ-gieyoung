@@ -1,6 +1,7 @@
 // 메인 페이지 컴포넌트 ///
 import Slogan from "../modules/Slogan.jsx";
 import M3_img from "../modules/M3_img.jsx";
+import MainRightScroll from "../modules/MainRightScroll.jsx";
 
 // 메인영역 CSS 불러오기
 import "../../css/main.scss";
@@ -14,11 +15,11 @@ import { faRectangleXmark } from "@fortawesome/free-solid-svg-icons";
 import mainFn from "../func/main.js";
 import { useEffect } from "react";
 
-export default function Main() {
 
-  useEffect(()=>{
+export default function Main() {
+  useEffect(() => {
     mainFn();
-  },[]);
+  }, []);
   //// 코드 리턴구역 //////////////
   return (
     <div id="main-area">
@@ -58,7 +59,7 @@ export default function Main() {
             {/* 비디오 팝업 */}
             <div className="vid-popup flex">
               <div className="video-bg">
-                <video id="s11_video"  src="https://kfpd.org/visual_video.mp4" preload="metadata"></video>
+                <video id="video" src="https://kfpd.org/visual_video.mp4" preload="metadata"></video>
               </div>
               {/* 비디오 닫기 버튼 */}
               <a className="close-btn flex" href="#null">
@@ -68,7 +69,7 @@ export default function Main() {
             </div>
           </div>
         </div>
-      {/* 메인3 - 움직이는 배경이미지 */}
+        {/* 메인3 - 움직이는 배경이미지 */}
         <div className="main3">
           <div className="inbox">
             <div className="wrap">
@@ -85,23 +86,22 @@ export default function Main() {
           </div>
         </div>
         {/* 메인4 - 가로스크롤 */}
-        <div className="main4">
+        <div className="main4 horizon-scroll">
           <div className="inbox">
-            <ul className="wrap">
+            <ul className="wrap flex">
               <li>
-                <div className="top">
                   {/* 슬로건 모듈 */}
                   <Slogan clsName="main4" />
-                </div>
-                <div className="bottom">
-                  <p className="font-6 nanum">네니아는 우리 땅의 생산자들과의 유기적인 관계를 발전시켜 왔으며 안전하고 맛있는 식품의 개발능력으로 세상을 더 좋은 곳으로 만들고 더 나은 사회가치를 공유하고자 노력합니다.</p>
-                </div>
               </li>
-              <li>
+              {/* 슬로건 모듈 */}
+              <MainRightScroll clsName="nenia_way" />
+
+
+              {/* <li>
                 <a href="http://nenia.kr/page/21" className="img_box">
-                  <img src="http://nenia.kr/theme/responsive_nenia/include/img/main4_img1.png" alt=""/>
+                  <img src="http://nenia.kr/theme/responsive_nenia/include/img/main4_img1.png" alt="" />
                 </a>
-                <figure className="logo"><img src="http://nenia.kr/theme/responsive_nenia/include/img/main4_img1_logo.png" alt=""/></figure>
+                <h1 className="font-2">네니아웨이</h1>
                 <a className="font-8" href="http://nenia.kr/page/21">
                   <div className="a_bg"></div>
                   <div className="label">더 알아보기</div>
@@ -109,9 +109,11 @@ export default function Main() {
               </li>
               <li>
                 <a href="http://nenia.kr/page/22" className="img_box">
-                  <img src="http://nenia.kr/theme/responsive_nenia/include/img/main4_img2.png" alt=""/>
+                  <img src="http://nenia.kr/theme/responsive_nenia/include/img/main4_img2.png" alt="" />
                 </a>
-                <figure className="logo"><img src="http://nenia.kr/theme/responsive_nenia/include/img/main4_img2_logo.png" alt=""/></figure>
+                <figure className="logo">
+                  <img src="http://nenia.kr/theme/responsive_nenia/include/img/main4_img2_logo.png" alt="" />
+                </figure>
                 <a className="font-8" href="http://nenia.kr/page/22">
                   <div className="a_bg"></div>
                   <div className="label">더 알아보기</div>
@@ -119,9 +121,11 @@ export default function Main() {
               </li>
               <li>
                 <a href="http://nenia.kr/page/25" className="img_box">
-                  <img src="http://nenia.kr/theme/responsive_nenia/include/img/main4_img3.png" alt=""/>
+                  <img src="http://nenia.kr/theme/responsive_nenia/include/img/main4_img3.png" alt="" />
                 </a>
-                <figure className="logo"><img src="http://nenia.kr/theme/responsive_nenia/include/img/main4_img3_logo.png" alt=""/></figure>
+                <figure className="logo">
+                  <img src="http://nenia.kr/theme/responsive_nenia/include/img/main4_img3_logo.png" alt="" />
+                </figure>
                 <a className="font-8" href="http://nenia.kr/page/25">
                   <div className="a_bg"></div>
                   <div className="label">더 알아보기</div>
@@ -129,18 +133,19 @@ export default function Main() {
               </li>
               <li>
                 <a href="http://nenia.kr/page/24" className="img_box">
-                  <img src="http://nenia.kr/theme/responsive_nenia/include/img/main4_img4.png" alt=""/>
+                  <img src="http://nenia.kr/theme/responsive_nenia/include/img/main4_img4.png" alt="" />
                 </a>
-                <figure className="logo"><img src="http://nenia.kr/theme/responsive_nenia/include/img/main4_img4_logo.png" alt=""/></figure>
+                <figure className="logo">
+                  <img src="http://nenia.kr/theme/responsive_nenia/include/img/main4_img4_logo.png" alt="" />
+                </figure>
                 <a className="font-8" href="http://nenia.kr/page/24">
                   <div className="a_bg"></div>
                   <div className="label">더 알아보기</div>
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
-      
       </div>
     </div>
   );

@@ -22,6 +22,10 @@ function Slogan({clsName}) {
       {selData.more}
       </a>
     </div>
+
+    <div className="desc">
+       <p className="font-6">{selData.desc}</p>
+    </div>
   </>
   );
 }
