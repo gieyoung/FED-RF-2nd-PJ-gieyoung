@@ -11,9 +11,14 @@ import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { faRectangleXmark } from "@fortawesome/free-solid-svg-icons";
 
 // 메인 js불러오기
-import "../func/main.js";
+import mainFn from "../func/main.js";
+import { useEffect } from "react";
 
 export default function Main() {
+
+  useEffect(()=>{
+    mainFn();
+  },[]);
   //// 코드 리턴구역 //////////////
   return (
     <div id="main-area">
@@ -53,9 +58,7 @@ export default function Main() {
             {/* 비디오 팝업 */}
             <div className="vid-popup flex">
               <div className="video-bg">
-                <video id="s11_video" loop="" muted="" preload="metadata">
-                  <source src="https://kfpd.org/visual_video.mp4" type="video/mp4" />
-                </video>
+                <video id="s11_video"  src="https://kfpd.org/visual_video.mp4" preload="metadata"></video>
               </div>
               {/* 비디오 닫기 버튼 */}
               <a className="close-btn flex" href="#null">

@@ -91,11 +91,11 @@
       background: #d8e0a5;
       z-index: 2;
       flex-direction: column;
-      // animation: pop-ani2 0.5s ease-in-out forwards;
+
+      transition: height 0.5s ease-in-out;
 
       &.on {
         height: 100vh;
-        animation: pop-ani 0.5s ease-in-out forwards;
       }
 
       .video-bg {

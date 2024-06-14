@@ -6,12 +6,17 @@ import { menu } from "../data/gnb";
 
 
 // 공통(상단/하단) js 불러오기
-import "../func/common.js";
+import commonFn from "../func/common"
 
 // 상단영역 CSS 불러오기
 import "../../css/top_area.scss";
+import { useEffect } from "react";
 
 export default function TopArea() {
+
+  useEffect(()=>{
+    commonFn();
+  },[]);
   //// 코드 리턴구역 //////////////
   return (
     <>
