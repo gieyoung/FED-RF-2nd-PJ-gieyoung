@@ -11,12 +11,14 @@ console.log(mFn);
 
 ///////////헤더 1단메뉴 마우스 오버시 2단메뉴 내려오기/////////////
 
-$('.gnb-depth1').mouseenter(function(){
+$('.gnb-depth1').mouseenter(() => {
+  console.log("나야나!");
   $(this).find('.gnb-depth2').addClass('on');
 
 });
 
-$('.gnb-depth1').mouseleave(function(){
+$('.gnb-depth1').mouseleave(() => {
+  console.log("나야나2!");
   $(this).find('.gnb-depth2').removeClass('on');
 
 });

@@ -97,10 +97,6 @@
         height: 100vh;
         animation: pop-ani 0.5s ease-in-out forwards;
       }
-      &.on2 {
-        height: 0;
-        animation: pop-ani2 0.5s ease-in-out forwards;
-      }
 
       .video-bg {
         height: 80%;
@@ -131,17 +127,7 @@
           height: 100vh;
         }
       }
-      // 사라질때
-      @keyframes pop-ani2 {
-        from {
-          height: 100vh;
-        }
-        to {
-          height: 0;
-        }
-      }
     } //////////////////main2/////////////////
-
 
     //main3
     .main3 {
@@ -149,11 +135,11 @@
       background: url("http://nenia.kr/theme/responsive_nenia/include/img/main2_bak.jpg") no-repeat 50% 30% / cover;
       position: relative;
       padding: 150px 0;
-      
+
       ul {
         justify-content: center;
         padding-bottom: 30px;
-        gap:30px;
+        gap: 30px;
 
         li img {
           width: 100%;
@@ -161,8 +147,39 @@
           height: auto;
         }
       }
+    } ////////////////////////main3////////////////////
 
+    //main4
+    .main4 {
+      background: #d8e0a5;
+      margin-top: -20px;
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      ul {display:flex; width:100vw;}
+   li:first-child {display:flex; flex-direction:column; justify-content:space-between;  margin-right:16%; min-width:555px;}
+   li:first-child .top h1 {padding-bottom:5px; color:#149473; font-weight:600;}
+   li:first-child .top p {color:#154726; line-height:1.3;}
+   li:first-child .top p span {font-weight:700;}
+   li:first-child .bottom {padding-bottom:50px;}
+   li:first-child .bottom p {color:#154726; padding-bottom:12px; line-height:1.6; padding-left:2px; font-weight:400; letter-spacing:0px;}
+   li:first-child .bottom a {color:#149473; display:inline-flex; align-items:center; font-weight:500; position:relative;}
+   li:first-child .bottom a::after {content:''; display:block; position:absolute; width:0; height:2px; background:#149473; bottom:-2px; transition-duration: 0.5s; margin-right:25%; right:0;}
+   li:first-child .bottom a:hover::after {width:75%; left:0; }
+   li:first-child .bottom a img {padding-left:10px;}
+   li:not(:first-child) {display:flex; flex-direction:column; align-items:center;  margin-right:8%; min-width:22%; justify-content: space-between;}
+   li:not(:first-child) .img_box {border-radius:50px; overflow: hidden; }
+   li:not(:first-child) .img_box:hover img {transform:scale(1.1);}
+   li:not(:first-child) .img_box img {width:100%; max-width:420px; height:auto; display:block;transition:all 0.5s;}
+   li:not(:first-child) figure {padding:40px 0 35px;}
+   li:not(:first-child) a { display:inline-block; position:relative;}
+   li:not(:first-child) .a_bg {width:140px; height:50px; display:flex; justify-content:center; align-items:center; border-radius:60px;  background:#154726; font-weight:600; transition:all 0.5s;}
+   li:not(:first-child) a .label {position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:100%; text-align:center;color:#FEFCF7; font-weight:500;}
+   li:not(:first-child) a:hover .a_bg {scale:1.1}
+   li:not(:first-child) a:hover .label {animation:play_a 0.5s forwards linear;}
+   li:not(:first-child) img {width:100%; height:auto;}
     }
-    
   }
 }

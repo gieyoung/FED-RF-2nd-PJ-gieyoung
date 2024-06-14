@@ -4,6 +4,10 @@
 import { Link } from "react-router-dom";
 import { menu } from "../data/gnb";
 
+
+// 공통(상단/하단) js 불러오기
+import "../func/common.js";
+
 // 상단영역 CSS 불러오기
 import "../../css/top_area.scss";
 
