@@ -23,9 +23,10 @@ export const sloganData = {
     link: "",
 
   },
-  main5:{
+  storeList:{
     stit: "대표상품",
     btit: "네니아의 대표상품을 소개합니다",
+    more: "스토어 가기",
     desc: "",
   },
   

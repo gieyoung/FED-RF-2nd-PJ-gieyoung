@@ -93,9 +93,9 @@ export default function TopArea() {
             </nav>
             {/* <!-- 1-1.로고 --> */}
             <h1 className="logo">
-              <a href="" className="po-center" alt="네니아 로고">
+            <Link to= "/" className="po-center" alt="네니아 로고">
                 <span className="ir">로고</span>
-              </a>
+              </Link>
             </h1>
             {/* <!-- 1-3.기타 --> */}
             <ul className="etc-box flex">

@@ -7,7 +7,7 @@ export const menu = [
     sub: [
       {
         txt: "네니아 웨이",
-        link: "/nenia-way",
+        link: "/way",
       },
       {
         txt: "우리밀 이야기",
@@ -17,7 +17,7 @@ export const menu = [
   },
   {
     txt: "사업소개",
-    link: "/business",
+    link: "/nenia",
     sub: [
       {
         txt: "네니아",
@@ -25,7 +25,7 @@ export const menu = [
       },
       {
         txt: "친환경 급식",
-        link: "/school-food",
+        link: "/ecomeal",
       },
       {
         txt: "네니아브레드",

@@ -4,27 +4,27 @@ export const sns = [
   {
     alt: "인스타그램",
     img: "http://nenia.kr/theme/responsive_nenia/include/img/instar.png",
-    link: "https://www.instagram.com/econenia/",
+    link: "/images/sns_img/instar.png",
   },
   {
     alt: "유튜브",
     img: "http://nenia.kr/theme/responsive_nenia/include/img/youtube.png",
-    link: "https://www.youtube.com/@econenia",
+    link: "/images/sns_img/youtube.png",
   },
   {
     alt: "블로그",
     img: "http://nenia.kr/theme/responsive_nenia/include/img/blog.png",
-    link: "https://m.blog.naver.com/PostList.naver?blogId=eco-nenia",
+    link: "/images/sns_img/blog.png",
   },
   {
     alt: "페이스북",
     img: "http://nenia.kr/theme/responsive_nenia/include/img/facebook.png",
-    link: "https://www.facebook.com/econenia",
+    link: "/images/sns_img/facebook.png",
   },
   {
     alt: "카카오스토리",
     img: "http://nenia.kr/theme/responsive_nenia/include/img/kakao.png",
-    link: "https://story.kakao.com/econenia",
+    link: "/images/sns_img/kakao.png",
   },
   
 ];
