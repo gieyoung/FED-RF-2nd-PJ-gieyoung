@@ -45,8 +45,14 @@ function StoreList(props) {
           {/* 스토어리스트 데이터 배열로 만들기 */}
           {storeListData.map((v, i) => (
             <li key={i} className={v.clsName}>
-              <h2 className="font-2">{v.product}</h2>
+              <h2 className="font-3">{v.product}</h2>
               <p className="font-6">{v.desc}</p>
+
+              <div className="btn">
+                <a href={v.link} className="po-center">
+                  바로가기
+                </a>
+              </div>
             </li>
           ))}
         </ul>
