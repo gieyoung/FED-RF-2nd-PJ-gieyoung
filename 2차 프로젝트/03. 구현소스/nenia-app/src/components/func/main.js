@@ -6,9 +6,9 @@ import "jquery-ui-dist/jquery-ui";
 
 
 // 가로 사이즈 변하는 js불러오기
-import "../plugin/width_chg.js";
+import "./width_chg.js";
 // 뒤에 배경 움직이는 js불러오기
-import "../plugin/back_move.js";
+import "./back_move.js";
 
 
 ///////////[ main2 동영상 열고 닫기 ]/////////////

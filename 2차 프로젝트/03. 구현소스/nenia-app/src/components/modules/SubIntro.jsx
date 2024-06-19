@@ -14,10 +14,10 @@ import "../../css/sub_intro.scss";
 
 // js불러오기
 // 가로 사이즈 변하는 js불러오기
-import "../plugin/width_chg.js";
+import "../func/width_chg.js";
 
 // 뒤에 배경 움직이는 js불러오기
-import "../plugin/back_move.js";
+import "../func/back_move.js";
 
 function SubIntro({ catName }) {
   // 불러온 데이터 변수할당

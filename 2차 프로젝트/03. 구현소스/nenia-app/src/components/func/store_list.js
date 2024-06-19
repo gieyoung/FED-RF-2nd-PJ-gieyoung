@@ -5,8 +5,8 @@ import $ from "jquery";
 import "jquery-ui-dist/jquery-ui";
 
 // gsap 플러그인 불러오기
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // 스크롤트리거 플러그인을 불러오기
 gsap.registerPlugin(ScrollTrigger);

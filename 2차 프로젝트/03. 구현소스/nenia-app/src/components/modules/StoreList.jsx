@@ -12,7 +12,7 @@ import { storeListData } from "../data/store_list";
 import "../../css/store_list.scss";
 
 // 스토어리스트 JS 불러오기
-import "../plugin/store_list.js";
+import "../func/store_list.js";
 
 function StoreList(props) {
   // 코드 리턴구역 /////////
