@@ -12,14 +12,14 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 
-///////////[ 스크롤됨에 따라 main3 배경 움직임 ]/////////////
+///////////[ 스크롤됨에 따라 back-move 배경 움직임 ]/////////////
 var winWidth = window.matchMedia("screen and (max-width:900px)");
 
 $(function(){
   if (winWidth.matches){
     var back_move = gsap.timeline({
       scrollTrigger: {
-        trigger:'.main3',
+        trigger:'.back-move',
         scrub:1,
         start:'top 100%',
         endTrigger:'bottom',
@@ -27,7 +27,7 @@ $(function(){
         toggleActions: 'play none none none',
       }
     });
-    back_move.to('.main3', {
+    back_move.to('.back-move', {
       backgroundPosition:'50% 100%'
     })
      
@@ -35,14 +35,14 @@ $(function(){
   }else{ //PC
     var back_move = gsap.timeline({
       scrollTrigger: {
-        trigger:'.main3',
+        trigger:'.back-move',
         scrub:1,
         start:'top 100%',
         end:'bottom -100%',
         toggleActions: 'play none none none',
       }
     });
-    back_move.to('.main3', {
+    back_move.to('.back-move', {
       backgroundPosition:'50% 100%'
     })
   }

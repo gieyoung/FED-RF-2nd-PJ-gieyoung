@@ -3,7 +3,7 @@
 export const menu = [
   {
     txt: "회사소개",
-    link: "/company",
+    link: "/way",
     sub: [
       {
         txt: "네니아 웨이",

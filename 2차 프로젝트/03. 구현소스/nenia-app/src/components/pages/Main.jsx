@@ -35,7 +35,7 @@ export default function Main() {
           </div>
         </div>
         {/* 메인2 - 동영상 */}
-        <div className="main2">
+        <div className="main2 width-chg">
           <div className="inbox">
             <div className="wrap flex">
               {/* 왼쪽영역 */}
@@ -43,7 +43,6 @@ export default function Main() {
                 {/* 슬로건 모듈 */}
                 <Slogan clsName="main2" />
               </div>
-
               {/* 오른쪽 영역 */}
               <div className="right flex">
                 <div className="video-sum">
@@ -70,19 +69,17 @@ export default function Main() {
           </div>
         </div>
         {/* 메인3 - 움직이는 배경이미지 */}
-        <div className="main3">
+        <div className="main3 back-move">
           <div className="inbox">
-            <div className="wrap">
-              <ul className="flex">
-                {/* 메인3 이미지 컴포넌트 */}
-                <M3_img />
-              </ul>
-              <h2 className="font-4">
-                우리 아이들이 푸르고 건강하게
-                <br />
-                <span>자라나도록 좋은 식품을 만듭니다.</span>
-              </h2>
-            </div>
+            <ul className="flex">
+              {/* 메인3 이미지 컴포넌트 */}
+              <M3_img />
+            </ul>
+            <h2 className="font-4">
+              우리 아이들이 푸르고 건강하게
+              <br />
+              <span>자라나도록 좋은 식품을 만듭니다.</span>
+            </h2>
           </div>
         </div>
         {/* 메인4 - 가로스크롤 */}
@@ -102,8 +99,8 @@ export default function Main() {
         </div>
         {/* 메인5 - 스토어 상품 소개 */}
         <div className="main5">
-        {/* 스토어리스트 모듈 */}
-        <StoreList />
+          {/* 스토어리스트 모듈 */}
+          <StoreList />
         </div>
       </div>
     </div>

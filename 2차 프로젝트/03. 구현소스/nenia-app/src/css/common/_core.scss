@@ -3,7 +3,7 @@
 /* 1차 PJ : 공통 클래스 CSS - core.css */
 /* 공통 셋팅을 위한 클래스 + 웹폰트 */
 
-/* 웹폰트*/
+
 @font-face {
   font-family: "Pretendard-Regular";
   src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
@@ -14,15 +14,13 @@ body * {
   // outline:1px solid red;
 
   // 데이터 줄바꿈을 위해 /n 부분
-  white-space: pre-line
+  white-space: pre-line;
 }
 
 /* 모바일에서 오른쪽 여백 생기는 문제 해결 */
 // body > * {
 //   overflow-x:hidden;
 // }
-
-
 
 /* 드래그시 배경 색상(오뚜기 시그니처 컬러) */
 ::selection {
@@ -34,10 +32,16 @@ body * {
   position: relative;
 }
 
+// 서브페이지 전체 감싸는 박스
+.sub-wrap {
+  width: 100%;
+  height: 100%;
+}
+
 /* 공통클래스 중앙속박스 */
 .inbox {
   max-width: 1500px;
-  width:90%;
+  width: 90%;
   margin: 0 auto;
   outline: 1px solid red;
   height: 100%;
@@ -94,6 +98,15 @@ body * {
 
 // 폰트사이즈
 
+// 서브인트로 슬로건
+.font-1 {
+  font-size: 6rem;
+  font-weight: bold;
+  color: #154726;
+  padding: 350px 0 130px;
+  line-height: 1.4;
+}
+
 // 큰타이틀 - btit
 
 .font-2 {
@@ -101,8 +114,9 @@ body * {
   font-weight: 500;
   line-height: 1.4;
   padding: 15px 0 30px;
-  span{
-   font-weight: bold;
+  letter-spacing: 3px;
+  span {
+    font-weight: bold;
   }
 }
 .font-3 {
@@ -110,47 +124,49 @@ body * {
   font-weight: 600;
   line-height: 1.4;
   padding: 15px 0 30px;
- 
 }
 // 중간타이틀 - mtit
 .font-4 {
   font-size: 3.8rem;
   font-weight: 500;
-  color:#fff;
+  color: #fff;
   text-align: center;
-  line-height:1.5;
-  span{
+  line-height: 1.5;
+  span {
     font-weight: 600;
-   }
-
- 
+    letter-spacing: 2.5px;
+  }
 }
 // 작은타이틀 - stit
 .font-5 {
   font-size: 2.1rem;
   font-weight: 500;
- 
 }
 // desc
 .font-6 {
   font-size: 1.8rem;
-  color:#154726;
+  color: #154726;
   font-weight: 500;
-  line-height:1.8;
- 
+  line-height: 1.8;
+}
+.font-7 {
+  font-size: 1.7rem;
+  color:#fff;
+  font-weight: 100;
+  line-height: 1.8;
 }
 
-.font-9{
- font-size: 1.4rem;
- font-weight: 100;
+.font-9 {
+  font-size: 1.4rem;
+  font-weight: 100;
 }
-.font-10{
- font-size: 1.2rem;
- font-weight: 100;
+.font-10 {
+  font-size: 1.2rem;
+  font-weight: 100;
 }
 
-.desc{
-  margin-top:100px;
+.desc {
+  margin-top: 100px;
 }
 
 // 버튼 스타일 애니메이션
@@ -195,7 +211,6 @@ body * {
     }
   }
 }
-
 
 /* 공통클래스: 클리어 설정 */
 .clb::after {
