@@ -15,9 +15,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 var windowWidth = window.matchMedia("screen and (max-width:900px)");
+
+
 $(function () {
-  if (windowWidth.matches) {
-  } else {
+  {
     //PC
 
     var tl = gsap.timeline({
@@ -182,3 +183,5 @@ $(function () {
     });
   }
 });
+
+

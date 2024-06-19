@@ -17,22 +17,7 @@ gsap.registerPlugin(ScrollTrigger);
 var windowWidth = window.matchMedia("screen and (max-width:900px)");
 
 $(function () {
-  if (windowWidth.matches) {
-    var tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".width-chg",
-        scrub: 1,
-        start: "top 76%",
-        end: "top 40%",
-        toggleActions: "play none none none",
-      },
-    });
-    tl.to(".width-chg", {
-      borderRadius: "0 0 20px 20px",
-      width: "100%",
-      top: 0,
-    });
-  } else {
+ {
 
     //PC
     var tl = gsap.timeline({

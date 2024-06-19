@@ -16,23 +16,9 @@ gsap.registerPlugin(ScrollTrigger);
 var winWidth = window.matchMedia("screen and (max-width:900px)");
 
 $(function(){
-  if (winWidth.matches){
-    var back_move = gsap.timeline({
-      scrollTrigger: {
-        trigger:'.back-move',
-        scrub:1,
-        start:'top 100%',
-        endTrigger:'bottom',
-        end:'bottom -200%',
-        toggleActions: 'play none none none',
-      }
-    });
-    back_move.to('.back-move', {
-      backgroundPosition:'50% 100%'
-    })
-     
+
       
-  }else{ //PC
+ { //PC
     var back_move = gsap.timeline({
       scrollTrigger: {
         trigger:'.back-move',

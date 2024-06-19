@@ -16,7 +16,7 @@ var windowWidth = window.matchMedia("screen and (min-width: 1200px)");
 // 가로 1200px이상에서만 가로스크롤이벤트 적용
 
 $(function () {
-  if (windowWidth.matches) {
+  
     var right_scroll = gsap.timeline({
       scrollTrigger:{
         trigger:'.main4',
@@ -33,5 +33,5 @@ $(function () {
       xPercent: -190,
       ease: "none",
     });
-  }
+
 });
