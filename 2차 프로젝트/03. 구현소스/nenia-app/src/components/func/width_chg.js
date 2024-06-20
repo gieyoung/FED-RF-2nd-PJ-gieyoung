@@ -14,27 +14,24 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 // 스크롤트리거 플러그인을 불러오기
 gsap.registerPlugin(ScrollTrigger);
 
-var windowWidth = window.matchMedia("screen and (max-width:900px)");
-
-$(function () {
- {
-
-    //PC
-    var tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".width-chg",
-        scrub: 1,
-        start: "top 100%",
-        end: "top 20%",
-        toggleActions: "play none none none",
-      },
-    });
-    tl.to(".width-chg", {
-      borderRadius: "0",
-      width: "100%",
-      top: 0,
-    });
-  }
-});
-
-
+export default function widthFn() {
+  $(function () {
+    {
+      //PC
+      var tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".width-chg",
+          scrub: 1,
+          start: "top 100%",
+          end: "top 20%",
+          toggleActions: "play none none none",
+        },
+      });
+      tl.to(".width-chg", {
+        borderRadius: "0",
+        width: "100%",
+        top: 0,
+      });
+    }
+  });
+}

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import { Link } from "react-router-dom";
 
@@ -11,14 +11,10 @@ import { storeListData } from "../data/store_list";
 // 스토어리스트 CSS 불러오기
 import "../../css/store_list.scss";
 
-// js불러오기
-import storeFn from "../func/store_list";
+// 스토어리스트 JS 불러오기
+import "../func/store_list.js";
 
 function StoreList(props) {
-  useEffect(() => {
-    // 스토어 리스트 함수 호출
-    storeFn();
-  }, []);
   // 코드 리턴구역 /////////
   return (
     <div className="store-list">

@@ -1,5 +1,4 @@
 // 메인 페이지 컴포넌트 ///
-import { useEffect } from "react";
 import Slogan from "../modules/Slogan.jsx";
 import M3_img from "../modules/M3_img.jsx";
 import MainRight from "../modules/MainRight.jsx";
@@ -13,19 +12,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { faRectangleXmark } from "@fortawesome/free-solid-svg-icons";
 
-// js불러오기
+// 메인 js불러오기
 import mainFn from "../func/main.js";
-import widthFn from "../func/width_chg.js";
-import backMoveFn from "../func/back_move.js";
+import { useEffect } from "react";
 
 export default function Main() {
   useEffect(() => {
-    // 메인 함수호출
     mainFn();
-    // 움직이는 배경 함수 호출
-    backMoveFn();
-    // 가로 크기 변하는 함수 호출
-    widthFn();
   }, []);
   //// 코드 리턴구역 //////////////
   return (

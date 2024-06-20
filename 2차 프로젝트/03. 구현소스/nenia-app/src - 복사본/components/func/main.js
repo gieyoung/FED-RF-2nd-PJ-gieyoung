@@ -5,17 +5,10 @@ import $ from "jquery";
 import "jquery-ui-dist/jquery-ui";
 
 
-// // 가로 사이즈 변하는 js불러오기
-// import "./width_chg.js";
-// // 뒤에 배경 움직이는 js불러오기
-// import "./back_move.js";
-
-// gsap
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-
-// 스크롤트리거 플러그인을 불러오기
-gsap.registerPlugin(ScrollTrigger);
+// 가로 사이즈 변하는 js불러오기
+import "./width_chg.js";
+// 뒤에 배경 움직이는 js불러오기
+import "./back_move.js";
 
 
 ///////////[ main2 동영상 열고 닫기 ]/////////////
@@ -30,11 +23,16 @@ export default function mainFn() {
     $(".close-btn").hide();
     $("#video").get(0).pause();
   });
-  
-
-
-
 }
 ////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
 
 

@@ -11,7 +11,10 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 // 스크롤트리거 플러그인을 불러오기
 gsap.registerPlugin(ScrollTrigger);
 
-export default function backMoveFn() {
+
+///////////[ 스크롤됨에 따라 back-move 배경 움직임 ]/////////////
+var winWidth = window.matchMedia("screen and (max-width:900px)");
+
 $(function(){
 
       
@@ -30,7 +33,5 @@ $(function(){
     })
   }
 });
-
-}
 
 ////////////////////////////////////////////////////////////////

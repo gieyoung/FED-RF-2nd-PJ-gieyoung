@@ -12,7 +12,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 
-export default function storeFn() {
+
+
+var windowWidth = window.matchMedia("screen and (max-width:900px)");
+
+
 $(function () {
   {
     //PC
@@ -179,5 +183,5 @@ $(function () {
     });
   }
 });
-}
+
 

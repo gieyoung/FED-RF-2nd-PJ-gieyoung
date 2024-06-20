@@ -1,19 +1,17 @@
 // 슬로건 컴포넌트
-import React, { useEffect } from "react";
+import React from "react";
+
+// 가로 스크롤 기능 함수
+// import moveSlide from "../func/dance";
+// 가로 사이즈 변하는 js불러오기
+import "../func/right_scroll.js";
 
 import { Link } from "react-router-dom";
 
 // 슬로건 데이터 불러오기
 import { mainRightData } from "../data/main_right";
 
-// js불러오기
-import rightFn from "../func/right_scroll";
-
 function MainRight(props) {
-  useEffect(() => {
-    rightFn();
-  }, []);
-
   // 코드 리턴구역 /////////
   return (
     <>
