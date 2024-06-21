@@ -12,15 +12,12 @@ import widthFn from "../func/width_chg.js";
 import backMoveFn from "../func/back_move.js";
 import wayFn from "../func/way.js";
 
-// js불러오기
-import rightFn from "../func/right_scroll";
 
 export default function Nenia() {
   useEffect(() => {
-    wayFn();
+    // wayFn();
     // 가로 크기 변하는 함수 호출
     widthFn();
-    rightFn();
   }, []);
 
   return (
@@ -64,8 +61,8 @@ export default function Nenia() {
             백년이 지나도 변치않을 <br />
             <span>네니아 제조원칙</span>
           </h1>
-
-          <SubRight />
+         {/* 서브가로스크롤 모듈 */}
+          <SubRight clsName="way"/>
         </div>
       </div>
     </div>
