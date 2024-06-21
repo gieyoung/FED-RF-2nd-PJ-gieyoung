@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import SubIntro from "../modules/SubIntro.jsx";
 import SubRight from "../modules/SubRight.jsx";
+import History from "../modules/History.jsx";
 
 // 메인영역 CSS 불러오기
 import "../../css/way.scss";
@@ -12,10 +13,9 @@ import widthFn from "../func/width_chg.js";
 import backMoveFn from "../func/back_move.js";
 import wayFn from "../func/way.js";
 
-
 export default function Nenia() {
   useEffect(() => {
-    // wayFn();
+    wayFn();
     // 가로 크기 변하는 함수 호출
     widthFn();
   }, []);
@@ -54,15 +54,23 @@ export default function Nenia() {
         </div>
       </div>
 
-      {/* 섹션3 */}
-      <div className="s11_6 horizon-scroll">
+      {/* 섹션3 - 연혁 */}
+      <div className="s11_5">
+        <div className="inbox">
+          {/* 연혁 모듈 */}
+         <History />
+        </div>
+      </div>
+
+      {/* 섹션4 - 가로 스크롤*/}
+      <div className="sec4 shorizon-scroll flex">
         <div className="inbox">
           <h1 className="font-2">
             백년이 지나도 변치않을 <br />
-            <span>네니아 제조원칙</span>
+            네니아 제조원칙
           </h1>
-         {/* 서브가로스크롤 모듈 */}
-          <SubRight clsName="way"/>
+          {/* 서브가로스크롤 모듈 */}
+          <SubRight clsName="way" />
         </div>
       </div>
     </div>

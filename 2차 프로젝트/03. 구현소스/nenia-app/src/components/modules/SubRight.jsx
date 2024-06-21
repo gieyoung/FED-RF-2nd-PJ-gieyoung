@@ -6,13 +6,16 @@ import { Link } from "react-router-dom";
 // 슬로건 데이터 불러오기
 import { subRightData } from "../data/sub_right";
 
+// css불러오기
+import "../../css/sright_scroll.scss";
+
 // js불러오기
-import rightFn from "../func/right_scroll";
+import srightFn from "../func/sright_scroll";
 
 function SubRight({ clsName }) {
   useEffect(() => {
     // 가로스크롤 함수 호출
-    rightFn();
+    srightFn();
   }, []);
 
   // 불러온 데이터 변수할당
@@ -28,7 +31,7 @@ function SubRight({ clsName }) {
         {selData.map((v, i) => (
           <li key={i}>
             <h2 className="font-3">{v.tit}</h2>
-            <img className="non-active" src={v.img} alt="" />
+            <div className="img-wrap"><img src={v.img} alt="이미지" /></div>
             <p className="font-6">{v.desc}</p>
           </li>
         ))}
