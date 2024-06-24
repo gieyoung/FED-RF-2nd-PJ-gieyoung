@@ -1,12 +1,14 @@
-// 메인 페이지 컴포넌트 ///
+// 네니아웨이 페이지 컴포넌트 ///
 import { useEffect } from "react";
 import SubIntro from "../modules/SubIntro.jsx";
 import SubRight from "../modules/SubRight.jsx";
 import History from "../modules/History.jsx";
+import Family from "../modules/Family.jsx";
+import SubLast from "../modules/SubLast.jsx";
 
-// 메인영역 CSS 불러오기
+// CSS 불러오기
 import "../../css/way.scss";
-import "../../css/width_chg.scss";
+
 
 // js불러오기
 import widthFn from "../func/width_chg.js";
@@ -15,7 +17,7 @@ import wayFn from "../func/way.js";
 
 export default function Nenia() {
   useEffect(() => {
-    wayFn();
+    // wayFn();
     // 가로 크기 변하는 함수 호출
     widthFn();
   }, []);
@@ -58,7 +60,7 @@ export default function Nenia() {
       <div className="s11_5">
         <div className="inbox">
           {/* 연혁 모듈 */}
-         <History />
+          <History yearName="year" />
         </div>
       </div>
 
@@ -71,6 +73,16 @@ export default function Nenia() {
           </h1>
           {/* 서브가로스크롤 모듈 */}
           <SubRight clsName="way" />
+        </div>
+      </div>
+      <div className="sec5">
+        {/* 패밀리사이트 무한이동스크롤 모듈 */}
+        <Family />
+      </div>
+      <div className="sec6 sub-last">
+        <div className="inbox">
+          {/* 서브마지막 링크 모듈 */}
+          <SubLast clsName="way" />
         </div>
       </div>
     </div>

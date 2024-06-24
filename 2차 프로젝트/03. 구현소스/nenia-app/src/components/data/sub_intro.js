@@ -7,7 +7,7 @@ export const subIntroData = {
     tit: "네니아 웨이",
   },
   wheat: {
-    bakimg:"/images/bak_img/bak1.jpg",
+    bakimg:"/images/bak_img/bak1.png",
     slogan: "밀이 자라면, 미래도 자란다",
     tit: "우리밀 이야기",
   },
@@ -17,12 +17,12 @@ export const subIntroData = {
     tit: "네니아 대표상품",
   },
   ecomeal: {
-    bakimg:"/images/bak_img/bak1.jpg",
+    bakimg:"/images/bak_img/bak2.jpg",
     slogan: "급식은 교육이다",
     tit: "친환경 급식",
   },
   bread: {
-    bakimg:"/images/bak_img/bak1.jpg",
+    bakimg:"/images/bak_img/bak2.jpg",
     slogan: "네니아브레드",
     tit: "네니아브레드",
   },

@@ -57,38 +57,6 @@ export default function TopArea() {
                     }
                   </li>
                 ))}
-
-                {/* <li class="gnb-depth1">
-                  <a href=""><span>회사소개</span></a>
-                  <ul class="gnb-depth2 po-centerX">
-                    <li>
-                      <a href=""><span>네니아way</span></a>
-                    </li>
-                    <li>
-                      <a href=""><span>우리밀이야기</span></a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="gnb-depth1">
-                  <a href="./sub.html"><span>사업소개</span></a>
-                  <ul class="gnb-depth2 po-centerX">
-                    <li>
-                      <a href=""><span>네니아</span></a>
-                    </li>
-                    <li>
-                      <a href=""><span>친환경급식</span></a>
-                    </li>
-                    <li>
-                      <a href=""><span>네니아브레드</span></a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="gnb-depth1">
-                  <a href=""><span>네니아소식</span></a>
-                </li>
-                <li class="gnb-depth1">
-                  <a href=""><span>스토어</span></a>
-                </li> */}
               </ul>
             </nav>
             {/* <!-- 1-1.로고 --> */}

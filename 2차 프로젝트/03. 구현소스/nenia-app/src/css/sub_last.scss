@@ -1,0 +1,31 @@
+.sub-last {
+  background: #faf3e6;
+  padding: 80px 0;
+  border-radius: 20px;
+
+  .inbox{
+
+    background: url("http://nenia.kr/theme/responsive_nenia/include/img/s11_8_bak.png") no-repeat center / cover;
+    border-radius: 20px;
+    padding: 130px 0;
+    text-align: center;
+  }
+  h1 {
+    color: #154726;
+    font-weight: 700;
+  }
+  p {
+    color: #154726;
+    padding: 10px 0 28px;
+  }
+ 
+  .btn{
+    display: inline-block;
+    position: relative;
+    background-color: #154726;
+    a{
+      color:#fff;
+    }
+  }
+
+}

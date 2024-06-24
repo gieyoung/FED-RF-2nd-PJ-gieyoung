@@ -1,0 +1,40 @@
+.square-info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .box {
+    display: flex;
+    height: 800px;
+    .left {
+      width: 50%;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .right {
+      width: 50%;
+      box-sizing: border-box;
+      padding: 100px 50px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      color: #154726;
+    }
+  }
+}
+
+.s1 {
+  background: #f4e5be;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 0;
+}
+.s2 {
+  background: #d8e0a5;
+}
+.s3 {
+  background: #faf3e6;
+}

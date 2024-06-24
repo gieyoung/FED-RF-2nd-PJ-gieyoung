@@ -47,43 +47,76 @@ export const subRightData = {
   ],
   wheat: [
     {
-      tit: "NON-GMO 원료만을 엄선하여 사용합니다",
-      img: "/images/main_scroll/main_scroll1.png",
-      desc: "수입산 옥수수전분, 물엿, 변성전분, 대두단백,액상과당 등 GMO우려가 있는 원재료는 사용하지 않습니다. 복합 원재료의 경우도 원료 자체에 GMO의 위험이 있는 것은 배제합니다.",
-      cont: `The Outsiders are back with a new Luke Fox-led team and a much different mission than before.`,
+      tit: "100% 국내산",
+      img: "/images/wheat/right_scroll_img/img1.png",
+      desc: "우리밀은 우리의 들녘에서 우리의 공기와 물을 먹으며 자란 우리 곡물입니다.",
     },
     {
-      tit: "NON-GMO 원료만을 엄선하여 사용합니다",
-      img: "/images/main_scroll/main_scroll1.png",
-      desc: "수입산 옥수수전분, 물엿, 변성전분, 대두단백,액상과당 등 GMO우려가 있는 원재료는 사용하지 않습니다. 복합 원재료의 경우도 원료 자체에 GMO의 위험이 있는 것은 배제합니다.",
-      cont: `The Outsiders are back with a new Luke Fox-led team and a much different mission than before.`,
+      tit: "농가소득 기여",
+      img: "/images/wheat/right_scroll_img/img2.png",
+      desc: "겨울철 유휴농지를 활용하여 우리밀 농가소득 증대에 기여 합니다.",
     },
     {
-      tit: "NON-GMO 원료만을 엄선하여 사용합니다",
-      img: "/images/main_scroll/main_scroll1.png",
-      desc: "수입산 옥수수전분, 물엿, 변성전분, 대두단백,액상과당 등 GMO우려가 있는 원재료는 사용하지 않습니다. 복합 원재료의 경우도 원료 자체에 GMO의 위험이 있는 것은 배제합니다.",
-      cont: `The Outsiders are back with a new Luke Fox-led team and a much different mission than before.`,
+      tit: "생태환경 보존",
+      img: "/images/wheat/right_scroll_img/img3.png",
+      desc: "우리밀 8만ha 재배 시 산소 23만 톤 방출, 1ha당 100kg의 미세먼지를 제거합니다.",
     },
+    {
+      tit: "식량안보 파수꾼",
+      img: "/images/wheat/right_scroll_img/img4.png",
+      desc: "대한민국 제2의 식량으로 우리밀 소비 확대는 식량자급률 향상에 기여 합니다.",
+    },
+    {
+      tit: "환경 보호",
+      img: "/images/wheat/right_scroll_img/img5.png",
+      desc: "수입밀(미국, 캐나다 등) 대비 이동거리가 짧아 탄소 저감효과에 기여 합니다.",
+    },
+    {
+      tit: "품질 제고 노력",
+      img: "/images/wheat/right_scroll_img/img6.png",
+      desc: "철저한 품질관리로 안정성 및 가공 품질 적성을 충족한 밀입니다.",
+    },
+  
+   
+    
   ],
   ecomeal: [
     {
-      tit: "NON-GMO 원료만을 엄선하여 사용합니다",
-      img: "/images/main_scroll/main_scroll1.png",
-      desc: "수입산 옥수수전분, 물엿, 변성전분, 대두단백,액상과당 등 GMO우려가 있는 원재료는 사용하지 않습니다. 복합 원재료의 경우도 원료 자체에 GMO의 위험이 있는 것은 배제합니다.",
-      cont: `The Outsiders are back with a new Luke Fox-led team and a much different mission than before.`,
+      tit: "가능한 친환경 농산물과 무항생제 축산물을 사용합니다.",
+      img: "/images/way/right_scroll_img/img5.png",
+      desc: "연중수급이 불가능하여 사용이 어려운 경우를 제외하고 최대한 친환경 농산물과 무항생제 축산물을 사용합니다.",
     },
     {
-      tit: "NON-GMO 원료만을 엄선하여 사용합니다",
-      img: "/images/main_scroll/main_scroll1.png",
-      desc: "수입산 옥수수전분, 물엿, 변성전분, 대두단백,액상과당 등 GMO우려가 있는 원재료는 사용하지 않습니다. 복합 원재료의 경우도 원료 자체에 GMO의 위험이 있는 것은 배제합니다.",
-      cont: `The Outsiders are back with a new Luke Fox-led team and a much different mission than before.`,
+      tit: "가능한 친환경 농산물과 무항생제 축산물을 사용합니다.",
+      img: "/images/way/right_scroll_img/img5.png",
+      desc: "연중수급이 불가능하여 사용이 어려운 경우를 제외하고 최대한 친환경 농산물과 무항생제 축산물을 사용합니다.",
     },
     {
-      tit: "NON-GMO 원료만을 엄선하여 사용합니다",
-      img: "/images/main_scroll/main_scroll1.png",
-      desc: "수입산 옥수수전분, 물엿, 변성전분, 대두단백,액상과당 등 GMO우려가 있는 원재료는 사용하지 않습니다. 복합 원재료의 경우도 원료 자체에 GMO의 위험이 있는 것은 배제합니다.",
-      cont: `The Outsiders are back with a new Luke Fox-led team and a much different mission than before.`,
+      tit: "가능한 친환경 농산물과 무항생제 축산물을 사용합니다.",
+      img: "/images/way/right_scroll_img/img5.png",
+      desc: "연중수급이 불가능하여 사용이 어려운 경우를 제외하고 최대한 친환경 농산물과 무항생제 축산물을 사용합니다.",
     },
+    {
+      tit: "가능한 친환경 농산물과 무항생제 축산물을 사용합니다.",
+      img: "/images/way/right_scroll_img/img5.png",
+      desc: "연중수급이 불가능하여 사용이 어려운 경우를 제외하고 최대한 친환경 농산물과 무항생제 축산물을 사용합니다.",
+    },
+    {
+      tit: "가능한 친환경 농산물과 무항생제 축산물을 사용합니다.",
+      img: "/images/way/right_scroll_img/img5.png",
+      desc: "연중수급이 불가능하여 사용이 어려운 경우를 제외하고 최대한 친환경 농산물과 무항생제 축산물을 사용합니다.",
+    },
+    {
+      tit: "가능한 친환경 농산물과 무항생제 축산물을 사용합니다.",
+      img: "/images/way/right_scroll_img/img5.png",
+      desc: "연중수급이 불가능하여 사용이 어려운 경우를 제외하고 최대한 친환경 농산물과 무항생제 축산물을 사용합니다.",
+    },
+    {
+      tit: "가능한 친환경 농산물과 무항생제 축산물을 사용합니다.",
+      img: "/images/way/right_scroll_img/img5.png",
+      desc: "연중수급이 불가능하여 사용이 어려운 경우를 제외하고 최대한 친환경 농산물과 무항생제 축산물을 사용합니다.",
+    },
+   
   ],
 };
 

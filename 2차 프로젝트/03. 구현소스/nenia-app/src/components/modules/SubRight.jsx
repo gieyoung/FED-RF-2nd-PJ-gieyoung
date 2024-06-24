@@ -27,7 +27,7 @@ function SubRight({ clsName }) {
   return (
     <>
       <ul>
-        {/* 메인4 데이터 배열로 만들기 */}
+        {/* 데이터 배열로 만들기 */}
         {selData.map((v, i) => (
           <li key={i}>
             <h2 className="font-3">{v.tit}</h2>

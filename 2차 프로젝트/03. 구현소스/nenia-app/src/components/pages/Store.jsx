@@ -1,9 +1,13 @@
-import React from 'react';
+// 스토어 페이지 컴포넌트 ///
+import React from "react";
+import SubIntro from "../modules/SubIntro.jsx";
 
 function Store(props) {
   return (
-    <div>
-      
+    // 전체 감싸는 박스
+    <div className="sub-wrap store-wrap">
+      {/* 스토어 모듈 */}
+      <SubIntro catName="store" />
     </div>
   );
 }
