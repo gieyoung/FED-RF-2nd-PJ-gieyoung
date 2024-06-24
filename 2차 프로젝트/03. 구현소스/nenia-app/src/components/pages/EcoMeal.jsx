@@ -44,7 +44,6 @@ function EcoMeal(props) {
 
       {/* 섹션3 - 움직이는 배경이미지 */}
       <div className="sec3 back-move">
-
         <div className="txt-box">
           <h1 className="font-2">
             그렇다면, 우리는 <br /> 무엇을 먹어야 할까요?
@@ -67,6 +66,7 @@ function EcoMeal(props) {
           <StoreList />
         </div>
       </div>
+
       {/* 섹션5 */}
       <div className="sec5 sub-last">
         <div className="inbox">

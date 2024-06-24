@@ -4,7 +4,7 @@ import React from "react";
 import { historyData } from "../data/history";
 
 function History(props) {
-  console.log(historyData);
+  console.log("나야나",historyData);
 
   // 코드 리턴구역 /////////
   return (
