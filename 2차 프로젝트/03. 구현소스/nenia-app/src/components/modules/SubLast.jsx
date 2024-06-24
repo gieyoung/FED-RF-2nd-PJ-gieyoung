@@ -16,13 +16,11 @@ function SubLast({clsName}) {
     <>
       <h1 className="font-4">{selData.btit}</h1>
       <p className="font-6">{selData.stit}</p>
-      <a>
-        <div className="btn">
-          <Link to={selData.link} className="po-center">
-            {selData.more}
-          </Link>
-        </div>
-      </a>
+      <div className="btn">
+        <Link to={selData.link} className="po-center">
+          {selData.more}
+        </Link>
+      </div>
     </>
   );
 }

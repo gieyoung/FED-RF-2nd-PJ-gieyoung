@@ -1,10 +1,15 @@
 // 전체 레이아웃 컴포넌트 ///
 
+import { useEffect } from "react";
 import FooterArea from "./FooterArea";
 import MainArea from "./MainArea";
 import TopArea from "./TopArea";
 
 export default function Layout(){
+
+    useEffect(()=>{
+        window.scrollTo(0,0);
+    },[]);
 
     //// 코드 리턴구역 //////////////
     return(

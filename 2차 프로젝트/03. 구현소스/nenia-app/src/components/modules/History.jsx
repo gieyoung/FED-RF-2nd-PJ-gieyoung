@@ -1,10 +1,14 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 // 연혁 데이터 불러오기
 import { historyData } from "../data/history";
 
-function History(props) {
-  console.log("나야나",historyData);
+function History() {
+  console.log("나야나", historyData);
+
+  // 객체 키배열을 역순으로 정렬후 데이터 적용!
+  const selData = Object.keys(historyData).sort((a,b)=>a>b?-1:a<b?1:0);
+  console.log("키배열:",selData);
 
   // 코드 리턴구역 /////////
   return (
@@ -16,18 +20,22 @@ function History(props) {
         <div className="right">
           <div className="right_wrap">
             <h1 className="font-2">네니아 연혁</h1>
-            <ul className="history">
+            <div className="history">
               {/* 데이터 배열로 만들기 */}
-              {historyData.map((v, i) => (
-                <div key={i} className="sub_history">
-                  <h2 className="font-2">{v.year}</h2>
-                  <li className="font-6 nanum">
-                    <h3 className="year font-6">{v.mon}</h3>
-                    <p className="font-6">{v.desc}</p>
-                  </li>
-                </div>
+              {selData.map((v, i) => (
+                <Fragment key={i}>
+                  <h2 className="font-2">{v}</h2>
+                  <ul className="sub_history">
+                    {historyData[v].map((v, i) => (
+                      <li key={i} className="font-6 nanum">
+                        <h3 className="year font-6">{v.mon}</h3>
+                        <p className="font-6">{v.desc}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </Fragment>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
       </div>
