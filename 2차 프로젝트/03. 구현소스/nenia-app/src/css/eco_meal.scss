@@ -1,0 +1,27 @@
+.ecomeal-wrap {
+  .sec3 {
+    background: url("http://nenia.kr/theme/responsive_nenia/include/img/s22_5_bak.jpg") no-repeat 50% 30% / 140%;
+    height: 100vh;
+    border-radius: 20px 20px 0 0;
+
+    position: relative;
+
+   
+    .txt-box {
+      width: 50%;
+      position: absolute;
+      right:0;
+      bottom:100px;
+
+      .font-2 {
+        color: #fff;
+        margin-bottom: 20px;
+      }
+      .font-6 {
+        color: #fff;
+      }
+  
+  
+    }
+  }
+}

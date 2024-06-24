@@ -82,40 +82,26 @@ export const subRightData = {
   ],
   ecomeal: [
     {
-      tit: "가능한 친환경 농산물과 무항생제 축산물을 사용합니다.",
-      img: "/images/way/right_scroll_img/img5.png",
-      desc: "연중수급이 불가능하여 사용이 어려운 경우를 제외하고 최대한 친환경 농산물과 무항생제 축산물을 사용합니다.",
+      tit: "첫째, 필수 서류에 대한 점검",
+      img: "/images/ecomeal/right_scroll_img/img1.png",
+      desc: "번거롭더라도 가공식품의 특성상 원산지, 성분, 인증에 대한 명확한 점검이 필요합니다.",
     },
     {
-      tit: "가능한 친환경 농산물과 무항생제 축산물을 사용합니다.",
-      img: "/images/way/right_scroll_img/img5.png",
-      desc: "연중수급이 불가능하여 사용이 어려운 경우를 제외하고 최대한 친환경 농산물과 무항생제 축산물을 사용합니다.",
+      tit: "둘째, 세부원료에 대한 점검",
+      img: "/images/ecomeal/right_scroll_img/img2.png",
+      desc: "대체가 불가피한 설탕, 후추, 초콜릿, 천연 향신료를 제외하고 수입산을 남용하고 있는지 확인합니다.",
     },
     {
-      tit: "가능한 친환경 농산물과 무항생제 축산물을 사용합니다.",
-      img: "/images/way/right_scroll_img/img5.png",
-      desc: "연중수급이 불가능하여 사용이 어려운 경우를 제외하고 최대한 친환경 농산물과 무항생제 축산물을 사용합니다.",
+      tit: "셋째, 화학적 합성 첨가물에 대한 점검",
+      img: "/images/ecomeal/right_scroll_img/img3.png",
+      desc: "식품 생산과 유통의 편리성, 원가 절감을 위해 사용되는 안정제, 방부제, 산화방지제가 아이들에게 어떤 영향을 미칠지 모릅니다.",
     },
     {
-      tit: "가능한 친환경 농산물과 무항생제 축산물을 사용합니다.",
-      img: "/images/way/right_scroll_img/img5.png",
-      desc: "연중수급이 불가능하여 사용이 어려운 경우를 제외하고 최대한 친환경 농산물과 무항생제 축산물을 사용합니다.",
+      tit: "넷째, 원료에 충실하게 만들었는가",
+      img: "/images/ecomeal/right_scroll_img/img4.png",
+      desc: "단맛을 내는 옥수수 전분, 제빵 개량제, 쇠고기맛 엑기스 등 원료를 부실하게 넣고 맛과 향, 색을 보완하기 위해 첨가물을 넣은 것인지 확인해야 합니다.",
     },
-    {
-      tit: "가능한 친환경 농산물과 무항생제 축산물을 사용합니다.",
-      img: "/images/way/right_scroll_img/img5.png",
-      desc: "연중수급이 불가능하여 사용이 어려운 경우를 제외하고 최대한 친환경 농산물과 무항생제 축산물을 사용합니다.",
-    },
-    {
-      tit: "가능한 친환경 농산물과 무항생제 축산물을 사용합니다.",
-      img: "/images/way/right_scroll_img/img5.png",
-      desc: "연중수급이 불가능하여 사용이 어려운 경우를 제외하고 최대한 친환경 농산물과 무항생제 축산물을 사용합니다.",
-    },
-    {
-      tit: "가능한 친환경 농산물과 무항생제 축산물을 사용합니다.",
-      img: "/images/way/right_scroll_img/img5.png",
-      desc: "연중수급이 불가능하여 사용이 어려운 경우를 제외하고 최대한 친환경 농산물과 무항생제 축산물을 사용합니다.",
-    },
+   
    
   ],
 };
