@@ -61,10 +61,8 @@ function EcoMeal(props) {
 
       {/* 섹션4 - 스토어 상품 소개 */}
       <div className="sec4">
-        <div className="inbox">
           {/* 스토어리스트 모듈 */}
           <StoreList />
-        </div>
       </div>
 
       {/* 섹션5 */}

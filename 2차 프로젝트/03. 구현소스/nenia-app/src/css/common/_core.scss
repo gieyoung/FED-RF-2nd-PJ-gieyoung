@@ -113,8 +113,8 @@ body * {
   font-size: 5rem;
   line-height: 1.4;
   padding: 15px 0 30px;
-  color: #154726;
-  padding: 0;
+  // color: #154726;
+  // padding: 0;
 
   span {
     font-weight: bold;
@@ -233,3 +233,18 @@ body {
 .cont-box {
   height: 100%;
 }
+
+
+
+// 탑버튼
+.top-btn {
+  background:url("../../../public/images/top_btn.png") no-repeat left top;
+	position:fixed;
+	bottom:20px;
+	right:20px;
+	width:51px;
+	height:51px;
+	z-index:99;
+	
+}
+

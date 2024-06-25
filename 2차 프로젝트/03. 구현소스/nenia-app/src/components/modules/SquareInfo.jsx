@@ -32,6 +32,8 @@ function SquareInfo({ catName }) {
           <p className="font-6">{selData.desc1}</p>
         </div>
       </div>
+
+
       {/* 두번째 사각 영역 */}
       <div className="box s2">
         <div className="right">
@@ -42,7 +44,10 @@ function SquareInfo({ catName }) {
           <img src={selData.img2} alt={selData.alt2}></img>
         </div>
       </div>
-      {/* 세번째 사각 영역 */}
+
+
+      {/* 세번째 사각 영역 - catName이 wheat일때만 출력*/}
+      { catName == "wheat" && (
       <div className="box s3">
         <div className="left">
           <img src={selData.img3} alt={selData.alt3}></img>
@@ -52,6 +57,8 @@ function SquareInfo({ catName }) {
           <p className="font-6">{selData.desc3}</p>
         </div>
       </div>
+      )
+      }
     </>
   );
 }

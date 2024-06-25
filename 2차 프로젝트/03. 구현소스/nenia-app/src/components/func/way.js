@@ -12,37 +12,47 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function wayFn() {
-  var tl = gsap.timeline({
-    top:'0',
+  var history = gsap.timeline({
     scrollTrigger:{
-      trigger:'.s11_5',
-      scrub:1,
+      trigger:'.sec3',
+      // 트리거 적용 대상 .sec3
+      scrub:3,
+      // 부드럽게
       start:'top top',
-      end:'bottom -400%',
+      // 시작지점: .sec3의 top과 브라우저의 top이 만날때
+      end:'bottom -150%',
+      // 끝나는 지점: .sec3의 bottom과 브라우저의 -300%가 만날때(브라우저의 보이지 않는 위쪽)
       pin:true,
-      toggleActions: 'play none none none',
+      // 고정
+      // markers:true,
+ 
+   
     }
   });
-  tl.to('.s11_5 .right_wrap', {
-    yPercent: -90,
+
+  // 오른쪽 텍스트 영역
+  history.to('.sec3 .right-wrap', {
+    yPercent: -70,
+    // 세로축으로 -70px 이동
     ease: "none",
   })
 
-  var tl = gsap.timeline({
+  var history = gsap.timeline({
     scrollTrigger:{
-      trigger:'.s11_5',
+      trigger:'.sec3',
       scrub:1,
       start:'top top',
-      end:'bottom -400%',
-      toggleActions: 'play none none none',
+      end:'bottom -150%',
+ 
     }
   });
-  tl.to('.s11_5 .left .bak', {
+
+  // 왼쪽 이미지
+  history.to('.sec3 .left .bak', {
     backgroundPosition: '50% 10%'
+    // 왼쪽 사진 배경 움직임
   })
-//   tl.to("#wrap_footer",{
-//     zIndex:0
-// })
+
 
 
   // $(function () {

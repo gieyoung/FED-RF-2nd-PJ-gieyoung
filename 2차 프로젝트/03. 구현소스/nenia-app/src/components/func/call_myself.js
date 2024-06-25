@@ -52,7 +52,7 @@ export default function familyFn() {
 
     // 재귀호출!(타임아웃함수로 호출함!)
     // stopSts변수값이 false일때만 실행하기
-    if (!stopSts) setTimeout(moveGallery, 40);
+    if (!stopSts) setTimeout(moveGallery, 20);
   } ///////// moveGallery 함수 /////////////
 
   // 대상에 마우스 오버시 멈추고 아웃시 다시 흘러가게하기!

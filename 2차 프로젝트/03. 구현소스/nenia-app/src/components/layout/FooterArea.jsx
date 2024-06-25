@@ -13,60 +13,104 @@ export default function FooterArea() {
     <>
       <div id="footer-area">
         <footer className="footer-area inbox flex">
-          {/* <!-- 로고 --> */}
-          <h2 className="logo">
-            <a href="" alt="네니아 로고">
-              <span className="ir">로고</span>
-            </a>
-          </h2>
-          <div className="mid">
-            {/* <!-- 주소 --> */}
-            <address className="font-9">
-              <p>
-                <span>농업회사법인(주)네니아</span>
-              </p>
-              <p>경기도 양평군 강상면 강남로 1532-9, 2층</p>
-              <p>
-                <span>TEL.</span> 1577-2341
-              </p>
-              <p>
-                <span>FAX.</span> 031-716-6611
-              </p>
-            </address>
+          {/* 하단 첫번째 박스 */}
+          <div className="f1-box">
+            {/* 왼쪽영역 */}
+            <div className="left">
+              <h1 className="font-2">자연가까이, 네니아</h1>
 
-            {/* <!-- sns --> */}
-            <ul className="sns">
-              {/* sns 데이터 배열로 만들기 */}
-              {sns.map((v, i) => (
-                <li key={i}>
-                  <a href={v.link} target="_blank">
-                    <img src={v.img} alt={v.alt}></img>
-                  </a>
-                </li>
-              ))}
+              <ul>
+                <li className="btn"><a className="po-center" href="/store">회원가입</a></li>
+                <li className="btn"><a className="po-center" href="/store">로그인</a></li>
+              </ul>
+               
+            </div>
+            {/* 오른쪽영역 */}
+            <ul className="right">
+              <li>
+                <a className="font-4" href="/way">
+                  회사소개
+                </a>
+              </li>
+              <li>
+                <a className="font-4" href="/nenia">
+                  사업소개
+                </a>
+              </li>
+              <li>
+                <a className="font-4" href="/news">
+                  네니아 소식
+                </a>
+              </li>
+              <li>
+                <a className="font-4" href="/store">
+                  스토어
+                </a>
+              </li>
             </ul>
           </div>
-          <div className="last">
-            {/* <!-- 개인정보처리방침 --> */}
-            <div className="privacy">
-              <ul>
-                <li>
-                  <a className="font-9" href="#">
-                    <span>개인정보처리방침</span>
-                  </a>
-                </li>
-                <li>
-                  <a className="font-9" href="#">
-                    이용약관
-                  </a>
-                </li>
+          {/* 하단 두번째 박스 */}
+          <div className="f2-box">
+            {/* <!-- 로고 --> */}
+            <h2 className="logo">
+              <a href="" alt="네니아 로고">
+                <span className="ir">로고</span>
+              </a>
+            </h2>
+            <div className="mid">
+              {/* <!-- 주소 --> */}
+              <address className="font-9">
+                <p>
+                  <span>농업회사법인(주)네니아</span>
+                </p>
+                <p>경기도 양평군 강상면 강남로 1532-9, 2층</p>
+                <p>
+                  <span>TEL.</span> 1577-2341
+                </p>
+                <p>
+                  <span>FAX.</span> 031-716-6611
+                </p>
+              </address>
+
+              {/* <!-- sns --> */}
+              <ul className="sns">
+                {/* sns 데이터 배열로 만들기 */}
+                {sns.map((v, i) => (
+                  <li key={i}>
+                    <a href={v.link} target="_blank">
+                      <img src={v.img} alt={v.alt}></img>
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
-            {/* <!-- 저작권 --> */}
-            <div className="copyright font-10">
+            <div className="last">
+              {/* <!-- 개인정보처리방침 --> */}
+              <div className="privacy">
+                <ul>
+                  <li>
+                    <a className="font-9" href="#">
+                      <span>개인정보처리방침</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a className="font-9" href="#">
+                      이용약관
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              {/* <!-- 저작권 --> */}
+              <div className="copyright font-10">
                 <p>COPYRIGHT © 2023 네니아. All RIGHTS RESERVED.</p>
               </div>
+            </div>
           </div>
+
+          {/* 탑버튼 */}
+          <a href="#" className="top-btn">
+            <span className="ir">Top</span>
+          </a>
         </footer>
       </div>
     </>

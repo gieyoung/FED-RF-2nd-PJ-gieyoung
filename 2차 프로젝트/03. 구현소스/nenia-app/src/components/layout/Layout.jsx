@@ -7,9 +7,10 @@ import TopArea from "./TopArea";
 
 export default function Layout(){
 
-    useEffect(()=>{
-        window.scrollTo(0,0);
-    },[]);
+    // 새로고침하면 상단이동(이거 적용하면 가로스크롤이 튀어서 주석-나중에 해결필요)
+    // useEffect(()=>{
+    //     window.scrollTo(0,0);
+    // },[]);
 
     //// 코드 리턴구역 //////////////
     return(

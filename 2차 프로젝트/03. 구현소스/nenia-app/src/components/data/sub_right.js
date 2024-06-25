@@ -101,6 +101,16 @@ export const subRightData = {
       img: "/images/ecomeal/right_scroll_img/img4.png",
       desc: "단맛을 내는 옥수수 전분, 제빵 개량제, 쇠고기맛 엑기스 등 원료를 부실하게 넣고 맛과 향, 색을 보완하기 위해 첨가물을 넣은 것인지 확인해야 합니다.",
     },
+    {
+      tit: "다섯째, 건강한 재료인가",
+      img: "/images/ecomeal/right_scroll_img/img1.png",
+      desc: "단맛을 내는 옥수수 전분, 제빵 개량제, 쇠고기맛 엑기스 등 원료를 부실하게 넣고 맛과 향, 색을 보완하기 위해 첨가물을 넣은 것인지 확인해야 합니다.",
+    },
+    {
+      tit: "여섯째, 신선한 재료인가",
+      img: "/images/ecomeal/right_scroll_img/img2.png",
+      desc: "번거롭더라도 가공식품의 특성상 원산지, 성분, 인증에 대한 명확한 점검이 필요합니다.",
+    },
    
    
   ],

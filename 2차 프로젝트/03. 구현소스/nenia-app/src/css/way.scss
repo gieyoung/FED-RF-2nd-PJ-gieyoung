@@ -42,68 +42,60 @@
   } ////////////////////////섹션2 끝///////////////////////////
 
   // 섹션3
-  .s11_5 {
+  .sec3 {
     padding: 135px 0;
-    // height: 100vh;
+    height: 100vh;
     background: #d8e0a5;
     position: relative;
     overflow: hidden;
     z-index: 1;
-  }
-  .s11_5 .wrap {
-    display: flex;
-  }
-  .s11_5 .left {
-    width: 50%;
-  }
-  .s11_5 .left .bak {
-    width: 67%;
-    height: 650px;
-    background: url("http://nenia.kr/theme/responsive_nenia/include/img/s11_5_bak.jpg") no-repeat 50% 0% /130%;
-    border-radius: 20px;
-    position: relative;
-    display: block;
-  }
-  .s11_5 .left .bak img {
-    position: absolute;
-    top: 15%;
-    right: -34%;
-    transform: translateX(-50%);
-  }
-  .s11_5 .right {
-    width: 50%;
-  }
-  .s11_5 h1 {
-    padding-bottom: 130px;
-    color: #154726;
-    font-weight: 700;
-  }
-  .s11_5 h2 {
-    color: #154726;
-    font-weight: 700;
-    padding-bottom: 25px;
-  }
-  .s11_5 .sub_history {
-    padding-bottom: 40%;
-  }
-  .s11_5 .sub_history:last-child h2::before {
-    content: "~";
-    display: inline-block;
-    margin-right: 10px;
-  }
-  .s11_5 li {
-    display: flex;
-  }
-  .s11_5 li:not(:last-child) {
-    padding-bottom: 10px;
-  }
-  .s11_5 li h3 {
-    color: #149473;
-    min-width: 90px;
-  }
-  .s11_5 li p {
-    color: #154726;
-    font-weight: 300;
+
+    .wrap {
+      display: flex;
+    }
+
+    /* 왼쪽이미지 영역 */
+    .left {
+      width: 50%;
+
+      // 이미지
+      .bak {
+        width: 70%;
+        height: 650px;
+        background: url("../../public//images/way/bak.jpg") no-repeat 50% 0% /130%;
+      }
+    }
+
+   /* 오른쪽 텍스트 영역 */
+    .right {
+      width: 50%;
+
+      h1 {
+        padding-bottom: 150px;
+        color: #154726;
+      }
+      h2 {
+        color: #154726;
+        padding-bottom: 30px;
+      }
+      .con {
+        padding-bottom: 150px;
+      }
+  
+      li {
+        display: flex;padding-bottom: 10px;
+
+        h3 {
+          color: #149473;
+          min-width: 100px;
+
+          p {
+            color: #154726;
+          }
+        }
+      }
+    }
+   
   }
 
   // .sec3 {
@@ -163,20 +155,16 @@
 
   // 섹션5
 
-
-
   .sec5 {
     padding: 100px 0 50px 0;
     /* 가로스크롤 방지 */
     overflow-x: hidden;
     cursor: default;
 
-
     .family {
       width: 100%;
       height: 100%;
       padding: 50px 0;
-      
 
       /* 옆으로 움직이는 패밀리사이트 */
       .gbox {
@@ -190,9 +178,9 @@
         padding: 0;
       }
       li {
-        width: 16vw;
+        width: 14vw;
         flex-shrink: 0;
-        aspect-ratio: 601 / 277;
+        aspect-ratio: 576/267;
         padding: 2vw;
         box-sizing: border-box;
         justify-content: center;
@@ -206,7 +194,4 @@
   } //////////////////섹션5끝///////////////////
 
   // 섹션6
-
-
- 
 }

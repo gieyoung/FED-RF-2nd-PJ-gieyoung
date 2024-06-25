@@ -16,13 +16,14 @@ export default function srightFn() {
     var right_scroll = gsap.timeline({
       scrollTrigger: {
         trigger: ".shorizon-scroll",
-        scrub: 1,
+        scrub: 2,
         // scrub은 스크롤 속도에 따라 애니메이션을 부드럽게 적용하도록 설정
-        start: "top",
+        start: "top top",
         end: "bottom -150%",
         pin: true,
         // pin은 요소를 스크롤 시 고정시킴
-        toggleActions: "play none none none",
+        // markers:true,
+   
       },
     });
     right_scroll.to(".shorizon-scroll ul", {

@@ -27,7 +27,9 @@ function Family(props) {
             {/* 데이터 배열로 만들기 */}
             {familyData.map((v, i) => (
               <li key={i} className="flex">
-                <img src={v.img} alt={v.alt} />
+                <a href={v.link} title={v.title} target="_blank">
+                  <img src={v.img} alt={v.alt} />
+                </a>
               </li>
             ))}
           </ul>

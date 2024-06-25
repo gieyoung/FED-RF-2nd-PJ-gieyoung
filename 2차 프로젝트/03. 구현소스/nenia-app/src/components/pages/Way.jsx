@@ -17,7 +17,7 @@ import wayFn from "../func/way.js";
 
 export default function Nenia() {
   useEffect(() => {
-    // wayFn();
+    wayFn();
     // 가로 크기 변하는 함수 호출
     widthFn();
   }, []);
@@ -57,7 +57,7 @@ export default function Nenia() {
       </div>
 
       {/* 섹션3 - 연혁 */}
-      <div className="s11_5">
+      <div className="sec3">
         <div className="inbox">
           {/* 연혁 모듈 */}
           <History yearName="year" />
