@@ -31,7 +31,7 @@ function SubRight({ clsName }) {
         {selData.map((v, i) => (
           <li key={i}>
             <h2 className="font-3">{v.tit}</h2>
-            <div className="img-wrap"><img src={v.img} alt="이미지" /></div>
+            <div className="img-wrap"><img src={process.env.PUBLIC_URL+v.img} alt="이미지" /></div>
             <p className="font-6">{v.desc}</p>
           </li>
         ))}

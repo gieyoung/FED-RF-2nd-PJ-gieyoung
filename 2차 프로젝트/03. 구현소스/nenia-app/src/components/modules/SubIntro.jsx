@@ -30,7 +30,7 @@ function SubIntro({ catName }) {
       <div
         className="sub-visual"
         style={{
-          backgroundImage: `url(${selData.bakimg})`,
+          backgroundImage: `url(${process.env.PUBLIC_URL+selData.bakimg})`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",

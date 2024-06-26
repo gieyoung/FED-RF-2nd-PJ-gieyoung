@@ -28,7 +28,7 @@ function Family(props) {
             {familyData.map((v, i) => (
               <li key={i} className="flex">
                 <a href={v.link} title={v.title} target="_blank">
-                  <img src={v.img} alt={v.alt} />
+                  <img src={process.env.PUBLIC_URL+v.img} alt={v.alt} />
                 </a>
               </li>
             ))}

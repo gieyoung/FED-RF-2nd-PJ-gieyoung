@@ -26,7 +26,7 @@ function Wheat(props) {
         <div className="sec2">
           <div className="inbox">
             <h2 className="font-2">우리밀의 구조</h2>
-            <img src="/images/wheat/sec2.jpg" alt="우리밀의 구조" />
+            <img src="../../../public/images/wheat/sec2.jpg" alt="우리밀의 구조" />
           </div>
         </div>
 

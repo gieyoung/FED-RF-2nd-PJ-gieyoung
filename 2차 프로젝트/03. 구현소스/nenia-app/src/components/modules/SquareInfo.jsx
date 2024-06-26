@@ -25,7 +25,7 @@ function SquareInfo({ catName }) {
       {/* 첫번째 사각 영역 */}
       <div className="box s1 width-chg">
         <div className="left">
-          <img src={selData.img1} alt={selData.alt1}></img>
+          <img src={process.env.PUBLIC_URL+selData.img1} alt={selData.alt1}></img>
         </div>
         <div className="right">
           <h1 className="font-2">{selData.tit1}</h1>
@@ -41,7 +41,7 @@ function SquareInfo({ catName }) {
           <p className="font-6">{selData.desc2}</p>
         </div>
         <div className="left">
-          <img src={selData.img2} alt={selData.alt2}></img>
+          <img src={process.env.PUBLIC_URL+selData.img2} alt={selData.alt2}></img>
         </div>
       </div>
 
@@ -50,7 +50,7 @@ function SquareInfo({ catName }) {
       { catName == "wheat" && (
       <div className="box s3">
         <div className="left">
-          <img src={selData.img3} alt={selData.alt3}></img>
+          <img src={process.env.PUBLIC_URL+selData.img3} alt={selData.alt3}></img>
         </div>
         <div className="right">
           <h1 className="font-2">{selData.tit3}</h1>
