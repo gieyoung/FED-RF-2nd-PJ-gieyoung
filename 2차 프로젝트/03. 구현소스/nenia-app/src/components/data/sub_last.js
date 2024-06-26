@@ -20,10 +20,10 @@ export const lastData = {
     link: "/store",
   },
   ecomeal:{
-    btit: "네니아의 친환경 급식이 궁금하세요?",
-    stit: "네니아의 급식 정보를 확인해보세요",
-    more: "급식 바로가기",
-    link: "/ecomeal",
+    btit: "네니아 제품이 궁금하세요?",
+    stit: "네니아의 신선식품을 지금 받아보세요",
+    more: "스토어 바로가기",
+    link: "/store",
 
   },
   bread:{
