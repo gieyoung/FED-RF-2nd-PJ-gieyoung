@@ -12,7 +12,7 @@ function M3_img(props) {
       {/* 메인3 이미지 데이터 배열로 만들기 */}
       {m3_img.map((v, i) => (
         <li key={i}>
-          <img src={v.img} alt={v.alt} />
+          <img src={process.env.PUBLIC_URL+v.img} alt={v.alt} />
         </li>
       ))}
     </>
