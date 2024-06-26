@@ -2,6 +2,7 @@
   // 섹션1
   .sec1 {
     text-align: center;
+    height: 100vh;
 
     .font-2 {
       color: #fff;
@@ -62,7 +63,8 @@
       .bak {
         width: 70%;
         height: 650px;
-        background: url("../../public//images/way/bak.jpg") no-repeat 50% 0% /130%;
+        background: url("../../public//images/way/bak.jpg") no-repeat 50% 0% / cover;
+        background-position: 50% 0%;
       }
     }
 
@@ -98,59 +100,7 @@
    
   }
 
-  // .sec3 {
-  //   background: #faf3e6;
-  //   position: relative;
-  //   z-index: 1;
-  //   margin-top: -20px;
-  //   padding: 90px 0;
-  //   height: 100vh;
-  //   overflow: hidden;
-  //   transform: translate(0px, 0px);
-  //   inset: 0px auto auto 0px;
-  //   margin: 0px;
-  //   max-width: 1351px;
-  //   width: 1351px;
-  //   max-height: 919px;
-  //   height: 919px;
-  //   padding: 90px 0px;
-  //   .wrap {
-  //     display: flex;
-  //   }
-  //   .left {
-  //     width: 50%;
-  //     height: 100%;
-  //     padding-right: 3%;
-  //     transform: translate(0px, 0px);
-  //   }
-  //   .left li {
-  //     height: 900px;
-  //   }
-  //   .left li:first-child {
-  //     margin-top: 100px;
-  //     height: 780px;
-  //   }
-  //   .right {
-  //     width: 50%;
-  //     height: 780px;
-  //     background: url("http://nenia.kr/theme/responsive_nenia/include/img/s11_3_img.jpg") no-repeat 50% 0% / cover;
-  //     border-radius: 20px;
-  //     background-position: 50% 0%;
-  //   }
-  //   h1 {
-  //     color: #154726;
-  //     padding: 0 0 40px 0;
-  //   }
-  //   h1 span {
-  //     font-weight: 600;
-  //   }
-  //   p {
-  //     color: #154726;
-  //     line-height: 1.6;
-  //     font-weight: 300;
-  //   }
-  // }
-
+  
   // 섹션4(가로스크롤)- sright_scroll.scss
 
   // 섹션5

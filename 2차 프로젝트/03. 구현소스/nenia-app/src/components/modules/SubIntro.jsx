@@ -38,7 +38,7 @@ function SubIntro({ catName }) {
       ></div>
       <div className="inbox">
         <div className="txt">
-          <h1 className="font-1">{selData.slogan}</h1>
+          <h1 className="font-1"><span>{selData.slogan}</span></h1>
           <p className="font-6">
             {selData.tit} 
             {/* 폰트어썸 사용 */}

@@ -38,11 +38,9 @@ export default function historyFn() {
     }
   });
   tl.to('.s11_5 .left .bak', {
-    backgroundPosition: '50% 10%'
+    backgroundPosition: "50% 100%",
   })
-//   tl.to("#wrap_footer",{
-//     zIndex:0
-// })
+
 
   var tl = gsap.timeline({
     scrollTrigger:{

@@ -100,11 +100,15 @@ body * {
 
 // 서브인트로 슬로건
 .font-1 {
-  font-size: 6rem;
-  font-weight: bold;
+  font-size: 8rem;
   color: #154726;
   padding: 350px 0 130px;
   line-height: 1.4;
+  letter-spacing: 2px;
+
+  span {
+    font-weight: bold;
+  }
 }
 
 // 큰타이틀 - btit
@@ -194,7 +198,6 @@ body * {
   }
   > a {
     color: #154726;
-    // background-color: red;
     width: 100%;
     line-height: 50px;
     border-radius: 50px;

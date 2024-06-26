@@ -34,7 +34,7 @@ function StoreList(props) {
               backgroundSize: "cover",
             }}
           >
-            {v.product}
+            {/* {v.product} */}
           </li>
         ))}
       </ul>

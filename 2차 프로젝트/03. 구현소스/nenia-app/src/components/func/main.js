@@ -23,11 +23,13 @@ export default function mainFn() {
   $(".btn>a").on("click", () => {
     $(".vid-popup").addClass("on");
     $(".close-btn").show();
+    // 동영상 열었을때 플레이됨
     $("#video").get(0).play();
   });
   $(".close-btn").on("click", () => {
     $(".vid-popup").removeClass("on");
     $(".close-btn").hide();
+    // 동영상 닫았을때 플레이 멈춤
     $("#video").get(0).pause();
   });
   

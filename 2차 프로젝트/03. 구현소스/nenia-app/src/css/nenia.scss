@@ -1,23 +1,51 @@
-
 .nenia-wrap {
-// 섹션1
-.sec1 {
-  text-align: center;
+  // 섹션1
+  .sec1 {
+    text-align: center;
+    // 가로 크기 변하는 이미지
+    background: url("../../public/images/back_move/way_bak.jpg") no-repeat 50% 30% / cover;
 
-  .font-2 {
-    color: #fff;
-    font-weight: bold;
+    .font-2 {
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .inbox {
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 
-  .inbox {
-    flex-direction: column;
-    justify-content: center;
+  // 섹션2
+  .sec2 {
+    background: #faf3e6;
+    height: 100vh;
+    overflow: hidden;
+
+    .wrap {
+      display: flex;
+      margin-top: 100px;
+
+      // 왼쪽 텍스트 영역
+      .left {
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+        transform: translate(0px, 0px);
+
+        li:first-child {
+          padding-top: 100px;
+          height: 700px;
+        }
+      }
+
+      // 오른쪽 이미지 영역
+      .right {
+        width: 50%;
+        height: 700px;
+        background: url("../../public/images/nenia/bak.jpg") no-repeat center / cover;
+        background-position: 50% 0%;
+      }
+    }
   }
-}
-
-// 가로 크기 변하는 이미지
-.width-chg {
-  background: url("../../public/images/back_move/way_bak.jpg") no-repeat 50% 30% / cover;
-}
-
 }

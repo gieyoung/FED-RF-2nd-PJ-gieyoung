@@ -35,24 +35,34 @@
   /* 오른쪽 글자 리스트 영역 */
   .right {
     width: 50%;
-    background: #faf3e6;
+    background: #fff;
     height: 100%;
     padding: 100px 50px;
     box-sizing: border-box;
-    // border-radius: 0 0 50px 0;
     overflow: hidden;
-    li:first-child {
-      padding-bottom: 150px;
-    }
 
-    li:not(:first-child) {
-      padding-bottom: 30%;
-      & h2 {
-        font-weight: 700;
+    li {
+      .font-5 {
+        color: #149473;
       }
-      & p {
-        padding: 0 10px 30px 0;
-        line-height: 1.5;
+
+      .font-2 span {
+        color: #154726;
+      }
+
+      &:first-child {
+        margin-bottom: 150px;
+      }
+
+      &:not(:first-child) {
+        padding-bottom: 30%;
+        & h2 {
+          font-weight: 700;
+        }
+        & p {
+          padding: 0 10px 30px 0;
+          line-height: 1.5;
+        }
       }
     }
 

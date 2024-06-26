@@ -14,7 +14,7 @@ export const subIntroData = {
   nenia: {
     bakimg:"/images/bak_img/bak2.jpg",
     slogan: "자연 가까이, 네니아",
-    tit: "네니아 대표상품",
+    tit: "네니아",
   },
   ecomeal: {
     bakimg:"/images/bak_img/bak2.jpg",
@@ -29,7 +29,7 @@ export const subIntroData = {
   news: {
     bakimg:"/images/bak_img/bak3.jpg",
     slogan: "우리의 다양한 이야기",
-    tit: "네니아 이야기",
+    tit: "네니아 뉴스",
   },
   store: {
     bakimg:"/images/bak_img/bak4.jpg",

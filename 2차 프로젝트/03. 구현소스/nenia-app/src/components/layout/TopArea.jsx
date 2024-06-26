@@ -18,7 +18,7 @@ export default function TopArea() {
     commonFn();
   },[]);
 
-  const goToTop = () => window.scrollTo(0,0);
+  // const goToTop = () => window.scrollTo(0,0);
   //// 코드 리턴구역 //////////////
   return (
     <>
@@ -29,7 +29,7 @@ export default function TopArea() {
             <nav id="nav">
               <ul className="gnb flex">
                 {menu.map((v, i) => (
-                  <li key={i} className="gnb-depth1" onClick={goToTop}>
+                  <li key={i} className="gnb-depth1">
                     {
                       // 하위 메뉴가 있으면 일반 a요소에 출력
                       // 없으면 Link 라우팅 출력
@@ -48,7 +48,7 @@ export default function TopArea() {
                       v.sub && (
                         <ul className="gnb-depth2 po-centerX">
                           {v.sub.map((v, i) => (
-                            <li key={i} onClick={goToTop}>
+                            <li key={i}>
                               <Link to={v.link}>
                                 <span>{v.txt}</span>
                               </Link>
@@ -62,7 +62,7 @@ export default function TopArea() {
               </ul>
             </nav>
             {/* <!-- 1-1.로고 --> */}
-            <h1 className="logo" onClick={goToTop}>
+            <h1 className="logo">
             <Link to= "/" className="po-center" alt="네니아 로고">
                 <span className="ir">로고</span>
               </Link>

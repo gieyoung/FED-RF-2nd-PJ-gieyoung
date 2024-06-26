@@ -22,7 +22,7 @@ export default function srightFn() {
         end: "bottom -150%",
         pin: true,
         // pin은 요소를 스크롤 시 고정시킴
-        // markers:true,
+        markers:true,
    
       },
     });
