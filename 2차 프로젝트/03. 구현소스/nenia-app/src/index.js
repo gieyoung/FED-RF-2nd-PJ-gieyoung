@@ -16,7 +16,7 @@ import "../src/css/main.scss";
 
 export default function MainComponent() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       {/* 라우터 경로 변경시 최상단이동 컴포넌트 */}
       <ScrollTop />
       <Routes>
