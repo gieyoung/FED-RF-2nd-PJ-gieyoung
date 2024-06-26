@@ -21,7 +21,7 @@ function MainRight(props) {
       {mainRightData.map((v, i) => (
         <li key={i} className="flex">
           <Link to={v.link} className="img_box" target="_blank">
-            <img src={v.img} alt={v.link} />
+            <img src={process.env.PUBLIC_URL+v.img} alt={v.link} />
           </Link>
           <h1 className="font-3">{v.tit}</h1>
           <div className="btn">

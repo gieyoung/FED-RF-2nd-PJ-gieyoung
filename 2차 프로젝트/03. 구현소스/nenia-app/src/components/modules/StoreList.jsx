@@ -29,7 +29,7 @@ function StoreList(props) {
             key={i}
             className={v.clsName}
             style={{
-              backgroundImage: `url(${v.img})`,
+              backgroundImage: `url(${process.env.PUBLIC_URL+v.img})`,
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
             }}

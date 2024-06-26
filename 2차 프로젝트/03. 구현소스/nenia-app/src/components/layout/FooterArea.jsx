@@ -78,7 +78,7 @@ export default function FooterArea() {
                 {sns.map((v, i) => (
                   <li key={i}>
                     <a href={v.link} target="_blank">
-                      <img src={v.img} alt={v.alt}></img>
+                      <img src={process.env.PUBLIC_URL+v.img} alt={v.alt}></img>
                     </a>
                   </li>
                 ))}
