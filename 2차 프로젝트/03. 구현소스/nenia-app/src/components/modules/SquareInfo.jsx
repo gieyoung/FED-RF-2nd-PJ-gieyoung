@@ -47,7 +47,7 @@ function SquareInfo({ catName }) {
 
 
       {/* 세번째 사각 영역 - catName이 wheat일때만 출력*/}
-      { catName === "wheat" || catName === "nenia" (
+      { catName === "wheat" || catName === "nenia" && (
       <div className="box s3">
         <div className="left">
           <img src={process.env.PUBLIC_URL+selData.img3} alt={selData.alt3}></img>
