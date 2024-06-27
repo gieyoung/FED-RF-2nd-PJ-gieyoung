@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-
-
+import { Link } from "react-router-dom";
 
 // 슬로건 컴포넌트 ///
 import Slogan from "../modules/Slogan.jsx";
@@ -29,7 +28,7 @@ function StoreList(props) {
             key={i}
             className={v.clsName}
             style={{
-              backgroundImage: `url(${process.env.PUBLIC_URL+v.img})`,
+              backgroundImage: `url(${process.env.PUBLIC_URL + v.img})`,
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
             }}
@@ -53,9 +52,9 @@ function StoreList(props) {
               <p className="font-6">{v.desc}</p>
 
               <div className="btn">
-                <a href={v.link} className="po-center">
+                <Link to={v.link} className="po-center">
                   바로가기
-                </a>
+                </Link>
               </div>
             </li>
           ))}

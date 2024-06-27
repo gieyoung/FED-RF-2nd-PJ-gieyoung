@@ -4,19 +4,17 @@
 import { Link } from "react-router-dom";
 import { menu } from "../data/gnb";
 
-
 // 공통(상단/하단) js 불러오기
-import commonFn from "../func/common"
+import commonFn from "../func/common";
 
 // 상단영역 CSS 불러오기
 import "../../css/top_area.scss";
 import { useEffect } from "react";
 
 export default function TopArea() {
-
-  useEffect(()=>{
+  useEffect(() => {
     commonFn();
-  },[]);
+  }, []);
 
   // const goToTop = () => window.scrollTo(0,0);
   //// 코드 리턴구역 //////////////
@@ -63,7 +61,7 @@ export default function TopArea() {
             </nav>
             {/* <!-- 1-1.로고 --> */}
             <h1 className="logo">
-            <Link to= "/" className="po-center" alt="네니아 로고">
+              <Link to="/" className="po-center" alt="네니아 로고">
                 <span className="ir">로고</span>
               </Link>
             </h1>
@@ -71,21 +69,21 @@ export default function TopArea() {
             <ul className="etc-box flex">
               {/* <!-- 로그인 --> */}
               <li className="login btn">
-                <a href="/main" className="po-center">
+                <Link to="/" className="po-center">
                   로그인
-                </a>
+                </Link>
               </li>
               {/* <!-- 회원가입 --> */}
               <li className="join btn">
-                <a href="/main" className="po-center">
+                <Link to="/" className="po-center">
                   회원가입
-                </a>
+                </Link>
               </li>
               {/* <!-- 장바구니 --> */}
               <li className="cart btn">
-                <a href="/main" className="po-center">
+                <Link to="/" className="po-center">
                   장바구니
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

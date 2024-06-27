@@ -19,7 +19,7 @@ export default function FooterArea() {
             <div className="left">
               <h1 className="font-2">자연가까이, 네니아</h1>
 
-              <ul>
+              {/* <ul>
                 <li className="btn">
                   <a className="po-center" href="#null">
                     회원가입
@@ -30,22 +30,37 @@ export default function FooterArea() {
                     로그인
                   </a>
                 </li>
-              </ul>
+              </ul> */}
             </div>
             {/* 오른쪽영역 */}
             <ul className="right">
               <li>
-                <Link to="/way" className="font-4">
-                  회사소개
+                <Link to="/way" className="font-3">
+                  네니아웨이
                 </Link>
               </li>
               <li>
-                <Link to="/nenia" className="font-4">
-                  사업소개
+                <Link to="/wheat" className="font-3">
+                  우리밀이야기
                 </Link>
               </li>
               <li>
-                <Link to="/store" className="font-4">
+                <Link to="/nenia" className="font-3">
+                  네니아
+                </Link>
+              </li>
+              <li>
+                <Link to="/ecomeal" className="font-3">
+                  친환경 급식
+                </Link>
+              </li>
+              <li>
+                <Link to="/bread" className="font-3">
+                  네니아 브레드
+                </Link>
+              </li>
+              <li>
+                <Link to="/store" className="font-3">
                   스토어
                 </Link>
               </li>
@@ -55,7 +70,7 @@ export default function FooterArea() {
           <div className="f2-box">
             {/* <!-- 로고 --> */}
             <h2 className="logo">
-              <Link to="/main">
+              <Link to="/">
                 <span className="ir">로고</span>
               </Link>
             </h2>

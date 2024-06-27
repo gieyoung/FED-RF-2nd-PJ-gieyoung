@@ -1,5 +1,6 @@
 // 슬로건 컴포넌트
 import React from "react";
+import { Link } from "react-router-dom";
 
 // 슬로건 데이터 불러오기
 import { sloganData } from "../data/slogan";
