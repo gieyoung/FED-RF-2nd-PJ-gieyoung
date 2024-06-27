@@ -20,21 +20,34 @@ export default function FooterArea() {
               <h1 className="font-2">자연가까이, 네니아</h1>
 
               <ul>
-                <li className="btn"><a className="po-center" href="/store">회원가입</a></li>
-                <li className="btn"><a className="po-center" href="/store">로그인</a></li>
+                <li className="btn">
+                  <a className="po-center" href="#null">
+                    회원가입
+                  </a>
+                </li>
+                <li className="btn">
+                  <a className="po-center" href="/#null">
+                    로그인
+                  </a>
+                </li>
               </ul>
-               
             </div>
             {/* 오른쪽영역 */}
             <ul className="right">
               <li>
-              <Link to="/way" className="font-4">회사소개</Link>
+                <Link to="/way" className="font-4">
+                  회사소개
+                </Link>
               </li>
               <li>
-              <Link to="/nenia" className="font-4">사업소개</Link>
+                <Link to="/nenia" className="font-4">
+                  사업소개
+                </Link>
               </li>
               <li>
-              <Link to="/store" className="font-4">스토어</Link>
+                <Link to="/store" className="font-4">
+                  스토어
+                </Link>
               </li>
             </ul>
           </div>
@@ -42,9 +55,9 @@ export default function FooterArea() {
           <div className="f2-box">
             {/* <!-- 로고 --> */}
             <h2 className="logo">
-              <a href="/main" alt="네니아 로고">
+              <Link to="/main">
                 <span className="ir">로고</span>
-              </a>
+              </Link>
             </h2>
             <div className="mid">
               {/* <!-- 주소 --> */}
@@ -67,7 +80,7 @@ export default function FooterArea() {
                 {sns.map((v, i) => (
                   <li key={i}>
                     <a href={v.link} target="_blank" rel="noreferrer">
-                      <img src={process.env.PUBLIC_URL+v.img} alt={v.alt}></img>
+                      <img src={process.env.PUBLIC_URL + v.img} alt={v.alt}></img>
                     </a>
                   </li>
                 ))}
