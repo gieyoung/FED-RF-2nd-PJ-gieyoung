@@ -20,7 +20,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 ///////////[ main2 동영상 열고 닫기 ]/////////////
 export default function mainFn() {
-  $(".video-sum .btn>a").on("click", () => {
+  $(".btn>a").on("click", () => {
     $(".vid-popup").addClass("on");
     $(".close-btn").show();
     // 동영상 열었을때 플레이됨
