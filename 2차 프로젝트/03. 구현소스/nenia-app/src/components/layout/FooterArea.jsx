@@ -1,7 +1,7 @@
 // 하단영역 컴포넌트 ///
 
 // 데이터 불러오기
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { sns } from "../data/sns";
 
 // 하단영역 CSS 불러오기
@@ -28,19 +28,13 @@ export default function FooterArea() {
             {/* 오른쪽영역 */}
             <ul className="right">
               <li>
-                <a className="font-4" href="/way">
-                  회사소개
-                </a>
+              <Link to="/way" className="font-4">회사소개</Link>
               </li>
               <li>
-                <a className="font-4" href="/nenia">
-                  사업소개
-                </a>
+              <Link to="/nenia" className="font-4">사업소개</Link>
               </li>
               <li>
-                <a className="font-4" href="/store">
-                  스토어
-                </a>
+              <Link to="/store" className="font-4">스토어</Link>
               </li>
             </ul>
           </div>
