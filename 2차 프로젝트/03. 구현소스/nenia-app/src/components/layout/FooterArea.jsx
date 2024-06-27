@@ -1,7 +1,7 @@
 // 하단영역 컴포넌트 ///
 
 // 데이터 불러오기
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { sns } from "../data/sns";
 
 // 하단영역 CSS 불러오기
@@ -38,11 +38,6 @@ export default function FooterArea() {
                 </a>
               </li>
               <li>
-                <a className="font-4" href="/news">
-                  네니아 소식
-                </a>
-              </li>
-              <li>
                 <a className="font-4" href="/store">
                   스토어
                 </a>
@@ -53,7 +48,7 @@ export default function FooterArea() {
           <div className="f2-box">
             {/* <!-- 로고 --> */}
             <h2 className="logo">
-              <a href="" alt="네니아 로고">
+              <a href="/main" alt="네니아 로고">
                 <span className="ir">로고</span>
               </a>
             </h2>
@@ -77,7 +72,7 @@ export default function FooterArea() {
                 {/* sns 데이터 배열로 만들기 */}
                 {sns.map((v, i) => (
                   <li key={i}>
-                    <a href={v.link} target="_blank">
+                    <a href={v.link} target="_blank" rel="noreferrer">
                       <img src={process.env.PUBLIC_URL+v.img} alt={v.alt}></img>
                     </a>
                   </li>
@@ -89,12 +84,12 @@ export default function FooterArea() {
               <div className="privacy">
                 <ul>
                   <li>
-                    <a className="font-9" href="#">
+                    <a className="font-9" href="/main">
                       <span>개인정보처리방침</span>
                     </a>
                   </li>
                   <li>
-                    <a className="font-9" href="#">
+                    <a className="font-9" href="/main">
                       이용약관
                     </a>
                   </li>
@@ -108,7 +103,7 @@ export default function FooterArea() {
           </div>
 
           {/* 탑버튼 */}
-          <a href="#" className="top-btn">
+          <a href="#null" className="top-btn">
             <span className="ir">Top</span>
           </a>
         </footer>

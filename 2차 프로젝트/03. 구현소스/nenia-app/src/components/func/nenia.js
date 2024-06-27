@@ -1,7 +1,7 @@
 // 네니아웨이 함수 - way.js
 
 // 제이쿼리 + 제이쿼리UI
-import $ from "jquery";
+// import $ from "jquery";
 import "jquery-ui-dist/jquery-ui";
 
 // gsap
@@ -13,7 +13,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function neniaFn() {
 
-    var tl = gsap.timeline({
+    var rowscroll = gsap.timeline({
       top: "0",
       scrollTrigger: {
         trigger: ".sec2",
@@ -25,12 +25,12 @@ export default function neniaFn() {
        
       },
     });
-    tl.to(".sec2 ul", {
+    rowscroll.to(".sec2 ul", {
       yPercent: -90,
       ease: "none",
     });
 
-    var tl = gsap.timeline({
+    var rowscroll2 = gsap.timeline({
       scrollTrigger: {
         trigger: ".sec2",
         scrub: 1,
@@ -39,7 +39,7 @@ export default function neniaFn() {
         
       },
     });
-    tl.to(".sec2 .right", {
+    rowscroll2.to(".sec2 .right", {
       backgroundPosition: "50% 100%",
     });
 

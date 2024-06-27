@@ -1,7 +1,7 @@
 // 네니아웨이 함수 - way.js
 
 // 제이쿼리 + 제이쿼리UI
-import $ from "jquery";
+// import $ from "jquery";
 import "jquery-ui-dist/jquery-ui";
 
 // gsap
@@ -37,7 +37,7 @@ export default function wayFn() {
     ease: "none",
   })
 
-  var history = gsap.timeline({
+  var history2 = gsap.timeline({
     scrollTrigger:{
       trigger:'.sec3',
       scrub:1,
@@ -48,41 +48,9 @@ export default function wayFn() {
   });
 
   // 왼쪽 이미지
-  history.to('.sec3 .left .bak', {
+  history2.to('.sec3 .left .bak', {
     backgroundPosition: '50% 10%'
     // 왼쪽 사진 배경 움직임
   })
 
-
-
-  // $(function () {
-  //   var tl = gsap.timeline({
-  //     top: "0",
-  //     scrollTrigger: {
-  //       trigger: ".sec3",
-  //       scrub: 1,
-  //       start: "top top",
-  //       end: "bottom -250%",
-  //       pin: true,
-  //       toggleActions: "play none none none",
-  //     },
-  //   });
-  //   tl.to(".sec3 ul", {
-  //     yPercent: -95,
-  //     ease: "none",
-  //   });
-
-  //   var tl = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: ".sec3",
-  //       scrub: 1,
-  //       start: "top top",
-  //       end: "bottom -250%",
-  //       toggleActions: "play none none none",
-  //     },
-  //   });
-  //   tl.to(".sec3 .right", {
-  //     backgroundPosition: "50% 100%",
-  //   });
-  // });
 }

@@ -16,22 +16,19 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function widthFn() {
   $(function () {
-    {
-      //PC
-      var tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".width-chg",
-          scrub: 1,
-          start: "top 100%",
-          end: "top 20%",
-          toggleActions: "play none none none",
-        },
-      });
-      tl.to(".width-chg", {
-        borderRadius: "0",
-        width: "100%",
-        top: 0,
-      });
-    }
+    var tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".width-chg",
+        scrub: 1,
+        start: "top 100%",
+        end: "top 20%",
+        toggleActions: "play none none none",
+      },
+    });
+    tl.to(".width-chg", {
+      borderRadius: "0",
+      width: "100%",
+      top: 0,
+    });
   });
 }

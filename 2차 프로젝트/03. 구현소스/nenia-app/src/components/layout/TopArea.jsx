@@ -34,7 +34,7 @@ export default function TopArea() {
                       // 하위 메뉴가 있으면 일반 a요소에 출력
                       // 없으면 Link 라우팅 출력
                       v.sub ? (
-                        <a href="#">
+                        <a href="#null">
                           <span>{v.txt}</span>
                         </a>
                       ) : (
@@ -71,19 +71,19 @@ export default function TopArea() {
             <ul className="etc-box flex">
               {/* <!-- 로그인 --> */}
               <li className="login btn">
-                <a href="" className="po-center">
+                <a href="/main" className="po-center">
                   로그인
                 </a>
               </li>
               {/* <!-- 회원가입 --> */}
               <li className="join btn">
-                <a href="" className="po-center">
+                <a href="/main" className="po-center">
                   회원가입
                 </a>
               </li>
               {/* <!-- 장바구니 --> */}
               <li className="cart btn">
-                <a href="" className="po-center">
+                <a href="/main" className="po-center">
                   장바구니
                 </a>
               </li>

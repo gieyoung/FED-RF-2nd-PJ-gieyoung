@@ -5,7 +5,7 @@ import React from "react";
 // 메인3이미지 데이터 가져오기
 import { m3_img } from "../data/m3_img";
 
-function M3_img(props) {
+function M3Img(props) {
   // 코드 리턴구역 /////////
   return (
     <>
@@ -19,4 +19,4 @@ function M3_img(props) {
   );
 }
 
-export default M3_img;
+export default M3Img;

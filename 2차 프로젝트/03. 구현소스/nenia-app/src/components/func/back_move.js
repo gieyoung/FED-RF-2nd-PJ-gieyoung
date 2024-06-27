@@ -12,25 +12,20 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function backMoveFn() {
-$(function(){
-
-      
- { //PC
+  $(function () {
     var back_move = gsap.timeline({
       scrollTrigger: {
-        trigger:'.back-move',
-        scrub:1,
-        start:'top 100%',
-        end:'bottom -100%',
-        toggleActions: 'play none none none',
-      }
+        trigger: ".back-move",
+        scrub: 1,
+        start: "top 100%",
+        end: "bottom -100%",
+        toggleActions: "play none none none",
+      },
     });
-    back_move.to('.back-move', {
-      backgroundPosition:'50% 100%'
-    })
-  }
-});
-
+    back_move.to(".back-move", {
+      backgroundPosition: "50% 100%",
+    });
+  });
 }
 
 ////////////////////////////////////////////////////////////////

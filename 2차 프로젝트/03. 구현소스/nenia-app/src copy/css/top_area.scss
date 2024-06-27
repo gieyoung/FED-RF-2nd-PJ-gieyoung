@@ -1,0 +1,146 @@
+/****************** 1.상단영역 ******************/
+
+#top-area {
+  position: relative;
+  z-index: 2;
+
+  .top-area {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background: #faf3e6;
+    max-width: 80%;
+    border-radius: 0 0 20px 20px;
+    transition: all 0.5s;
+    padding: 0 50px;
+    box-sizing: border-box;
+  }
+  .nav-wrap {
+    width: 100%;
+    /* 메뉴 */
+    #nav {
+      width: 60%;
+
+      .gnb {
+        /* 플렉스로 가로정렬 */
+        // gap: 25px;
+        font-size: 1.7rem;
+        font-weight: 500;
+
+        /* 1단메뉴 */
+        .gnb-depth1 {
+          position: relative;
+          &:hover {
+            font-weight: bold;
+          }
+
+          > a {
+            padding: 0 17px;
+            display: inline-block;
+            line-height: 70px;
+            color: #154726;
+          }
+        }
+
+        /* 2단메뉴 */
+        .gnb-depth2 {
+          position: absolute;
+          top: 100%;
+          width: 100%;
+          text-align: center;
+          margin-top: 10px;
+
+          border-radius: 20px;
+          background-color: #154726;
+          // 2단메뉴 숨기기
+          height: 0;
+          opacity: 0;
+
+          // 2단메뉴 보이기
+          &.on {
+            height: auto;
+            padding: 10px 20px;
+            opacity: 1;
+          }
+
+          > li {
+            > a {
+              font-weight: 300;
+              display: inline-block;
+              padding: 10px 0;
+              width: 100%;
+              color: #fefcf7;
+              font-size: 17px;
+              text-align: center;
+              position: relative;
+
+              // a에 마우스 오버시 밑줄
+              &:hover::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 2px;
+                background-color: #fff;
+                left: 0;
+                animation: bar-ani 0.2s ease-in-out forwards;
+              }
+
+              //메뉴바 애니메이션
+              @keyframes bar-ani {
+                0% {
+                  width: 0;
+                }
+                100% {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    /* 로고 */
+    h1.logo {
+      width: 15%;
+
+      a {
+        position: absolute;
+        display: inline-block;
+        /* 로고 이미지 삽입 */
+        background: url(../../public/images/top_logo.svg) no-repeat;
+        width: 114px;
+        height: 49px;
+        z-index: 998;
+      }
+    }
+
+    // 기타
+    .etc-box {
+     
+      justify-content: space-evenly;
+      li {
+        position: relative;
+        font-size: 14px;
+        background: #154726;
+        width: 100px;
+        height: 35px;
+
+        &:nth-child(2){
+          margin:0 10px;
+        }
+      }
+      a {
+        color: #fff;
+        line-height: 35px;
+      }
+    }
+  }
+}
+
+
+
+
+// 미디어쿼리
+
