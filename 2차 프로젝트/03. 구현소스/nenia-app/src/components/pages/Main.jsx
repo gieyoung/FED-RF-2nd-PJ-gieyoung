@@ -53,7 +53,7 @@ export default function Main() {
               {/* 오른쪽 영역 */}
               <div className="right flex">
                 <div className="video-sum">
-                  <div className="btn">
+                  <div className="btn v-open">
                     <a href="#null" className="po-center">
                       {/* 폰트어썸 사용 */}
                       <FontAwesomeIcon icon={faPlay} /> Watch
