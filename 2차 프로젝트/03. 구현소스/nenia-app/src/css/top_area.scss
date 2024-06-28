@@ -40,6 +40,10 @@
             line-height: 70px;
             color: #154726;
           }
+
+          > a:not(:last-child) {
+            cursor: default;
+          }
         }
 
         /* 2단메뉴 */
@@ -49,7 +53,6 @@
           width: 100%;
           text-align: center;
           margin-top: 10px;
-
           border-radius: 20px;
           background-color: #154726;
           // 2단메뉴 숨기기
