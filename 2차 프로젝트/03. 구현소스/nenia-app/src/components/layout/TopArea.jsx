@@ -75,7 +75,7 @@ export default function TopArea() {
               </li>
               {/* <!-- 회원가입 --> */}
               <li className="join btn">
-                <Link to="/" className="po-center">
+                <Link to="/member" className="po-center">
                   회원가입
                 </Link>
               </li>

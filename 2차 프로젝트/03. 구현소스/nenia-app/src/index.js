@@ -9,6 +9,7 @@ import Nenia from "./components/pages/Nenia";
 import EcoMeal from "./components/pages/EcoMeal";
 import Bread from "./components/pages/Bread";
 import Store from "./components/pages/Store";
+import Member from "./components/pages/Member";
 
 // 전체 공통 CSS 불러오기
 import "../src/css/main.scss";
@@ -34,6 +35,7 @@ export default function MainComponent() {
           <Route path="/ecomeal" element={<EcoMeal />} />
           <Route path="/bread" element={<Bread />} />
           <Route path="/store" element={<Store />} />
+          <Route path="/member" element={<Member />} />
         </Route>
       </Routes>
     </BrowserRouter>

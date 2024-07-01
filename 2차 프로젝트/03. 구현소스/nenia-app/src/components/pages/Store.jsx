@@ -6,7 +6,7 @@ function Store(props) {
   return (
     // 전체 감싸는 박스
     <div className="sub-wrap store-wrap">
-      {/* 스토어 모듈 */}
+      {/* 서브인트로 모듈 */}
       <SubIntro catName="store" />
     </div>
   );

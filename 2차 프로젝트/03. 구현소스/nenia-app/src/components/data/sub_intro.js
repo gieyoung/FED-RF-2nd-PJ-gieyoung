@@ -33,8 +33,13 @@ export const subIntroData = {
   },
   store: {
     bakimg:"/images/bak_img/bak4.jpg",
-    slogan: "건강한 삶, 친환경 식품",
+    slogan: "건강한 먹을거리, 네니아",
     tit: "네니아 스토어",
+  },
+  member: {
+    bakimg:"/images/bak_img/bak4.jpg",
+    slogan: "건강한 먹을거리, 네니아",
+    tit: "회원가입",
   },
   
   
