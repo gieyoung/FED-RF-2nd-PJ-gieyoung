@@ -25,16 +25,16 @@ const initData = () => {
             {
                 "idx": "1",
                 "uid":"admin",
-                "pwd":"1111",
-                "unm":"Administrator",
-                "eml":"admin@dc.com"
+                "pwd":"1234",
+                "unm":"최고관리자",
+                "eml":"admin@naver.com"
             },
             {
                 "idx": "2",
-                "uid":"tomtom",
-                "pwd":"1111",
-                "unm":"Tom",
-                "eml":"tom@gmail.com"
+                "uid":"poohlee23",
+                "pwd":"1234",
+                "unm":"운영자",
+                "eml":"poohlee23@naver.com"
             }
         ]
     `
