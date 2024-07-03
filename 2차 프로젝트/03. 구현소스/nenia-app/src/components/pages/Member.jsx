@@ -23,22 +23,34 @@ function Member() {
   // 1. 아이디변수
   const [userId, setUserId] = useState("");
 
+  // [2] 에러상태관리 변수
+  // -> 에러 상태값 초기값은 에러아님(false)
+  // 1. 아이디변수
+  const [userIdError, setUserIdError] = useState(false);
+
+
+
+  // [ 아이디관련 메시지 프리셋 ] ////
+  const msgId = ["최소 5글자 이상 입력하세요", "이미 사용중인 아이디입니다", "사용 가능한 아이디 입니다"];
+
+  // [3]에러 메시지 상태변수 : 초기값 msgId[0]
+  const [idMsg, setIdMsg] = useState(msgId[0]);
+
   // [유효성 검사 함수]
   /////////// [아이디 유효성 검사] //////////////////////
-  const changeUserId = (e) =>{
+  const changeUserId = (e) => {
     // 입력된 값 읽기
     let val = e.target.value;
-    console.log(val);
+    // console.log(val);
 
     // 1. 아이디 유효성 검사식
-    const valid = /^[A-Za-z0-9+]{5,}$/;
+    const valid = /^[a-z0-9+]{5,}$/;
     // 소문자 5글자 이상이어야 통과
-  
 
     // 2. 에러상태 분기하기
     // 2-1. 에러 아닐때(유효성 검사만 통과한 경우)
     // 유효성 검사방법: 정규식.test(값)
-    if(valid.test(val)){
+    if (valid.test(val)) {
       console.log("통과");
       // 아이디 검사를 위해 기본 데이터 생성호출!(mem_fn.js)
       initData();
@@ -54,23 +66,59 @@ function Member() {
 
       // 3. 입력데이터의 아이디가 기존 배열값에 있으면 true, 없으면 false
       let isT = memData.some((v) => v.uid === val);
-     //val = 현재 입력한 값. v.uid = memData에 저장되어 있는 아이디 값
-     // 즉 현재 입력한 값과 로컬스에 있는 아이디 값이 있는지 검사
-     console.log("중복아이디 있니?", isT);
+      //val = 현재 입력한 값. v.uid = memData에 저장되어 있는 아이디 값
+      // 즉 현재 입력한 값과 로컬스에 있는 아이디 값이 있는지 검사
+      console.log("중복아이디 있니?", isT);
 
-     // true일 경우 중복데이터 메시지 표시
-     if(isT){
-      
+      // true일 경우 중복데이터 메시지 표시
+      if (isT) {
+        // 에러 메시지 업데이트
+        setIdMsg(msgId[1]);
+      //  "이미 사용중인 아이디입니다"
+        // 에러 상태값 업데이트: 에러임(true)
+        setUserIdError(true);
+      } ///if///
+      // false일 경우 성공메시지 표시: 에러가 아님(false)
+      else{
+        setUserIdError(false);
+      }///else///
+    } /// if /////////////////////////
 
-     }///if///
+    // 2-2. 에러일때(유효성 검사 불통과)
+    else{
 
+    
+      console.log("에러");
+      // 에러 메시지 업데이트
+      setIdMsg(msgId[0]);
+      //"최소 5글자 이상 입력하세요"
+      // 에러 상태값 업데이트: 에러임(true)
+      setUserIdError(true);
+    }////////else/////////
 
-  } /// if /////////////////////////
+  
+    
+
+    // userId 상태변수값이 업데이트 되어야 화면에 출력된다.
+    setUserId(val);
 
   };
   //////////////// changeUserId 함수 /////////////////
 
+  // [ 전체 유효성 검사 체크 함수]
+  const totalValid = () => {
+    // 1. 모든 상태변수에 빈값일 때 에러상태값 업데이트
+    if (!userId) setUserIdError(true);
 
+    // 2. 통과시 true, 불통과시 false리턴처리
+    // 통과조건 -> 빈값아님 + 에러후크변수가 모두 false
+    if (
+      userId &&
+      !userIdError
+      ) return true;
+    // 하나라도 false이면 false를 리턴함
+    else return false;
+  }; ////////totalValid함수//////////
 
   // 코드리턴구역
   return (
@@ -89,13 +137,47 @@ function Member() {
                 <li>
                   {/* 1. 아이디 */}
                   <label>아이디</label>
-                  <input type="text" 
-                  maxLength="16" 
-                  placeholder="아이디를 입력해주세요"
-                  // value={userId}
-                  onChange={changeUserId} 
+                  <input
+                    type="text"
+                    maxLength="16"
+                    placeholder="아이디를 입력해주세요"
+                    value={userId}
+                    onChange={changeUserId}
                   />
-                  <span>(영문소문자/숫자, 4~16자)</span>
+                  {
+                    // 에러일 경우 메시지 출력
+                    userIdError && (
+                      <div className="msg">
+                        <small
+                          style={{
+                            color: "red",
+                            fontSize: "10px",
+                          }}
+                        >
+                          {idMsg}
+                          {/* "최소 5글자 이상 입력하세요" 또는 "이미 사용중인 아이디입니다", */}
+                        </small>
+                      </div>
+                    )
+                  }
+                  {
+                    // 에러 아닐 때 메시지 출력
+                    !userIdError && userId && (
+                      <div className="msg">
+                        <small
+                          style={{
+                            color: "green",
+                            fontSize: "10px",
+                          }}
+                        >
+                          {msgId[2]}
+                      
+                          {/* "사용 가능한 아이디 입니다" */}
+                        </small>
+                      </div>
+                    )
+                  }
+                  <span>(영문소문자/숫자, 5~16자)</span>
                 </li>
                 <li>
                   <label>Password : </label>
