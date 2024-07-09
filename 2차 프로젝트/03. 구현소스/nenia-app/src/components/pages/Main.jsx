@@ -29,6 +29,7 @@ export default function Main() {
   }, []);
   //// 코드 리턴구역 //////////////
   return (
+    <>
     <div id="main-area">
       {/* 메인 배너 이미지 */}
       <div className="main-visual"></div>
@@ -111,5 +112,6 @@ export default function Main() {
         </div>
       </div>
     </div>
+    </>
   );
 } /////////// Main /////////////////////
