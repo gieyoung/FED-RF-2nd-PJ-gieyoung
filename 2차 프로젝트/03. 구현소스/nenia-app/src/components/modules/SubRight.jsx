@@ -1,5 +1,6 @@
 // 슬로건 컴포넌트
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 // import { Link } from "react-router-dom";
 
@@ -25,6 +26,7 @@ function SubRight({ clsName }) {
 
   // 코드 리턴구역 /////////
   return (
+    
     <>
       <ul>
         {/* 데이터 배열로 만들기 */}

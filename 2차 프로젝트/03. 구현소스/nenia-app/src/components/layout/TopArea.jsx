@@ -1,4 +1,5 @@
 // 상단영역 컴포넌트 ///
+import { useEffect } from "react";
 
 // GNB 데이터 불러오기
 import { Link } from "react-router-dom";
@@ -9,7 +10,6 @@ import commonFn from "../func/common";
 
 // 상단영역 CSS 불러오기
 import "../../css/top_area.scss";
-import { useEffect } from "react";
 
 export default function TopArea() {
   useEffect(() => {
