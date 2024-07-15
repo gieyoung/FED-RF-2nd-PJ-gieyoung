@@ -15,6 +15,9 @@ import Store3 from "./components/pages/Store3";
 import Store4 from "./components/pages/Store4";
 import Store5 from "./components/pages/Store5";
 import Member from "./components/pages/Member";
+import Login from "./components/pages/Login";
+import ItemList from "./components/pages/ItemList";
+
 
 // 전체 공통 CSS 불러오기
 import "../src/css/main.scss";
@@ -40,12 +43,15 @@ export default function MainComponent() {
           <Route path="/ecomeal" element={<EcoMeal />} />
           <Route path="/bread" element={<Bread />} />
           <Route path="/store" element={<Store />} />
-          <Route path="/member" element={<Member />} />
+          <Route path="member" element={<Member />} />
+          <Route path="login" element={<Login />} />
+          <Route path="/itemlist" element={<ItemList />} />
           <Route path="/브레드" element={<Store1 />} />
           <Route path="/store2" element={<Store2 />} />
           <Route path="/store3" element={<Store3 />} />
           <Route path="/store4" element={<Store4 />} />
           <Route path="/store5" element={<Store5 />} />
+      
 
         </Route>
       </Routes>

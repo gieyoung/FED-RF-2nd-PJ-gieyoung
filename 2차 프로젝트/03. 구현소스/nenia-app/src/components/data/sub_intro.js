@@ -41,6 +41,11 @@ export const subIntroData = {
     slogan: "건강한 먹을거리, 네니아",
     tit: "회원가입",
   },
+  login: {
+    bakimg:"/images/bak_img/bak4.jpg",
+    slogan: "건강한 먹을거리, 네니아",
+    tit: "로그인",
+  },
   
   
 };

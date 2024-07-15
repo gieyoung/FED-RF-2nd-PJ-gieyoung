@@ -69,7 +69,7 @@ export default function TopArea() {
             <ul className="etc-box flex">
               {/* <!-- 로그인 --> */}
               <li className="login btn">
-                <Link to="/" className="po-center">
+                <Link to="/login" className="po-center">
                   로그인
                 </Link>
               </li>

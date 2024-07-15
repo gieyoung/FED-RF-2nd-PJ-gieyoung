@@ -1,6 +1,5 @@
 .green {
   background-color: green;
-
 }
 .selected {
   color: green;
@@ -133,6 +132,7 @@
   align-items: center;
   top: 25px;
   right: 25px;
+  font-size: 14px;
 }
 .board_newgallery li:hover .image {
   border-radius: 10px 10px 0 0;
@@ -147,7 +147,6 @@
 .board_newgallery dl.info {
   padding: 25px;
   background: #f4e5be;
-  height: 141px;
   border-radius: 0 0 20px 20px;
 }
 .board_newgallery dl.info dt.subject {
@@ -172,4 +171,14 @@
   color: #154726;
   line-height: 1.6;
   font-weight: 300;
+}
+
+
+
+// 이미지
+.board_newgallery .image a {
+  // background: url('http://www.nenia.kr/data/file/31/3696084091_7oxqTRrD_bab98648ca0f50bf9525b06e6ab4a9ba19fb86cc.jpg') no-repeat center / cover;
+  width: 100%;
+  height: 227.5px;
+  display: block;
 }

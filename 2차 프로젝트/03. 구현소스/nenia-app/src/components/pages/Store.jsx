@@ -1,44 +1,58 @@
 import React, { useState } from "react";
 import SubIntro from "../modules/SubIntro.jsx";
 import { Link } from "react-router-dom";
-// 스토어 카테고리 데이터 불러오기
-import { storeCat } from "../data/store_cat.js";
+
+// 데이터 불러오기
+import { storeCat, sBread, srice } from "../data/store_cat.js";
+
+// 공통함수 불러오기
+import { addComma } from "../func/common_fn.js";
 
 // CSS 불러오기
 import "../../css/store.scss";
 
-function Store(props) {
-  const [selectedCategory, setSelectedCategory] = useState(storeCat[0].catname);
+// 제이쿼리
+import $ from "jquery";
+import ItemDetail from "../modules/ItemDetail";
 
-  const handleCategoryClick = (catname) => {
-    setSelectedCategory(catname);
-  };
+function Store({ dbName }) {
+  // [ 상태관리 변수 ] ///
+  // [1] 카테고리
+  const [activeCat, setActiveCat] = useState(0);
+  // [2] 카테고리에 따른 상품리스트 
+  const [activeList, setActiveList] = useState("all");
 
-  // 필터링된 아이템 리스트
-  const filteredItems = storeCat.filter(cat => cat.catname === selectedCategory);
+  // 스토어리스트 데이터 모으기(브레드, 떡, 만두, 아이스크림)
+  const selData = [...storeCat, ...sBread, ...srice];
 
+
+  ////코드리턴구역////////////////////////////////
   return (
     // 전체 감싸는 박스
     <div className="sub-wrap store-wrap">
       {/* 서브인트로 모듈 */}
       <SubIntro catName="store" />
 
-      <div className="total_board_list_wrap">
-        <div className="inner">
-          <div className="board_category_tab">
+      <div class="total_board_list_wrap">
+        <div class="inner">
+          <div class="board_category_tab">
             <nav id="bo_cate">
               <h2>네니아이야기 카테고리</h2>
-              {/* 카테고리 영역 */}
               <ul id="bo_cate_ul">
-                {/* 데이터 배열로 만들기 */}
+                {/* 카테고리 데이터 배열로 만들기 */}
                 {storeCat.map((v, i) => (
-                  <li key={i}>
-                    <button
-                      onClick={() => handleCategoryClick(v.catname)}
-                      className={`${v.clsname} ${selectedCategory === v.catname ? 'green' : ''}`.trim()}
+                  <li key={i} className={v.category}>
+                    <a
+                      href="#"
+                      id={activeCat === i ? "bo_cate_on" : ""}
+                      className={v.category}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setActiveCat(i);
+                      }}
                     >
-                      {v.catname}
-                    </button>
+                      {v.cname}
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -46,23 +60,14 @@ function Store(props) {
           </div>
 
           {/* <!-- 제목 --> */}
-          <form name="fboardlist" id="fboardlist" action="http://www.nenia.kr/bbs/board_list_update.php" method="post">
-            <input type="hidden" name="bo_table" value="31" />
-            <input type="hidden" name="sfl" value="" />
-            <input type="hidden" name="stx" value="" />
-            <input type="hidden" name="spt" value="-36" />
-            <input type="hidden" name="sca" value="보도자료" />
-            <input type="hidden" name="page" value="1" />
-            <input type="hidden" name="sw" value="" />
-            <input type="hidden" name="btn_submit" id="btn_submit" value="" />
-
+          <form name="fboardlist" id="fboardlist">
             <ul className="board_newgallery">
-              {filteredItems.map((v, i) => (
-                <li key={i}>
+            {selData.filter((v) => activeCat === "all" || v.category === activeCat).map((v, i) => (
+              <li key={i} className={v.category}>
+                <div className="image">
                   <a
-                    href={v.link}
                     style={{
-                      backgroundImage: "url('http://www.nenia.kr/data/file/31/3696084091_fBDOFuAh_cd0ab3b23b348c27a67244eb317b72014903ff0d.jpg')",
+                      backgroundImage: `url(${v.isrc})`,
                       backgroundRepeat: "no-repeat",
                       backgroundPosition: "center",
                       backgroundSize: "cover",
@@ -71,12 +76,47 @@ function Store(props) {
                       display: "block",
                     }}
                   ></a>
-                </li>
+                  <span>{v.catname}</span>
+                </div>
+                <dl className="info">
+                  <dt className="subject">
+                    <a className="font-6" href="">
+                    {v.tit}
+                    </a>
+                  </dt>
+                  <dd className="content font-7 nanum">{v.price}원</dd>
+                </dl>
+              </li>
               ))}
             </ul>
           </form>
 
-          <div className="board_button">{/* <!-- <a href="http://www.nenia.kr/31">목록</a> -->  */}</div>
+          <div className="board_page">
+            <nav className="pg_wrap">
+              <span className="pg">
+                <span className="sound_only">열린</span>
+                <strong className="pg_current">1</strong>
+                <span className="sound_only">페이지</span>
+                <a href="http://www.nenia.kr/31?amp;&amp;page=2" className="pg_page">
+                  2<span className="sound_only">페이지</span>
+                </a>
+                <a href="http://www.nenia.kr/31?amp;&amp;page=3" className="pg_page">
+                  3<span className="sound_only">페이지</span>
+                </a>
+                <a href="http://www.nenia.kr/31?amp;&amp;page=4" className="pg_page">
+                  4<span className="sound_only">페이지</span>
+                </a>
+                <a href="http://www.nenia.kr/31?amp;&amp;page=5" className="pg_page">
+                  5<span className="sound_only">페이지</span>
+                </a>
+                <a href="http://www.nenia.kr/31?amp;&amp;page=5" className="pg_page pg_end">
+                  맨끝
+                </a>
+              </span>
+            </nav>{" "}
+          </div>
+
+          <div className="board_button"></div>
         </div>
       </div>
     </div>
