@@ -2,14 +2,9 @@ import React, { useState } from "react";
 import SubIntro from "../modules/SubIntro.jsx";
 import { Link } from "react-router-dom";
 
-// 상품리스트 서브컴포넌트 불러오기
-import Store_List from "../modules/Store_List.jsx";
-// 상품상세보기 서브컴포넌트 불러오기
-import Store_detail from "../modules/Store_detail.jsx";
-
 // 데이터 불러오기
 import { storeCat } from "../data/store_cat.js";
-
+import { sbread, srice } from "../data/store_data.js";
 
 // 공통함수 불러오기
 import { addComma } from "../func/common_fn.js";
@@ -19,19 +14,28 @@ import "../../css/store.scss";
 
 // 제이쿼리
 import $ from "jquery";
+import ItemDetail from "../modules/ItemDetail";
 
+function Store({ viewDetail, updateIdx }) {
+  // (1) viewDetail - 부모컴포넌트가 전달해준 상태변수
+  // (viewList를 업데이트하는 setViewList메서드임!)
+  // (2) updateIdx - 부모컴포넌트의 setIdx 상태관리변수의 메서드
 
-function Store() {
   // [ 후크 상태관리 변수 셋팅! ] //
-  // 1. 카테고리 상태관리변수
+  // [1] 카테고리
   const [activeCat, setActiveCat] = useState(0);
-  // 2. 리스트 / 상세보기 전환용 상태관리변수
+  // // [2] 카테고리에 따른 상품리스트
+  // const [activeList, setActiveList] = useState("all");
+  // 1. 리스트 / 상세보기 전환용 상태관리변수
   const [viewList, setViewList] = useState(true);
-  // 3. 상품 데이터 인덱스값 상태관리변수
+  // 2. 상품 데이터 인덱스값 상태관리변수
   const [idx, setIdx] = useState(0);
-  // 4. 선택 아이템 고유이름 상태관리변수
-  const [selItem, setSelItem] = useState("전체보기");
  
+
+  /////////////////////////////////////////////////////////////////////////////
+
+  // 스토어리스트 데이터 모으기(브레드, 떡, 만두, 아이스크림)
+  const selData = [...sbread, ...srice];
 
   ////코드리턴구역////////////////////////////////
   return (
@@ -39,8 +43,9 @@ function Store() {
     <div className="sub-wrap store-wrap">
       {/* 서브인트로 모듈 */}
       <SubIntro catName="store" />
+
       <div className="total_board_list_wrap">
-        <div className="inbox">
+        <div className="inner">
           <div className="board_category_tab">
             <nav id="bo_cate">
               <h2>네니아이야기 카테고리</h2>
@@ -49,35 +54,12 @@ function Store() {
                 {storeCat.map((v, i) => (
                   <li key={i} className={v.category}>
                     <a
-                      href={v.link}
+                      href="#"
                       id={activeCat === i ? "bo_cate_on" : ""}
                       className={v.category}
                       onClick={(e) => {
                         e.preventDefault();
                         setActiveCat(i);
-                        // 초이스 종류 변경하기
-       
-                        let selItem;
-
-                        if (v.category === "all") {
-                          selItem = "전체보기";
-                        } else if (v.category === "bread") {
-                          selItem = "브레드";
-                        } else if (v.category === "ricecake") {
-                          selItem = "떡";
-                        } else if (v.category === "mando") {
-                          selItem = "만두";
-                        } else if (v.category === "icecream") {
-                          selItem = "아이스크림";
-                        }
-                        
-                        setSelItem(selItem);
-
-                        console.log("카테고리명", selItem);
-                        // 초이스 변경시 무조건 리스트 페이지보기
-                        // -> viewList 업데이트하기
-                        setViewList(true);
-
                       }}
                     >
                       {v.cname}
@@ -91,30 +73,49 @@ function Store() {
           {/* <!-- 스토어리스트 --> */}
           <form name="fboardlist" id="fboardlist">
             <ul className="board_newgallery">
+              {selData.map((v, i) => (
+                <li key={i} className={v.category}>
+                  <div className="image">
+                    <a
+                    href="#"
+                    onClick={(e) => {
+                      // a요소 기본이동막기
+                      e.preventDefault();
+                      // 상태변수 viewList 업데이트
+                      // setViewList메서드가 viewDetail로 들어옴
+                      viewDetail(false);
+                      // setIdx메서드가 updateIdx로 들어옴
+                      updateIdx(i);
+                    }}
 
-            {
-          // 상태관리변수 viewList값이 true이면 리스트보기
-          viewList ? (
-            <Store_List
-              viewDetail={setViewList}
-              updateIdx={setIdx}
-              selItem={selItem}
-          
-  
-            />
-          ) : (
-            <Store_detail backList={setViewList} gNo={idx} selItem={selItem}
-           
-            />
-          )
-          // false이면 상품 상세리스트 보기
-        }
- 
+
+                      style={{
+                        backgroundImage: `url(${v.isrc})`,
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "center",
+                        backgroundSize: "cover",
+                        width: "100%",
+                        height: "227.5px",
+                        display: "block",
+                      }}
+                    ></a>
+                    <span>{v.catname}</span>
+                  </div>
+                  <dl className="info">
+                    <dt className="subject">
+                      <a className="font-6" href="">
+                        {v.tit}
+                      </a>
+                    </dt>
+                    <dd className="content font-7 nanum">{v.price}원</dd>
+                  </dl>
+                </li>
+              ))}
             </ul>
           </form>
 
           {/* 페이지 버튼 */}
-          {/* <div className="board_page">
+          <div className="board_page">
             <nav className="pg_wrap">
               <span className="pg">
                 <span className="sound_only">열린</span>
@@ -139,7 +140,7 @@ function Store() {
             </nav>{" "}
           </div>
 
-          <div className="board_button"></div> */}
+          <div className="board_button"></div>
         </div>
       </div>
     </div>

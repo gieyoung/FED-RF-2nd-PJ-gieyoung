@@ -62,23 +62,23 @@ function Member() {
   // [ 아이디관련 메시지 프리셋 ] ////
   const msgId = [
     // 1. 최소 5글자 이상 입력할것
-    "User ID must contain a minimum of 5 characters",
+    "아이디는 최소 5글자 이상 입력해야 합니다.",
     // 2. 이미 사용중인 아이디임
-    "This ID is already in use!",
+    "이미 사용중인 아이디 입니다.",
     // 3. 훌륭한 아이디!
-    "That's a great ID!",
+    "사용가능한 아이디 입니다.",
   ];
 
   // [ 기타 메시지 프리셋 ]
   const msgEtc = {
     // 비밀번호
-    pwd: "5 to 15 digits in the form of special characters, characters, and numbers",
+    pwd: "5 ~ 20사이의 소문자 또는 숫자를 입력해주세요",
     // 비밀번호확인
-    confPwd: "Password verification does not match",
+    confPwd: "비밀번호가 일치하지 않습니다.",
     // 필수입력
-    req: "This is a required entry",
+    req: "필수 입력 칸 입니다.",
     // 이메일
-    email: "Please enter a valid email format",
+    email: "이메일 형식이 잘못 되었습니다.",
   }; ///// msgEtc ///////
 
   // [3] 에러메시지 상태변수 : 초기값 msgId[0]
@@ -293,7 +293,7 @@ function Member() {
       return;
     }
     if (!(pwd == chkPwd)) {
-      alert("비밀번호 일치 하지 않습니다.");
+      alert("비밀번호가 일치 하지 않습니다.");
       return;
     }
 
@@ -372,187 +372,166 @@ function Member() {
 
   // 코드리턴 구역 //////////////////
   return (
-    <div className="outbx">
-      <section className="membx">
-        <h2>회원가입</h2>
-        <table>
-          <tr>
-            <th scope="row">아이디</th>
-            <td>
-              <input type="text"
-                maxLength="20"
-                placeholder="Please enter your ID"
-                // defaultValue="ㅎㅎㅎ"
-                value={userId}
-                onChange={changeUserId} /> 
-              (영문소문자/숫자, 4~16자)
-            </td>
-          </tr>
-        </table>
-
-        <form action="process.php" method="post">
-          <ul>
-            <li>
-              {/* 1. 아이디 */}
-              <label>ID : </label>
-              <input
-                type="text"
-                maxLength="20"
-                placeholder="Please enter your ID"
-                // defaultValue="ㅎㅎㅎ"
-                value={userId}
-                onChange={changeUserId}
-              />
-              {
-                //   에러일 경우 메시지 출력
-                // 조건문 && 출력요소
-                userIdError && (
-                  <div className="msg">
-                    <small
-                      style={{
-                        color: "red",
-                        fontSize: "14px",
-                      }}
-                    >
-                      {idMsg}
-                    </small>
-                  </div>
-                )
-              }
-              {
-                // 통과시 메시지 출력
-                // 조건문 && 출력요소
-                // 조건추가 : userId가 입력전일때 안보임처리
-                // userId가 입력전엔 false로 리턴됨!
-                !userIdError && userId && (
-                  <div className="msg">
-                    <small
-                      style={{
-                        color: "green",
-                        fontSize: "14px",
-                      }}
-                    >
-                      {msgId[2]}
-                    </small>
-                  </div>
-                )
-              }
-            </li>
-            <li>
-              <label>Password : </label>
-              <input type="password" maxLength="20" placeholder="Please enter your Password" value={pwd} onChange={changePwd} />
-              {
-                // 에러일 경우 메시지 출력
-                // 조건문 && 출력요소
-                pwdError && (
-                  <div className="msg">
-                    <small
-                      style={{
-                        color: "red",
-                        fontSize: "10px",
-                      }}
-                    >
-                      {msgEtc.pwd}
-                    </small>
-                  </div>
-                )
-              }
-            </li>
-            <li>
-              <label>Confirm Password : </label>
-              <input type="password" maxLength="20" placeholder="Please enter your Confirm Password" value={chkPwd} onChange={changeChkPwd} />
-              {
-                // 에러일 경우 메시지 출력
-                // 조건문 && 출력요소
-                chkPwdError && (
-                  <div className="msg">
-                    <small
-                      style={{
-                        color: "red",
-                        fontSize: "10px",
-                      }}
-                    >
-                      {msgEtc.confPwd}
-                    </small>
-                  </div>
-                )
-              }
-            </li>
-            <li>
-              <label>User Name : </label>
-              <input type="text" maxLength="20" placeholder="Please enter your Name" value={userName} onChange={changeUserName} />
-              {
-                // 에러일 경우 메시지 출력
-                // 조건문 && 출력요소
-                userNameError && (
-                  <div className="msg">
-                    <small
-                      style={{
-                        color: "red",
-                        fontSize: "10px",
-                      }}
-                    >
-                      {msgEtc.req}
-                    </small>
-                  </div>
-                )
-              }
-            </li>
-            <li>
-              <label>Address</label>
-              {/* 다음우편번호 모듈
-              - 보내줄값은 내가 정해야함!
-              - 변경체크함수를 프롭스다운시킴! */}
-              <AddressInput changeAddr={changeAddr} />
-              {
-                // 에러일 경우 메시지 출력
-                // 조건문 && 출력요소
-                addrError && (
-                  <div className="msg">
-                    <small
-                      style={{
-                        color: "red",
-                        fontSize: "10px",
-                      }}
-                    >
-                      {msgEtc.req}
-                    </small>
-                  </div>
-                )
-              }
-            </li>
-            <li>
-              <label>Email : </label>
-              <input type="text" maxLength="50" placeholder="Please enter your Email" value={email} onChange={changeEmail} />
-              {
-                // 에러일 경우 메시지 출력
-                // 조건문 && 출력요소
-                emailError && (
-                  <div className="msg">
-                    <small
-                      style={{
-                        color: "red",
-                        fontSize: "10px",
-                      }}
-                    >
-                      {msgEtc.email}
-                    </small>
-                  </div>
-                )
-              }
-            </li>
-            <li style={{ overflow: "hidden" }}>
-              <button className="sbtn more-btn" onClick={onSubmit}>
-                <span>Submit</span>
-              </button>
-            </li>
-            <li>
-              Are you already a Member?
-              <Link to="/login">Log In</Link>
-            </li>
-          </ul>
-        </form>
-      </section>
+    <div className="inbox">
+      <div className="join-wrap">
+        <section className="join-pg">
+          <h2>회원가입</h2>
+          <form action="process.php" method="post">
+            <ul>
+              <li>
+                {/* 1. 아이디 */}
+                <input
+                  type="text"
+                  maxLength="20"
+                  placeholder="아이디"
+                  value={userId}
+                  onChange={changeUserId}
+                />
+                <span class="info">(영문 소문자 / 숫자, 5 ~ 20자)</span>
+                {
+                  //   에러일 경우 메시지 출력
+                  // 조건문 && 출력요소
+                  userIdError && (
+                    <div className="msg">
+                      <small
+                        style={{
+                          color: "red",
+                        }}
+                      >
+                        {idMsg}
+                      </small>
+                    </div>
+                  )
+                }
+                {
+                  // 통과시 메시지 출력
+                  // 조건문 && 출력요소
+                  // 조건추가 : userId가 입력전일때 안보임처리
+                  // userId가 입력전엔 false로 리턴됨!
+                  !userIdError && userId && (
+                    <div className="msg">
+                      <small
+                        style={{
+                          color: "green",
+                        }}
+                      >
+                        {msgId[2]}
+                      </small>
+                    </div>
+                  )
+                }
+              </li>
+              <li>
+                <input type="password" maxLength="20" placeholder="비밀번호" value={pwd} onChange={changePwd} />
+                <span class="info">(영문 소문자 / 숫자, 5 ~ 20자)</span>
+                {
+                  // 에러일 경우 메시지 출력
+                  // 조건문 && 출력요소
+                  pwdError && (
+                    <div className="msg">
+                      <small
+                        style={{
+                          color: "red",
+                        }}
+                      >
+                        {msgEtc.pwd}
+                      </small>
+                    </div>
+                  )
+                }
+              </li>
+              <li>
+                <label>Confirm Password : </label>
+                <input type="password" maxLength="20" placeholder="Please enter your Confirm Password" value={chkPwd} onChange={changeChkPwd} />
+                {
+                  // 에러일 경우 메시지 출력
+                  // 조건문 && 출력요소
+                  chkPwdError && (
+                    <div className="msg">
+                      <small
+                        style={{
+                          color: "red",
+                        }}
+                      >
+                        {msgEtc.confPwd}
+                      </small>
+                    </div>
+                  )
+                }
+              </li>
+              <li>
+                <label>User Name : </label>
+                <input type="text" maxLength="20" placeholder="Please enter your Name" value={userName} onChange={changeUserName} />
+                {
+                  // 에러일 경우 메시지 출력
+                  // 조건문 && 출력요소
+                  userNameError && (
+                    <div className="msg">
+                      <small
+                        style={{
+                          color: "red",
+                        }}
+                      >
+                        {msgEtc.req}
+                      </small>
+                    </div>
+                  )
+                }
+              </li>
+              <li>
+                <label>Address</label>
+                {/* 다음우편번호 모듈
+                - 보내줄값은 내가 정해야함!
+                - 변경체크함수를 프롭스다운시킴! */}
+                <AddressInput changeAddr={changeAddr} />
+                {
+                  // 에러일 경우 메시지 출력
+                  // 조건문 && 출력요소
+                  addrError && (
+                    <div className="msg">
+                      <small
+                        style={{
+                          color: "red",
+                        }}
+                      >
+                        {msgEtc.req}
+                      </small>
+                    </div>
+                  )
+                }
+              </li>
+              <li>
+                <label>Email : </label>
+                <input type="text" maxLength="50" placeholder="Please enter your Email" value={email} onChange={changeEmail} />
+                {
+                  // 에러일 경우 메시지 출력
+                  // 조건문 && 출력요소
+                  emailError && (
+                    <div className="msg">
+                      <small
+                        style={{
+                          color: "red",
+                        }}
+                      >
+                        {msgEtc.email}
+                      </small>
+                    </div>
+                  )
+                }
+              </li>
+              <li style={{ overflow: "hidden" }}>
+                <button className="sbtn more-btn" onClick={onSubmit}>
+                  <span>Submit</span>
+                </button>
+              </li>
+              <li>
+                Are you already a Member?
+                <Link to="/login">Log In</Link>
+              </li>
+            </ul>
+          </form>
+        </section>
+      </div>
     </div>
   );
 }

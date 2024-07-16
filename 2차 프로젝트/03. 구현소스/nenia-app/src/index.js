@@ -9,14 +9,9 @@ import Nenia from "./components/pages/Nenia";
 import EcoMeal from "./components/pages/EcoMeal";
 import Bread from "./components/pages/Bread";
 import Store from "./components/pages/Store";
-import Store1 from "./components/pages/Store1";
-import Store2 from "./components/pages/Store2";
-import Store3 from "./components/pages/Store3";
-import Store4 from "./components/pages/Store4";
-import Store5 from "./components/pages/Store5";
 import Member from "./components/pages/Member";
 import Login from "./components/pages/Login";
-import ItemList from "./components/pages/ItemList";
+
 
 
 // 전체 공통 CSS 불러오기
@@ -45,12 +40,8 @@ export default function MainComponent() {
           <Route path="/store" element={<Store />} />
           <Route path="member" element={<Member />} />
           <Route path="login" element={<Login />} />
-          <Route path="/itemlist" element={<ItemList />} />
-          <Route path="/브레드" element={<Store1 />} />
-          <Route path="/store2" element={<Store2 />} />
-          <Route path="/store3" element={<Store3 />} />
-          <Route path="/store4" element={<Store4 />} />
-          <Route path="/store5" element={<Store5 />} />
+
+    
       
 
         </Route>

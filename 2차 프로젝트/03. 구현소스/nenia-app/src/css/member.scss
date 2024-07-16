@@ -16,11 +16,18 @@
   li {
     position: relative;
     padding: 20px 0;
-    text-align: center;
+   
 
     span {
       font-size: 16px;
     }
+
+    .info{
+      padding-top: 10px;
+      text-align: left;
+      display: block;
+    }
+    
   }
   label {
     display: inline-block;
@@ -75,7 +82,92 @@
   }
 }
 
+
+
+
+
+
 .membx {
   width: 400px;
   margin: 0 auto;
 }
+
+
+.join-wrap{
+  background-color: #fff;
+  margin: 200px 0;
+
+  // 회원가입
+  .join-pg{
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  
+  h2 {
+    text-align: center;
+    padding: 15px;
+    font-size: 40px;
+  }
+
+  li {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+   
+
+    span {
+      font-size: 16px;
+    }
+
+    .info{
+      padding-top: 10px;
+      text-align: left;
+      display: block;
+    }
+    
+  }
+  label {
+    display: inline-block;
+    width: 25%;
+    text-align: right;
+    font-size: 20px;
+    white-space: nowrap;
+  }
+  input{
+    width: 50%;
+      height: 40px;
+      line-height: 45px;
+      outline: 1px solid #c8c8c8;
+      margin-right: 20px;
+      font-size: 16px;
+  }
+  .msg {
+    position: absolute;
+    left: 0;
+    bottom:-5px;
+    font-size: 16px;
+
+  }
+
+  .sbtn {
+    width: 100%;
+    padding: 15px;
+    background-color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    margin-top: 20px;
+  }
+  .sbtn:hover {
+    background-color: #154726;
+  }
+  
+  
+  
+}
+
+
