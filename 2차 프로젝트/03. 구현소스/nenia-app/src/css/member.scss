@@ -16,18 +16,16 @@
   li {
     position: relative;
     padding: 20px 0;
-   
 
     span {
       font-size: 16px;
     }
 
-    .info{
+    .info {
       padding-top: 10px;
       text-align: left;
       display: block;
     }
-    
   }
   label {
     display: inline-block;
@@ -51,59 +49,26 @@
     padding: 5px 0;
   }
 
-  .sbtn {
-    width: 100%;
-    padding: 15px;
-    background-color: #000;
-    font-size: 20px;
-    font-weight: bold;
-    color: #fff;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    margin-top: 20px;
-  }
-  .sbtn:hover {
-    background-color: #154726;
-  }
-  ul {
-    li:last-child {
-      text-align: center;
-      a {
-        color: #0d6efd;
-        text-decoration: none;
-        &:hover {
-          color: #154726;
-          text-decoration: overline;
-          text-decoration-style: wavy;
-        }
-      }
-    }
-  }
 }
-
-
-
-
-
 
 .membx {
-  width: 400px;
+  max-width: 450px;
   margin: 0 auto;
+  outline: 1px solid #000;
+  padding: 30px 50px;
 }
 
-
-.join-wrap{
-  background-color: #fff;
-  margin: 200px 0;
+.join-wrap {
+  background-color: #faf3e6;
+  height: 100%;
 
   // 회원가입
-  .join-pg{
-    width: 500px;
+  .join-pg {
+    margin: 0 auto;
+    width: 50%;
     margin: 0 auto;
   }
 
-  
   h2 {
     text-align: center;
     padding: 15px;
@@ -114,18 +79,17 @@
     position: relative;
     padding: 20px 0;
     display: flex;
-   
 
     span {
       font-size: 16px;
     }
 
-    .info{
+    .info {
       padding-top: 10px;
+      padding-left: 20px;
       text-align: left;
       display: block;
     }
-    
   }
   label {
     display: inline-block;
@@ -134,40 +98,63 @@
     font-size: 20px;
     white-space: nowrap;
   }
-  input{
+  input {
     width: 50%;
-      height: 40px;
-      line-height: 45px;
-      outline: 1px solid #c8c8c8;
-      margin-right: 20px;
-      font-size: 16px;
+    height: 40px;
+    line-height: 45px;
+    outline: 1px solid #c8c8c8;
+    border: none;
+
+    font-size: 16px;
+  }
+
+  button{
+    cursor: pointer;
+  }
+
+  .addr1{
+    margin: 5px 0;
   }
   .msg {
     position: absolute;
     left: 0;
-    bottom:-5px;
+    bottom: -5px;
     font-size: 16px;
-
   }
 
-  .sbtn {
-    width: 100%;
-    padding: 15px;
-    background-color: #000;
-    font-size: 20px;
-    font-weight: bold;
-    color: #fff;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    margin-top: 20px;
-  }
-  .sbtn:hover {
-    background-color: #154726;
-  }
+
   
-  
-  
+
+
 }
 
 
+// 완료 버튼
+.sbtn {
+  width: 100%;
+  padding: 20px;
+  background-color: #154726;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: -20px;
+}
+.sbtn:hover {
+  background-color: #154726;
+}
+
+// 회원가입 또는 로그인 화면 이동 버튼
+.go-login{
+  font-size: 16px;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  padding: 20px;
+  outline: 1px solid #c8c8c8;
+  background: #fff;
+  box-sizing: border-box;
+}

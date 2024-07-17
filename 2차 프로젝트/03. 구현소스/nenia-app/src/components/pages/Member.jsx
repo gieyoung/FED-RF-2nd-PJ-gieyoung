@@ -1,7 +1,11 @@
 // 회원가입 페이지 컴포넌트 - Member.jsx
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import AddressInput from "../modules/AddressInput";
+import SubIntro from "../modules/SubIntro.jsx";
+
+// js불러오기
+import widthFn from "../func/width_chg.js";
 
 // 로컬스토리지 생성 JS
 import { initData } from "../func/mem_fn";
@@ -12,6 +16,12 @@ import $ from "jquery";
 import "../../css/member.scss";
 
 function Member() {
+  useEffect(() => {
+    // 가로 크기 변하는 함수 호출
+    widthFn();
+  }, []);
+
+
   // 라우터 이동네비게이트
   const goNav = useNavigate();
   // goNav(라우터주소,state변수);
@@ -66,13 +76,13 @@ function Member() {
     // 2. 이미 사용중인 아이디임
     "이미 사용중인 아이디 입니다.",
     // 3. 훌륭한 아이디!
-    "사용가능한 아이디 입니다.",
+    "사용 가능한 아이디 입니다.",
   ];
 
   // [ 기타 메시지 프리셋 ]
   const msgEtc = {
     // 비밀번호
-    pwd: "5 ~ 20사이의 소문자 또는 숫자를 입력해주세요",
+    pwd: "5 ~ 15사이의 특수문자나 소문자 또는 숫자를 입력해주세요",
     // 비밀번호확인
     confPwd: "비밀번호가 일치하지 않습니다.",
     // 필수입력
@@ -101,7 +111,7 @@ function Member() {
     // 3. 에러상태 분기하기
     // 3-1. 에러 아닐때 (유효성검사만 통과한 경우)
     if (valid.test(val)) {
-      console.log("통과했지만...!");
+      // console.log("통과했지만...!");
       // 아이디 검사를 위해 기본 데이터 생성호출!
       initData();
       // 로컬스토리지에 "mem-data"가 없으면 초기셋팅함!
@@ -122,7 +132,7 @@ function Member() {
       // 기존 배열값으로 있는지 검사함!
       // 있으면 true, 없으면 false
       let isT = memData.some((v) => v.uid === val);
-      console.log("중복id있어?", isT);
+      // console.log("중복id있어?", isT);
 
       // 4. true 일 경우 중복데이터 메시지 표시
       if (isT) {
@@ -289,7 +299,7 @@ function Member() {
       return;
     }
     if (!/^.*(?=^.{5,15}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/.test(pwd)) {
-      alert("5 to 15 digits in the form of special characters, characters, and numbers");
+      alert("5~15사이의 특수문자, 소문자, 숫자를 사용해주세요");
       return;
     }
     if (!(pwd == chkPwd)) {
@@ -306,6 +316,19 @@ function Member() {
       alert("이메일 형식에 맞지 않습니다.");
       return;
     }
+
+    if((addr=="")){
+      alert("주소창을 채워주세요");
+      return;
+    }
+
+    var addr2Element = document.querySelector(".addr2");
+
+    if (addr2Element && addr2Element.value.trim() === ""){
+      alert("상세주소를 입력 해주세요");
+      return;
+    }
+
 
     // 2. 유효성검사 전체 통과시
     if (totalValid()) {
@@ -347,7 +370,7 @@ function Member() {
       localStorage.setItem("mem-data", JSON.stringify(memData));
 
       // 7. 회원가입 환영메시지 + 로그인페이지 이동
-      document.querySelector(".sbtn").innerText = "thank you for joining us!";
+      document.querySelector(".sbtn").innerText = "회원가입 되었습니다";
       // 1초후 페이지 이동 : 라우터 네비게이트로 이동함
       setTimeout(() => {
         goNav("/login");
@@ -372,10 +395,13 @@ function Member() {
 
   // 코드리턴 구역 //////////////////
   return (
-    <div className="inbox">
-      <div className="join-wrap">
+    <>
+    <SubIntro catName="member" />
+      {/* 서브인트로 모듈 */}
+      
+      <div className="join-wrap width-chg">
+        <div className="inbox">
         <section className="join-pg">
-          <h2>회원가입</h2>
           <form action="process.php" method="post">
             <ul>
               <li>
@@ -387,7 +413,7 @@ function Member() {
                   value={userId}
                   onChange={changeUserId}
                 />
-                <span class="info">(영문 소문자 / 숫자, 5 ~ 20자)</span>
+                <span class="info">(영문 소문자 / 숫자, 5글자 이상)</span>
                 {
                   //   에러일 경우 메시지 출력
                   // 조건문 && 출력요소
@@ -423,7 +449,7 @@ function Member() {
               </li>
               <li>
                 <input type="password" maxLength="20" placeholder="비밀번호" value={pwd} onChange={changePwd} />
-                <span class="info">(영문 소문자 / 숫자, 5 ~ 20자)</span>
+                <span class="info">(영문 소문자 / 숫자, 5 ~ 15자)</span>
                 {
                   // 에러일 경우 메시지 출력
                   // 조건문 && 출력요소
@@ -441,8 +467,7 @@ function Member() {
                 }
               </li>
               <li>
-                <label>Confirm Password : </label>
-                <input type="password" maxLength="20" placeholder="Please enter your Confirm Password" value={chkPwd} onChange={changeChkPwd} />
+                <input type="password" maxLength="20" placeholder="비밀번호 재입력" value={chkPwd} onChange={changeChkPwd} />
                 {
                   // 에러일 경우 메시지 출력
                   // 조건문 && 출력요소
@@ -460,8 +485,7 @@ function Member() {
                 }
               </li>
               <li>
-                <label>User Name : </label>
-                <input type="text" maxLength="20" placeholder="Please enter your Name" value={userName} onChange={changeUserName} />
+                <input type="text" maxLength="20" placeholder="이름" value={userName} onChange={changeUserName} />
                 {
                   // 에러일 경우 메시지 출력
                   // 조건문 && 출력요소
@@ -479,7 +503,6 @@ function Member() {
                 }
               </li>
               <li>
-                <label>Address</label>
                 {/* 다음우편번호 모듈
                 - 보내줄값은 내가 정해야함!
                 - 변경체크함수를 프롭스다운시킴! */}
@@ -501,8 +524,7 @@ function Member() {
                 }
               </li>
               <li>
-                <label>Email : </label>
-                <input type="text" maxLength="50" placeholder="Please enter your Email" value={email} onChange={changeEmail} />
+                <input type="text" maxLength="50" placeholder="이메일" value={email} onChange={changeEmail} />
                 {
                   // 에러일 경우 메시지 출력
                   // 조건문 && 출력요소
@@ -521,18 +543,18 @@ function Member() {
               </li>
               <li style={{ overflow: "hidden" }}>
                 <button className="sbtn more-btn" onClick={onSubmit}>
-                  <span>Submit</span>
+                  <span>완료</span>
                 </button>
               </li>
               <li>
-                Are you already a Member?
-                <Link to="/login">Log In</Link>
+                <Link  className="go-login" to="/login">이미 회원이신가요? 로그인 하기</Link>
               </li>
             </ul>
           </form>
         </section>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

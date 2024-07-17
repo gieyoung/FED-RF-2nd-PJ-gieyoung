@@ -1,7 +1,7 @@
 // 스크롤됨에 따라 가로크기 바뀌는 함수 - width_chg.js
 
 // 스토어리스트 CSS 불러오기
-import "../../css/width_chg.scss";
+// import "../../css/width_chg.scss";
 
 // 제이쿼리 + 제이쿼리UI
 import $ from "jquery";

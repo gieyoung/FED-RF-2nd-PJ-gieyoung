@@ -7,6 +7,7 @@ import "../../css/member.scss";
 // 로컬 스토리지 셋팅 함수 호출!
 import { initData } from "../func/mem_fn";
 import { dCon } from "../modules/dCon";
+import { Link } from "react-router-dom";
 
 function Login(props) {
   // 컨텍스트 사용
@@ -249,6 +250,9 @@ function Login(props) {
                 <button className="sbtn more-btn login-sbtn" onClick={onSubmit}>
                   <span>로그인</span>
                 </button>
+              </li>
+              <li>
+                <Link className="go-login" to="/member">아직 회원이 아니신가요? 회원가입 하기</Link>
               </li>
             </ul>
           </form>
