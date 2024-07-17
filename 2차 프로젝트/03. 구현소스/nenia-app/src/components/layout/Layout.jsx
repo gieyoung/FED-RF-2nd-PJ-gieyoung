@@ -72,7 +72,7 @@ export default function Layout() {
       {/* 1.상단영역 */}
       <TopArea loginMsg={loginMsg} loginSts={loginSts} logoutFn={logoutFn} goPage={goPage} />
       {/* 2.메인영역 */}
-      <MainArea />
+      <MainArea/>
       {/* 3.하단영역 */}
       <FooterArea />
     </dCon.Provider>

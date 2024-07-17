@@ -11,6 +11,7 @@ import Bread from "./components/pages/Bread";
 import Store from "./components/pages/Store";
 import Member from "./components/pages/Member";
 import Login from "./components/pages/Login";
+import SearchPage from "./components/pages/SearchPage";
 
 
 
@@ -40,6 +41,7 @@ export default function MainComponent() {
           <Route path="/store" element={<Store />} />
           <Route path="member" element={<Member />} />
           <Route path="login" element={<Login />} />
+          <Route path="search" element={<SearchPage />} />
 
     
       

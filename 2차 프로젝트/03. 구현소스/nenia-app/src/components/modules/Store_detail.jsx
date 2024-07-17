@@ -15,7 +15,7 @@ import "../../css/store_detail.scss";
 // 제이쿼리
 import $ from "jquery";
 
-export default function Store_detail({ backList, gNo, selItem }) {
+export default function Store_detail({ backList, gNo, selItem}) {
   // (1) backList - 부모컴포넌트가 전달해준 상태변수
   // (viewList를 업데이트하는 setViewList메서드임!)
   // (2) gNo - 상품 데이터 배열순번
@@ -23,6 +23,8 @@ export default function Store_detail({ backList, gNo, selItem }) {
 
   // 스토어리스트 데이터 모으기(브레드, 떡, 만두, 아이스크림)
   const selData = [...sbread, ...srice, ...smando, ...sicecream];
+
+  
 
   // 선택코드에 따른 데이터 선택하기
   let storeData;

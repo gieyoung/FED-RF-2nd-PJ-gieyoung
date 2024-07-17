@@ -11,7 +11,7 @@ import commonFn from "../func/common";
 // 상단영역 CSS 불러오기
 import "../../css/top_area.scss";
 
-export default function TopArea() {
+export default function TopArea({ loginSts, logoutFn, goPage }) {
   useEffect(() => {
     commonFn();
   }, []);
@@ -67,24 +67,52 @@ export default function TopArea() {
             </h1>
             {/* <!-- 1-3.기타 --> */}
             <ul className="etc-box flex">
-              {/* <!-- 로그인 --> */}
-              <li className="login btn">
-                <Link to="/login" className="po-center">
-                  로그인
-                </Link>
-              </li>
-              {/* <!-- 회원가입 --> */}
-              <li className="join btn">
-                <Link to="/member" className="po-center">
-                  회원가입
-                </Link>
-              </li>
-              {/* <!-- 장바구니 --> */}
-              <li className="cart btn">
-                <Link to="/" className="po-center">
-                  장바구니
-                </Link>
-              </li>
+              {
+                // 로그인 상태가 null일때 나옴
+                loginSts === null && (
+                  <>
+                    {/* <!-- 로그인 --> */}
+                    <li className="login btn">
+                      <Link to="/login" className="po-center">
+                        로그인
+                      </Link>
+                    </li>
+                    {/* <!-- 회원가입 --> */}
+                    <li className="join btn">
+                      <Link to="/member" className="po-center">
+                        회원가입
+                      </Link>
+                    </li>
+                  </>
+                )
+              }
+              {
+                // 로그인 상태일 때
+                loginSts !== null && (
+                  <>
+                   {/* <!-- 장바구니 --> */}
+                   <li className="cart btn">
+                      <Link to="/" className="po-center">
+                        장바구니
+                      </Link>
+                    </li>
+                    {/* <!-- 로그아웃 --> */}
+                    <li className="login btn">
+                      <a
+                        href="#"
+                        className="po-center"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          logoutFn();
+                        }}
+                      >
+                        로그아웃
+                      </a>
+                    </li>
+                   
+                  </>
+                )
+              }
             </ul>
           </div>
         </header>
