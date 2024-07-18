@@ -88,7 +88,7 @@ export const sbread = [
 // 스토어 떡 카테고리 
 export const srice = [
   {
-    idx: "1",
+    idx: "7",
     isrc: "/images/store/ricecake/1.jpg",
     dtsrc:[""],
     tit: "수리취앙금가래떡 1kg",
@@ -102,7 +102,7 @@ export const srice = [
    
   },
   {
-    idx: "2",
+    idx: "8",
     isrc: "/images/store/ricecake/2.jpg",
     dtsrc:[""],
     tit: "유기농 떡볶이떡 500g",
@@ -116,7 +116,7 @@ export const srice = [
    
   },
   {
-    idx: "3",
+    idx: "9",
     isrc: "/images/store/ricecake/3.jpg",
     dtsrc:[""],
     tit: "꽃소떡 1kg",
@@ -130,7 +130,7 @@ export const srice = [
    
   },
   {
-    idx: "4",
+    idx: "10",
     isrc: "/images/store/ricecake/4.jpg",
     dtsrc:[""],
     tit: "나리랑 달래랑",
@@ -144,7 +144,7 @@ export const srice = [
    
   },
   {
-    idx: "5",
+    idx: "11",
     isrc: "/images/store/ricecake/5.jpg",
     dtsrc:[""],
     tit: "우리 찹쌀로 만든 쑥오쟁이떡 400g",
@@ -158,7 +158,7 @@ export const srice = [
    
   },
   {
-    idx: "6",
+    idx: "12",
     isrc: "/images/store/ricecake/6.jpg",
     dtsrc:[""],
     tit: "현미떡국떡 500g",
@@ -172,7 +172,7 @@ export const srice = [
    
   },
   {
-    idx: "7",
+    idx: "13",
     isrc: "/images/store/ricecake/7.jpg",
     dtsrc:[""],
     tit: "유기농 떡국떡 500g",
@@ -191,7 +191,7 @@ export const srice = [
 // 스토어 만두 카테고리 
 export const smando = [
   {
-    idx: "1",
+    idx: "14",
     isrc: "/images/store/mando/1.jpg",
     dtsrc:[""],
     tit: "우리밀 손만두 1kg",
@@ -205,7 +205,7 @@ export const smando = [
    
   },
   {
-    idx: "2",
+    idx: "15",
     isrc: "/images/store/mando/2.jpg",
     dtsrc:[""],
     tit: "노랑꼬마채식만두 1kg",
@@ -219,7 +219,7 @@ export const smando = [
    
   },
   {
-    idx: "3",
+    idx: "16",
     isrc: "/images/store/mando/3.jpg",
     dtsrc:[""],
     tit: "우리밀 고기 호떡 만두",
@@ -233,7 +233,7 @@ export const smando = [
    
   },
   {
-    idx: "4",
+    idx: "17",
     isrc: "/images/store/mando/4.jpg",
     dtsrc:[""],
     tit: "우리밀 물만두 500g",
@@ -247,7 +247,7 @@ export const smando = [
    
   },
   {
-    idx: "5",
+    idx: "18",
     isrc: "/images/store/mando/5.jpg",
     dtsrc:[""],
     tit: "우리밀 왕교자 1kg",
@@ -261,7 +261,7 @@ export const smando = [
    
   },
   {
-    idx: "6",
+    idx: "19",
     isrc: "/images/store/mando/6.jpg",
     dtsrc:[""],
     tit: "우리밀 파삭 당면만두 1kg",
@@ -279,7 +279,7 @@ export const smando = [
 // 스토어 아이스크림 카테고리 
 export const sicecream = [
   {
-    idx: "1",
+    idx: "20",
     isrc: "/images/store/icecream/1.png",
     dtsrc:[""],
     tit: "오미자로 쭈 120ml x 40개",
@@ -293,7 +293,7 @@ export const sicecream = [
    
   },
   {
-    idx: "2",
+    idx: "21",
     isrc: "/images/store/icecream/2.jpg",
     dtsrc:[""],
     tit: "유기농 딸기 아이스크림 100mlx20개",
@@ -307,7 +307,7 @@ export const sicecream = [
    
   },
   {
-    idx: "3",
+    idx: "22",
     isrc: "/images/store/icecream/3.jpg",
     dtsrc:[""],
     tit: "유기농 초코 아이스크림 100mlx20개",
@@ -321,7 +321,7 @@ export const sicecream = [
    
   },
   {
-    idx: "4",
+    idx: "23",
     isrc: "/images/store/icecream/4.jpg",
     dtsrc:[""],
     tit: "유기농 아이스크림 3종 세트",
@@ -335,7 +335,7 @@ export const sicecream = [
    
   },
   {
-    idx: "5",
+    idx: "24",
     isrc: "/images/store/icecream/5.jpg",
     dtsrc:[""],
     tit: "유기농 바닐라 아이스크림 100mlx20개",

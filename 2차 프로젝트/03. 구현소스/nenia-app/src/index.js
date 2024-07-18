@@ -12,13 +12,13 @@ import Store from "./components/pages/Store";
 import Member from "./components/pages/Member";
 import Login from "./components/pages/Login";
 import SearchPage from "./components/pages/SearchPage";
-
-
+import Cart from "./components/pages/Cart";
 
 // 전체 공통 CSS 불러오기
 import "../src/css/main.scss";
 
 export default function MainComponent() {
+  // 코드 리턴구역 /////////////
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       {/* 라우터 경로 변경시 최상단이동 컴포넌트 */}
@@ -42,10 +42,7 @@ export default function MainComponent() {
           <Route path="member" element={<Member />} />
           <Route path="login" element={<Login />} />
           <Route path="search" element={<SearchPage />} />
-
-    
-      
-
+          <Route path="cart" element={<Cart />} />
         </Route>
       </Routes>
     </BrowserRouter>

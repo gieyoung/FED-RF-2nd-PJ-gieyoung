@@ -92,7 +92,7 @@ export default function TopArea({ loginSts, logoutFn, goPage }) {
                   <>
                    {/* <!-- 장바구니 --> */}
                    <li className="cart btn">
-                      <Link to="/" className="po-center">
+                      <Link to="/cart" className="po-center">
                         장바구니
                       </Link>
                     </li>

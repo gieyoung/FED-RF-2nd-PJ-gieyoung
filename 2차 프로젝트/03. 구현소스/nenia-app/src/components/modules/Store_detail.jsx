@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState, useRef } from "react";
-import SubIntro from "../modules/SubIntro.jsx";
 import { Link } from "react-router-dom";
+import SubIntro from "../modules/SubIntro.jsx";
 
 // 데이터 불러오기
 import { storeCat } from "../data/store_cat.js";
@@ -14,37 +14,18 @@ import "../../css/store_detail.scss";
 
 // 제이쿼리
 import $ from "jquery";
-import { pCon } from "./pCon";
+import { dCon } from "../modules/dCon";
 
-export default function Store_detail({ backList, gNo, selItem, tot, setTot, dt }) {
-  
+export default function Store_detail({ backList, gNo, selItem }) {
   // (1) backList - 부모컴포넌트가 전달해준 상태변수
   // (viewList를 업데이트하는 setViewList메서드임!)
   // (2) gNo - 상품 데이터 배열순번
   // (idx 상태관리변수가 전달됨 - 이 값 변경시 컴포넌트 변경됨)
-    // tot - 상품토탈정보
+  // tot - 상품토탈정보
   // setTot - 상품토탈정보 업데이트함수
-  // dt - 상품데이터
 
-  // 상품정보 개별 셋업 ////
-  // cat - 카테고리
-  // let cat = tot.category;
-  // // ginfo - 상품정보
-  // let ginfo = tot.ginfo;
-  // // gIdx - 상품고유번호
-  // let gIdx = tot.idx;
-
-  // console.log(cat, ginfo, gIdx);
-
-  
-  // // 전역 카트 사용여부값 업데이트 사용위해 전역 컨텍스트 사용
-  // const myCon = useContext(pCon);
-
-  // // 제이쿼리 이벤트함수에 전달할 ginfo값 참조변수
-  // const getGinfo = useRef(ginfo);
-  // // getGinfo참조변수는 새로들어온 ginfo전달값이 달라진 경우
-  // // 업데이트한다!
-  // if (getGinfo.current != ginfo) getGinfo.current = ginfo;
+  // 전역 카트 사용여부값 업데이트 사용위해 전역 컨텍스트 사용
+  const myCon = useContext(dCon);
 
   // 스토어리스트 데이터 모으기(브레드, 떡, 만두, 아이스크림)
   const selData = [...sbread, ...srice, ...smando, ...sicecream];
@@ -63,12 +44,10 @@ export default function Store_detail({ backList, gNo, selItem, tot, setTot, dt }
   } else if (selItem === "아이스크림") {
     storeData = sicecream;
   }
-  // console.log("선택된 카테고리의 데이터", storeData, gNo, selData[gNo]);
-
+  console.log("storeData:", storeData, "gNo:", gNo,"selData[gNo]:", selData[gNo],"storeData[gNo]:", storeData[gNo], "storeData[gNo].disprice:",storeData[gNo].disprice);
 
   // 화면랜더링구역 : 한번만 //////////
   useEffect(() => {
-    
     // [ 수량증감 버튼클릭시 증감기능구현 ]
 
     // 1. 대상요소 ///////
@@ -78,18 +57,42 @@ export default function Store_detail({ backList, gNo, selItem, tot, setTot, dt }
     const numBtn = $(".chg_num");
     // (3) 총합계 요소
     const total = $("#total");
-    // console.log(sum,numBtn);
 
-  
+    // 2. 수량증감 이벤트함수 ///
+    numBtn.on("click", (e) => {
+      // (1) 이미지순번(구분하려고)
+      // 클릭된 이미지 버튼의 부모 요소를 기준으로 인덱스 구하기
+      let seq = $(e.target).index();
+      // let seq = $(e.currentTarget).index();
+      console.log("버튼순번:", seq, e.target, e.currentTarget);
+      // 0은 증가 / 1은 감소
 
-    // 참고) 제거용 -> numBtn.off("click");
+      // (2) 기존 숫자값 읽기
+      let num = Number(sum.val());
+      console.log("현재숫자:", num);
+
+      // (3) 증감반영하기(0은 false,1은 true 처리)
+      sum.val(seq == 0 ? ++num : num == 1 ? 1 : --num);
+      // seq가0이냐?그럼 증가:아니면 (num이 1이냐)
+      // 그럼1 아니면 감소 -> num이 1이하면 안되니까!
+      // 증감기호가 변수 앞에 있어야 먼저증감하고 할당함!
+
+      // (4) 총합계 반영하기
+
+      const totalPrice = parseInt(selData[gNo].disprice[0].replace(",", ""), 10) * num + "원";
+
+      total.text(addComma(totalPrice));
+
+      console.log("나야나", totalPrice);
+    }); //////// click ////////
   }, []); /// 현재컴포넌트 처음생성시 한번만 실행구역 ///
 
   // [ 화면랜더링구역 : 매번 ] ///
   useEffect(() => {
     // 매번 리랜더링 될때마다 수량초기화!
-    $("#sum").val(1);
-    
+    // $("#sum").val(1);
+    // 총합계 초기화
+    // $("#total").text(selData[gNo].disprice[0] + "원");
   }); ////////// useEffect //////
 
   // 코드리턴구역 ///////////
@@ -119,55 +122,111 @@ export default function Store_detail({ backList, gNo, selItem, tot, setTot, dt }
                 <span>판매가</span>
                 <span className="price-right">
                   {/* 할인가 */}
-                  <span>{storeData[gNo].disprice}</span>
+                  <span>{storeData[gNo].disprice}원</span>
                   <span className="price">
                     {/* 정가 */}
                     {storeData[gNo].price}
                   </span>
                 </span>
               </div>
+              {/* 보관법 */}
               <div className="product-order-list product-point">
                 <span>보관법</span>
                 <span className="point-right">{storeData[gNo].method}</span>
               </div>
+              {/* 구매수량 */}
+              <div className="product-order-list">
+                <span>구매수량</span>
+                <span>
+                  {/* 카운트 박스 */}
+                  <input className="count-box" type="text" id="sum" defaultValue="1" />
+                  <b className="chg_num">
+                    <img src={process.env.PUBLIC_URL + "/images/cnt_up.png"} alt="증가" />
+                    <img src={process.env.PUBLIC_URL + "/images/cnt_down.png"} alt="감소" />
+                  </b>
+                </span>
+              </div>
             </div>
+
             <div className="product-ordered-box"></div>
             <div className="total-price-box">
               <span>총 합계</span>
-              <div className="option-counter">
-                {/* 카운트 박스 */}
-                <div className="count-box">
-                  <input
-                    className="count-input"
-                    type="text"
-                    id="sum"
-                    defaultValue="1"
-                  />
-                </div>
-                
-                <div className="btn chg_num">
-                  {/* 마이너스 버튼 */}
-                  <div className="minus-btn"></div>
-                  {/* 플러스 버튼 */}
-                  <div className="plus-btn"></div>
-                </div>
-              </div>
-              <span>
-                0
+              <span id="total">
+                {/* 갯수1일때 가격 */}
+                {selData[gNo].disprice}원
                 <span
                   style={{
                     fontSize: "14px",
                     fontWeight: 400,
                     paddingLeft: "5px",
                   }}
-                >
-                  원
-                </span>
+                ></span>
               </span>
             </div>
             <div className="product-btns">
               <button className="buy-btn">구매하기</button>
-              <button className="cart-btn">장바구니</button>
+              <button
+                className="cart-btn"
+                onClick={(e) => {
+                  e.preventDefault();
+                  // [ 로컬스 카트 데이터 넣기 ]
+                  // 1. 로컬스 없으면 만들어라!
+                  if (!localStorage.getItem("cart-data")) {
+                    localStorage.setItem("cart-data", "[]");
+                  } //// if /////
+
+                  // 2. 로컬스 읽어와서 파싱하기
+                  let locals = localStorage.getItem("cart-data");
+                  locals = JSON.parse(locals);
+
+                  // idx값만 모아서 다른 배열만들기
+                  let newLocals = locals.map((v) => v.idx);
+                  console.log("idx새배열:", newLocals);
+
+                  // 중복 확인을 위한 idx 값을 설정
+                  let currentIdx = selData[gNo].idx; //확인하려는 현재 상품의 idx 값이어야 함
+
+                  console.log("idx값", currentIdx);
+
+                  // 인클루드 비교
+                  let retSts = newLocals.includes(currentIdx);
+
+                  console.log("중복상태:", retSts);
+                  if (retSts) {
+                    // 메시지 보이기
+                    alert("이미 선택하신 상품입니다!");
+                    // 함수 나가기
+                    return;
+                  } ///// if //////
+
+                  // 4.로컬스에 객체 데이터 추가하기
+                  locals.push({
+                    idx: selData[gNo].idx,
+                    cat: selData[gNo].catname,
+                    gtit: selData[gNo].tit,
+                    cnt: $("#sum").val(),
+                    price: selData[gNo].disprice,
+                  });
+                  /************************** 
+                    [데이터 구조정의]
+                    1. idx : 상품고유번호
+                    2. cat : 카테고리
+                    3. gtit : 상품명
+                    4. cnt : 상품개수
+                    5. price : 가격
+                  **************************/
+
+                  // 로컬스에 문자화하여 입력하기
+                  localStorage.setItem("cart-data", JSON.stringify(locals));
+
+                  // 로컬스 카트데이터 상태값 변경!
+                  myCon.setLocalsCart(localStorage.getItem("cart-data"));
+                  // 카트리스트 생성 상태값 변경!
+                  myCon.setCartSts(true);
+                }}
+              >
+                장바구니
+              </button>
               <button className="list-btn" onClick={() => backList(true)}>
                 리스트 이동
               </button>

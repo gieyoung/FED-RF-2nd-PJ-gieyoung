@@ -22,8 +22,7 @@ export default function Store_List({ viewDetail, updateIdx, selItem }) {
   // (1) viewDetail - 부모컴포넌트가 전달해준 상태변수
   // (viewList를 업데이트하는 setViewList메서드임!)
   // (2) updateIdx - 부모컴포넌트의 setIdx 상태관리변수의 메서드
-   // 상품토탈정보
-   const [tot, setTot] = useState(selData[0]); 
+  
 
 
 
@@ -60,6 +59,9 @@ export default function Store_List({ viewDetail, updateIdx, selItem }) {
                 viewDetail(false);
                 // setIdx메서드가 updateIdx로 들어옴
                 updateIdx(i);
+                // 상품토탈정보 업데이트
+                // setTot(v);
+              
               }}
               style={{
                 backgroundImage: `url(${v.isrc})`,
