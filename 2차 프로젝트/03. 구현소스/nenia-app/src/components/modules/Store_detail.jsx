@@ -228,7 +228,7 @@ export default function Store_detail({ backList, gNo, selItem }) {
                 장바구니
               </button>
               <button className="list-btn" onClick={() => backList(true)}>
-                리스트 이동
+                상품 리스트
               </button>
             </div>
           </div>

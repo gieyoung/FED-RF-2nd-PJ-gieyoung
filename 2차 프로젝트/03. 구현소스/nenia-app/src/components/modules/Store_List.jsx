@@ -59,8 +59,7 @@ export default function Store_List({ viewDetail, updateIdx, selItem }) {
                 viewDetail(false);
                 // setIdx메서드가 updateIdx로 들어옴
                 updateIdx(i);
-                // 상품토탈정보 업데이트
-                // setTot(v);
+              
               
               }}
               style={{
@@ -76,12 +75,28 @@ export default function Store_List({ viewDetail, updateIdx, selItem }) {
             <span>{v.catname}</span>
           </div>
           <dl className="info">
+          <a
+              href="#"
+              onClick={(e) => {
+                // a요소 기본이동막기
+                e.preventDefault();
+                // 상태변수 viewList 업데이트
+                // setViewList메서드가 viewDetail로 들어옴
+                viewDetail(false);
+                // setIdx메서드가 updateIdx로 들어옴
+                updateIdx(i);
+              
+              
+              }}
+             
+            >
             <dt className="subject">
               <span className="font-6">
                 {v.tit}
               </span>
             </dt>
             <dd className="content font-7 nanum">{v.disprice}원</dd>
+            </a>
           </dl>
         </li>
       ))}
