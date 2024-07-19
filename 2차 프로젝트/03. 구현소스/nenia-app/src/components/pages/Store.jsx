@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useContext } from "react";
 import SubIntro from "../modules/SubIntro.jsx";
 import { Link } from "react-router-dom";
 
@@ -19,13 +19,18 @@ import "../../css/store.scss";
 
 // 제이쿼리
 import $ from "jquery";
+import { dCon } from "../modules/dCon.jsx";
 
 function Store() {
   // [ 후크 상태관리 변수 셋팅! ] //
   // 1. 카테고리 상태관리변수
   const [activeCat, setActiveCat] = useState(0);
+
+  const myCon = useContext(dCon);
+  const viewList = myCon.viewList;
+  const setViewList = myCon.setViewList;
   // 2. 리스트 / 상세보기 전환용 상태관리변수
-  const [viewList, setViewList] = useState(true);
+  // const [viewList, setViewList] = useState(true);
   // 3. 상품 데이터 인덱스값 상태관리변수
   const [idx, setIdx] = useState(0);
   // 4. 선택 아이템 고유이름 상태관리변수
@@ -33,6 +38,11 @@ function Store() {
 
   // 5. 검색상태 관리변수 : 값유지만 하도록 참조변수로 생성
   const searchSts = useRef(false);
+
+  const orgData = [...sbread, ...srice, ...smando, ...sicecream];
+
+  // 데이터 가져오기
+  const [selData,setSelData] = useState(orgData);
 
   // 검색기능수행 함수 ////////////////////
   const searchList = () => {
@@ -46,17 +56,14 @@ function Store() {
       return;
     } //////// if //////
 
-    // 데이터 가져오기
-    const selData = [...sbread, ...srice, ...smando, ...sicecream];
+    console.log("로컬스:", orgData);
 
-    console.log("로컬스:", selData);
-
-    // selData 배열에서 tit 속성만 추출하여 새로운 배열 생성
-    const titData = selData.map((v) => v.tit);
+    // orgData 배열에서 tit 속성만 추출하여 새로운 배열 생성
+    const titData = orgData.map((v) => v.tit);
     console.log("titData:", titData);
 
     // 4. titData에서 검색기준값으로 검색하기
-    const resData = selData.filter((v) => {
+    const resData = orgData.filter((v) => {
       // titData에서 검색어가 포함된 경우에 해당하는 데이터만 필터링
       if (v.tit.includes(inpVal)) {
         return true;
@@ -67,7 +74,12 @@ function Store() {
     console.log("검색데이터:", resData);
 
     // 5. 리스트 업데이트 하기
-    // orgData = resData;
+    setSelData(resData);
+
+    setSelItem("전체보기");
+    setActiveCat(0);
+
+
   }; ////////////// searchList 함수 //////////////
 
   ////코드리턴구역////////////////////////////////
@@ -96,8 +108,11 @@ function Store() {
 
                         let selItem;
 
+                          $("#stxt").val('');
+
                         if (v.category === "all") {
                           selItem = "전체보기";
+                          setSelData(orgData);
                         } else if (v.category === "bread") {
                           selItem = "브레드";
                         } else if (v.category === "ricecake") {
@@ -114,7 +129,6 @@ function Store() {
                         // 초이스 변경시 무조건 리스트 페이지보기
                         // -> viewList 업데이트하기
                         setViewList(true);
-       
                       }}
                     >
                       {v.cname}
@@ -147,7 +161,20 @@ function Store() {
             <ul className="board_newgallery">
               {
                 // 상태관리변수 viewList값이 true이면 리스트보기
-                viewList ? <Store_List viewDetail={setViewList} updateIdx={setIdx} selItem={selItem} /> : <Store_detail backList={setViewList} gNo={idx} selItem={selItem} />
+                viewList ? (
+                  <Store_List
+                    selData={selData}
+                    viewDetail={setViewList}
+                    updateIdx={setIdx}
+                    selItem={selItem}
+                  />
+                ) : (
+                  <Store_detail
+                    backList={setViewList}
+                    gNo={idx}
+                    selItem={selItem}
+                  />
+                )
                 // false이면 상품 상세리스트 보기
               }
             </ul>

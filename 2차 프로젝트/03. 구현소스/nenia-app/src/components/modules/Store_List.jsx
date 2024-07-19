@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import SubIntro from "../modules/SubIntro.jsx";
 import { Link } from "react-router-dom";
 
@@ -15,18 +15,31 @@ import "../../css/store.scss";
 // 제이쿼리
 import $ from "jquery";
 
-export default function Store_List({ viewDetail, updateIdx, selItem }) {
+export default function Store_List({ selData, viewDetail, updateIdx, selItem }) {
   // 스토어리스트 데이터 모으기(브레드, 떡, 만두, 아이스크림)
-  const selData = [...sbread, ...srice, ...smando, ...sicecream];
+  // const selData = [...sbread, ...srice, ...smando, ...sicecream];
   // (1) viewDetail - 부모컴포넌트가 전달해준 상태변수
   // (viewList를 업데이트하는 setViewList메서드임!)
   // (2) updateIdx - 부모컴포넌트의 setIdx 상태관리변수의 메서드
+
+  // 원본 데이터
+  const orgData = [...sbread, ...srice, ...smando, ...sicecream];
+
+  const tempData = useRef(selData);
+
+  
+  if(tempData.current != orgData){
+    tempData.current = selData;
+  }
+
+  console.log("비교데이터:",tempData.current);
+
 
   // 선택코드에 따른 데이터 선택하기
   let storeData;
 
   if (selItem == "전체보기") {
-    storeData = selData;
+    storeData = tempData.current != orgData && selData;
   } else if (selItem == "브레드") {
     storeData = sbread;
   } else if (selItem == "떡") {

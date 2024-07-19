@@ -7,8 +7,12 @@ import { addComma } from "../func/common_fn";
 
 // 제이쿼리
 import $ from "jquery";
+import { useNavigate } from "react-router-dom";
 
 function CartList({ loginSts }) {
+
+  const goNav = useNavigate();
+
   // 강제 리랜더링을 위한 상태변수
   const [force, setForce] = useState(false);
   // -> 불린값을 넣어놓고 강제 리랜더링이 필요한 경우
@@ -114,6 +118,8 @@ function CartList({ loginSts }) {
                       onClick={(e) => {
                         e.preventDefault();
                         ItemClick(v.idx); // idx 값 전달
+                        myCon.setViewList(false);
+                        goNav("/store");                        
                       }}
                     >
                       {v.gtit}

@@ -18,6 +18,9 @@ export default function Layout() {
   const [loginMsg, setLoginMsg] = useState(null);
   // console.log(loginMsg);
 
+  // 2. 리스트 / 상세보기 전환용 상태관리변수
+  const [viewList, setViewList] = useState(true);
+
   // [ 공통 함수 ] ///
   // 1. 라우팅 이동함수
   const goPage = useNavigate();
@@ -60,28 +63,24 @@ export default function Layout() {
   let cartTemp = false;
 
   // [ 로컬스 카트 데이터 상태변수 ] ///
-  const [localsCart,setLocalsCart] = 
-  useState(localStorage.getItem("cart-data"));
+  const [localsCart, setLocalsCart] = useState(
+    localStorage.getItem("cart-data")
+  );
 
   // 로컬스 카트 데이터 존재여부에 따라 상태값 변경
-  if(localsCart){
+  if (localsCart) {
     // 데이터가 있으면 cartTemp값 true로 변경
     // 데이터 개수가 0이 아니어야함!
     let cartCnt = JSON.parse(localsCart).length;
     // console.log("카트 데이터수:",cartCnt);
-    if(cartCnt > 0) cartTemp = true;
+    if (cartCnt > 0) cartTemp = true;
   } //////////// 카트존재여부 if ////////
-
-
 
   // 상태관리 변수 셋팅 ///////
   // 1. 페이지변경 상태변수
   // const [pgName, setPgName] = useState("main");
   // 2. 카트리스트 사용여부 : true 일때 사용
-  const [cartSts,setCartSts] = useState(cartTemp);
-
-
-
+  const [cartSts, setCartSts] = useState(cartTemp);
 
   /*************************************** 
       [ 컨텍스트 API 공개 변수들 ]
@@ -105,10 +104,17 @@ export default function Layout() {
         setCartSts,
         setLocalsCart,
         localsCart,
+        viewList,
+        setViewList,
       }}
     >
       {/* 1.상단영역 */}
-      <TopArea loginMsg={loginMsg} loginSts={loginSts} logoutFn={logoutFn} goPage={goPage} />
+      <TopArea
+        loginMsg={loginMsg}
+        loginSts={loginSts}
+        logoutFn={logoutFn}
+        goPage={goPage}
+      />
       {/* 2.메인영역 */}
       <MainArea />
       {/* 3.하단영역 */}
