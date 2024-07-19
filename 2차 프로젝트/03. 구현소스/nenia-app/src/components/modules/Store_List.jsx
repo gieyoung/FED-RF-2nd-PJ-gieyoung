@@ -15,34 +15,28 @@ import "../../css/store.scss";
 // 제이쿼리
 import $ from "jquery";
 
-
 export default function Store_List({ viewDetail, updateIdx, selItem }) {
   // 스토어리스트 데이터 모으기(브레드, 떡, 만두, 아이스크림)
   const selData = [...sbread, ...srice, ...smando, ...sicecream];
   // (1) viewDetail - 부모컴포넌트가 전달해준 상태변수
   // (viewList를 업데이트하는 setViewList메서드임!)
   // (2) updateIdx - 부모컴포넌트의 setIdx 상태관리변수의 메서드
-  
 
+  // 선택코드에 따른 데이터 선택하기
+  let storeData;
 
-
-
-    // 선택코드에 따른 데이터 선택하기
-    let storeData;
-
-    if (selItem == "전체보기") {
-      storeData = selData;
-    } else if (selItem == "브레드") {
-      storeData = sbread;
-    } else if (selItem == "떡") {
-      storeData = srice;
-    } else if (selItem == "만두") {
-      storeData = smando;
-    } else if(selItem === "아이스크림"){
-      storeData = sicecream;
-    }
-    console.log("선택된 카테고리의 데이터",storeData);
-
+  if (selItem == "전체보기") {
+    storeData = selData;
+  } else if (selItem == "브레드") {
+    storeData = sbread;
+  } else if (selItem == "떡") {
+    storeData = srice;
+  } else if (selItem == "만두") {
+    storeData = smando;
+  } else if (selItem === "아이스크림") {
+    storeData = sicecream;
+  }
+  console.log("선택된 카테고리의 데이터", storeData);
 
   return (
     <>
@@ -59,8 +53,8 @@ export default function Store_List({ viewDetail, updateIdx, selItem }) {
                 viewDetail(false);
                 // setIdx메서드가 updateIdx로 들어옴
                 updateIdx(i);
-              
-              
+                // 상세페이지로 갈때 스크롤 상단 이동
+                window.scrollTo(0, 800);
               }}
               style={{
                 backgroundImage: `url(${v.isrc})`,
@@ -75,27 +69,26 @@ export default function Store_List({ viewDetail, updateIdx, selItem }) {
             <span>{v.catname}</span>
           </div>
           <dl className="info">
-          <a
+            <a
               href="#"
               onClick={(e) => {
                 // a요소 기본이동막기
                 e.preventDefault();
                 // 상태변수 viewList 업데이트
                 // setViewList메서드가 viewDetail로 들어옴
+                // 상태관리변수 viewList값이 true이면 리스트보기
+                // false이면 상품 상세리스트 보기
                 viewDetail(false);
                 // setIdx메서드가 updateIdx로 들어옴
                 updateIdx(i);
-              
-              
+                // 상세페이지로 갈때 스크롤 상단 이동
+                window.scrollTo(0, 800);
               }}
-             
             >
-            <dt className="subject">
-              <span className="font-6">
-                {v.tit}
-              </span>
-            </dt>
-            <dd className="content font-7 nanum">{v.disprice}원</dd>
+              <dt className="subject">
+                <span className="font-6">{v.tit}</span>
+              </dt>
+              <dd className="content font-7 nanum">{v.disprice}원</dd>
             </a>
           </dl>
         </li>
@@ -103,5 +96,3 @@ export default function Store_List({ viewDetail, updateIdx, selItem }) {
     </>
   );
 }
-
-

@@ -22,7 +22,7 @@ export default function MainComponent() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       {/* 라우터 경로 변경시 최상단이동 컴포넌트 */}
-      {/* <ScrollTop /> */}
+      <ScrollTop />
       <Routes>
         {/* 레이아웃 컴포넌트를 루트로 설정!
         루트 Route 는 홀로닫지말고 반드시 다른

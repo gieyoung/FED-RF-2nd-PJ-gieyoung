@@ -152,18 +152,22 @@
 // 버튼
 .product-btns {
   display: flex;
-  gap: 30px;
+  gap: 10px;
   margin-top: 80px;
+
+  
   
   // 버튼 공통
   button{
     cursor: pointer;
     width: calc(100% / 3);
-    font-size: 18px;
+    font-size: 16px;
     border: 1px solid #000;
     text-align: center;
-    line-height: 60px;
-    font-weight: 600;
+    padding: 10px 0;
+    font-weight: 500;
+      /* 폰트 */
+    font-family: "Pretendard-Regular";
  
 
     &:hover{

@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import SubIntro from "../modules/SubIntro.jsx";
+import { dCon } from "../modules/dCon";
 
 // 데이터 불러오기
 import { storeCat } from "../data/store_cat.js";
@@ -14,9 +15,8 @@ import "../../css/store_detail.scss";
 
 // 제이쿼리
 import $ from "jquery";
-import { dCon } from "../modules/dCon";
 
-export default function Store_detail({ backList, gNo, selItem }) {
+export default function Store_detail({ backList, gNo, selItem, loginSts }) {
   // (1) backList - 부모컴포넌트가 전달해준 상태변수
   // (viewList를 업데이트하는 setViewList메서드임!)
   // (2) gNo - 상품 데이터 배열순번
@@ -30,7 +30,7 @@ export default function Store_detail({ backList, gNo, selItem }) {
   // 스토어리스트 데이터 모으기(브레드, 떡, 만두, 아이스크림)
   const selData = [...sbread, ...srice, ...smando, ...sicecream];
 
-  // 선택코드에 따른 데이터 선택하기
+  // 카테고리에 따른 데이터 선택하기
   let storeData;
 
   if (selItem == "전체보기") {
@@ -44,7 +44,7 @@ export default function Store_detail({ backList, gNo, selItem }) {
   } else if (selItem === "아이스크림") {
     storeData = sicecream;
   }
-  console.log("storeData:", storeData, "gNo:", gNo,"selData[gNo]:", selData[gNo],"storeData[gNo]:", storeData[gNo], "storeData[gNo].disprice:",storeData[gNo].disprice);
+  console.log("storeData:", storeData, "gNo:", gNo, "selData[gNo]:", selData[gNo], "storeData[gNo]:", storeData[gNo], "storeData[gNo].disprice:", storeData[gNo].disprice);
 
   // 화면랜더링구역 : 한번만 //////////
   useEffect(() => {
@@ -78,7 +78,6 @@ export default function Store_detail({ backList, gNo, selItem }) {
       // 증감기호가 변수 앞에 있어야 먼저증감하고 할당함!
 
       // (4) 총합계 반영하기
-
       const totalPrice = parseInt(selData[gNo].disprice[0].replace(",", ""), 10) * num + "원";
 
       total.text(addComma(totalPrice));
@@ -91,7 +90,7 @@ export default function Store_detail({ backList, gNo, selItem }) {
   useEffect(() => {
     // 매번 리랜더링 될때마다 수량초기화!
     // $("#sum").val(1);
-    // 총합계 초기화
+    // // 총합계 초기화
     // $("#total").text(selData[gNo].disprice[0] + "원");
   }); ////////// useEffect //////
 
@@ -164,7 +163,22 @@ export default function Store_detail({ backList, gNo, selItem }) {
               </span>
             </div>
             <div className="product-btns">
-              <button className="buy-btn">구매하기</button>
+              <button
+                className="buy-btn"
+                onClick={(e) => {
+                  e.preventDefault();
+                  // 로그인 상태가 null일 때
+                  if (loginSts === null) {
+                    alert("로그인이 필요한 서비스입니다");
+                  }
+                  // 로그인 상태일 때
+                  else {
+                    alert("현재 지원하지 않는 서비스입니다");
+                  }
+                }}
+              >
+                구매하기
+              </button>
               <button
                 className="cart-btn"
                 onClick={(e) => {
@@ -184,7 +198,7 @@ export default function Store_detail({ backList, gNo, selItem }) {
                   console.log("idx새배열:", newLocals);
 
                   // 중복 확인을 위한 idx 값을 설정
-                  let currentIdx = selData[gNo].idx; //확인하려는 현재 상품의 idx 값이어야 함
+                  let currentIdx = storeData[gNo].idx; //확인하려는 현재 상품의 idx 값이어야 함
 
                   console.log("idx값", currentIdx);
 
@@ -198,14 +212,19 @@ export default function Store_detail({ backList, gNo, selItem }) {
                     // 함수 나가기
                     return;
                   } ///// if //////
+                  else {
+                    // 메시지 보이기
+                    alert("장바구니에 담겼습니다!");
+                  }
 
                   // 4.로컬스에 객체 데이터 추가하기
                   locals.push({
-                    idx: selData[gNo].idx,
-                    cat: selData[gNo].catname,
-                    gtit: selData[gNo].tit,
+                    idx: storeData[gNo].idx,
+                    cat: storeData[gNo].catname,
+                    gtit: storeData[gNo].tit,
                     cnt: $("#sum").val(),
-                    price: selData[gNo].disprice,
+                    price: storeData[gNo].disprice,
+                    img: storeData[gNo].isrc,
                   });
                   /************************** 
                     [데이터 구조정의]
@@ -214,6 +233,7 @@ export default function Store_detail({ backList, gNo, selItem }) {
                     3. gtit : 상품명
                     4. cnt : 상품개수
                     5. price : 가격
+                    6. img: 상품 이미지
                   **************************/
 
                   // 로컬스에 문자화하여 입력하기
@@ -226,6 +246,17 @@ export default function Store_detail({ backList, gNo, selItem }) {
                 }}
               >
                 장바구니
+                <br /> 담기
+              </button>
+              <button
+                onClick={() =>
+                  // CartList 페이지로 이동
+                  myCon.goPage("/cart")
+                }
+              >
+                장바구니
+                <br />
+                이동
               </button>
               <button className="list-btn" onClick={() => backList(true)}>
                 상품 리스트
