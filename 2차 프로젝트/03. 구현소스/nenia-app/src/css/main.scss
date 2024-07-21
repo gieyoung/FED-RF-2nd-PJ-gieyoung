@@ -12,7 +12,8 @@
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: url("../../public/images/main/visual_img.jpg") no-repeat center/cover;
+    background: url("../../public/images/main/visual_img.jpg") no-repeat
+      center/cover;
     z-index: -1;
   }
   .main-area {
@@ -20,7 +21,7 @@
 
     // 메인1
     .txt-wrap {
-      padding: 500px 0 40px;
+      padding: 50rem 0 4rem;
       max-width: 1500px;
       color: #fff;
 
@@ -32,34 +33,32 @@
         font-weight: 600;
       }
 
-      .desc{
-        margin-top:0;
+      .desc {
+        margin-top: 0;
       }
     }
 
     // main2영역- 스크롤되면 가로 크기가 달라짐
 
-    
-
     .main2 {
       background: #faf3e6;
       position: relative;
       top: 100px;
-      padding: 150px 0;
+      padding: 15rem 0;
       width: 80%;
       border-radius: 20px;
       margin: 0 auto;
-      height: 600px;
-     
+      height: 60rem;
+
       // 전체감싸는 박스
       .wrap {
         justify-content: space-between;
-        height: 600px;
+        height: 60rem;
       }
       // 왼쪽영역
       .left {
         width: 50%;
-        height:100%;
+        height: 100%;
 
         h1 {
           color: #149473;
@@ -81,9 +80,10 @@
         width: 50%;
         justify-content: center;
         // 썸네일 이미지
-        background: url("../../public/images/main/video_thumb.png") no-repeat center / cover;
+        background: url("../../public/images/main/video_thumb.png") no-repeat
+          center / cover;
         border-radius: 20px;
-        height:100%;
+        height: 100%;
 
         .btn {
           background-color: #ffd550;
@@ -97,7 +97,7 @@
       bottom: 0;
       left: 0;
       justify-content: center;
-      width: 100vw;
+      width: 100%;
       // 높이0으로 해서 안보이게
       height: 0;
       background: #d8e0a5;
@@ -136,8 +136,8 @@
       width: 100%;
       position: relative;
       padding: 150px 0;
-      background: url("../../public/images/back_move/main2_bak.jpg") no-repeat 50% 30% / cover;
-   
+      background: url("../../public/images/back_move/main2_bak.jpg") no-repeat
+        50% 30% / cover;
 
       ul {
         justify-content: center;
@@ -158,7 +158,6 @@
       overflow: hidden;
       position: relative;
 
-   
       .font-5 {
         color: #149473;
       }
@@ -204,13 +203,78 @@
     } /////////////////////main4끝////////////////////
 
     //main5
-  
 
     // 메인 스토어리스트 배경색만 다르게하기
-    .store-list .right{
+    .store-list .right {
       background-color: #fff;
     }
-
-    
   }
+}
+
+/********************************************** 미디어쿼리 CSS **********************************************/
+
+// 큰 디바이스
+/* 1200이하 */
+@media screen and (max-width: 1200px) {
+}
+
+/* 1024이하 */
+@media screen and (max-width: 1024px) {
+}
+
+// 중간 디바이스
+/* 768이하 */
+@media screen and (max-width: 768px) {
+  #main-area .main-area .main2{
+    height: auto;
+
+    .wrap{
+      height: auto;
+    }
+
+    .flex {
+      flex-direction: column;
+    }
+
+    .left {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 100px;
+  
+      .btn {
+        margin: 0 auto;
+      }
+  
+      .desc{
+        margin-top: 30px;
+        
+      }
+    }
+
+    .right {
+      width: 100%;
+      height: 50rem;
+    }
+  }
+
+
+
+
+  #main-area .main-area .main3 ul{
+    gap:10px;
+  }
+
+/* 480이하 */
+@media screen and (max-width: 480px) {
+  #main-area .main-area .main2 .right{
+   height: 30rem;
+}
+}
+// 작은 디바이스
+/* 360이하 */
+@media screen and (max-width: 360px) {
+}
+/* 280이하 */
+@media screen and (max-width: 280px) {
+}
 }

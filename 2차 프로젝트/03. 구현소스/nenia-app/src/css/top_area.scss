@@ -73,7 +73,7 @@
               padding: 10px 0;
               width: 100%;
               color: #fefcf7;
-              font-size: 17px;
+              font-size: 1.7rem;
               text-align: center;
               position: relative;
 
@@ -125,10 +125,10 @@
       justify-content: space-evenly;
       li {
         position: relative;
-        font-size: 14px;
+        font-size: 1.4rem;
         background: #154726;
-        width: 100px;
-        height: 35px;
+        width: 10rem;
+        height: 3.5rem;
 
         &:nth-child(2){
           margin:0 10px;
@@ -145,5 +145,32 @@
 
 
 
-// 미디어쿼리
+/********************************************** 미디어쿼리 CSS **********************************************/
+
+
+/* 1200이하 */
+@media screen and (max-width:1200px){
+  #top-area .top-area{max-width:100%; border-radius:0;}
+}
+
+/* 1024이하 */
+@media screen and (max-width:1024px) {
+  
+}
+/* 760이하 */
+@media screen and (max-width:760px) {
+
+}
+/* 480이하 */
+@media screen and (max-width:480px) {
+
+}
+/* 360이하 */
+@media screen and (max-width:360px) {
+
+}
+/* 280이하 */
+@media screen and (max-width:280px) {
+
+}
 

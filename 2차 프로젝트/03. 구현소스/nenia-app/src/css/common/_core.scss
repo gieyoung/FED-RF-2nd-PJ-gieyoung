@@ -3,10 +3,10 @@
 /* 1차 PJ : 공통 클래스 CSS - core.css */
 /* 공통 셋팅을 위한 클래스 + 웹폰트 */
 
-
 @font-face {
   font-family: "Pretendard-Regular";
-  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
 }
 
 /* 공사중 표시 */
@@ -156,7 +156,7 @@ body * {
 }
 .font-7 {
   font-size: 1.7rem;
-  color:#fff;
+  color: #fff;
   font-weight: 100;
   line-height: 1.8;
 }
@@ -177,18 +177,15 @@ body * {
 // 버튼 스타일 애니메이션
 .btn {
   position: relative;
-  font-size: 17px;
+  font-size: 1.7rem;
   background: #fff2d8;
-  width: 100px;
-  height: 50px;
-  display: inline-block;
+  width: 14rem;
+  height: 5rem;
+  display: flex;
   justify-content: center;
   align-items: center;
-  display: flex;
   border-radius: 50px;
   transition: all 0.5s;
-  font-size: 17px;
-  width: 140px;
 
   &:hover {
     scale: 1.1;
@@ -237,17 +234,61 @@ body {
   height: 100%;
 }
 
-
-
 // 탑버튼
 .top-btn {
-  background:url("../../../public/images/top_btn.png") no-repeat left top;
-	position:fixed;
-	bottom:20px;
-	right:20px;
-	width:51px;
-	height:51px;
-	z-index:99;
-	
+  background: url("../../../public/images/top_btn.png") no-repeat left top;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 51px;
+  height: 51px;
+  z-index: 99;
 }
 
+/********************************************** 미디어쿼리 CSS **********************************************/ /* 1200이하 */
+
+// 큰 디바이스
+/* 1200이하 */
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+/* 1024이하 */
+@media screen and (max-width: 1024px) {
+}
+
+// 중간 디바이스
+/* 768이하 */
+@media screen and (max-width: 768px) {
+  .font-2 {
+    font-size: 3.5rem;
+  }
+  .font-4 {
+    font-size: 3.5rem;
+  }
+}
+/* 480이하 */
+@media screen and (max-width: 480px) {
+}
+
+// 작은 디바이스
+/* 360이하 */
+@media screen and (max-width: 360px) {
+  .font-2 {
+    font-size: 2.5rem;
+  }
+  .font-4 {
+    font-size: 2.5rem;
+  }
+  .font-5 {
+    font-size: 1.6rem;
+  }
+  .btn {
+    font-size: 1.6rem;
+  }
+}
+/* 280이하 */
+@media screen and (max-width: 280px) {
+}
