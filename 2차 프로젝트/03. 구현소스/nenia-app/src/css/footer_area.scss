@@ -20,11 +20,9 @@
       .left {
         width: 50%;
 
-        .font-2{
-          padding:0;
+        .font-2 {
+          padding: 0;
         }
-
-       
 
         ul {
           display: flex;
@@ -39,11 +37,10 @@
         width: 50%;
         padding-left: 50px;
 
-        .font-3{
+        .font-3 {
           padding: 15px 0 5px;
         }
 
-        
         li:not(:last-child) {
           margin-bottom: 20px;
         }
@@ -77,8 +74,8 @@
       display: flex;
       align-items: center;
       color: rgba(254, 252, 247, 0.6);
+      justify-content: space-between;
 
-      
       span {
         color: #fff;
       }
@@ -97,9 +94,10 @@
         a {
           display: inline-block;
           /* 로고 이미지 삽입 */
-          background: url(../../public/images/footer_logo.svg) no-repeat;
-          width: 128px;
-          height: 131px;
+          background: url(../../public/images/footer_logo.svg) no-repeat
+            center/cover;
+          width: 12.8rem;
+          height: 13.1rem;
         }
       }
       .mid {
@@ -122,7 +120,7 @@
         //sns
         .sns {
           display: flex;
-          gap: 43px;
+          gap: 4.3rem;
         }
       }
 
@@ -139,4 +137,59 @@
       }
     }
   }
+}
+
+/********************************************** 미디어쿼리 CSS **********************************************/
+
+// 큰 디바이스
+/* 1200이하 */
+@media screen and (max-width: 1200px) {
+}
+
+/* 1024이하 */
+@media screen and (max-width: 1024px) {
+}
+
+// 중간 디바이스
+/* 768이하 */
+@media screen and (max-width: 768px) {
+  #footer-area .footer-area .f1-box {
+    display: none;
+  }
+  #footer-area .footer-area .f2-box {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+  #footer-area .footer-area .f2-box h2.logo {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  #footer-area .footer-area .f2-box {
+    height: auto;
+    padding: 40px 0;
+  }
+  #footer-area .footer-area .f2-box .mid {
+    width: 100%;
+  }
+  #footer-area .footer-area .f2-box .last {
+    width: 100%;
+  }
+  #footer-area .footer-area .f2-box .mid .sns {
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  #footer-area .footer-area .f2-box .last .privacy{height:100px;}
+}
+/* 480이하 */
+@media screen and (max-width: 480px) {
+
+}
+
+// 작은 디바이스
+/* 360이하 */
+@media screen and (max-width: 360px) {
+}
+/* 280이하 */
+@media screen and (max-width: 280px) {
 }

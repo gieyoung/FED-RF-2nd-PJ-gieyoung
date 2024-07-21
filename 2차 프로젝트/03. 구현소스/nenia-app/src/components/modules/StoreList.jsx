@@ -33,7 +33,7 @@ function StoreList(props) {
               backgroundSize: "cover",
             }}
           >
-            {/* {v.product} */}
+            
           </li>
         ))}
       </ul>
@@ -47,7 +47,9 @@ function StoreList(props) {
 
           {/* 스토어리스트 데이터 배열로 만들기 */}
           {storeListData.map((v, i) => (
+            
             <li key={i} className={v.clsName}>
+              <img src={process.env.PUBLIC_URL + v.img} className="only-m" alt="" />
               <h2 className="font-3">{v.product}</h2>
               <p className="font-6">{v.desc}</p>
 

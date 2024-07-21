@@ -39,6 +39,9 @@ function Nenia(props) {
             {/* 왼쪽 텍스트 영역 */}
             <div className="left">
               <ul>
+                <li className="only-m">
+                  <img src="images/nenia/bak.jpg" alt="" />
+                </li>
                 <li>
                   <h1 className="font-2">
                     네니아는 더 나은 <br />

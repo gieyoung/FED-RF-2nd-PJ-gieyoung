@@ -102,7 +102,7 @@ body * {
 .font-1 {
   font-size: 8rem;
   color: #154726;
-  padding: 350px 0 130px;
+  padding: 35rem 0 13rem;
   line-height: 1.4;
   letter-spacing: 2px;
 
@@ -245,7 +245,7 @@ body {
   z-index: 99;
 }
 
-/********************************************** 미디어쿼리 CSS **********************************************/ /* 1200이하 */
+/********************************************** 미디어쿼리 CSS **********************************************/ 
 
 // 큰 디바이스
 /* 1200이하 */
@@ -257,25 +257,40 @@ body {
 
 /* 1024이하 */
 @media screen and (max-width: 1024px) {
+  .font-2 {
+    font-size: 3.8rem;
+  }
+  .font-4 {
+    font-size: 3.8rem;
+  }
+
+  .font-3{font-size: 2.5rem;}
 }
 
 // 중간 디바이스
 /* 768이하 */
 @media screen and (max-width: 768px) {
   .font-2 {
-    font-size: 3.5rem;
+    font-size: 3.3rem;
   }
   .font-4 {
-    font-size: 3.5rem;
+    font-size: 3.3rem;
   }
+
+  .font-3{font-size: 2.5rem;}
+
 }
 /* 480이하 */
 @media screen and (max-width: 480px) {
+  .font-1{font-size: 5rem;}
 }
 
 // 작은 디바이스
 /* 360이하 */
 @media screen and (max-width: 360px) {
+  .font-1{
+    font-size: 3.5rem;
+  }
   .font-2 {
     font-size: 2.5rem;
   }
@@ -284,6 +299,9 @@ body {
   }
   .font-5 {
     font-size: 1.6rem;
+  }
+  .font-3{
+    font-size:2rem;
   }
   .btn {
     font-size: 1.6rem;

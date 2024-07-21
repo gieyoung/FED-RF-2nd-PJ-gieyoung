@@ -8,10 +8,14 @@ import "jquery-ui-dist/jquery-ui";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+var windowWidth = window.matchMedia("screen and (min-width:1200px)");
+
 // 스크롤트리거 플러그인을 불러오기
 gsap.registerPlugin(ScrollTrigger);
 
 export default function storeFn() {
+    // 디바이스 크기가 1200px 이상일 때 실행되도록 조건을 설정
+    if (windowWidth.matches) {
   $(function () {
     var storelist = gsap.timeline({
       scrollTrigger: {
@@ -79,4 +83,5 @@ export default function storeFn() {
       top: "0%",
     });
   });
+}
 }

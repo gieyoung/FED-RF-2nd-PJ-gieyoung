@@ -2,15 +2,18 @@
   // 섹션1
   .sec2 {
     background: #f4e5be;
-    padding: 100px 0;
+    padding: 10rem 0;
 
-    .img {
-      background: url("../../public/images/wheat/sec2.jpg") no-repeat center;
-      width: 1280px;
-      height: 755px;
+    img {
+      // background: url("../../public/images/wheat/sec2.jpg") no-repeat center;
+      width: 80%;
+   
+
+      padding: 10rem 0;
+
+      display: block;
       margin: 0 auto;
-
-      padding: 100px 0;
+ 
     }
 
     p {
@@ -18,3 +21,34 @@
     }
   }
 }
+
+/********************************************** 미디어쿼리 CSS **********************************************/ 
+
+// 큰 디바이스
+/* 1200이하 */
+@media screen and (max-width: 1200px) {
+}
+
+/* 1024이하 */
+@media screen and (max-width: 1024px) {
+}
+
+// 중간 디바이스
+/* 768이하 */
+@media screen and (max-width: 768px) {
+  .wheat-wrap .sec2 img{width: 100%;}
+
+}
+/* 480이하 */
+@media screen and (max-width: 480px) {
+
+}
+
+// 작은 디바이스
+/* 360이하 */
+@media screen and (max-width: 360px) {
+}
+/* 280이하 */
+@media screen and (max-width: 280px) {
+}
+

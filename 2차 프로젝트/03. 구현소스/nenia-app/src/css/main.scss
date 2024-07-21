@@ -216,6 +216,42 @@
 // 큰 디바이스
 /* 1200이하 */
 @media screen and (max-width: 1200px) {
+  #main-area .main-area .main4 li:first-child {
+    min-width: 100%;
+  }
+  #main-area .main-area .main4 .slidePg > .flex {
+    display: block;
+  }
+
+  #main-area .main-area .main4 ul {
+    height: auto;
+  }
+
+  #main-area .main-area .main4 li > .flex {
+    display: block;
+  }
+  #main-area .main-area .main4 li {
+    margin-right: 0;
+  }
+  #main-area .main-area .main4 li:not(:first-child) {
+    margin-right: 0;
+  }
+
+  .slidePg {
+    text-align: center;
+  }
+
+  .main4 {
+    padding: 15rem 0;
+
+    .btn {
+      margin: 0 auto;
+    }
+
+    .desc {
+      margin-top: 30px;
+    }
+  }
 }
 
 /* 1024이하 */
@@ -225,10 +261,18 @@
 // 중간 디바이스
 /* 768이하 */
 @media screen and (max-width: 768px) {
-  #main-area .main-area .main2{
+  #main-area .main-area .txt-wrap {
+    text-align: center;
+    padding:30rem 0 4rem;
+    
+    .btn {
+      margin: 0 auto;
+    }
+  }
+  #main-area .main-area .main2 {
     height: auto;
 
-    .wrap{
+    .wrap {
       height: auto;
     }
 
@@ -240,14 +284,13 @@
       width: 100%;
       text-align: center;
       margin-bottom: 100px;
-  
+
       .btn {
         margin: 0 auto;
       }
-  
-      .desc{
+
+      .desc {
         margin-top: 30px;
-        
       }
     }
 
@@ -257,24 +300,21 @@
     }
   }
 
-
-
-
-  #main-area .main-area .main3 ul{
-    gap:10px;
+  #main-area .main-area .main3 ul {
+    gap: 10px;
   }
 
-/* 480이하 */
-@media screen and (max-width: 480px) {
-  #main-area .main-area .main2 .right{
-   height: 30rem;
-}
-}
-// 작은 디바이스
-/* 360이하 */
-@media screen and (max-width: 360px) {
-}
-/* 280이하 */
-@media screen and (max-width: 280px) {
-}
+  /* 480이하 */
+  @media screen and (max-width: 480px) {
+    #main-area .main-area .main2 .right {
+      height: 30rem;
+    }
+  }
+  // 작은 디바이스
+  /* 360이하 */
+  @media screen and (max-width: 360px) {
+  }
+  /* 280이하 */
+  @media screen and (max-width: 280px) {
+  }
 }

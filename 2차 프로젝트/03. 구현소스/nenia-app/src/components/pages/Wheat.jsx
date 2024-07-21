@@ -27,7 +27,7 @@ function Wheat(props) {
           <div className="inbox">
             <h2 className="font-2">우리밀의 구조</h2>
             <div className="img"></div>
-            {/* <img src="../../../public/images/wheat/sec2.jpg" alt="우리밀의 구조" /> */}
+            <img src="/images/wheat/sec2.jpg" alt="우리밀의 구조" />
           </div>
         </div>
 

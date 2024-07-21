@@ -16,3 +16,34 @@
     padding-left: 10px;
   }
 }
+
+/********************************************** 미디어쿼리 CSS **********************************************/ 
+
+// 큰 디바이스
+/* 1200이하 */
+@media screen and (max-width: 1200px) {
+}
+
+/* 1024이하 */
+@media screen and (max-width: 1024px) {
+}
+
+// 중간 디바이스
+/* 768이하 */
+@media screen and (max-width: 768px) {
+  .txt p{padding: 0;}
+
+}
+/* 480이하 */
+@media screen and (max-width: 480px) {
+
+}
+
+// 작은 디바이스
+/* 360이하 */
+@media screen and (max-width: 360px) {
+}
+/* 280이하 */
+@media screen and (max-width: 280px) {
+}
+
