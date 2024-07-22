@@ -35,12 +35,12 @@
   height: 18px;
 }
 .product-desc {
-  font-size: 14px;
+  font-size: 1.4rem;
   margin-top: 15px;
 }
 .product-order-box {
   margin-top: 10px;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 500;
 }
 .product-order-list {
@@ -200,6 +200,9 @@
 }
 
 
+.selbx{display: none;}
+
+
 /********************** 미디어 쿼리 **********************/
 @media screen and (max-width: 1239px) {
   .product-container {
@@ -241,7 +244,7 @@
 }
 @media screen and (max-width: 399px) {
   .product-name {
-    font-size: 25px;
+    font-size: 2.5rem;
   }
   .product-btns {
     height: 50px;
