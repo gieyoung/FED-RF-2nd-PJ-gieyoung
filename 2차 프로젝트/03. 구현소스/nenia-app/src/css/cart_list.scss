@@ -46,14 +46,14 @@
 #cartlist table {
   width: 100%;
   margin: 100px auto;
-  font-size: 14px;
+  font-size: 1.4rem;
   border-top: 2px solid rgb(34, 34, 34);
   border-bottom: 2px solid rgb(34, 34, 34);
   border-collapse: collapse;
 }
 #cartlist caption {
   padding: 40px 0px;
-  font-size: 30px;
+  font-size: 3rem;
 }
 #cartlist th {
   background-color: #f1f1f1;
@@ -61,9 +61,10 @@
   padding: 20px;
 }
 #cartlist td {
- padding: 10px 0;
+ padding: 10px;
   border-top: 1px solid rgb(85, 85, 85);
   text-align: center;
+
 }
 #cartlist td img {
   width: 100px;
@@ -121,7 +122,7 @@
 /* 입력창 */
 .item-cnt {
   width: 20px;
-  margin-left: 10px;
+
 }
 /* 증감 이미지버튼 */
 #cartlist .btn-cnt img {
@@ -131,9 +132,8 @@
 }
 /* 반영 버튼 */
 .btn-insert {
-  position: absolute;
-  font-size: 12px;
-  margin-left: 60px;
+  font-size: 1.2rem;
+  margin-left:10px;
   white-space: nowrap;
   padding: 0;
   overflow: hidden;
@@ -144,9 +144,9 @@
 }
 /* 취소 버튼 */
 .btn-cancel {
-  position: absolute;
-  font-size: 12px;
-  margin-left: 90px;
+  
+  font-size: 1.2rem;
+  margin-left: 2px;
   white-space: nowrap;
   padding: 0;
   overflow: hidden;
@@ -182,11 +182,11 @@
 
 // 총 합계
 .total{
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: bold;
   
   td{
-    font-size: 20px;
+    font-size: 2rem;
     padding: 50px 0 !important;
   }
   
@@ -197,7 +197,7 @@
 .go-buy button{
   cursor: pointer;
   width: 15%;
-  font-size: 18px;
+  font-size: 1.8rem;
   border: 1px solid #c8c8c8;
   text-align: center;
   padding: 15px 0;
@@ -217,13 +217,41 @@
 
 
 
+/********************************************** 미디어쿼리 CSS **********************************************/ 
 
-// td{
-//   outline: 1px solid red;
-// }
-// th{
-//   outline: 1px solid red;
-// }
+// 큰 디바이스
+/* 1200이하 */
+@media screen and (max-width: 1200px) {
+  
+}
 
+/* 1024이하 */
+@media screen and (max-width: 1024px) {
+}
 
+// 중간 디바이스
+/* 768이하 */
+@media screen and (max-width: 768px) {
+  // 품목삭제
+  #cartlist th:nth-child(2), #cartlist td:nth-child(2){display: none;}
+  #cartlist th:nth-child(3), #cartlist td:nth-child(3){display: none;}
+  #cartlist th{padding:10px;}
+  .go-buy button{width:55%; margin: 5px 0;}
+  .go-buy button:first-child{margin-right: 0;}
+ 
 
+}
+/* 480이하 */
+@media screen and (max-width: 480px) {
+  #cartlist caption{font-size:2rem;}
+
+}
+
+// 작은 디바이스
+/* 360이하 */
+@media screen and (max-width: 360px) {
+ 
+}
+/* 280이하 */
+@media screen and (max-width: 280px) {
+}

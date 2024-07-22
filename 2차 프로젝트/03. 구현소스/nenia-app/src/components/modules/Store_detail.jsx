@@ -15,14 +15,18 @@ import "../../css/store_detail.scss";
 
 // 제이쿼리
 import $ from "jquery";
+        
 
-export default function Store_detail({ backList, gNo, selItem, loginSts }) {
+export default function Store_detail({ backList, gNo, selItem, loginSts, setSearchVisible }) {
   // (1) backList - 부모컴포넌트가 전달해준 상태변수
   // (viewList를 업데이트하는 setViewList메서드임!)
   // (2) gNo - 상품 데이터 배열순번
   // (idx 상태관리변수가 전달됨 - 이 값 변경시 컴포넌트 변경됨)
   // tot - 상품토탈정보
   // setTot - 상품토탈정보 업데이트함수
+
+
+ 
 
   // 전역 카트 사용여부값 업데이트 사용위해 전역 컨텍스트 사용
   const myCon = useContext(dCon);
@@ -48,6 +52,12 @@ export default function Store_detail({ backList, gNo, selItem, loginSts }) {
 
   // 화면랜더링구역 : 한번만 //////////
   useEffect(() => {
+
+  //  검색창 안보이게 하기
+    setSearchVisible(false);
+
+
+
     // [ 수량증감 버튼클릭시 증감기능구현 ]
 
     // 1. 대상요소 ///////
@@ -84,6 +94,10 @@ export default function Store_detail({ backList, gNo, selItem, loginSts }) {
 
       console.log("나야나", totalPrice);
     }); //////// click ////////
+
+
+
+   
   }, []); /// 현재컴포넌트 처음생성시 한번만 실행구역 ///
 
   // [ 화면랜더링구역 : 매번 ] ///
@@ -258,7 +272,10 @@ export default function Store_detail({ backList, gNo, selItem, loginSts }) {
                 <br />
                 이동
               </button>
-              <button className="list-btn" onClick={() => backList(true)}>
+              <button className="list-btn" onClick={() => {
+                backList(true);
+               
+              }}>
                 상품 리스트
               </button>
             </div>

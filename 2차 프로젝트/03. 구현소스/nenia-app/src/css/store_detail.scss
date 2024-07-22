@@ -26,7 +26,7 @@
   border-bottom: 2px solid #000;
 }
 .product-name {
-  font-size: 30px;
+  font-size: 3rem;
   font-weight: bold;
 }
 
@@ -46,23 +46,20 @@
 .product-order-list {
   display: flex;
   justify-content: space-between;
-  height: 45px;
-  line-height: 45px;
+  line-height: 4.5rem;
 }
 .product-order-list span:first-child {
   white-space: nowrap;
-  
 }
 .product-order-list .price {
   white-space: nowrap;
-  text-decoration:line-through;
+  text-decoration: line-through;
   font-size: 12px;
   color: rgb(151, 151, 151);
-  padding-left:15px;
-  
+  padding-left: 15px;
 }
 .price-right {
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 .price-right strike {
@@ -71,7 +68,7 @@
   padding-right: 10px;
 }
 .point-right {
-  font-size: 16px;
+  font-size: 1.6rem;
 }
 
 #select-product-option {
@@ -111,9 +108,7 @@
   display: flex;
   height: 33px;
   font-weight: 300;
-
 }
-
 
 .count-box {
   width: 46px;
@@ -144,9 +139,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 600;
-  margin: 30px 0;
+  margin: 3rem 0;
 }
 
 // 버튼
@@ -155,36 +150,30 @@
   gap: 10px;
   margin-top: 80px;
 
-  
-  
   // 버튼 공통
-  button{
+  button {
     cursor: pointer;
     width: calc(100% / 3);
-    font-size: 16px;
+    font-size: 1.6rem;
     border: 1px solid #000;
     text-align: center;
     padding: 10px 0;
     font-weight: 500;
-      /* 폰트 */
+    /* 폰트 */
     font-family: "Pretendard-Regular";
- 
 
-    &:hover{
+    &:hover {
       background-color: #154726;
       border: 1px solid #154726;
-      color:#fff;
+      color: #fff;
     }
   }
 
   // 구매하기 버튼
-.buy-btn {
-  color: #fff;
-  background-color: #000;
-
-}
-
-
+  .buy-btn {
+    color: #fff;
+    background-color: #000;
+  }
 }
 
 // 카운터 버튼
@@ -199,8 +188,6 @@
   vertical-align: -4px;
 }
 
-
-.selbx{display: none;}
 
 
 /********************** 미디어 쿼리 **********************/
@@ -241,30 +228,20 @@
   .thumbnail-box {
     width: 100%;
   }
+
+  .product-btns {
+    flex-direction: column;
+  }
+
+  .product-btns button {
+    width: 100%;
+    padding: 0;
+    height: 50px;
+  }
 }
 @media screen and (max-width: 399px) {
   .product-name {
     font-size: 2.5rem;
   }
-  .product-btns {
-    height: 50px;
-    gap: 15px;
-  }
-  .price-right {
-    font-size: 16.5px;
-  }
-  .fit-size-btn {
-    font-size: 14px;
-  }
-  .point-right {
-    font-size: 16.5px;
-}
-  .buy-btn {
-    line-height: 50px;
-  }
-  .wish-btn {
-    flex-basis: 50px;
-    line-height: 50px;
-    font-size: 20px;
-  }
+
 }

@@ -36,17 +36,19 @@ function Store() {
   const idx = myCon.idx;
   const setIdx = myCon.setIdx;
 
-
   // 4. 선택 아이템 고유이름 상태관리변수
   const [selItem, setSelItem] = useState("전체보기");
 
   // 5. 검색상태 관리변수 : 값유지만 하도록 참조변수로 생성
   const searchSts = useRef(false);
 
+  // 6. 검색박스 가시성 상태관리변수
+  const [searchVisible, setSearchVisible] = useState(true);
+
   const orgData = [...sbread, ...srice, ...smando, ...sicecream];
 
   // 데이터 가져오기
-  const [selData,setSelData] = useState(orgData);
+  const [selData, setSelData] = useState(orgData);
 
   // 검색기능수행 함수 ////////////////////
   const searchList = () => {
@@ -82,9 +84,12 @@ function Store() {
 
     setSelItem("전체보기");
     setActiveCat(0);
-
-
   }; ////////////// searchList 함수 //////////////
+
+  // 페이지 로드 시 스크롤 위치 800px로 이동
+  useEffect(() => {
+    window.scrollTo(0, 800);
+  }, []);
 
   ////코드리턴구역////////////////////////////////
   return (
@@ -112,11 +117,12 @@ function Store() {
 
                         let selItem;
 
-                          $("#stxt").val('');
+                        $("#stxt").val("");
 
                         if (v.category === "all") {
                           selItem = "전체보기";
                           setSelData(orgData);
+                          setSearchVisible(true);
                         } else if (v.category === "bread") {
                           selItem = "브레드";
                         } else if (v.category === "ricecake") {
@@ -133,6 +139,9 @@ function Store() {
                         // 초이스 변경시 무조건 리스트 페이지보기
                         // -> viewList 업데이트하기
                         setViewList(true);
+                        if (selItem !== "전체보기") {
+                          setSearchVisible(false);
+                        }
                       }}
                     >
                       {v.cname}
@@ -144,7 +153,7 @@ function Store() {
           </div>
 
           {/* 검색옵션박스 */}
-          <div className="selbx">
+          <div className={`selbx ${searchVisible ? "show" : ""}`}>
             <input
               id="stxt"
               type="text"
@@ -165,52 +174,11 @@ function Store() {
             <ul className="board_newgallery">
               {
                 // 상태관리변수 viewList값이 true이면 리스트보기
-                viewList ? (
-                  <Store_List
-                    selData={selData}
-                    viewDetail={setViewList}
-                    updateIdx={setIdx}
-                    selItem={selItem}
-                  />
-                ) : (
-                  <Store_detail
-                    backList={setViewList}
-                    gNo={idx}
-                    selItem={selItem}
-                  />
-                )
+                viewList ? <Store_List selData={selData} viewDetail={setViewList} updateIdx={setIdx} selItem={selItem} setSearchVisible={setSearchVisible}/> : <Store_detail backList={setViewList} gNo={idx} selItem={selItem} setSearchVisible={setSearchVisible}/>
                 // false이면 상품 상세리스트 보기
               }
             </ul>
           </form>
-
-          {/* 페이지 버튼 */}
-          {/* <div className="board_page">
-            <nav className="pg_wrap">
-              <span className="pg">
-                <span className="sound_only">열린</span>
-                <strong className="pg_current">1</strong>
-                <span className="sound_only">페이지</span>
-                <a href="http://www.nenia.kr/31?amp;&amp;page=2" className="pg_page">
-                  2<span className="sound_only">페이지</span>
-                </a>
-                <a href="http://www.nenia.kr/31?amp;&amp;page=3" className="pg_page">
-                  3<span className="sound_only">페이지</span>
-                </a>
-                <a href="http://www.nenia.kr/31?amp;&amp;page=4" className="pg_page">
-                  4<span className="sound_only">페이지</span>
-                </a>
-                <a href="http://www.nenia.kr/31?amp;&amp;page=5" className="pg_page">
-                  5<span className="sound_only">페이지</span>
-                </a>
-                <a href="http://www.nenia.kr/31?amp;&amp;page=5" className="pg_page pg_end">
-                  맨끝
-                </a>
-              </span>
-            </nav>{" "}
-          </div>
-
-          <div className="board_button"></div> */}
         </div>
       </div>
     </div>

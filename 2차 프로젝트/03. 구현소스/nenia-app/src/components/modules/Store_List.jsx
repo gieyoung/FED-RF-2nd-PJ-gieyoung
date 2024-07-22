@@ -15,7 +15,7 @@ import "../../css/store.scss";
 // 제이쿼리
 import $ from "jquery";
 
-export default function Store_List({ selData, viewDetail, updateIdx, selItem }) {
+export default function Store_List({ selData, viewDetail, updateIdx, selItem, setSearchVisible }) {
   // 스토어리스트 데이터 모으기(브레드, 떡, 만두, 아이스크림)
   // const selData = [...sbread, ...srice, ...smando, ...sicecream];
   // (1) viewDetail - 부모컴포넌트가 전달해준 상태변수
@@ -40,6 +40,8 @@ export default function Store_List({ selData, viewDetail, updateIdx, selItem }) 
 
   if (selItem == "전체보기") {
     storeData = tempData.current != orgData && selData;
+    // 검색창 보이게 하기
+    setSearchVisible(true);
   } else if (selItem == "브레드") {
     storeData = sbread;
   } else if (selItem == "떡") {
@@ -66,8 +68,9 @@ export default function Store_List({ selData, viewDetail, updateIdx, selItem }) 
                 viewDetail(false);
                 // setIdx메서드가 updateIdx로 들어옴
                 updateIdx(i);
-                // 상세페이지로 갈때 스크롤 상단 이동
-                window.scrollTo(0, 800);
+                // setSearchVisible(false); 
+                // 검색창 안보이게 하기
+             
               }}
               style={{
                 backgroundImage: `url(${v.isrc})`,
@@ -94,8 +97,9 @@ export default function Store_List({ selData, viewDetail, updateIdx, selItem }) 
                 viewDetail(false);
                 // setIdx메서드가 updateIdx로 들어옴
                 updateIdx(i);
-                // 상세페이지로 갈때 스크롤 상단 이동
-                window.scrollTo(0, 800);
+                // setSearchVisible(false); 
+                // 검색창 안보이게 하기
+             
               }}
             >
               <dt className="subject">
