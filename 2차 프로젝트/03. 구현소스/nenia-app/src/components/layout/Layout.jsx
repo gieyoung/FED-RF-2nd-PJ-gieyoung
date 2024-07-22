@@ -18,8 +18,11 @@ export default function Layout() {
   const [loginMsg, setLoginMsg] = useState(null);
   // console.log(loginMsg);
 
-  // 2. 리스트 / 상세보기 전환용 상태관리변수
+  // 3. 리스트 / 상세보기 전환용 상태관리변수
   const [viewList, setViewList] = useState(true);
+
+  // 4. 상품 데이터 인덱스값 상태관리변수
+  const [idx, setIdx] = useState(0);
 
   // [ 공통 함수 ] ///
   // 1. 라우팅 이동함수
@@ -43,9 +46,15 @@ export default function Layout() {
     sessionStorage.removeItem("minfo");
     // 3. 로그인 메시지 초기화
     setLoginMsg(null);
+    // 4. 장바구니 데이터 초기화
+    localStorage.removeItem("cart-data");
     // 4. 메인페이지로 돌아가기
     goPage("/");
-  }; //////////logoutFn
+  }; //////////logoutFn  
+
+  // 로그인 상태 여부에 따라 이름추가하는 함수
+  const addUid = () => loginSts?"-"+JSON.parse(loginSts).uid:'';
+
 
   // 화면 랜더링 구역
   // -> 로그인 상태 체크
@@ -64,7 +73,7 @@ export default function Layout() {
 
   // [ 로컬스 카트 데이터 상태변수 ] ///
   const [localsCart, setLocalsCart] = useState(
-    localStorage.getItem("cart-data")
+    localStorage.getItem("cart-data"+addUid())
   );
 
   // 로컬스 카트 데이터 존재여부에 따라 상태값 변경
@@ -106,6 +115,9 @@ export default function Layout() {
         localsCart,
         viewList,
         setViewList,
+        idx,
+        setIdx,
+        addUid,
       }}
     >
       {/* 1.상단영역 */}

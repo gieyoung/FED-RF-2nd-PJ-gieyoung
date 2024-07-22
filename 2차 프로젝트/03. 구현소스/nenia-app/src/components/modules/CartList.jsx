@@ -22,7 +22,8 @@ function CartList({ loginSts }) {
   const myCon = useContext(dCon);
 
   // 로컬스 데이터 가져오기
-  const selData = JSON.parse(myCon.localsCart);
+  let selData = JSON.parse(localStorage.getItem("cart-data"+myCon.addUid()));
+  if(!selData) selData = [];
   console.log("로컬스:", selData);
 
   // 전체 데이터 개수
@@ -118,6 +119,9 @@ function CartList({ loginSts }) {
                       onClick={(e) => {
                         e.preventDefault();
                         ItemClick(v.idx); // idx 값 전달
+                        // 상세페이지의 상품 컨텍스트 변수 변경
+                        myCon.setIdx(Number(v.idx)-1);
+                        // 상세페이지 보기 상태값 변경
                         myCon.setViewList(false);
                         goNav("/store");                        
                       }}
@@ -263,7 +267,7 @@ function CartList({ loginSts }) {
                           let res = JSON.stringify(selData);
 
                           // 3.로컬스 "cart-data"반영하기
-                          localStorage.setItem("cart-data", res);
+                          localStorage.setItem("cart-data"+myCon.addUid(), res);
 
                           // 4. 카트리스트 전역상태변수 변경
                           myCon.setLocalsCart(res);

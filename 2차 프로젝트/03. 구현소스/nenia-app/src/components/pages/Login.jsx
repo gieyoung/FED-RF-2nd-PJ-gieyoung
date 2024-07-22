@@ -163,7 +163,23 @@ function Login(props) {
           // 4. 로그인 성공 메시지 버튼에 출력하기
           document.querySelector(".sbtn").innerText = "Login";
 
-          // 5. 라우팅 페이지 이동
+          // 5. 로그인시 장바구니 로컬스가 있으면 개인 장바구니로 변환함!
+          // 로컬스 cart-data가 있으면 들어감
+          if(localStorage.getItem("cart-data")){
+            // 로컬스 cart-data변환 배열개수가 0이상일때만 아이디 카트만들기
+            if(JSON.parse(localStorage.getItem("cart-data")).length>0){
+              // 아이디 카트도 해당카트가 없을때만 만들어준다!
+              if(!localStorage.getItem("cart-data"+result.uid)){
+                // 방금 로그인한 사용자 아이디 카드 만들기
+                localStorage.setItem("cart-data-"+result.uid,localStorage.getItem("cart-data"));
+                // 기존 일반인 카트는 지우기!
+                localStorage.removeItem("cart-data");
+              }
+
+            }
+          } 
+
+          // 6. 라우팅 페이지 이동
           // 1초후 메인 페이지로 이동
           setTimeout(() => {
             myCon.goPage("/");

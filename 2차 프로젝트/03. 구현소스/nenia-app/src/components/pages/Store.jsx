@@ -31,8 +31,12 @@ function Store() {
   const setViewList = myCon.setViewList;
   // 2. 리스트 / 상세보기 전환용 상태관리변수
   // const [viewList, setViewList] = useState(true);
-  // 3. 상품 데이터 인덱스값 상태관리변수
-  const [idx, setIdx] = useState(0);
+  // 3. 상품 데이터 인덱스값 상태관리변수 -> 컨텍스트API변수로 변경한다!!!
+  // const [idx, setIdx] = useState(0);
+  const idx = myCon.idx;
+  const setIdx = myCon.setIdx;
+
+
   // 4. 선택 아이템 고유이름 상태관리변수
   const [selItem, setSelItem] = useState("전체보기");
 

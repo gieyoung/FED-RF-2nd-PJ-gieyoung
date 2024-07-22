@@ -185,12 +185,12 @@ export default function Store_detail({ backList, gNo, selItem, loginSts }) {
                   e.preventDefault();
                   // [ 로컬스 카트 데이터 넣기 ]
                   // 1. 로컬스 없으면 만들어라!
-                  if (!localStorage.getItem("cart-data")) {
-                    localStorage.setItem("cart-data", "[]");
+                  if (!localStorage.getItem("cart-data"+myCon.addUid())) {
+                    localStorage.setItem("cart-data"+myCon.addUid(), "[]");
                   } //// if /////
 
                   // 2. 로컬스 읽어와서 파싱하기
-                  let locals = localStorage.getItem("cart-data");
+                  let locals = localStorage.getItem("cart-data"+myCon.addUid());
                   locals = JSON.parse(locals);
 
                   // idx값만 모아서 다른 배열만들기
@@ -237,10 +237,10 @@ export default function Store_detail({ backList, gNo, selItem, loginSts }) {
                   **************************/
 
                   // 로컬스에 문자화하여 입력하기
-                  localStorage.setItem("cart-data", JSON.stringify(locals));
+                  localStorage.setItem("cart-data"+myCon.addUid(), JSON.stringify(locals));
 
                   // 로컬스 카트데이터 상태값 변경!
-                  myCon.setLocalsCart(localStorage.getItem("cart-data"));
+                  myCon.setLocalsCart(localStorage.getItem("cart-data"+myCon.addUid()));
                   // 카트리스트 생성 상태값 변경!
                   myCon.setCartSts(true);
                 }}
