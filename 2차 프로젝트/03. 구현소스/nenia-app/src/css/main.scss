@@ -249,9 +249,12 @@
     }
 
     .desc {
-      margin-top: 30px;
+      margin: 30px 0 100px 0;
     }
   }
+
+  #main-area .main-area .main4 ul{width:100%;}
+  #main-area .main-area .main4 li:not(:first-child){margin-top: 100px;}
 }
 
 /* 1024이하 */

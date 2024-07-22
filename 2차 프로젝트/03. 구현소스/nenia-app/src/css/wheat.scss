@@ -36,7 +36,9 @@
 // 중간 디바이스
 /* 768이하 */
 @media screen and (max-width: 768px) {
-  .wheat-wrap .sec2 img{width: 100%;}
+  .wheat-wrap .sec2 img{width: 100%; padding: 5rem 0;}
+  .wheat-wrap .sec2 .font-2{text-align: center;}
+  
 
 }
 /* 480이하 */

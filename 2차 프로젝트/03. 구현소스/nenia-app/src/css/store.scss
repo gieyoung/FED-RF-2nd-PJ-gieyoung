@@ -17,19 +17,20 @@
   padding-left: 1px;
   width: 100%;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 #bo_cate li {
   padding-bottom: 10px;
 }
-/*#bo_cate li:first-child	{display:none;}*/
+
 #bo_cate a {
   cursor: pointer;
   color: #154726;
   display: block;
   padding: 4px 0;
-  margin: 0 17.5px;
-  font-size: 16px;
+
+  font-size: 1.6rem;
 }
 #bo_cate a:focus,
 #bo_cate a:hover,
@@ -38,7 +39,7 @@
 }
 #bo_cate #bo_cate_on {
   z-index: 2;
-  padding: 7px 15px;
+  padding: 0.7rem 1.5rem;
   background: #154726;
   border-radius: 50px;
   color: #fff;
@@ -154,6 +155,7 @@
     box-sizing: border-box;
     padding: 25px;
     display: block;
+    height: 140px;
 
   }
 }
@@ -165,6 +167,16 @@
   margin-bottom: 8px;
   font-size: 18px;
   color: #000;
+
+  span.font-6{
+    display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2; /* 표시할 줄 수 */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            height: 3em; /* line-height와 줄 수에 맞게 조절 */
+            line-height: 1.5em; /* 줄 높이 */
+  }
 }
 .board_newgallery dl.info dt.subject a {
   color: #154726;
@@ -189,4 +201,49 @@
   width: 100%;
   height: 227.5px;
   display: block;
+}
+
+.selbx{
+  text-align: right;
+  .search-btn{
+    margin-left: 2px;
+  }
+}
+
+.board_category_tab{
+  max-width: 400px;
+}
+
+
+/********************************************** 미디어쿼리 CSS **********************************************/ 
+
+// 큰 디바이스
+/* 1200이하 */
+@media screen and (max-width: 1200px) {
+  
+}
+
+/* 1024이하 */
+@media screen and (max-width: 1024px) {
+  .board_newgallery li{width:calc(50% - 2%);  margin-top: 50px;}
+}
+
+// 중간 디바이스
+/* 768이하 */
+@media screen and (max-width: 768px) {
+
+}
+/* 480이하 */
+@media screen and (max-width: 480px) {
+  .board_newgallery li{width: 100%;}
+
+}
+
+// 작은 디바이스
+/* 360이하 */
+@media screen and (max-width: 360px) {
+ 
+}
+/* 280이하 */
+@media screen and (max-width: 280px) {
 }
