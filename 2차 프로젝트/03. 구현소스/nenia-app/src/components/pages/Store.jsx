@@ -45,6 +45,13 @@ function Store() {
   // 6. 검색박스 가시성 상태관리변수
   const [searchVisible, setSearchVisible] = useState(true);
 
+  // 7. 검색어 하이라이트 상태관리변수
+  const [searchWord, setSearchWord] = useState("");
+
+  const handleSearchChange = (e) => {
+    setSearchWord(e.target.value);
+  };
+
   const orgData = [...sbread, ...srice, ...smando, ...sicecream];
 
   // 데이터 가져오기
@@ -118,6 +125,7 @@ function Store() {
                         let selItem;
 
                         $("#stxt").val("");
+                        setSearchWord(""); // 검색어 초기화
 
                         if (v.category === "all") {
                           selItem = "전체보기";
@@ -158,6 +166,9 @@ function Store() {
               id="stxt"
               type="text"
               maxLength="50"
+              value={searchWord}
+              onChange={handleSearchChange}
+              placeholder="검색어 입력"
               onKeyUp={(e) => {
                 // 엔터칠때 검색실행!
                 if (e.code === "Enter") searchList();
@@ -165,7 +176,7 @@ function Store() {
               }}
             />
             <button className="search-btn" onClick={searchList}>
-              Search
+              검색
             </button>
           </div>
 
@@ -174,7 +185,11 @@ function Store() {
             <ul className="board_newgallery">
               {
                 // 상태관리변수 viewList값이 true이면 리스트보기
-                viewList ? <Store_List selData={selData} viewDetail={setViewList} updateIdx={setIdx} selItem={selItem} setSearchVisible={setSearchVisible}/> : <Store_detail backList={setViewList} gNo={idx} selItem={selItem} setSearchVisible={setSearchVisible}/>
+                viewList ? (
+                  <Store_List selData={selData} viewDetail={setViewList} updateIdx={setIdx} selItem={selItem} setSearchVisible={setSearchVisible} searchWord={searchWord} />
+                ) : (
+                  <Store_detail backList={setViewList} gNo={idx} selItem={selItem} setSearchVisible={setSearchVisible} />
+                )
                 // false이면 상품 상세리스트 보기
               }
             </ul>

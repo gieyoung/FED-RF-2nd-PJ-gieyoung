@@ -4,22 +4,25 @@
 import $ from "jquery";
 import "jquery-ui-dist/jquery-ui";
 
-
 // 나의 함수 불러오기
-// import mFn from "../func/my_function.js";
+import mFn from "../func/my_function.js";
 
 // console.log(mFn);
 
 ///////////[ 헤더 1단메뉴 마우스 오버시 2단메뉴 내려오기 ]/////////////
 export default function commonFn() {
-  $(".gnb-depth1").hover(
-    function () {
-      $(this).find(".gnb-depth2").addClass("on");
-    },
-    function () {
-      $(this).find(".gnb-depth2").removeClass("on");
-    }
-  );
+  if ($(window).width() >= 760) {
+    $(".gnb-depth1").hover(
+      function () {
+        $(this).find(".gnb-depth2").addClass("on");
+      },
+      function () {
+        $(this).find(".gnb-depth2").removeClass("on");
+      }
+    );
+  } else {
+    $(".gnb-depth1").off("hover"); // 1200px 미만일 때 hover 이벤트 제거
+  }
 
   $(window).scroll(function () {
     // 스크롤 100px이상되면 탑메뉴 나오고 그밖에 숨김
@@ -30,9 +33,32 @@ export default function commonFn() {
     }
   });
 
+  /****************************************************
+     [ 모바일 메뉴 버튼 ]
+******************************************************/
 
-    
-/****************************************************
+// 1. 대상선정
+// 모바일에서 메뉴 li요소
+const nav = mFn.qsa("#top-area .nav-wrap #nav li a");
+console.log("나야나",nav);
+const $nav = $(nav);
+
+  $(".m_btn").click(function () {
+    $(".m_btn").toggleClass("on");
+    $(".hidden").toggleClass("on");
+    $("#nav").toggleClass("on");
+  });
+
+  $nav.click(function () {
+    $(".m_btn").toggleClass("on");
+    $(".hidden").toggleClass("on");
+    $("#nav").toggleClass("on");
+
+  });
+
+
+
+  /****************************************************
      [ top버튼-클릭시 상단으로 이동하는 버튼]
 ******************************************************/
 
@@ -46,7 +72,6 @@ export default function commonFn() {
     }
   });
 
-
   $(".top-btn").click(function () {
     $("body,html").animate(
       {
@@ -59,5 +84,3 @@ export default function commonFn() {
 }
 
 ////////////////////////////////////////////////////////////////
-
-

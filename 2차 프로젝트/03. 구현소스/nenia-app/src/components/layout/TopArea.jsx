@@ -32,7 +32,12 @@ export default function TopArea({ loginSts, logoutFn, goPage }) {
                       // 하위 메뉴가 있으면 일반 a요소에 출력
                       // 없으면 Link 라우팅 출력
                       v.sub ? (
-                        <a href="#null">
+                        <a
+                          href="#"
+                          onClick={(e) => {
+                            e.preventDefault();
+                          }}
+                        >
                           <span>{v.txt}</span>
                         </a>
                       ) : (
@@ -59,6 +64,7 @@ export default function TopArea({ loginSts, logoutFn, goPage }) {
                 ))}
               </ul>
             </nav>
+
             {/* <!-- 1-1.로고 --> */}
             <h1 className="logo">
               <Link to="/" className="po-center" alt="네니아 로고">
@@ -90,8 +96,8 @@ export default function TopArea({ loginSts, logoutFn, goPage }) {
                 // 로그인 상태일 때
                 loginSts !== null && (
                   <>
-                   {/* <!-- 장바구니 --> */}
-                   <li className="cart btn">
+                    {/* <!-- 장바구니 --> */}
+                    <li className="cart btn">
                       <Link to="/cart" className="po-center">
                         장바구니
                       </Link>
@@ -109,11 +115,18 @@ export default function TopArea({ loginSts, logoutFn, goPage }) {
                         로그아웃
                       </a>
                     </li>
-                   
                   </>
                 )
               }
             </ul>
+
+            {/* 모바일 메뉴 */}
+            <div class="m-gnb only-m">
+              <a href="#" class="m_btn">
+                <span>메뉴</span>
+              </a>
+            </div>
+            <div class="hidden"></div>
           </div>
         </header>
       </div>
