@@ -38,15 +38,15 @@ export default function Store_List({ selData, viewDetail, updateIdx, selItem, se
   let storeData;
 
   if (selItem == "전체보기") {
-    storeData == tempData.current !== orgData && selData;
+    storeData = tempData.current != orgData && selData;
   } else if (selItem == "브레드") {
-    storeData == sbread;
+    storeData = sbread;
   } else if (selItem == "떡") {
-    storeData == srice;
+    storeData = srice;
   } else if (selItem == "만두") {
-    storeData == smando;
+    storeData = smando;
   } else if (selItem === "아이스크림") {
-    storeData == sicecream;
+    storeData = sicecream;
   }
   console.log("선택된 카테고리의 데이터", storeData);
 
@@ -84,7 +84,7 @@ export default function Store_List({ selData, viewDetail, updateIdx, selItem, se
       {storeData.map((v, i) => (
         <li key={i} className={v.category}>
           <div className="image">
-            <button
+            <a
               href="#"
               onClick={(e) => {
                 // a요소 기본이동막기
@@ -110,11 +110,11 @@ export default function Store_List({ selData, viewDetail, updateIdx, selItem, se
                 height: "227.5px",
                 display: "block",
               }}
-            ></button>
+            ></a>
             <span>{v.catname}</span>
           </div>
           <dl className="info">
-            <button
+            <a
               href="#"
               onClick={(e) => {
                 // a요소 기본이동막기
@@ -132,7 +132,7 @@ export default function Store_List({ selData, viewDetail, updateIdx, selItem, se
                 <span className="font-6">{highlightText(v.tit, searchWord)}</span>
               </dt>
               <dd className="content font-7 nanum">{v.disprice}원</dd>
-            </button>
+            </a>
           </dl>
         </li>
       ))}
