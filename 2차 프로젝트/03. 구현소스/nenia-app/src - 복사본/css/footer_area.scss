@@ -1,0 +1,195 @@
+/****************** 3.하단영역 ******************/
+
+#footer-area {
+  width: 100%;
+  background: #2f4e37;
+  color: #fefcf7;
+
+  .footer-area {
+    flex-direction: column;
+
+    // 하단 첫번째 박스
+    .f1-box {
+      display: flex;
+      padding: 80px 0;
+      width: 100%;
+      border-bottom: 1px solid rgba(254, 252, 247, 0.1);
+
+      // 왼쪽영역
+
+      .left {
+        width: 50%;
+
+        .font-2 {
+          padding: 0;
+        }
+
+        ul {
+          display: flex;
+          li:first-child {
+            margin-right: 20px;
+          }
+        }
+      }
+
+      // 오른쪽영역
+      .right {
+        width: 50%;
+        padding-left: 50px;
+
+        .font-3 {
+          padding: 15px 0 5px;
+        }
+
+        li:not(:last-child) {
+          margin-bottom: 20px;
+        }
+
+        // 글자밑줄
+        a {
+          position: relative;
+          font-weight: 600;
+          color: #fefcf7;
+          &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #fff;
+            bottom: -2px;
+            transition-duration: 0.3s;
+          }
+          &:hover::after {
+            width: 100%;
+            left: 0;
+          }
+        }
+      }
+    }
+    // 하단 두번째 박스
+    .f2-box {
+      width: 100%;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      color: rgba(254, 252, 247, 0.6);
+      justify-content: space-between;
+
+      span {
+        color: #fff;
+      }
+      a {
+        color: rgba(254, 252, 247, 0.6);
+        &:hover {
+          color: #fff;
+        }
+      }
+
+      // 하단로고
+      h2.logo {
+        // background-color: red;
+        width: 50%;
+
+        a {
+          display: inline-block;
+          /* 로고 이미지 삽입 */
+          background: url(../../public/images/footer_logo.svg) no-repeat
+            center/cover;
+          width: 12.8rem;
+          height: 13.1rem;
+        }
+      }
+      .mid {
+        // background-color: green;
+        width: 25%;
+
+        // 주소
+        address {
+          font-style: normal;
+
+          padding: 0 0 35px 0;
+          p {
+            line-height: 20px;
+          }
+
+          p:first-child {
+            margin-bottom: 10px;
+          }
+        }
+        //sns
+        .sns {
+          display: flex;
+          gap: 4.3rem;
+        }
+      }
+
+      .last {
+        width: 25%;
+        // background-color: black;
+        // 개인정보처리방침
+        .privacy {
+          height: 125px;
+          li {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/********************************************** 미디어쿼리 CSS **********************************************/
+
+// 큰 디바이스
+/* 1200이하 */
+@media screen and (max-width: 1200px) {
+}
+
+/* 1024이하 */
+@media screen and (max-width: 1024px) {
+}
+
+// 중간 디바이스
+/* 768이하 */
+@media screen and (max-width: 768px) {
+  #footer-area .footer-area .f1-box {
+    display: none;
+  }
+  #footer-area .footer-area .f2-box {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+  #footer-area .footer-area .f2-box h2.logo {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  #footer-area .footer-area .f2-box {
+    height: auto;
+    padding: 40px 0;
+  }
+  #footer-area .footer-area .f2-box .mid {
+    width: 100%;
+  }
+  #footer-area .footer-area .f2-box .last {
+    width: 100%;
+  }
+  #footer-area .footer-area .f2-box .mid .sns {
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  #footer-area .footer-area .f2-box .last .privacy{height:100px;}
+}
+/* 480이하 */
+@media screen and (max-width: 480px) {
+
+}
+
+// 작은 디바이스
+/* 360이하 */
+@media screen and (max-width: 360px) {
+}
+/* 280이하 */
+@media screen and (max-width: 280px) {
+}

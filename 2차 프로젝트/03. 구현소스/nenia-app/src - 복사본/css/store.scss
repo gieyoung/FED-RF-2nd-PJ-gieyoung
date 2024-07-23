@@ -1,0 +1,268 @@
+.green {
+  background-color: green;
+}
+.selected {
+  color: green;
+  font-weight: bold;
+}
+
+#bo_cate h2 {
+  position: absolute;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+}
+#bo_cate ul {
+  margin-bottom: 30px;
+  padding-left: 1px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#bo_cate li {
+  padding-bottom: 10px;
+}
+
+#bo_cate a {
+  cursor: pointer;
+  color: #154726;
+  display: block;
+  padding: 4px 0;
+
+  font-size: 1.6rem;
+}
+#bo_cate a:focus,
+#bo_cate a:hover,
+#bo_cate a:active {
+  text-decoration: none;
+}
+#bo_cate #bo_cate_on {
+  z-index: 2;
+  padding: 0.7rem 1.5rem;
+  background: #154726;
+  border-radius: 50px;
+  color: #fff;
+}
+
+.total_board_list_wrap,
+.total_board_view_wrap {
+  background: #faf3e6;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  z-index: 1;
+  padding: 10rem 0;
+  min-height: 800px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.total_board_list_wrap > h1 {
+  color: #154726;
+  font-weight: 700;
+  text-align: center;
+}
+.total_board_view_wrap {
+  border-radius: 20px;
+}
+
+.view_visual {
+  width: 100%;
+  height: 100vh;
+  display: block;
+  background: #ffdd70;
+  position: fixed;
+  top: 0;
+  z-index: -2;
+}
+.view_txt {
+  text-align: center;
+  padding: 210px 0 140px;
+  color: #154726;
+}
+.view_txt h1 {
+  font-weight: 700;
+}
+.view_txt h2 {
+  padding: 10px 0;
+  font-weight: 700;
+}
+
+.board_newgallery * {
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+.board_newgallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+
+}
+.board_newgallery:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  content: "";
+}
+.board_newgallery li {
+  width: 23.3%;
+  margin-bottom: 30px;
+
+
+
+  list-style: none;
+  position: relative;
+}
+
+
+.board_newgallery li .image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+}
+.board_newgallery li .image span {
+  position: absolute;
+  color: #fff;
+  background: #154726;
+  width: 76px;
+  height: 30px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 25px;
+  right: 25px;
+  font-size: 14px;
+}
+.board_newgallery li:hover .image {
+  border-radius: 10px 10px 0 0;
+}
+.board_newgallery li:hover .image a {
+  transform: scale(1.1);
+  
+}
+.board_newgallery li:hover dl.info {
+  border-radius: 0 0 10px 10px;
+}
+
+.board_newgallery dl.info {
+  background: #f4e5be;
+  border-radius: 0 0 20px 20px;
+
+  a{
+    box-sizing: border-box;
+    padding: 25px;
+    display: block;
+    height: 140px;
+
+  }
+}
+.board_newgallery dl.info dt.subject {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  margin-bottom: 8px;
+  font-size: 18px;
+  color: #000;
+
+  span.font-6{
+    display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2; /* 표시할 줄 수 */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            height: 3em; /* line-height와 줄 수에 맞게 조절 */
+            line-height: 1.5em; /* 줄 높이 */
+            font-weight: 600;
+  }
+}
+.board_newgallery dl.info dt.subject a {
+  color: #154726;
+  font-weight: 700;
+}
+.board_newgallery dl.info dd.content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: #154726;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+
+
+// 이미지
+.board_newgallery .image a {
+  // background: url('http://www.nenia.kr/data/file/31/3696084091_7oxqTRrD_bab98648ca0f50bf9525b06e6ab4a9ba19fb86cc.jpg') no-repeat center / cover;
+  width: 100%;
+  height: 227.5px;
+  display: block;
+}
+
+.selbx{
+  text-align: right;
+  margin-bottom: 50px;
+  opacity: 0;
+
+  #stxt{
+   height:24px;
+   vertical-align: middle;
+  }
+  .search-btn{
+    margin-left: 2px;
+    height: 30px;
+    vertical-align: middle;
+
+  }
+}
+
+.selbx.show {
+  opacity: 1;
+}
+
+.board_category_tab{
+  max-width: 400px;
+}
+
+
+/********************************************** 미디어쿼리 CSS **********************************************/ 
+
+// 큰 디바이스
+/* 1200이하 */
+@media screen and (max-width: 1200px) {
+  
+}
+
+/* 1024이하 */
+@media screen and (max-width: 1024px) {
+  .board_newgallery li{width:calc(50% - 2%);  margin-bottom: 20px;}
+  .board_newgallery li:nth-child(2n){gap: 0%;}
+  .board_newgallery{gap:4%;}
+}
+
+// 중간 디바이스
+/* 768이하 */
+@media screen and (max-width: 768px) {
+
+}
+/* 480이하 */
+@media screen and (max-width: 480px) {
+  .board_newgallery li{width: 100%;}
+  .board_newgallery dl.info a{height: auto;}
+
+}
+
+// 작은 디바이스
+/* 360이하 */
+@media screen and (max-width: 360px) {
+ 
+}
+/* 280이하 */
+@media screen and (max-width: 280px) {
+}

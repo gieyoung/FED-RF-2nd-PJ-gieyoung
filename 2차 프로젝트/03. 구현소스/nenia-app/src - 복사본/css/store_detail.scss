@@ -1,0 +1,247 @@
+// 상품 디테일 전체 감싸는 박스
+.product-container {
+  width: 1200px;
+  margin: 70px auto 70px;
+  box-sizing: border-box;
+}
+
+.product-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 100px;
+  width: 100%;
+}
+
+// 이미지 썸네일 박스
+.thumbnail-box {
+  flex-basis: 50%;
+  aspect-ratio: 1/1;
+}
+
+.product-box {
+  flex-basis: 45%;
+}
+.product-tit-box {
+  padding-bottom: 20px;
+  border-bottom: 2px solid #000;
+}
+.product-name {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.product-icon {
+  margin-top: 7px;
+  height: 18px;
+}
+.product-desc {
+  font-size: 1.4rem;
+  margin-top: 15px;
+}
+.product-order-box {
+  margin-top: 10px;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.product-order-list {
+  display: flex;
+  justify-content: space-between;
+  line-height: 4.5rem;
+}
+.product-order-list span:first-child {
+  white-space: nowrap;
+}
+.product-order-list .price {
+  white-space: nowrap;
+  text-decoration: line-through;
+  font-size: 12px;
+  color: rgb(151, 151, 151);
+  padding-left: 15px;
+}
+.price-right {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.price-right strike {
+  color: #aaa;
+  font-weight: 500;
+  padding-right: 10px;
+}
+.point-right {
+  font-size: 1.6rem;
+}
+
+#select-product-option {
+  width: 80%;
+  text-align: right;
+  padding: 0 10px;
+}
+.fit-size-btn {
+  padding: 6px 24px;
+  margin-top: 20px;
+  border: 1px solid #e5e5e5;
+  background-color: #f6f6f6;
+  text-align: center;
+  font-size: 16px;
+}
+
+.product-ordered-box {
+  margin-top: 20px;
+  border-bottom: 2px solid #000;
+}
+.product-ordered-list {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  border-top: 1px solid #e5e5e5;
+  height: 50px;
+  font-size: 14px;
+}
+.option-name {
+  font-weight: 300;
+}
+
+.option-counter {
+  position: absolute;
+  right: 27%;
+  display: flex;
+  height: 33px;
+  font-weight: 300;
+}
+
+.count-box {
+  width: 46px;
+}
+.count-input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: "Montserrat", "Noto Sans KR", sans-serif;
+}
+.option-price {
+  position: absolute;
+  right: 5%;
+  font-weight: 600;
+}
+.product-close-btn {
+  position: absolute;
+  right: 0.5%;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  // background: url(../../public/images/m_close_btn_black.png) center/cover no-repeat;
+}
+.total-price-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 3rem 0;
+}
+
+// 버튼
+.product-btns {
+  display: flex;
+  gap: 10px;
+  margin-top: 80px;
+
+  // 버튼 공통
+  button {
+    cursor: pointer;
+    width: calc(100% / 3);
+    font-size: 1.6rem;
+    border: 1px solid #000;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: 500;
+    /* 폰트 */
+    font-family: "Pretendard-Regular";
+
+    &:hover {
+      background-color: #154726;
+      border: 1px solid #154726;
+      color: #fff;
+    }
+  }
+
+  // 구매하기 버튼
+  .buy-btn {
+    color: #fff;
+    background-color: #000;
+  }
+}
+
+// 카운터 버튼
+.chg_num {
+  display: inline-block;
+  width: 18px;
+  cursor: pointer;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  vertical-align: -4px;
+}
+
+
+
+/********************** 미디어 쿼리 **********************/
+@media screen and (max-width: 1239px) {
+  .product-container {
+    width: 1000px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .product-container {
+    width: 750px;
+  }
+}
+
+/**************** 모바일 미디어 쿼리 ****************/
+@media screen and (max-width: 767px) {
+  .product-container {
+    width: 100%;
+  }
+  .product-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+  .thumbnail-box {
+    width: 70%;
+  }
+  .product-box {
+    width: 95%;
+  }
+  /* 여기글자크기부터 미디어쿼리 시작 */
+}
+
+@media screen and (max-width: 559px) {
+  .product-container {
+    margin-top: 0;
+  }
+  .thumbnail-box {
+    width: 100%;
+  }
+
+  .product-btns {
+    flex-direction: column;
+  }
+
+  .product-btns button {
+    width: 100%;
+    padding: 0;
+    height: 50px;
+  }
+}
+@media screen and (max-width: 399px) {
+  .product-name {
+    font-size: 2.5rem;
+  }
+
+}
