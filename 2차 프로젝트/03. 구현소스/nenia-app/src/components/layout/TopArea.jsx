@@ -121,12 +121,12 @@ export default function TopArea({ loginSts, logoutFn, goPage }) {
             </ul>
 
             {/* 모바일 메뉴 */}
-            <div class="m-gnb only-m">
-              <a href="#" class="m_btn">
+            <div className="m-gnb only-m">
+              <a href="#" className="m_btn">
                 <span>메뉴</span>
               </a>
             </div>
-            <div class="hidden"></div>
+            <div className="hidden"></div>
           </div>
         </header>
       </div>
