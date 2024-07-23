@@ -13,6 +13,7 @@ import Member from "./components/pages/Member";
 import Login from "./components/pages/Login";
 import SearchPage from "./components/pages/SearchPage";
 import Cart from "./components/pages/Cart";
+import Board from "./components/pages/Board";
 
 // 전체 공통 CSS 불러오기
 import "../src/css/main.scss";
@@ -43,6 +44,7 @@ export default function MainComponent() {
           <Route path="login" element={<Login />} />
           <Route path="search" element={<SearchPage />} />
           <Route path="cart" element={<Cart />} />
+          <Route path="board" element={<Board />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -338,6 +338,8 @@ function CartList({ loginSts }) {
                       onClick={() => {
                         // CartList 페이지로 이동
                         myCon.goPage("/store");
+                        // store페이지로 이동해서 새로고침되기
+                        window.location.reload();
                       
                       }}
                     >

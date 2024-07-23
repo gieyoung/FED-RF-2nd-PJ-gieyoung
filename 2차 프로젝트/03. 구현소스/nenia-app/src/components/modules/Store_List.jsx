@@ -136,6 +136,9 @@ export default function Store_List({ selData, viewDetail, updateIdx, selItem, se
           </dl>
         </li>
       ))}
+
+
+      
     </>
   );
 }
