@@ -40,7 +40,7 @@ function Nenia(props) {
             <div className="left">
               <ul>
                 <li className="only-m">
-                  <img src="images/nenia/bak.jpg" alt="" />
+                  <img src="process.env.PUBLIC_URL+images/nenia/bak.jpg" alt="" />
                 </li>
                 <li>
                   <h1 className="font-2">
