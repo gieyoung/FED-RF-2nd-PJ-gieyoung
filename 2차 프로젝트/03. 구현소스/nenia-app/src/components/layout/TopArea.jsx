@@ -41,7 +41,7 @@ export default function TopArea({ loginSts, logoutFn, goPage }) {
                           <span>{v.txt}</span>
                         </a>
                       ) : (
-                        <Link to={v.link}>
+                        <Link to={v.link} className="mtn">
                           <span>{v.txt}</span>
                         </Link>
                       )
@@ -52,7 +52,7 @@ export default function TopArea({ loginSts, logoutFn, goPage }) {
                         <ul className="gnb-depth2 po-centerX">
                           {v.sub.map((v, i) => (
                             <li key={i}>
-                              <Link to={v.link}>
+                              <Link to={v.link} className="mtn">
                                 <span>{v.txt}</span>
                               </Link>
                             </li>
@@ -67,7 +67,7 @@ export default function TopArea({ loginSts, logoutFn, goPage }) {
 
             {/* <!-- 1-1.로고 --> */}
             <h1 className="logo">
-              <Link to="/" className="po-center" alt="네니아 로고">
+              <Link to="/" className="po-center mtn2" alt="네니아 로고">
                 <span className="ir">로고</span>
               </Link>
             </h1>
@@ -78,14 +78,14 @@ export default function TopArea({ loginSts, logoutFn, goPage }) {
                 loginSts === null && (
                   <>
                     {/* <!-- 로그인 --> */}
-                    <li className="login btn">
-                      <Link to="/login" className="po-center">
+                    <li className="login btn mtn2">
+                      <Link to="/login" className="po-center mtn2">
                         로그인
                       </Link>
                     </li>
                     {/* <!-- 회원가입 --> */}
-                    <li className="join btn">
-                      <Link to="/member" className="po-center">
+                    <li className="join btn mtn2">
+                      <Link to="/member" className="po-center mtn2">
                         회원가입
                       </Link>
                     </li>
@@ -97,16 +97,16 @@ export default function TopArea({ loginSts, logoutFn, goPage }) {
                 loginSts !== null && (
                   <>
                     {/* <!-- 장바구니 --> */}
-                    <li className="cart btn">
-                      <Link to="/cart" className="po-center">
+                    <li className="cart btn mtn2" >
+                      <Link to="/cart" className="po-center mtn2">
                         장바구니
                       </Link>
                     </li>
                     {/* <!-- 로그아웃 --> */}
-                    <li className="login btn">
+                    <li className="login btn mtn2">
                       <a
                         href="#"
-                        className="po-center"
+                        className="po-center mtn2"
                         onClick={(e) => {
                           e.preventDefault();
                           logoutFn();
@@ -122,7 +122,7 @@ export default function TopArea({ loginSts, logoutFn, goPage }) {
 
             {/* 모바일 메뉴 */}
             <div className="m-gnb only-m">
-              <a href="#" className="m_btn">
+              <a href="#" className="m-btn">
                 <span>메뉴</span>
               </a>
             </div>

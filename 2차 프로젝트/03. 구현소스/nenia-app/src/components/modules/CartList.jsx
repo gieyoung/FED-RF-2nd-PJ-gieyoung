@@ -338,8 +338,7 @@ function CartList({ loginSts }) {
                       onClick={() => {
                         // CartList 페이지로 이동
                         myCon.goPage("/store");
-                        // 상세페이지로 갈때 스크롤 상단 이동
-                        window.scrollTo(0, 800);
+                      
                       }}
                     >
                       쇼핑 계속하기

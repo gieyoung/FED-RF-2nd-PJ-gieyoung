@@ -413,7 +413,7 @@ function Member() {
                   value={userId}
                   onChange={changeUserId}
                 />
-                <span class="info">(영문 소문자 / 숫자, 5글자 이상)</span>
+                <span className="info">(영문 소문자 / 숫자, 5글자 이상)</span>
                 {
                   //   에러일 경우 메시지 출력
                   // 조건문 && 출력요소
@@ -449,7 +449,7 @@ function Member() {
               </li>
               <li>
                 <input type="password" maxLength="20" placeholder="비밀번호" value={pwd} onChange={changePwd} />
-                <span class="info">(영문 소문자 / 숫자, 5 ~ 15자)</span>
+                <span className="info">(영문 소문자 / 숫자, 5 ~ 15자)</span>
                 {
                   // 에러일 경우 메시지 출력
                   // 조건문 && 출력요소

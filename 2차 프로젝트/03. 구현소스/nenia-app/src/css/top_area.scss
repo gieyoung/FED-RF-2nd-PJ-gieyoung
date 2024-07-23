@@ -139,11 +139,10 @@
       }
     }
   }
-}
 
-// 모바일
+  // 모바일
 
-.m_btn {
+.m-btn {
   display: block;
   text-indent: -99999px;
   width: 30px;
@@ -154,7 +153,7 @@
 }
 
 /*햄버거버튼 클릭때마다 엑스로 변화*/
-.m_btn span {
+.m-btn span {
   display: block;
   width: 23px;
   height: 2px;
@@ -166,7 +165,7 @@
   transition: all 0.5s ease;
 }
 
-.m_btn span::before {
+.m-btn span::before {
   content: "";
   width: 30px;
   height: 2px;
@@ -177,7 +176,7 @@
   transition: all 0.5s ease;
 }
 
-.m_btn span::after {
+.m-btn span::after {
   content: "";
   width: 30px;
   height: 2px;
@@ -188,18 +187,18 @@
   transition: all 0.5s ease;
 }
 
-.m_btn.on span {
+.m-btn.on span {
   background: rgba(0, 0, 0, 0);
   transition: all 0.5s ease;
 }
 
-.m_btn.on span::before {
+.m-btn.on span::before {
   transform: rotate(45deg);
   top: 0;
   transition: all 0.5s ease;
 }
 
-.m_btn.on span::after {
+.m-btn.on span::after {
   transform: rotate(-45deg);
   top: 0;
   transition: all 0.5s ease;
@@ -251,19 +250,19 @@
 .only-m {
   position: absolute;
   right: 20px;
-  top:20px;
-  .m_btn{
+  top: 20px;
+  .m-btn {
     display: none;
   }
 }
+
+}
+
 
 /********************************************** 미디어쿼리 CSS **********************************************/
 
 /* 1200이하 */
 @media screen and (max-width: 1200px) {
-
- 
-
   #top-area .top-area {
     max-width: 100%;
     border-radius: 0;
@@ -275,27 +274,29 @@
 }
 /* 760이하 */
 @media screen and (max-width: 760px) {
-
-  .only-m .m_btn{display: block;}
+  #top-area .only-m .m-btn {
+    display: block;
+  }
   #nav.on {
     left: 0;
-    
   }
   #nav {
     left: 150%;
     transition: all 0.5s ease-in-out;
   }
-  #top-area .nav-wrap .etc-box{right:60px;}
+  #top-area .nav-wrap .etc-box {
+    right: 60px;
+  }
 
-
-  #top-area .nav-wrap h1.logo a{
-  left: 0;
-  transform: translate(20px, -50%);}
+  #top-area .nav-wrap h1.logo a {
+    left: 0;
+    transform: translate(20px, -50%);
+  }
   #top-area .nav-wrap #nav .gnb .gnb-depth1 > a {
     color: #000;
     font-weight: bold;
   }
-  .only-m {
+  #top-area .only-m{
     display: block;
   }
   #top-area .nav-wrap .etc-box {
@@ -358,8 +359,12 @@
 }
 /* 480이하 */
 @media screen and (max-width: 480px) {
-  #top-area .nav-wrap>ul.flex{    flex-direction: column;}
-  #top-area .nav-wrap .etc-box li:nth-child(1){margin-bottom:2px;}
+  #top-area .nav-wrap > ul.flex {
+    flex-direction: column;
+  }
+  #top-area .nav-wrap .etc-box li:nth-child(1) {
+    margin-bottom: 2px;
+  }
 }
 /* 360이하 */
 @media screen and (max-width: 360px) {

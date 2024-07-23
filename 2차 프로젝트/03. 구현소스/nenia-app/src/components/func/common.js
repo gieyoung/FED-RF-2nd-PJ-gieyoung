@@ -11,27 +11,61 @@ import mFn from "../func/my_function.js";
 
 ///////////[ 헤더 1단메뉴 마우스 오버시 2단메뉴 내려오기 ]/////////////
 export default function commonFn() {
-  if ($(window).width() >= 760) {
-    $(".gnb-depth1").hover(
-      function () {
-        $(this).find(".gnb-depth2").addClass("on");
-      },
-      function () {
-        $(this).find(".gnb-depth2").removeClass("on");
-      }
-    );
-  } else {
-    $(".gnb-depth1").off("hover"); // 1200px 미만일 때 hover 이벤트 제거
+  function handleResize() {
+    if ($(window).width() >= 760) {
+      // 760px 이상일 때 실행
+      $(".gnb-depth1").hover(
+        function () {
+          $(this).find(".gnb-depth2").addClass("on");
+        },
+        function () {
+          $(this).find(".gnb-depth2").removeClass("on");
+        }
+      );
+
+      $(window).scroll(function () {
+        // 스크롤 100px 이상되면 탑메뉴 나오고 그 밖에 숨김
+        if ($(this).scrollTop() > 300) {
+          $(".top-area").fadeOut();
+        } else {
+          $(".top-area").fadeIn();
+        }
+      });
+    } else {
+      // 760px 미만일 때 hover 이벤트 제거 및 scroll 이벤트 핸들러 제거
+      $(".gnb-depth1").off("mouseenter mouseleave");
+      $(window).off("scroll");
+    }
   }
 
-  $(window).scroll(function () {
-    // 스크롤 100px이상되면 탑메뉴 나오고 그밖에 숨김
-    if ($(this).scrollTop() > 300) {
-      $(".top-area").fadeOut();
-    } else {
-      $(".top-area").fadeIn();
-    }
-  });
+  // 초기 로드시 한 번 실행
+  handleResize();
+
+  // 화면 크기 변화에 따라 실행
+  $(window).resize(handleResize);
+
+// export default function commonFn() {
+//   if ($(window).width() >= 760) {
+//     $(".gnb-depth1").hover(
+//       function () {
+//         $(this).find(".gnb-depth2").addClass("on");
+//       },
+//       function () {
+//         $(this).find(".gnb-depth2").removeClass("on");
+//       }
+//     );
+//   } else {
+//     $(".gnb-depth1").off("hover"); // 1200px 미만일 때 hover 이벤트 제거
+//   }
+
+//   $(window).scroll(function () {
+//     // 스크롤 100px이상되면 탑메뉴 나오고 그밖에 숨김
+//     if ($(this).scrollTop() > 300) {
+//       $(".top-area").fadeOut();
+//     } else {
+//       $(".top-area").fadeIn();
+//     }
+//   });
 
   /****************************************************
      [ 모바일 메뉴 버튼 ]
@@ -39,23 +73,49 @@ export default function commonFn() {
 
 // 1. 대상선정
 // 모바일에서 메뉴 li요소
-const nav = mFn.qsa("#top-area .nav-wrap #nav li a");
-console.log("나야나",nav);
-const $nav = $(nav);
 
-  $(".m_btn").click(function () {
-    $(".m_btn").toggleClass("on");
+
+
+
+  $(".m-btn").click(function () {
+    $(".m-btn").toggleClass("on");
     $(".hidden").toggleClass("on");
     $("#nav").toggleClass("on");
   });
 
-  $nav.click(function () {
-    $(".m_btn").toggleClass("on");
-    $(".hidden").toggleClass("on");
-    $("#nav").toggleClass("on");
 
-  });
 
+
+  // 760이하에서만 실행되는 함수
+  //(mtn 버튼(모바일ver에서 메뉴 누르면 링크는 이동하는데 모바일 메뉴 창이 안닫혀서 강제로 닫게 해주는 것)
+$(document).ready(function() {
+  function handleResize() {
+    if (window.innerWidth <= 760) {
+      $(".mtn").off('click').on('click', function () {
+        $(".m-btn").toggleClass("on");
+        $(".hidden").toggleClass("on");
+        $("#nav").toggleClass("on");
+      });
+      //(mtn2 버튼(로고, 로그인, 회원가입, 장바구니 버튼 처럼 상단에 있는 버튼은 따로 설정)
+      $(".mtn2").on('click', function () {
+        $(".m-btn").removeClass("on");
+        $(".hidden").removeClass("on");
+        $("#nav").removeClass("on");
+      });
+    } else {
+      // 화면 크기가 760px 이상일 경우 이벤트 핸들러 제거 (선택 사항)
+      $(".mtn").off('click');
+    }
+  }
+
+  // 초기 로드시 한 번 실행
+  handleResize();
+
+  // 화면 크기 변화에 따라 실행
+  $(window).resize(handleResize);
+});
+
+  
 
 
   /****************************************************

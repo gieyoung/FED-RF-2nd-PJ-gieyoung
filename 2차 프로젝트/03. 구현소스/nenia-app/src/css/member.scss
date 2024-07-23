@@ -10,7 +10,7 @@
   h2 {
     text-align: center;
     padding: 15px;
-    font-size: 40px;
+    font-size: 4rem;
   }
 
   li {
@@ -69,7 +69,7 @@
     margin: 0 auto;
     max-width: 700px;
     box-sizing: border-box;
-    padding: 50px 80px;
+    padding: 5rem 8rem;
 
   }
 
@@ -81,11 +81,11 @@
 
   li {
     position: relative;
-    padding: 20px 0;
-    // display: flex;
+    padding: 2rem 0;
+
 
     span {
-      font-size: 14px;
+      font-size: 1.4rem;
     }
 
     .info {
@@ -110,9 +110,7 @@
     outline: 1px solid #c8c8c8;
     border: none;
     box-sizing: border-box;
-
-
-    font-size: 16px;
+    font-size: 1.6rem;
   }
 
   button{
@@ -139,9 +137,9 @@
 // 완료 버튼
 .sbtn {
   width: 100%;
-  padding: 20px;
+  padding: 2rem;
   background-color: #154726;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: bold;
   color: #fff;
   cursor: pointer;
@@ -156,12 +154,49 @@
 
 // 회원가입 또는 로그인 화면 이동 버튼
 .go-login{
-  font-size: 16px;
+  font-size: 1.6rem;
   text-align: center;
   display: inline-block;
   width: 100%;
-  padding: 20px;
+  padding: 2rem;
   outline: 1px solid #c8c8c8;
   background: #fff;
   box-sizing: border-box;
+}
+
+
+
+
+/********************************************** 미디어쿼리 CSS **********************************************/ 
+
+// 큰 디바이스
+/* 1200이하 */
+@media screen and (max-width: 1200px) {
+ 
+}
+
+/* 1024이하 */
+@media screen and (max-width: 1024px) {
+
+}
+
+// 중간 디바이스
+/* 768이하 */
+@media screen and (max-width: 768px) {
+
+
+}
+/* 480이하 */
+@media screen and (max-width: 480px) {
+  .join-wrap .join-pg{padding: 3rem;}
+  
+}
+
+// 작은 디바이스
+/* 360이하 */
+@media screen and (max-width: 360px) {
+
+}
+/* 280이하 */
+@media screen and (max-width: 280px) {
 }

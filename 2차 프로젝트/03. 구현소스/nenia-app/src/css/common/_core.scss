@@ -279,6 +279,7 @@ body {
 // 중간 디바이스
 /* 768이하 */
 @media screen and (max-width: 768px) {
+  .font-1{font-size: 5rem;}
   .font-2 {
     font-size: 3.3rem;
   }
@@ -293,7 +294,7 @@ body {
 }
 /* 480이하 */
 @media screen and (max-width: 480px) {
-  .font-1{font-size: 5rem;}
+  
 }
 
 // 작은 디바이스
