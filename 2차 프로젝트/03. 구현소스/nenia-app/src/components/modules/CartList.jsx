@@ -122,7 +122,7 @@ function CartList({ loginSts }) {
                           goNav("/store");
                         }}
                       >
-                        <img src={v.img} alt="item" />
+                        <img src={process.env.PUBLIC_URL+v.img} alt="item" />
                       </a>
                     </td>
                     {/* 상품명 */}

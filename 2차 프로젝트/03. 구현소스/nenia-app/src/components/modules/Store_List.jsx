@@ -102,7 +102,7 @@ export default function Store_List({ selData, viewDetail, updateIdx, selItem, se
                 // myCon.setViewList(false);
               }}
               style={{
-                backgroundImage: `url(${v.isrc})`,
+                backgroundImage: `url(${process.env.PUBLIC_URL+v.isrc})`,
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
                 backgroundSize: "cover",

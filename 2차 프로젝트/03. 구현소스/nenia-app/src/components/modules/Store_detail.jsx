@@ -120,7 +120,7 @@ export default function Store_detail({ backList, gNo, selItem, loginSts, setSear
           <div
             className="thumbnail-box"
             style={{
-              background: `url(${storeData[gNo].isrc})`,
+              background: `url(${process.env.PUBLIC_URL+storeData[gNo].isrc})`,
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
               backgroundSize: "cover",
