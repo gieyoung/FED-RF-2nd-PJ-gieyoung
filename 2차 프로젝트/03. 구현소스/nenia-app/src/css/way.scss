@@ -17,7 +17,7 @@
 
   // 가로 크기 변하는 이미지
   .width-chg {
-    background: url(`${process.env.PUBLIC_URL}/images/back_move/way_bak.jpg`) no-repeat 50% 30% / cover;
+    background: url("../../public/images/back_move/way_bak.jpg") no-repeat 50% 30% / cover;
     
   }
 
