@@ -44,7 +44,7 @@ export default function Nenia() {
         <div className="inbox">
           <h2 className="font-2">네니아 로고 소개</h2>
           <div className="img"></div>
-          <img src="process.env.PUBLIC_URL+/images/way/sec2.png" alt="로고 설명 이미지" />
+          <img src={`${process.env.PUBLIC_URL}/images/way/sec2.png`} alt="로고 설명 이미지" />
           <p className="font-6">
             ‘네니아’의 B.I.는 인간과 자연의 생명의 신비에 대하여 <br />
             경의를 표하는 마음으로 착안되었습니다. B.I.의 시작은 '씨앗'입니다. <br />
