@@ -1,10 +1,7 @@
-import React, { useContext, useEffect, useState, useRef } from "react";
-import { Link } from "react-router-dom";
-import SubIntro from "../modules/SubIntro.jsx";
+import React, { useContext, useEffect, useRef } from "react";
 import { dCon } from "../modules/dCon";
 
 // 데이터 불러오기
-import { storeCat } from "../data/store_cat.js";
 import { sbread, srice, smando, sicecream } from "../data/store_data.js";
 
 // 공통함수 불러오기
@@ -45,15 +42,15 @@ export default function Store_detail({ backList, gNo, selItem, loginSts, setSear
   let storeData;
 
   if (selItem == "전체보기") {
-    storeData = tempData.current != orgData && selData;
+    storeData == tempData.current !== orgData && selData;
   } else if (selItem == "브레드") {
-    storeData = sbread;
+    storeData == sbread;
   } else if (selItem == "떡") {
-    storeData = srice;
+    storeData == srice;
   } else if (selItem == "만두") {
-    storeData = smando;
+    storeData == smando;
   } else if (selItem === "아이스크림") {
-    storeData = sicecream;
+    storeData == sicecream;
   }
   // console.log("storeData:", storeData, "gNo:", gNo, "selData[gNo]:", selData[gNo], "storeData[gNo]:", storeData[gNo], "storeData[gNo].disprice:", storeData[gNo].disprice);
 

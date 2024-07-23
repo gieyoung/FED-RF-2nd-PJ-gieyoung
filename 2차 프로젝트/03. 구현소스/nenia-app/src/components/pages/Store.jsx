@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useContext } from "react";
 import SubIntro from "../modules/SubIntro.jsx";
-import { Link } from "react-router-dom";
+
 
 // 상품리스트 서브컴포넌트 불러오기
 import Store_List from "../modules/Store_List.jsx";
@@ -12,7 +12,7 @@ import { storeCat } from "../data/store_cat.js";
 import { sbread, srice, smando, sicecream } from "../data/store_data.js";
 
 // 공통함수 불러오기
-import { addComma } from "../func/common_fn.js";
+// import { addComma } from "../func/common_fn.js";
 
 // CSS 불러오기
 import "../../css/store.scss";
@@ -40,7 +40,7 @@ function Store() {
   const [selItem, setSelItem] = useState("전체보기");
 
   // 5. 검색상태 관리변수 : 값유지만 하도록 참조변수로 생성
-  const searchSts = useRef(false);
+  // const searchSts = useRef(false);
 
   // 6. 검색박스 가시성 상태관리변수
   const [searchVisible, setSearchVisible] = useState(true);

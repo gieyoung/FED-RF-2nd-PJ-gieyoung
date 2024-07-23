@@ -1,20 +1,16 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
-import SubIntro from "../modules/SubIntro.jsx";
-import { Link } from "react-router-dom";
+import React, { useContext, useEffect, useRef } from "react";
 import { dCon } from "../modules/dCon";
 
 // 데이터 불러오기
-import { storeCat } from "../data/store_cat.js";
 import { sbread, srice, smando, sicecream } from "../data/store_data.js";
 
 // 공통함수 불러오기
-import { addComma } from "../func/common_fn.js";
+// import { addComma } from "../func/common_fn.js";
 
 // CSS 불러오기
 import "../../css/store.scss";
 
-// 제이쿼리
-import $ from "jquery";
+
 
 export default function Store_List({ selData, viewDetail, updateIdx, selItem, setSearchVisible, searchWord }) {
   // 스토어리스트 데이터 모으기(브레드, 떡, 만두, 아이스크림)
@@ -24,7 +20,7 @@ export default function Store_List({ selData, viewDetail, updateIdx, selItem, se
   // (2) updateIdx - 부모컴포넌트의 setIdx 상태관리변수의 메서드
 
   // 컨텍스트 사용
-  const myCon = useContext(dCon);
+  // const myCon = useContext(dCon);
   
 
   // 원본 데이터
@@ -42,15 +38,15 @@ export default function Store_List({ selData, viewDetail, updateIdx, selItem, se
   let storeData;
 
   if (selItem == "전체보기") {
-    storeData = tempData.current != orgData && selData;
+    storeData == tempData.current !== orgData && selData;
   } else if (selItem == "브레드") {
-    storeData = sbread;
+    storeData == sbread;
   } else if (selItem == "떡") {
-    storeData = srice;
+    storeData == srice;
   } else if (selItem == "만두") {
-    storeData = smando;
+    storeData == smando;
   } else if (selItem === "아이스크림") {
-    storeData = sicecream;
+    storeData == sicecream;
   }
   console.log("선택된 카테고리의 데이터", storeData);
 
@@ -88,7 +84,7 @@ export default function Store_List({ selData, viewDetail, updateIdx, selItem, se
       {storeData.map((v, i) => (
         <li key={i} className={v.category}>
           <div className="image">
-            <a
+            <button
               href="#"
               onClick={(e) => {
                 // a요소 기본이동막기
@@ -114,11 +110,11 @@ export default function Store_List({ selData, viewDetail, updateIdx, selItem, se
                 height: "227.5px",
                 display: "block",
               }}
-            ></a>
+            ></button>
             <span>{v.catname}</span>
           </div>
           <dl className="info">
-            <a
+            <button
               href="#"
               onClick={(e) => {
                 // a요소 기본이동막기
@@ -136,7 +132,7 @@ export default function Store_List({ selData, viewDetail, updateIdx, selItem, se
                 <span className="font-6">{highlightText(v.tit, searchWord)}</span>
               </dt>
               <dd className="content font-7 nanum">{v.disprice}원</dd>
-            </a>
+            </button>
           </dl>
         </li>
       ))}
