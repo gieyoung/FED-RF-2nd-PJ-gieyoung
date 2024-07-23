@@ -443,7 +443,7 @@ const ListMode = ({
   // 코드리턴구역 //////////////////////
   return (
     <>
-      <div className="selbx">
+      <div className="selbx2">
         <select name="cta" id="cta" className="cta">
           <option value="tit">Title</option>
           <option value="cont">Contents</option>
