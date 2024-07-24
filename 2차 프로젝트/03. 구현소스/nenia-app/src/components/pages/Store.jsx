@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useContext } from "react";
 import SubIntro from "../modules/SubIntro.jsx";
-
+import { dCon } from "../modules/dCon.jsx";
 
 // 상품리스트 서브컴포넌트 불러오기
 import Store_List from "../modules/Store_List.jsx";
@@ -11,26 +11,23 @@ import Store_detail from "../modules/Store_detail.jsx";
 import { storeCat } from "../data/store_cat.js";
 import { sbread, srice, smando, sicecream } from "../data/store_data.js";
 
-// 공통함수 불러오기
-// import { addComma } from "../func/common_fn.js";
-
 // CSS 불러오기
 import "../../css/store.scss";
 
 // 제이쿼리
 import $ from "jquery";
-import { dCon } from "../modules/dCon.jsx";
 
 function Store() {
+  const myCon = useContext(dCon);
+
   // [ 후크 상태관리 변수 셋팅! ] //
   // 1. 카테고리 상태관리변수
   const [activeCat, setActiveCat] = useState(0);
 
-  const myCon = useContext(dCon);
+  // 2. 리스트 / 상세보기 전환용 상태관리변수
   const viewList = myCon.viewList;
   const setViewList = myCon.setViewList;
-  // 2. 리스트 / 상세보기 전환용 상태관리변수
-  // const [viewList, setViewList] = useState(true);
+
   // 3. 상품 데이터 인덱스값 상태관리변수 -> 컨텍스트API변수로 변경한다!!!
   // const [idx, setIdx] = useState(0);
   const idx = myCon.idx;

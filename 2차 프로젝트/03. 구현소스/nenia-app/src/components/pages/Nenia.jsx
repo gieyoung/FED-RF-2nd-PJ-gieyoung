@@ -24,13 +24,11 @@ function Nenia(props) {
       {/* 서브인트로 모듈 */}
       <SubIntro catName="nenia" />
 
-       {/* 섹션1 */}
-       <div className="sec4 square-info ">
+      {/* 섹션1 */}
+      <div className="sec4 square-info ">
         {/* 사각정보 모듈 */}
         <SquareInfo catName="nenia" />
       </div>
-      
-     
 
       {/* 섹션2 */}
       <div className="sec2">
@@ -40,7 +38,7 @@ function Nenia(props) {
             <div className="left">
               <ul>
                 <li className="only-m">
-                  <img src="process.env.PUBLIC_URL+images/nenia/bak.jpg" alt="" />
+                  <img src={`${process.env.PUBLIC_URL}/images/nenia/bak.jpg`} alt="" />
                 </li>
                 <li>
                   <h1 className="font-2">
@@ -105,14 +103,11 @@ function Nenia(props) {
         </div>
       </div>
 
-
       {/* 섹션4 - 스토어 상품 소개 */}
       <div className="sec3">
         {/* 스토어리스트 모듈 */}
         <StoreList />
       </div>
-
-     
 
       {/* 섹션5 */}
       <div className="sec5 sub-last">

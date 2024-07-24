@@ -10,18 +10,14 @@ import { sbread, srice, smando, sicecream } from "../data/store_data.js";
 // CSS 불러오기
 import "../../css/store.scss";
 
-
-
 export default function Store_List({ selData, viewDetail, updateIdx, selItem, setSearchVisible, searchWord }) {
-  // 스토어리스트 데이터 모으기(브레드, 떡, 만두, 아이스크림)
-  // const selData = [...sbread, ...srice, ...smando, ...sicecream];
+
   // (1) viewDetail - 부모컴포넌트가 전달해준 상태변수
   // (viewList를 업데이트하는 setViewList메서드임!)
   // (2) updateIdx - 부모컴포넌트의 setIdx 상태관리변수의 메서드
 
   // 컨텍스트 사용
   const myCon = useContext(dCon);
-  
 
   // 원본 데이터
   const orgData = [...sbread, ...srice, ...smando, ...sicecream];
@@ -67,13 +63,12 @@ export default function Store_List({ selData, viewDetail, updateIdx, selItem, se
     );
   };
 
+  // 페이지 로드 시 스크롤 위치 800px로 이동
+  useEffect(() => {
+    window.scrollTo(0, 800);
+  }, []);
 
-    // 페이지 로드 시 스크롤 위치 800px로 이동
-    useEffect(() => {
-      window.scrollTo(0, 800);
-    }, []);
-
-    // 클릭 시 idx 값을 출력하는 함수
+  // 클릭 시 idx 값을 출력하는 함수
   const ItemClick = (idx) => {
     console.log("클릭된 상품의 idx:", idx);
     // 필요한 추가 작업을 여기에 추가
@@ -94,17 +89,12 @@ export default function Store_List({ selData, viewDetail, updateIdx, selItem, se
                 viewDetail(false);
                 // setIdx메서드가 updateIdx로 들어옴
                 updateIdx(i);
-
                 ItemClick(v.idx); // idx 값 전달
-                // // // 상세페이지의 상품 컨텍스트 변수 변경
-                // myCon.setIdx(Number(v.idx) - 1);
-                // // // 상세페이지 보기 상태값 변경
-                // myCon.setViewList(false);
                 myCon.setSelProductData(storeData);
                 console.log(myCon.selProductData);
               }}
               style={{
-                backgroundImage: `url(${process.env.PUBLIC_URL+v.isrc})`,
+                backgroundImage: `url(${process.env.PUBLIC_URL + v.isrc})`,
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
                 backgroundSize: "cover",
@@ -126,12 +116,7 @@ export default function Store_List({ selData, viewDetail, updateIdx, selItem, se
                 viewDetail(false);
                 // setIdx메서드가 updateIdx로 들어옴
                 updateIdx(i);
-
                 ItemClick(v.idx); // idx 값 전달
-                // // // 상세페이지의 상품 컨텍스트 변수 변경
-                // myCon.setIdx(Number(v.idx) - 1);
-                // // // 상세페이지 보기 상태값 변경
-                // myCon.setViewList(false);
                 myCon.setSelProductData(storeData);
                 console.log(myCon.selProductData);
               }}
@@ -144,9 +129,6 @@ export default function Store_List({ selData, viewDetail, updateIdx, selItem, se
           </dl>
         </li>
       ))}
-
-
-      
     </>
   );
 }
