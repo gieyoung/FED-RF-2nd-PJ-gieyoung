@@ -24,6 +24,9 @@ export default function Layout() {
   // 4. 상품 데이터 인덱스값 상태관리변수
   const [idx, setIdx] = useState(0);
 
+  // 5. 상품 상세 페이지를 위한 선택 데이터 상태관리변수
+  const [selProductData, setSelProductData] = useState(null);
+
   // [ 공통 함수 ] ///
   // 1. 라우팅 이동함수
   const goPage = useNavigate();
@@ -50,11 +53,10 @@ export default function Layout() {
     localStorage.removeItem("cart-data");
     // 4. 메인페이지로 돌아가기
     goPage("/");
-  }; //////////logoutFn  
+  }; //////////logoutFn
 
   // 로그인 상태 여부에 따라 이름추가하는 함수
-  const addUid = () => loginSts?"-"+JSON.parse(loginSts).uid:'';
-
+  const addUid = () => (loginSts ? "-" + JSON.parse(loginSts).uid : "");
 
   // 화면 랜더링 구역
   // -> 로그인 상태 체크
@@ -73,7 +75,7 @@ export default function Layout() {
 
   // [ 로컬스 카트 데이터 상태변수 ] ///
   const [localsCart, setLocalsCart] = useState(
-    localStorage.getItem("cart-data"+addUid())
+    localStorage.getItem("cart-data" + addUid())
   );
 
   // 로컬스 카트 데이터 존재여부에 따라 상태값 변경
@@ -118,6 +120,8 @@ export default function Layout() {
         idx,
         setIdx,
         addUid,
+        selProductData,
+        setSelProductData,
       }}
     >
       {/* 1.상단영역 */}

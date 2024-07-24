@@ -20,7 +20,7 @@ export default function Store_List({ selData, viewDetail, updateIdx, selItem, se
   // (2) updateIdx - 부모컴포넌트의 setIdx 상태관리변수의 메서드
 
   // 컨텍스트 사용
-  // const myCon = useContext(dCon);
+  const myCon = useContext(dCon);
   
 
   // 원본 데이터
@@ -100,6 +100,8 @@ export default function Store_List({ selData, viewDetail, updateIdx, selItem, se
                 // myCon.setIdx(Number(v.idx) - 1);
                 // // // 상세페이지 보기 상태값 변경
                 // myCon.setViewList(false);
+                myCon.setSelProductData(storeData);
+                console.log(myCon.selProductData);
               }}
               style={{
                 backgroundImage: `url(${process.env.PUBLIC_URL+v.isrc})`,
@@ -121,11 +123,17 @@ export default function Store_List({ selData, viewDetail, updateIdx, selItem, se
                 e.preventDefault();
                 // 상태변수 viewList 업데이트
                 // setViewList메서드가 viewDetail로 들어옴
-                // 상태관리변수 viewList값이 true이면 리스트보기
-                // false이면 상품 상세리스트 보기
                 viewDetail(false);
                 // setIdx메서드가 updateIdx로 들어옴
                 updateIdx(i);
+
+                ItemClick(v.idx); // idx 값 전달
+                // // // 상세페이지의 상품 컨텍스트 변수 변경
+                // myCon.setIdx(Number(v.idx) - 1);
+                // // // 상세페이지 보기 상태값 변경
+                // myCon.setViewList(false);
+                myCon.setSelProductData(storeData);
+                console.log(myCon.selProductData);
               }}
             >
               <dt className="subject">

@@ -14,7 +14,13 @@ import "../../css/store_detail.scss";
 // 제이쿼리
 import $ from "jquery";
 
-export default function Store_detail({ backList, gNo, selItem, loginSts, setSearchVisible }) {
+export default function Store_detail({
+  backList,
+  gNo,
+  selItem,
+  loginSts,
+  setSearchVisible,
+}) {
   // (1) backList - 부모컴포넌트가 전달해준 상태변수
   // (viewList를 업데이트하는 setViewList메서드임!)
   // (2) gNo - 상품 데이터 배열순번
@@ -42,17 +48,21 @@ export default function Store_detail({ backList, gNo, selItem, loginSts, setSear
   // 카테고리에 따른 데이터 선택하기
   let storeData;
 
-  if (selItem == "전체보기") {
-    storeData = tempData.current != orgData && selData;
-  } else if (selItem == "브레드") {
-    storeData = sbread;
-  } else if (selItem == "떡") {
-    storeData = srice;
-  } else if (selItem == "만두") {
-    storeData = smando;
-  } else if (selItem === "아이스크림") {
-    storeData = sicecream;
-  }
+  // if (selItem == "전체보기") {
+  //   storeData = tempData.current != orgData && selData;
+  // } else if (selItem == "브레드") {
+  //   storeData = sbread;
+  // } else if (selItem == "떡") {
+  //   storeData = srice;
+  // } else if (selItem == "만두") {
+  //   storeData = smando;
+  // } else if (selItem === "아이스크림") {
+  //   storeData = sicecream;
+  // }
+
+  // 카테고리에 따른 데이터 선택하기 할당!
+  storeData = myCon.selProductData;
+  console.log("할당data:", storeData, "/선택순번:", gNo);
   // console.log("storeData:", storeData, "gNo:", gNo, "selData[gNo]:", selData[gNo], "storeData[gNo]:", storeData[gNo], "storeData[gNo].disprice:", storeData[gNo].disprice);
 
   // 화면랜더링구역 : 한번만 //////////
@@ -90,7 +100,8 @@ export default function Store_detail({ backList, gNo, selItem, loginSts, setSear
       // 증감기호가 변수 앞에 있어야 먼저증감하고 할당함!
 
       // (4) 총합계 반영하기
-      const totalPrice = parseInt(storeData[gNo].disprice[0].replace(",", ""), 10) * num + "원";
+      const totalPrice =
+        parseInt(storeData[gNo].disprice[0].replace(",", ""), 10) * num + "원";
 
       total.text(addComma(totalPrice));
 
@@ -110,8 +121,6 @@ export default function Store_detail({ backList, gNo, selItem, loginSts, setSear
     window.scrollTo(0, 800);
   }); ////////// useEffect //////
 
-
-
   // 코드리턴구역 ///////////
   return (
     <>
@@ -120,7 +129,9 @@ export default function Store_detail({ backList, gNo, selItem, loginSts, setSear
           <div
             className="thumbnail-box"
             style={{
-              background: `url(${process.env.PUBLIC_URL+storeData[gNo].isrc})`,
+              background: `url(${
+                process.env.PUBLIC_URL + storeData[gNo].isrc
+              })`,
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
               backgroundSize: "cover",
@@ -156,10 +167,21 @@ export default function Store_detail({ backList, gNo, selItem, loginSts, setSear
                 <span>구매수량</span>
                 <span>
                   {/* 카운트 박스 */}
-                  <input className="count-box" type="text" id="sum" defaultValue="1" />
+                  <input
+                    className="count-box"
+                    type="text"
+                    id="sum"
+                    defaultValue="1"
+                  />
                   <b className="chg_num">
-                    <img src={process.env.PUBLIC_URL + "/images/cnt_up.png"} alt="증가" />
-                    <img src={process.env.PUBLIC_URL + "/images/cnt_down.png"} alt="감소" />
+                    <img
+                      src={process.env.PUBLIC_URL + "/images/cnt_up.png"}
+                      alt="증가"
+                    />
+                    <img
+                      src={process.env.PUBLIC_URL + "/images/cnt_down.png"}
+                      alt="감소"
+                    />
                   </b>
                 </span>
               </div>
@@ -209,7 +231,9 @@ export default function Store_detail({ backList, gNo, selItem, loginSts, setSear
                   } //// if /////
 
                   // 2. 로컬스 읽어와서 파싱하기
-                  let locals = localStorage.getItem("cart-data" + myCon.addUid());
+                  let locals = localStorage.getItem(
+                    "cart-data" + myCon.addUid()
+                  );
                   locals = JSON.parse(locals);
 
                   // idx값만 모아서 다른 배열만들기
@@ -256,10 +280,15 @@ export default function Store_detail({ backList, gNo, selItem, loginSts, setSear
                   **************************/
 
                   // 로컬스에 문자화하여 입력하기
-                  localStorage.setItem("cart-data" + myCon.addUid(), JSON.stringify(locals));
+                  localStorage.setItem(
+                    "cart-data" + myCon.addUid(),
+                    JSON.stringify(locals)
+                  );
 
                   // 로컬스 카트데이터 상태값 변경!
-                  myCon.setLocalsCart(localStorage.getItem("cart-data" + myCon.addUid()));
+                  myCon.setLocalsCart(
+                    localStorage.getItem("cart-data" + myCon.addUid())
+                  );
                   // 카트리스트 생성 상태값 변경!
                   myCon.setCartSts(true);
                 }}
