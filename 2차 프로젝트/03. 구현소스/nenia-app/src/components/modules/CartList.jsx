@@ -9,7 +9,7 @@ import { addComma } from "../func/common_fn";
 import $ from "jquery";
 import { useNavigate } from "react-router-dom";
 
-function CartList({ loginSts }) {
+function CartList({ loginSts, backList, }) {
   const goNav = useNavigate();
 
   // 강제 리랜더링을 위한 상태변수
@@ -340,6 +340,7 @@ function CartList({ loginSts }) {
                         myCon.goPage("/store");
                         // store페이지로 이동해서 새로고침되기
                         // window.location.reload();
+                       
                       
                       }}
                     >
