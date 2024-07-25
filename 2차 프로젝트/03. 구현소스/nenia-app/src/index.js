@@ -14,6 +14,7 @@ import Login from "./components/pages/Login";
 import SearchPage from "./components/pages/SearchPage";
 import Cart from "./components/pages/Cart";
 import Board from "./components/pages/Board";
+import MyPage from "./components/pages/MyPage";
 
 // 전체 공통 CSS 불러오기
 import "../src/css/main.scss";
@@ -45,6 +46,7 @@ export default function MainComponent() {
           <Route path="search" element={<SearchPage />} />
           <Route path="cart" element={<Cart />} />
           <Route path="board" element={<Board />} />
+          <Route path="mypage" element={<MyPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
